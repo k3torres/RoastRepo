@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66B0870818936D3D0045B805 /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870718936D3D0045B805 /* RoastAppShopViewController.m */; };
+		66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */; };
 		683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC667188A48F30027D7F2 /* Foundation.framework */; };
 		683BC66A188A48F30027D7F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC669188A48F30027D7F2 /* CoreGraphics.framework */; };
 		683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC66B188A48F30027D7F2 /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66B0870618936D3D0045B805 /* RoastAppShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopViewController.h; sourceTree = SOURCE_ROOT; };
+		66B0870718936D3D0045B805 /* RoastAppShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopViewController.m; sourceTree = SOURCE_ROOT; };
+		66B0870918936DB10045B805 /* RoastAppJSONHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppJSONHandler.h; path = Roast/RoastAppJSONHandler.h; sourceTree = "<group>"; };
+		66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppJSONHandler.m; path = Roast/RoastAppJSONHandler.m; sourceTree = "<group>"; };
 		683BC664188A48F30027D7F2 /* Roast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683BC667188A48F30027D7F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		683BC669188A48F30027D7F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,8 +58,8 @@
 		683BC68A188A48F30027D7F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		683BC68C188A48F30027D7F2 /* RoastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastTests.m; sourceTree = "<group>"; };
 		683BC69A188B13A10027D7F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
-		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppFeedViewController.h; sourceTree = "<group>"; };
-		DC9221701893560800C67EAD /* RoastAppFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppFeedViewController.m; sourceTree = "<group>"; };
+		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedViewController.h; path = Roast/RoastAppFeedViewController.h; sourceTree = "<group>"; };
+		DC9221701893560800C67EAD /* RoastAppFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedViewController.m; path = Roast/RoastAppFeedViewController.m; sourceTree = "<group>"; };
 		DC9221751893596C00C67EAD /* RoastAppFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppFeedItem.h; sourceTree = "<group>"; };
 		DC9221761893596C00C67EAD /* RoastAppFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppFeedItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,11 +88,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		683BC65B188A48F30027D7F2 = {
+		66B0870C18936EF40045B805 /* Networking Services */ = {
+			isa = PBXGroup;
+			children = (
+				66B0870918936DB10045B805 /* RoastAppJSONHandler.h */,
+				66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */,
+			);
+			name = "Networking Services";
+			sourceTree = "<group>";
+		};
+		66B0870F18936F6B0045B805 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				DC9221751893596C00C67EAD /* RoastAppFeedItem.h */,
 				DC9221761893596C00C67EAD /* RoastAppFeedItem.m */,
+				DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */,
+				DC9221701893560800C67EAD /* RoastAppFeedViewController.m */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		66B0871018936F850045B805 /* Shop View */ = {
+			isa = PBXGroup;
+			children = (
+				66B0870618936D3D0045B805 /* RoastAppShopViewController.h */,
+				66B0870718936D3D0045B805 /* RoastAppShopViewController.m */,
+			);
+			name = "Shop View";
+			sourceTree = "<group>";
+		};
+		683BC65B188A48F30027D7F2 = {
+			isa = PBXGroup;
+			children = (
+				66B0871018936F850045B805 /* Shop View */,
+				66B0870F18936F6B0045B805 /* Feed */,
+				66B0870C18936EF40045B805 /* Networking Services */,
 				683BC66D188A48F30027D7F2 /* Roast */,
 				683BC686188A48F30027D7F2 /* RoastTests */,
 				683BC666188A48F30027D7F2 /* Frameworks */,
@@ -118,8 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				683BC69A188B13A10027D7F2 /* Main.storyboard */,
-				DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */,
-				DC9221701893560800C67EAD /* RoastAppFeedViewController.m */,
 				683BC676188A48F30027D7F2 /* RoastAppAppDelegate.h */,
 				683BC677188A48F30027D7F2 /* RoastAppAppDelegate.m */,
 				683BC679188A48F30027D7F2 /* Images.xcassets */,
@@ -256,6 +290,8 @@
 			files = (
 				683BC678188A48F30027D7F2 /* RoastAppAppDelegate.m in Sources */,
 				683BC674188A48F30027D7F2 /* main.m in Sources */,
+				66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */,
+				66B0870818936D3D0045B805 /* RoastAppShopViewController.m in Sources */,
 				DC9221771893596C00C67EAD /* RoastAppFeedItem.m in Sources */,
 				DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */,
 			);
