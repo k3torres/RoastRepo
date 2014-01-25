@@ -8,7 +8,7 @@
 //  Request Encoding:
 //  0) List All Cafes
 //  1) List All Drinks
-//  2) Cafe contains search...
+//  2) ...
 //
 
 #import "RoastAppJSONHandler.h"
@@ -18,8 +18,9 @@
 //All server requests have this base URL
 NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 
-//
+//Function for making JSON requests, paramaterized by query type as described above
 -(NSArray *) makeJSONRequest:(int)queryType {
+    
     NSURLSession *session = [NSURLSession sharedSession];
     
     switch (queryType)
@@ -28,6 +29,11 @@ NSString *baseURL = @"http://54.201.5.175:8080/roast/";
             
             return [RoastAppJSONHandler requestAllCafes:session];
             
+            break;
+            
+        case 1:
+            
+            return [RoastAppJSONHandler requestAllDrinks:session];
             break;
             
         default:
@@ -39,9 +45,32 @@ NSString *baseURL = @"http://54.201.5.175:8080/roast/";
     return nil;
 }
 
+//Query: Select * from roast.cafes
 +(NSArray *)requestAllCafes:(NSURLSession *)session {
     
     NSString *fullURL = [baseURL stringByAppendingString:@"ListAllCafes"];
+    __block NSArray *queryResults;
+    
+    [[session dataTaskWithURL:[NSURL URLWithString:fullURL]
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                
+                NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+                NSArray *jsonArray = [dictionaryFromResponse allValues];
+                
+                
+                queryResults = [jsonArray objectAtIndex:0];
+                
+            }] resume];
+    
+    return queryResults;
+}
+
+//Query: Select * from roast.drinks
++(NSArray *)requestAllDrinks:(NSURLSession *)session {
+    
+    NSString *fullURL = [baseURL stringByAppendingString:@"ListAllDrinks"];
     __block NSArray *queryResults;
     
     [[session dataTaskWithURL:[NSURL URLWithString:fullURL]
