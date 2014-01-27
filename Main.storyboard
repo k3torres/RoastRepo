@@ -23,23 +23,29 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="pPo-tk-42O"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="pPo-tk-42O">
+                        <barButtonItem key="rightBarButtonItem" title="Shop View" id="agV-YI-LaZ">
+                            <connections>
+                                <segue destination="D6i-OL-WbZ" kind="push" id="HdP-cx-cqR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbD-qo-yWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="220" y="-346"/>
         </scene>
-        <!--Roast App Feed View Controller-->
+        <!--Roast App Shop View Controller-->
         <scene sceneID="UKV-8a-t1p">
             <objects>
-                <tableViewController id="D6i-OL-WbZ" customClass="RoastAppFeedViewController" sceneMemberID="viewController">
+                <tableViewController id="D6i-OL-WbZ" customClass="RoastAppShopViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HZa-Fp-bVn" customClass="RoastApp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8Fy-B4-xTS">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Fy-B4-xTS" id="4tm-T4-le2">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -52,6 +58,7 @@
                             <outlet property="delegate" destination="D6i-OL-WbZ" id="hqN-ec-F1T"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Q4X-9u-eYb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpk-oe-eRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

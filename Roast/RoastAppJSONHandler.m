@@ -19,7 +19,7 @@
 NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 
 //Function for making JSON requests, paramaterized by query type as described above
--(NSArray *) makeJSONRequest:(int)queryType {
++(NSArray *) makeJSONRequest:(int)queryType {
     
     NSURLSession *session = [NSURLSession sharedSession];
     
@@ -59,8 +59,9 @@ NSString *baseURL = @"http://54.201.5.175:8080/roast/";
                 NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 NSArray *jsonArray = [dictionaryFromResponse allValues];
                 
-                
+                NSLog(@"json array is nil?%d", [jsonArray isEqual:nil]);
                 queryResults = [jsonArray objectAtIndex:0];
+                NSLog(@"Connected to Server");
                 
             }] resume];
     

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface RoastAppJSONHandler : NSObject
--(NSArray *) makeJSONRequest:(int)queryType;
++(NSArray *) makeJSONRequest:(int)queryType;
 @end

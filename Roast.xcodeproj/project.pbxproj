@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66B0870818936D3D0045B805 /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870718936D3D0045B805 /* RoastAppShopViewController.m */; };
 		66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */; };
+		66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B892821895D8390030CE6E /* RoastAppShopViewController.m */; };
 		683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC667188A48F30027D7F2 /* Foundation.framework */; };
 		683BC66A188A48F30027D7F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC669188A48F30027D7F2 /* CoreGraphics.framework */; };
 		683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC66B188A48F30027D7F2 /* UIKit.framework */; };
@@ -37,10 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		66B0870618936D3D0045B805 /* RoastAppShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopViewController.h; sourceTree = SOURCE_ROOT; };
-		66B0870718936D3D0045B805 /* RoastAppShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopViewController.m; sourceTree = SOURCE_ROOT; };
 		66B0870918936DB10045B805 /* RoastAppJSONHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppJSONHandler.h; path = Roast/RoastAppJSONHandler.h; sourceTree = "<group>"; };
 		66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppJSONHandler.m; path = Roast/RoastAppJSONHandler.m; sourceTree = "<group>"; };
+		66B892811895D8390030CE6E /* RoastAppShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopViewController.h; path = Roast/RoastAppShopViewController.h; sourceTree = "<group>"; };
+		66B892821895D8390030CE6E /* RoastAppShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopViewController.m; path = Roast/RoastAppShopViewController.m; sourceTree = "<group>"; };
 		683BC664188A48F30027D7F2 /* Roast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683BC667188A48F30027D7F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		683BC669188A48F30027D7F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,8 +111,8 @@
 		66B0871018936F850045B805 /* Shop View */ = {
 			isa = PBXGroup;
 			children = (
-				66B0870618936D3D0045B805 /* RoastAppShopViewController.h */,
-				66B0870718936D3D0045B805 /* RoastAppShopViewController.m */,
+				66B892811895D8390030CE6E /* RoastAppShopViewController.h */,
+				66B892821895D8390030CE6E /* RoastAppShopViewController.m */,
 			);
 			name = "Shop View";
 			sourceTree = "<group>";
@@ -290,8 +290,8 @@
 			files = (
 				683BC678188A48F30027D7F2 /* RoastAppAppDelegate.m in Sources */,
 				683BC674188A48F30027D7F2 /* main.m in Sources */,
+				66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */,
 				66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */,
-				66B0870818936D3D0045B805 /* RoastAppShopViewController.m in Sources */,
 				DC9221771893596C00C67EAD /* RoastAppFeedItem.m in Sources */,
 				DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */,
 			);
