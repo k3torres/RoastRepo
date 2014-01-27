@@ -77,11 +77,26 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
-    NSLog(@"Current feedItems size:%ul", [self.feedItems count]);
-    cell.textLabel.text = feedItemAtIndex.serviceName;
+    NSLog(@"Current feedItems size:%u", [self.feedItems count]);
+
     // Configure the cell...
-    
+    [(UILabel *)[cell.contentView viewWithTag:10] setText:feedItemAtIndex.userName];
+    [(UILabel *)[cell.contentView viewWithTag:11] setText:feedItemAtIndex.serviceName];
+    [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init] ;
+    [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+    [(UILabel *)[cell.contentView viewWithTag:13] setText:[dateFormatter stringFromDate:feedItemAtIndex.timestamp]];
+
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    //XYZToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    //tappedItem.completed = !tappedItem.completed;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 /*
