@@ -18,22 +18,22 @@
 //All server requests have this base URL
 NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 
+NSArray *queryResult;
+
 //Function for making JSON requests, paramaterized by query type as described above
 +(NSArray *) makeJSONRequest:(int)queryType {
-    
-    NSURLSession *session = [NSURLSession sharedSession];
     
     switch (queryType)
     {
         case 0:
             
-            return [RoastAppJSONHandler requestAllCafes:session];
+            return [RoastAppJSONHandler requestAllCafes];
             
             break;
             
         case 1:
             
-            return [RoastAppJSONHandler requestAllDrinks:session];
+            return [RoastAppJSONHandler requestAllDrinks];
             break;
             
         default:
@@ -46,48 +46,86 @@ NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 }
 
 //Query: Select * from roast.cafes
-+(NSArray *)requestAllCafes:(NSURLSession *)session {
++(NSArray *)requestAllCafes{
     
     NSString *fullURL = [baseURL stringByAppendingString:@"ListAllCafes"];
-    __block NSArray *queryResults;
     
-    [[session dataTaskWithURL:[NSURL URLWithString:fullURL]
+    //Create a default configuration for the NSURLSession
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    //Create an NSURLSession and use RoastAPPJSONHandler as default session delegate
+    NSURLSession *session =
+    [NSURLSession sessionWithConfiguration:config
+                                  delegate:self
+                             delegateQueue:nil];
+    
+    NSURLSessionTask *queryDB =
+        [session dataTaskWithURL:[NSURL URLWithString:fullURL]
+      
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
                 
+                //perform database query, retreive JSON
                 NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 NSArray *jsonArray = [dictionaryFromResponse allValues];
+                NSArray *innerElements = [jsonArray objectAtIndex:0];
                 
-                NSLog(@"json array is nil?%d", [jsonArray isEqual:nil]);
-                queryResults = [jsonArray objectAtIndex:0];
-                NSLog(@"Connected to Server");
+                /*dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    //store DB for later retrieval
+                    NSLog(@"here");
+                    queryResult = [jsonArray objectAtIndex:0];
+                });*/
                 
-            }] resume];
-    
-    return queryResults;
+                queryResult = [[NSArray alloc] initWithArray:innerElements];
+                
+            }];
+     
+    [queryDB resume];
+     
+    return queryResult;
 }
 
 //Query: Select * from roast.drinks
-+(NSArray *)requestAllDrinks:(NSURLSession *)session {
++(NSArray *)requestAllDrinks{
     
     NSString *fullURL = [baseURL stringByAppendingString:@"ListAllDrinks"];
-    __block NSArray *queryResults;
+    //Create a default configuration for the NSURLSession
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    [[session dataTaskWithURL:[NSURL URLWithString:fullURL]
-            completionHandler:^(NSData *data,
-                                NSURLResponse *response,
-                                NSError *error) {
-                
-                NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-                NSArray *jsonArray = [dictionaryFromResponse allValues];
-                
-                
-                queryResults = [jsonArray objectAtIndex:0];
-                
-            }] resume];
+    //Create an NSURLSession and use RoastAPPJSONHandler as default session delegate
+    NSURLSession *session =
+    [NSURLSession sessionWithConfiguration:config
+                                  delegate:self
+                             delegateQueue:nil];
     
-    return queryResults;
+    NSURLSessionTask *queryDB =
+    [session dataTaskWithURL:[NSURL URLWithString:fullURL]
+     
+           completionHandler:^(NSData *data,
+                               NSURLResponse *response,
+                               NSError *error) {
+               
+               //perform database query, retreive JSON
+               NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+               NSArray *jsonArray = [dictionaryFromResponse allValues];
+               NSArray *innerElements = [jsonArray objectAtIndex:0];
+               
+               /*dispatch_async(dispatch_get_main_queue(), ^{
+                
+                //store DB for later retrieval
+                NSLog(@"here");
+                queryResult = [jsonArray objectAtIndex:0];
+                });*/
+               
+               queryResult = [[NSArray alloc] initWithArray:innerElements];
+               
+           }];
+    
+    [queryDB resume];
+    
+    return queryResult;
 }
 
 @end

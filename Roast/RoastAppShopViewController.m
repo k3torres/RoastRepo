@@ -8,6 +8,7 @@
 
 #import "RoastAppShopViewController.h"
 #import "RoastAppJSONHandler.h"
+#import "RoastAppShopItem.h"
 
 @interface RoastAppShopViewController ()
 
@@ -17,11 +18,20 @@
 
 - (void)loadInitialData
 {
-    NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:1];
+    NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:0];
+    
     if(queryResult != nil){
-        [self.shopItems addObject:[queryResult objectAtIndex:0]];
+        
+        int counter = 0;
+        
+        for(NSString *string in queryResult){
+            RoastAppShopItem *temp = [[RoastAppShopItem alloc] init];
+            temp.name = [queryResult objectAtIndex:counter];
+            [self.shopItems addObject:temp];
+            counter = counter + 1;
+        }
+        NSLog(@"shopItems Initialized!");
     }
-    NSLog(@"Wait here");
 
 }
 
@@ -37,11 +47,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"Shop View Loaded");
-    
     self.shopItems = [[NSMutableArray alloc] init];
     [self loadInitialData];
-    NSLog(@"shopItems Initialized!");
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -62,23 +69,24 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.shopItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    RoastAppShopItem *shopItem = [self.shopItems   objectAtIndex:indexPath.row];
+    cell.textLabel.text = shopItem.name;
     return cell;
 }
 
