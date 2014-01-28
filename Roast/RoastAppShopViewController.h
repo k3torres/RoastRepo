@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RoastAppShopViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface RoastAppShopViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property NSMutableArray *shopItems;
 

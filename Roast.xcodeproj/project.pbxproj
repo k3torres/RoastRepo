@@ -98,6 +98,7 @@
 				66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */,
 			);
 			name = "Networking Services";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		66B0870F18936F6B0045B805 /* Feed */ = {
@@ -109,6 +110,7 @@
 				DC9221701893560800C67EAD /* RoastAppFeedViewController.m */,
 			);
 			name = Feed;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		66B0871018936F850045B805 /* Shop View */ = {
@@ -120,14 +122,12 @@
 				66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */,
 			);
 			name = "Shop View";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		683BC65B188A48F30027D7F2 = {
 			isa = PBXGroup;
 			children = (
-				66B0871018936F850045B805 /* Shop View */,
-				66B0870F18936F6B0045B805 /* Feed */,
-				66B0870C18936EF40045B805 /* Networking Services */,
 				683BC66D188A48F30027D7F2 /* Roast */,
 				683BC686188A48F30027D7F2 /* RoastTests */,
 				683BC666188A48F30027D7F2 /* Frameworks */,
@@ -158,6 +158,9 @@
 		683BC66D188A48F30027D7F2 /* Roast */ = {
 			isa = PBXGroup;
 			children = (
+				66B0871018936F850045B805 /* Shop View */,
+				66B0870F18936F6B0045B805 /* Feed */,
+				66B0870C18936EF40045B805 /* Networking Services */,
 				683BC69A188B13A10027D7F2 /* Main.storyboard */,
 				683BC676188A48F30027D7F2 /* RoastAppAppDelegate.h */,
 				683BC677188A48F30027D7F2 /* RoastAppAppDelegate.m */,
