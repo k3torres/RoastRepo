@@ -38,7 +38,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     self.shopItems = [[NSMutableArray alloc] init];
+    
     [self loadInitialData];
     //[self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     
@@ -59,14 +61,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return [self.shopItems count];
 }

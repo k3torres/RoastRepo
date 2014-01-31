@@ -51,40 +51,14 @@ NSArray *queryResult;
     
     NSString *fullURL = [baseURL stringByAppendingString:@"ListAllCafes"];
     
-    //Create a default configuration for the NSURLSession
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
+    NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     
-    //Create an NSURLSession and use RoastAPPJSONHandler as default session delegate
-    NSURLSession *session =
-    [NSURLSession sessionWithConfiguration:config
-                                  delegate:self
-                             delegateQueue:nil];
+    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    NSArray *innerElements = [jsonArray objectAtIndex:0];
     
-    NSURLSessionTask *queryDB =
-        [session dataTaskWithURL:[NSURL URLWithString:fullURL]
-      
-            completionHandler:^(NSData *data,
-                                NSURLResponse *response,
-                                NSError *error) {
-                
-                //perform database query, retreive JSON
-                NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-                NSArray *jsonArray = [dictionaryFromResponse allValues];
-                NSArray *innerElements = [jsonArray objectAtIndex:0];
-                
-                /*dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    //store DB for later retrieval
-                    NSLog(@"here");
-                    queryResult = [jsonArray objectAtIndex:0];
-                });*/
-                
-                queryResult = [[NSArray alloc] initWithArray:innerElements];
-                
-            }];
-     
-    [queryDB resume];
-     
+    queryResult = [[NSArray alloc] initWithArray:innerElements];
+    
     return queryResult;
 }
 
@@ -92,39 +66,14 @@ NSArray *queryResult;
 +(NSArray *)requestAllDrinks{
     
     NSString *fullURL = [baseURL stringByAppendingString:@"ListAllDrinks"];
-    //Create a default configuration for the NSURLSession
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    //Create an NSURLSession and use RoastAPPJSONHandler as default session delegate
-    NSURLSession *session =
-    [NSURLSession sessionWithConfiguration:config
-                                  delegate:self
-                             delegateQueue:nil];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
+    NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     
-    NSURLSessionTask *queryDB =
-    [session dataTaskWithURL:[NSURL URLWithString:fullURL]
-     
-           completionHandler:^(NSData *data,
-                               NSURLResponse *response,
-                               NSError *error) {
-               
-               //perform database query, retreive JSON
-               NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-               NSArray *jsonArray = [dictionaryFromResponse allValues];
-               NSArray *innerElements = [jsonArray objectAtIndex:0];
-               
-               /*dispatch_async(dispatch_get_main_queue(), ^{
-                
-                //store DB for later retrieval
-                NSLog(@"here");
-                queryResult = [jsonArray objectAtIndex:0];
-                });*/
-               
-               queryResult = [[NSArray alloc] initWithArray:innerElements];
-               
-           }];
+    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    NSArray *innerElements = [jsonArray objectAtIndex:0];
     
-    [queryDB resume];
+    queryResult = [[NSArray alloc] initWithArray:innerElements];
     
     return queryResult;
 }
