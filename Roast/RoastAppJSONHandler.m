@@ -12,6 +12,7 @@
 //
 
 #import "RoastAppJSONHandler.h"
+#import "RoastAppShopViewController.h"
 
 @implementation RoastAppJSONHandler
 
