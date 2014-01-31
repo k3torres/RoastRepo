@@ -18,11 +18,14 @@
 - (void)loadInitialData
 {
     RoastAppFeedItem *feedItem1 = [[RoastAppFeedItem alloc] init];
-    feedItem1.serviceName = @"Twitter";
-    feedItem1.userName = @"Some Dick";
-    feedItem1.message = @"Yo bro. This place is crackin";
-    feedItem1.timestamp = [NSDate date];
-    [self.feedItems addObject:feedItem1];
+    for(int i = 0; i < 20; i++)
+    {
+        feedItem1.serviceName = @"Twitter";
+        feedItem1.userName = @"Some Dick";
+        feedItem1.message = @"Yo bro. This place is crackin";
+        feedItem1.timestamp = [NSDate date];
+        [self.feedItems addObject:feedItem1];
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -81,13 +84,29 @@
 
     // Configure the cell...
     [(UILabel *)[cell.contentView viewWithTag:10] setText:feedItemAtIndex.userName];
-    [(UILabel *)[cell.contentView viewWithTag:11] setText:feedItemAtIndex.serviceName];
     [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
 
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init] ;
     [dateFormatter setDateStyle:NSDateFormatterLongStyle];
     [(UILabel *)[cell.contentView viewWithTag:13] setText:[dateFormatter stringFromDate:feedItemAtIndex.timestamp]];
+        
+    if([feedItemAtIndex.serviceName isEqualToString:@"Twitter"])
+    {
+        //Set image to twitter img
+       // cell.imageView.image = [UIImage imageNamed:@"twittericon.png"];
+//        [(UIImage *)[cell.contentView viewWithTag:11] setImage:[UIImage imageNamed:@"twittericon.png"]];
+        NSLog(@"Good..!");
+        
+        UIImage *test = [[UIImage alloc] init];
+        test = [UIImage imageNamed:@"twittericon.png"];
+        
+        [(UIImageView *)[cell.contentView viewWithTag:11] setImage:test];
 
+    }
+    else{
+        NSLog(@"EOOR!");
+        
+    }
     return cell;
 }
 

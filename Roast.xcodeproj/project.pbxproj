@@ -23,6 +23,7 @@
 		683BC68B188A48F30027D7F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683BC689188A48F30027D7F2 /* InfoPlist.strings */; };
 		683BC68D188A48F30027D7F2 /* RoastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683BC68C188A48F30027D7F2 /* RoastTests.m */; };
 		683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683BC69A188B13A10027D7F2 /* Main.storyboard */; };
+		DC55C4711896FDA300C4675E /* twittericon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC55C4701896FDA300C4675E /* twittericon.png */; };
 		DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9221701893560800C67EAD /* RoastAppFeedViewController.m */; };
 		DC9221771893596C00C67EAD /* RoastAppFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9221761893596C00C67EAD /* RoastAppFeedItem.m */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		683BC68A188A48F30027D7F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		683BC68C188A48F30027D7F2 /* RoastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastTests.m; sourceTree = "<group>"; };
 		683BC69A188B13A10027D7F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		DC55C4701896FDA300C4675E /* twittericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twittericon.png; sourceTree = "<group>"; };
 		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedViewController.h; path = Roast/RoastAppFeedViewController.h; sourceTree = "<group>"; };
 		DC9221701893560800C67EAD /* RoastAppFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedViewController.m; path = Roast/RoastAppFeedViewController.m; sourceTree = "<group>"; };
 		DC9221751893596C00C67EAD /* RoastAppFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppFeedItem.h; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		683BC66E188A48F30027D7F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC55C4701896FDA300C4675E /* twittericon.png */,
 				683BC66F188A48F30027D7F2 /* Roast-Info.plist */,
 				683BC670188A48F30027D7F2 /* InfoPlist.strings */,
 				683BC673188A48F30027D7F2 /* main.m */,
@@ -274,6 +277,7 @@
 			files = (
 				683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */,
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
+				DC55C4711896FDA300C4675E /* twittericon.png in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
