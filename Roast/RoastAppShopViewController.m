@@ -27,11 +27,26 @@
         for(NSString *string in queryResult){
             RoastAppShopItem *temp = [[RoastAppShopItem alloc] init];
             temp.name = [queryResult objectAtIndex:counter];
-            [self.shopItems addObject:temp];
+            [self.shopList1 addObject:temp];
             counter = counter + 1;
         }
-        NSLog(@"shopItems Initialized!");
     }
+    
+    queryResult = [RoastAppJSONHandler makeJSONRequest:1];
+    
+    if(queryResult != nil){
+        
+        int counter = 0;
+        
+        for(NSString *string in queryResult){
+            RoastAppShopItem *temp = [[RoastAppShopItem alloc] init];
+            temp.name = [queryResult objectAtIndex:counter];
+            [self.shopList2 addObject:temp];
+            counter = counter + 1;
+        }
+    }
+
+    NSLog(@"shopItems Initialized!");
 
 }
 
@@ -39,16 +54,10 @@
 {
     [super viewDidLoad];
 
-    self.shopItems = [[NSMutableArray alloc] init];
+    self.shopList1 = [[NSMutableArray alloc] init];
+    self.shopList2 = [[NSMutableArray alloc] init];
     
     [self loadInitialData];
-    //[self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,8 +77,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    // Return the number of rows in the section.
-    return [self.shopItems count];
+    if(tableView == [self.view viewWithTag:1])
+    {
+        return [self.shopList1 count];
+    }
+    else {
+        return [self.shopList2 count];
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,9 +92,14 @@
     static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-    RoastAppShopItem *shopItem = [self.shopItems   objectAtIndex:indexPath.row];
-    cell.textLabel.text = shopItem.name;
+    if(tableView == [self.view viewWithTag:1]){
+        RoastAppShopItem *shopItem = [self.shopList1   objectAtIndex:indexPath.row];
+        cell.textLabel.text = shopItem.name;
+    }
+    else{
+        RoastAppShopItem *shopItem = [self.shopList2   objectAtIndex:indexPath.row];
+        cell.textLabel.text = shopItem.name;
+    }
     return cell;
 }
 

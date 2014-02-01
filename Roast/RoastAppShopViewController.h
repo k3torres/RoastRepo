@@ -10,6 +10,7 @@
 
 @interface RoastAppShopViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property NSMutableArray *shopItems;
+@property NSMutableArray *shopList1;
+@property NSMutableArray *shopList2;
 
 @end
