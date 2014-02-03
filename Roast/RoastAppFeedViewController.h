@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RoastAppFeedService.h"
 
 @interface RoastAppFeedViewController : UITableViewController
 
 @property NSMutableArray *feedItems;
+@property RoastAppFeedService *feedService;
 
 @end

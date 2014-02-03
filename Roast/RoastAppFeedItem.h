@@ -11,8 +11,11 @@
 @interface RoastAppFeedItem : NSObject
 
 @property NSString *serviceName;
+@property UIImage *serviceBadge;
+@property UIImage *userPic;
 @property NSString *userName;
 @property NSString *message;
 @property NSDate *timestamp;
+@property NSInteger *poop;
 
 @end
