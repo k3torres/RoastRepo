@@ -1,22 +1,18 @@
 //
-//  RoastAppFeedViewController.m
+//  RoastAppShowListViewController.m
 //  Roast
 //
-//  Created by Alexander Kissinger on 1/24/14.
+//  Created by Alexander Kissinger on 2/4/14.
 //  Copyright (c) 2014 Affiliated. All rights reserved.
 //
 
-#import "RoastAppFeedViewController.h"
-#import "RoastAppFeedItem.h"
-#import "RoastAppFeedProfile.h"
-#import "RoastAppFeedService.h"
-#import "STTwitter.h"
+#import "RoastAppShopListViewController.h"
 
-@interface RoastAppFeedViewController ()
+@interface RoastAppShopListViewController ()
 
 @end
 
-@implementation RoastAppFeedViewController
+@implementation RoastAppShopListViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,37 +26,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    //Images should be 550x225
+    self.shopImages = [[NSMutableArray alloc] init];
+    [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIImage imageNamed:@"caffecalabria.jpg"], @"image",
+                                @"CAFFE CALABRIA", @"name",
+                                Nil]];
+    [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIImage imageNamed:@"coffeeandteacollective.jpg"], @"image",
+                                @"COFFEE & TEA COLLECTIVE", @"name",
+                                Nil]];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.feedItems = [[NSMutableArray alloc] init];
-    
-    //TODO: Read from file
-    RoastAppFeedProfile *feedProfile = [[RoastAppFeedProfile alloc] init];
-    NSMutableArray *userFollowing = [[NSMutableArray alloc] init];
-    [userFollowing addObject:@"birdrockcoffee"];
-    [userFollowing addObject:@"candtcollective"];
-    [userFollowing addObject:@"roastcoachsd"];
-    [userFollowing addObject:@"younghickorysd"];
-        [userFollowing addObject:@"SDCoffeeNetwork"];
-        [userFollowing addObject:@"CaffeCalabria"];
-
-    [feedProfile setUsers:userFollowing];
-    //[feedProfile.users addObject:[NSString @"coffee"]];
-    [feedProfile setEnableFacebook:NO];
-    [feedProfile setEnableInstagram:NO];
-    [feedProfile setEnableTwitter:YES];
-    
-    self.feedService = [[RoastAppFeedService alloc] initWithProfile:feedProfile];
-    [self.feedService populateFeed:self.feedItems withTableView:self.tableView];
-    
-    [self.tableView reloadData];
-    NSLog(@"feedItems Initialized!");
-    NSLog(@"Current feedItems size:%u", [self.feedItems count]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,41 +64,21 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.feedItems count];
+    return [self.shopImages count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"FeedItemCell";
+    static NSString *CellIdentifier = @"ShopListCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    
-    
-    
-    
-    
-    
-
-    
-
     // Configure the cell...
-    RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
-     
-    [(UILabel *)[cell.contentView viewWithTag:10] setText:feedItemAtIndex.userName];
-    [(UIImageView *)[cell.contentView viewWithTag:11] setImage:feedItemAtIndex.serviceBadge];
-    [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
-    [(UILabel *)[cell.contentView viewWithTag:13] setText:feedItemAtIndex.timestamp];
-    [(UIImageView *)[cell.contentView viewWithTag:14] setImage:feedItemAtIndex.userPic];
+    NSDictionary *shopAtIndex = [self.shopImages objectAtIndex:indexPath.row];
     
-    return cell;
-}
+    [(UILabel *)[cell.contentView viewWithTag:11] setText:shopAtIndex[@"name"]];
+    [(UIImageView *)[cell.contentView viewWithTag:10] setImage:shopAtIndex[@"image"]];
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    //XYZToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
-    //tappedItem.completed = !tappedItem.completed;
-    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    return cell;
 }
 
 /*
