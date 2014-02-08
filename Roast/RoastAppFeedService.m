@@ -19,6 +19,9 @@
     self.fbAppID = @"259155417579773";
     self.fbShh = @"3630c8a8b2ef8c2a0152f15c332c15cf";
     
+    self.instagramClient_ID = @"159d17709bf84b329e5fe4a388afe380";
+    self.instagramRedirect_URI = @"http://coffeeapp.cc/logged_in";
+    self.instagramClient_Secret = @"0b453aed8d6e41c48b07a1b570a11815";
     return self;
 }
 

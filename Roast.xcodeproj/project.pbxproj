@@ -27,6 +27,7 @@
 		DC1825D018A6100A007232E6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1825CF18A6100A007232E6 /* FacebookSDK.framework */; };
 		DC1825D918A619F2007232E6 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1825D818A619F2007232E6 /* login.png */; };
 		DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */; };
+		68F1826D18A6061C00506E30 /* RoastAppShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */; };
 		DC1BA3FD18A1EDD200D6370A /* RoastAppShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */; };
 		DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC40FA2C18A5A382002CE7B3 /* twittericon.png */; };
 		DC51FFCD18A5C15600D196C2 /* RoastAppFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFC818A5C15600D196C2 /* RoastAppFeedItem.m */; };
@@ -92,6 +93,8 @@
 		DC1825D818A619F2007232E6 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		DC1825DD18A6215E007232E6 /* RoastAppLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppLoginViewController.h; sourceTree = "<group>"; };
 		DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppLoginViewController.m; sourceTree = "<group>"; };
+		68F1826B18A6061C00506E30 /* RoastAppShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopTableViewController.h; path = Roast/RoastAppShopTableViewController.h; sourceTree = "<group>"; };
+		68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopTableViewController.m; path = Roast/RoastAppShopTableViewController.m; sourceTree = "<group>"; };
 		DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopListViewController.h; sourceTree = "<group>"; };
 		DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopListViewController.m; sourceTree = "<group>"; };
 		DC40FA2C18A5A382002CE7B3 /* twittericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twittericon.png; sourceTree = "<group>"; };
