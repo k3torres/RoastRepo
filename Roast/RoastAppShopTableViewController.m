@@ -1,18 +1,22 @@
 //
-//  RoastAppShowListViewController.m
+//  RoastAppShopTableViewController.m
 //  Roast
 //
-//  Created by Alexander Kissinger on 2/4/14.
+//  Created by KT on 2/4/14.
 //  Copyright (c) 2014 Affiliated. All rights reserved.
 //
 
-#import "RoastAppShopListViewController.h"
+#import "RoastAppShopTableViewController.h"
+#import "RoastAppShopItem.h"
 
-@interface RoastAppShopListViewController ()
-
+@interface RoastAppShopTableViewController ()
+@property  NSMutableArray *shops;
+@property  RoastAppShopItem *shopItem1;
+@property   UIButton *button;
+@property  int counter;
 @end
 
-@implementation RoastAppShopListViewController
+@implementation RoastAppShopTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -20,29 +24,40 @@
     if (self) {
         // Custom initialization
     }
+    
+
+    
     return self;
+}
+-(void)loadInitial
+{
+    self.shopItem1 = [[RoastAppShopItem alloc] init];
+    self.shopItem1.shopImage = [UIImage imageNamed:@"CaffeCalabria1.png"];
+    [self.shops addObject:self.shopItem1];
+    
+    NSMutableArray *buttonArray = [[NSMutableArray alloc] init];
+    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.button setFrame:CGRectMake(0,0,30,30)];
+    [self.button setTitle:@"Drinks" forState:UIControlStateNormal];
+    [buttonArray addObject:self.button];
+    [self.shops addObject:buttonArray];
+    [self.shops addObject:@"Text Field"];
+    self.counter = 0;
+    
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //Images should be 550x225
-    self.shopImages = [[NSMutableArray alloc] init];
-    [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
-                                [UIImage imageNamed:@"caffecalabria.jpg"], @"image",
-                                @"CAFFE CALABRIA", @"name",
-                                Nil]];
-    [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
-                                [UIImage imageNamed:@"coffeeandteacollective.jpg"], @"image",
-                                @"COFFEE & TEA COLLECTIVE", @"name",
-                                Nil]];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+     self.shops = [[NSMutableArray alloc] init];
+    [self loadInitial];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,31 +79,40 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.shopImages count];
+    return [self.shops count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ShopListCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
+
     // Configure the cell...
-    NSDictionary *shopAtIndex = [self.shopImages objectAtIndex:indexPath.row];
-    
-    [(UILabel *)[cell.contentView viewWithTag:11] setText:shopAtIndex[@"name"]];
-    [(UIImageView *)[cell.contentView viewWithTag:10] setImage:shopAtIndex[@"image"]];
+    NSLog(@"what is indexPath = %i", (int)indexPath);
+    NSLog(@"counter = %i", self.counter);
+    if (self.counter < 1) {
+        self.counter++;
+        static NSString *CellIdentifier1 = @"picCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1 forIndexPath:indexPath];
+        [(UIImageView *)[cell.contentView viewWithTag:101] setImage:self.shopItem1.shopImage];
+        return cell;
+    }
+    else if ( self.counter == 1 ){
+        self.counter++;
+        static NSString *CellIdentifier2 = @"menuCell";
+        UITableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2 forIndexPath:indexPath];
+        [cell1 addSubview:self.button];
 
-    return cell;
+        return cell1;
+    }
+    else {
+        static NSString *CellIdentifier3 = @"textCell";
+        UITableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:CellIdentifier3 forIndexPath:indexPath];
+        [cell2.contentView viewWithTag:101];
+        
+        return cell2;
+    }
+    
 }
-
-
-- (IBAction)unwindToShopView:(UIStoryboardSegue *)segue
-
-{
-    
-    
-}
-
 
 /*
 // Override to support conditional editing of the table view.

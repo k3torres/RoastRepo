@@ -17,6 +17,9 @@
 @property STTwitterAPI *twitterService;
 @property NSString *twitterConsumerKey;
 @property NSString *twitterConsumerShh;
+@property NSString *instagramClient_ID;
+@property NSString *instagramRedirect_URI;
+@property NSString *instagramClient_Secret;
 
 @property NSString *fbAppID;
 @property NSString *fbShh;
