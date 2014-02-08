@@ -68,18 +68,15 @@
                           feedItem1.message = status[@"text"];
                           feedItem1.timestamp = status[@"created_at"];
                           feedItem1.userPic = userPic;
-                          feedItem1.id = status[@"id"];
+                          feedItem1.idNum = status[@"id"];
                           
                           [feedArray addObject:feedItem1];
                       }
                       
+                      [[NSNotificationCenter defaultCenter]
+                       postNotificationName:@"TestNotification"
+                       object:self];
                       
-                      [feedArray sortUsingComparator:^NSComparisonResult(RoastAppFeedItem *tweet0, RoastAppFeedItem *tweet1)
-                       {
-                           return [tweet1.id compare:tweet0.id];
-                       }];
-                      
-                      [tableView reloadData];
                       
                   } errorBlock:^(NSError *error)
                   {
@@ -92,10 +89,6 @@
              }];
              
          }
-         
-         
-         
-         
      }
      errorBlock:^(NSError *error)
      {

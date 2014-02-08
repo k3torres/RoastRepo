@@ -61,7 +61,11 @@
     [self.tableView reloadData];
     NSLog(@"feedItems Initialized!");
     NSLog(@"Current feedItems size:%u", [self.feedItems count]);
-}
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadList:)
+                                                 name:@"TestNotification"
+                                               object:nil];}
 
 - (void)didReceiveMemoryWarning
 {
@@ -117,6 +121,21 @@
     //XYZToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
     //tappedItem.completed = !tappedItem.completed;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)reloadList:(NSNotificationCenter *)notification
+{
+    [self.feedItems sortUsingComparator:^NSComparisonResult(RoastAppFeedItem *item0, RoastAppFeedItem *item1)
+     {
+         return [item1.idNum compare:item0.idNum];
+     }];
+    
+    [self.tableView reloadData];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /*

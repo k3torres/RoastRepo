@@ -16,6 +16,6 @@
 @property NSString *userName;
 @property NSString *message;
 @property NSDate *timestamp;
-@property NSInteger *poop;
+@property NSNumber *idNum;
 
 @end

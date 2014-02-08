@@ -26,7 +26,7 @@
 		DC085E22189C673300BE5833 /* RoastAppFeedProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DC085E21189C673300BE5833 /* RoastAppFeedProfile.m */; };
 		DC085E25189C682F00BE5833 /* RoastAppFeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC085E24189C682F00BE5833 /* RoastAppFeedService.m */; };
 		DC1BA3FD18A1EDD200D6370A /* RoastAppShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */; };
-		DC55C4711896FDA300C4675E /* twittericon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC55C4701896FDA300C4675E /* twittericon.png */; };
+		DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC40FA2C18A5A382002CE7B3 /* twittericon.png */; };
 		DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */; };
 		DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */; };
 		DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9221701893560800C67EAD /* RoastAppFeedViewController.m */; };
@@ -88,7 +88,7 @@
 		DC085E24189C682F00BE5833 /* RoastAppFeedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppFeedService.m; sourceTree = "<group>"; };
 		DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopListViewController.h; sourceTree = "<group>"; };
 		DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopListViewController.m; sourceTree = "<group>"; };
-		DC55C4701896FDA300C4675E /* twittericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twittericon.png; sourceTree = "<group>"; };
+		DC40FA2C18A5A382002CE7B3 /* twittericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twittericon.png; sourceTree = "<group>"; };
 		DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = coffeeandteacollective.jpg; path = ../coffeeandteacollective.jpg; sourceTree = "<group>"; };
 		DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = caffecalabria.jpg; path = ../caffecalabria.jpg; sourceTree = "<group>"; };
 		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedViewController.h; path = Roast/RoastAppFeedViewController.h; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		683BC66E188A48F30027D7F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DC55C4701896FDA300C4675E /* twittericon.png */,
+				DC40FA2C18A5A382002CE7B3 /* twittericon.png */,
 				683BC66F188A48F30027D7F2 /* Roast-Info.plist */,
 				683BC670188A48F30027D7F2 /* InfoPlist.strings */,
 				683BC673188A48F30027D7F2 /* main.m */,
@@ -394,10 +394,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */,
 				683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */,
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
-				DC55C4711896FDA300C4675E /* twittericon.png in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
 			);
