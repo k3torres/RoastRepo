@@ -16,6 +16,8 @@
 {
     self.twitterConsumerKey = @"FBx0CGvWk5aNx809oOTA";
     self.twitterConsumerShh = @"tQATEamxHiy61VtFumuAKpps1snMJDd8vSVjOEeIw";
+    self.fbAppID = @"259155417579773";
+    self.fbShh = @"3630c8a8b2ef8c2a0152f15c332c15cf";
     
     return self;
 }
@@ -43,7 +45,6 @@
     [self connectTwitter];
     
     //Twitter Request
-    
     [self.twitterService verifyCredentialsWithSuccessBlock:^(NSString *bearerToken)
      {
          for(NSString *user in self.feedProfile.users)

@@ -62,6 +62,7 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Feed" id="pPo-tk-42O">
+                        <barButtonItem key="backBarButtonItem" title="Logout" id="Ho2-of-ZFb"/>
                         <barButtonItem key="rightBarButtonItem" title="Shops" id="agV-YI-LaZ">
                             <connections>
                                 <segue destination="LOT-JR-Ki4" kind="push" id="MlW-T9-aGu"/>
@@ -224,24 +225,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhq-Gf-inE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="-346"/>
+            <point key="canvasLocation" x="-916" y="406"/>
+        </scene>
+        <!--Roast App Login View Controller-->
+        <scene sceneID="gP1-26-6Ow">
+            <objects>
+                <viewController id="ycV-7D-lgR" customClass="RoastAppLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k6F-8m-DhO"/>
+                        <viewControllerLayoutGuide type="bottom" id="1e1-3m-Q1p"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HQ8-gF-1B9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login.png" translatesAutoresizingMaskIntoConstraints="NO" id="eoD-4n-IrS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HZn-uO-QuA" customClass="FBLoginView">
+                                <rect key="frame" x="20" y="366" width="280" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ycV-7D-lgR" id="WgZ-7w-D7X"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="roast." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTG-gB-psj">
+                                <rect key="frame" x="37" y="176" width="256" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9J6-vB-dMt">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hSP-30-bBL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tHc-SH-o4y">
+                                <rect key="frame" x="273" y="7" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="k1a-9X-DLR" kind="push" identifier="login" id="zap-d1-4rv"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxo-mK-OUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="-322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="38W-xS-Lnx">
             <objects>
                 <navigationController definesPresentationContext="YES" id="NUJ-Mp-fbm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FTz-bf-VSC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQj-ns-RNr">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="k1a-9X-DLR" kind="relationship" relationship="rootViewController" id="H8H-A4-xn6"/>
+                        <segue destination="ycV-7D-lgR" kind="relationship" relationship="rootViewController" id="fr0-Xv-mt4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHJ-KY-Qf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608" y="-322"/>
+            <point key="canvasLocation" x="-926" y="-316"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login.png" width="528" height="839"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

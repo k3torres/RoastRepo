@@ -18,6 +18,9 @@
 @property NSString *twitterConsumerKey;
 @property NSString *twitterConsumerShh;
 
+@property NSString *fbAppID;
+@property NSString *fbShh;
+
 - (id)init;
 - (id)initWithProfile:(RoastAppFeedProfile *)newProfile;
 - (STTwitterAPI *)connectTwitter;
