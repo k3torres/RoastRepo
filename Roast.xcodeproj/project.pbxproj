@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6681A36318A61A1700D5324D /* RoastAppServerImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */; };
 		66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */; };
 		66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B892821895D8390030CE6E /* RoastAppShopViewController.m */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
@@ -59,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6681A36118A61A1700D5324D /* RoastAppServerImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppServerImageHandler.h; sourceTree = "<group>"; };
+		6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppServerImageHandler.m; sourceTree = "<group>"; };
 		66B0870918936DB10045B805 /* RoastAppJSONHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppJSONHandler.h; path = Roast/RoastAppJSONHandler.h; sourceTree = "<group>"; };
 		66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppJSONHandler.m; path = Roast/RoastAppJSONHandler.m; sourceTree = "<group>"; };
 		66B892811895D8390030CE6E /* RoastAppShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopViewController.h; path = Roast/RoastAppShopViewController.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 			children = (
 				66B0870918936DB10045B805 /* RoastAppJSONHandler.h */,
 				66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */,
+				6681A36118A61A1700D5324D /* RoastAppServerImageHandler.h */,
+				6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */,
 			);
 			name = "Networking Services";
 			path = ..;
@@ -434,6 +439,7 @@
 				683BC674188A48F30027D7F2 /* main.m in Sources */,
 				66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */,
 				66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */,
+				6681A36318A61A1700D5324D /* RoastAppServerImageHandler.m in Sources */,
 				66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */,
 				DC1BA3FD18A1EDD200D6370A /* RoastAppShopListViewController.m in Sources */,
 				DC51FFCF18A5C15600D196C2 /* RoastAppFeedService.m in Sources */,

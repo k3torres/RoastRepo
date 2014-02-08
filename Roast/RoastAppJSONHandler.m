@@ -21,7 +21,7 @@ NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 
 NSArray *queryResult;
 
-//Function for making JSON requests, paramaterized by query type as described above
+// Function for making JSON requests, paramaterized by query type as described above
 +(NSArray *) makeJSONRequest:(int)queryType :(NSString *)cafe{
     
     switch (queryType)
@@ -63,9 +63,9 @@ NSArray *queryResult;
 }
 
 //Query: Select * from roast.drinks where foodName like '% cafe %'
-+(NSArray *)requestCafeFoods:(NSString *)cafeFood{
++(NSArray *)requestCafeFoods:(NSString *)cafeName{
     
-    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeFoods?cafe="] stringByAppendingString:cafeFood];
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeFoods?cafe="] stringByAppendingString:cafeName];
     
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
