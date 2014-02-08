@@ -22,19 +22,19 @@ NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 NSArray *queryResult;
 
 //Function for making JSON requests, paramaterized by query type as described above
-+(NSArray *) makeJSONRequest:(int)queryType {
++(NSArray *) makeJSONRequest:(int)queryType :(NSString *)cafe{
     
     switch (queryType)
     {
         case 0:
             
-            return [RoastAppJSONHandler requestAllCafes];
+            return [RoastAppJSONHandler requestCafeDrinks:cafe];
             
             break;
             
         case 1:
             
-            return [RoastAppJSONHandler requestAllDrinks];
+            return [RoastAppJSONHandler requestCafeFoods:cafe];
             break;
             
         default:
@@ -46,10 +46,10 @@ NSArray *queryResult;
     return nil;
 }
 
-//Query: Select * from roast.cafes
-+(NSArray *)requestAllCafes{
+//Query: Select * from roast.cafes where cafeName like '% cafe %'
++(NSArray *)requestCafeDrinks:(NSString*)cafeName{
     
-    NSString *fullURL = [baseURL stringByAppendingString:@"ListAllCafes"];
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeDrinks?cafe="] stringByAppendingString:cafeName];
     
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
@@ -62,10 +62,10 @@ NSArray *queryResult;
     return queryResult;
 }
 
-//Query: Select * from roast.drinks
-+(NSArray *)requestAllDrinks{
+//Query: Select * from roast.drinks where foodName like '% cafe %'
++(NSArray *)requestCafeFoods:(NSString *)cafeFood{
     
-    NSString *fullURL = [baseURL stringByAppendingString:@"ListAllDrinks"];
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeFoods?cafe="] stringByAppendingString:cafeFood];
     
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];

@@ -18,7 +18,9 @@
 
 - (void)loadInitialData
 {
-    NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:0];
+    //This is just an arbitrary selection so that shop view has something to show
+    NSString * initialCafe = @"caffe";
+    NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:0 :initialCafe];
     
     if(queryResult != nil){
         
@@ -32,7 +34,7 @@
         }
     }
     
-    queryResult = [RoastAppJSONHandler makeJSONRequest:1];
+    queryResult = [RoastAppJSONHandler makeJSONRequest:1 :initialCafe];
     
     if(queryResult != nil){
         

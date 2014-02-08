@@ -12,6 +12,6 @@
 
 @property (strong) NSArray *queryResult;
 
-+(NSArray *) makeJSONRequest:(int)queryType;
++(NSArray *) makeJSONRequest:(int)queryType :(NSString *)cafe;
 
 @end
