@@ -20,11 +20,15 @@
 @property NSString *instagramClient_ID;
 @property NSString *instagramRedirect_URI;
 @property NSString *instagramClient_Secret;
+@property NSString *instagramAuthURL;
+@property NSString *instagramAPIURL;
+@property NSString *instagramTagURL;
 
 - (id)init;
 - (id)initWithProfile:(RoastAppFeedProfile *)newProfile;
 - (STTwitterAPI *)connectTwitter;
 -(NSMutableArray *)populateFeed:(NSMutableArray *)feedArray withTableView:(UITableView *)tableView;
-
+-(void)getAccessToken;
 
 @end
+

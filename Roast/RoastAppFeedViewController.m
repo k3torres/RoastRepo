@@ -42,20 +42,29 @@
     //TODO: Read from file
     RoastAppFeedProfile *feedProfile = [[RoastAppFeedProfile alloc] init];
     NSMutableArray *userFollowing = [[NSMutableArray alloc] init];
+    NSMutableArray *tagFollowing = [[NSMutableArray alloc] init];
+    
     [userFollowing addObject:@"birdrockcoffee"];
     [userFollowing addObject:@"candtcollective"];
     [userFollowing addObject:@"roastcoachsd"];
     [userFollowing addObject:@"younghickorysd"];
         [userFollowing addObject:@"SDCoffeeNetwork"];
         [userFollowing addObject:@"CaffeCalabria"];
-
+    
+    //adding tags for instagram
+    [tagFollowing addObject:@"candtcollective"];
+    [tagFollowing addObject:@"younghickorysd"];
+    [tagFollowing addObject:@"birdrockcoffeeroasters"];
+    
+    [feedProfile setTags:tagFollowing];
     [feedProfile setUsers:userFollowing];
     //[feedProfile.users addObject:[NSString @"coffee"]];
     [feedProfile setEnableFacebook:NO];
-    [feedProfile setEnableInstagram:NO];
+    [feedProfile setEnableInstagram:YES];
     [feedProfile setEnableTwitter:YES];
     
     self.feedService = [[RoastAppFeedService alloc] initWithProfile:feedProfile];
+    
     [self.feedService populateFeed:self.feedItems withTableView:self.tableView];
     
     [self.tableView reloadData];
@@ -65,7 +74,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reloadList:)
                                                  name:@"TestNotification"
-                                               object:nil];}
+                                               object:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -94,15 +104,6 @@
     static NSString *CellIdentifier = @"FeedItemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    
-    
-    
-    
-    
-    
-
-    
-
     // Configure the cell...
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
      
@@ -127,7 +128,7 @@
 {
     [self.feedItems sortUsingComparator:^NSComparisonResult(RoastAppFeedItem *item0, RoastAppFeedItem *item1)
      {
-         return [item1.idNum compare:item0.idNum];
+         return [item1.timestamp compare:item0.timestamp];
      }];
     
     [self.tableView reloadData];
