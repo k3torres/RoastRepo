@@ -17,6 +17,9 @@
 {
     self.twitterConsumerKey = @"FBx0CGvWk5aNx809oOTA";
     self.twitterConsumerShh = @"tQATEamxHiy61VtFumuAKpps1snMJDd8vSVjOEeIw";
+    self.fbAppID = @"259155417579773";
+    self.fbShh = @"3630c8a8b2ef8c2a0152f15c332c15cf";
+    
     self.instagramClient_ID = @"159d17709bf84b329e5fe4a388afe380";
     self.instagramAuthURL   = @"https://instagram.com/oauth/authorize/?";
     self.instagramTagURL    = @"https://api.instagram.com/v1/tags/";
@@ -51,7 +54,6 @@
     [self connectTwitter];
     
     //Twitter Request
-    
     [self.twitterService verifyCredentialsWithSuccessBlock:^(NSString *bearerToken)
      {
          for(NSString *user in self.feedProfile.users)

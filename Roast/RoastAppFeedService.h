@@ -24,6 +24,9 @@
 @property NSString *instagramAPIURL;
 @property NSString *instagramTagURL;
 
+@property NSString *fbAppID;
+@property NSString *fbShh;
+
 - (id)init;
 - (id)initWithProfile:(RoastAppFeedProfile *)newProfile;
 - (STTwitterAPI *)connectTwitter;
