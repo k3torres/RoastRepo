@@ -42,6 +42,8 @@
     //TODO: Read from file
     RoastAppFeedProfile *feedProfile = [[RoastAppFeedProfile alloc] init];
     NSMutableArray *userFollowing = [[NSMutableArray alloc] init];
+    NSMutableArray *tagFollowing = [[NSMutableArray alloc] init];
+    
     [userFollowing addObject:@"birdrockcoffee"];
     [userFollowing addObject:@"candtcollective"];
     [userFollowing addObject:@"roastcoachsd"];
@@ -56,6 +58,7 @@
     [feedProfile setEnableTwitter:YES];
     
     self.feedService = [[RoastAppFeedService alloc] initWithProfile:feedProfile];
+    
     [self.feedService populateFeed:self.feedItems withTableView:self.tableView];
     self.feedDateFormat = @"EEE h:mm a MM.dd.yyyy";
     
@@ -66,7 +69,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reloadList:)
                                                  name:@"TestNotification"
-                                               object:nil];}
+                                               object:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -93,15 +97,6 @@
     static NSString *CellIdentifier = @"FeedItemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    
-    
-    
-    
-    
-    
-
-    
-
     // Configure the cell...
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
     

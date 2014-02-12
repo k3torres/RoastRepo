@@ -11,6 +11,7 @@
 		66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */; };
 		66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B892821895D8390030CE6E /* RoastAppShopViewController.m */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
+		680C03C818A73F0700E5111D /* instagramicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680C03C718A73F0700E5111D /* instagramicon.png */; };
 		683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC667188A48F30027D7F2 /* Foundation.framework */; };
 		683BC66A188A48F30027D7F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC669188A48F30027D7F2 /* CoreGraphics.framework */; };
 		683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC66B188A48F30027D7F2 /* UIKit.framework */; };
@@ -54,6 +55,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		680C04F418A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C03ED18A7829900E5111D /* FriendPickerSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2D6B80E15413A570050835F;
+			remoteInfo = FriendPickerSample;
+		};
+		680C04F718A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C040718A7829900E5111D /* GraphApiSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E251173D152BB6FE00CB342A;
+			remoteInfo = GraphApiSample;
+		};
+		680C04FA18A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C042118A7829900E5111D /* HelloFacebookSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F6AF1891532A37B00DDBD75;
+			remoteInfo = HelloFacebookSample;
+		};
+		680C04FD18A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C043B18A7829900E5111D /* PlacePickerSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B9AF4BA4152E43EE00E9BA6C;
+			remoteInfo = PlacePickerSample;
+		};
+		680C050018A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C045518A7829900E5111D /* ProfilePictureSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B98686B8151D0B3700616412;
+			remoteInfo = ProfilePictureSample;
+		};
+		680C050318A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C048A18A7829A00E5111D /* RPSSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84070D161540AA2B00E39703;
+			remoteInfo = RPSSample;
+		};
+		680C050618A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C04B218A7829A00E5111D /* Scrumptious.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B9CD0A6F150EA4DD00560A93;
+			remoteInfo = Scrumptious;
+		};
+		680C050918A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C04CC18A7829A00E5111D /* SessionLoginSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84C757B8152A38770070DD9C;
+			remoteInfo = SessionLoginSample;
+		};
+		680C050C18A7829B00E5111D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 856DB049153393C3006F6A33;
+			remoteInfo = SwitchUserSample;
+		};
 		683BC684188A48F30027D7F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 683BC65C188A48F30027D7F2 /* Project object */;
@@ -73,6 +137,236 @@
 		66FE40531895F1A6003AAE61 /* RoastAppShopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopItem.h; path = Roast/RoastAppShopItem.h; sourceTree = "<group>"; };
 		66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopItem.m; path = Roast/RoastAppShopItem.m; sourceTree = "<group>"; };
 		680C03C618A608CB00E5111D /* CaffeCalabria1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaffeCalabria1.png; sourceTree = "<group>"; };
+		680C03C718A73F0700E5111D /* instagramicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagramicon.png; sourceTree = "<group>"; };
+		680C03C918A7819D00E5111D /* FacebookSDK-131121.unitypackage */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FacebookSDK-131121.unitypackage"; path = "../../Downloads/FacebookSDK-131121.unitypackage"; sourceTree = "<group>"; };
+		680C03CB18A7820D00E5111D /* facebook-ios-sdk-3.12.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; name = "facebook-ios-sdk-3.12.pkg"; path = "../../Downloads/facebook-ios-sdk-3.12.pkg"; sourceTree = "<group>"; };
+		680C03CE18A7829900E5111D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		680C03CF18A7829900E5111D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		680C03D018A7829900E5111D /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		680C03D318A7829900E5111D /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		680C03D418A7829900E5111D /* Project-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
+		680C03D518A7829900E5111D /* Project-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
+		680C03D618A7829900E5111D /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		680C03D918A7829900E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C03DA18A7829900E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C03DB18A7829900E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C03DD18A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FPViewController_iPad.xib; sourceTree = "<group>"; };
+		680C03DF18A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FPViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C03E118A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C03E218A7829900E5111D /* FPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPAppDelegate.h; sourceTree = "<group>"; };
+		680C03E318A7829900E5111D /* FPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPAppDelegate.m; sourceTree = "<group>"; };
+		680C03E418A7829900E5111D /* FPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPViewController.h; sourceTree = "<group>"; };
+		680C03E518A7829900E5111D /* FPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPViewController.m; sourceTree = "<group>"; };
+		680C03E618A7829900E5111D /* FriendPickerSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FriendPickerSample-Info.plist"; sourceTree = "<group>"; };
+		680C03E718A7829900E5111D /* FriendPickerSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FriendPickerSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C03E818A7829900E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C03E918A7829900E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C03EA18A7829900E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C03EB18A7829900E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C03EC18A7829900E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C03ED18A7829900E5111D /* FriendPickerSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FriendPickerSample.xcodeproj; sourceTree = "<group>"; };
+		680C03F018A7829900E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C03F318A7829900E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C03F418A7829900E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C03F518A7829900E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C03F718A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GraphApiViewController_iPad.xib; sourceTree = "<group>"; };
+		680C03F918A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GraphApiViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C03FB18A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C03FC18A7829900E5111D /* GraphApiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphApiAppDelegate.h; sourceTree = "<group>"; };
+		680C03FD18A7829900E5111D /* GraphApiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphApiAppDelegate.m; sourceTree = "<group>"; };
+		680C03FE18A7829900E5111D /* GraphApiSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GraphApiSample-Info.plist"; sourceTree = "<group>"; };
+		680C03FF18A7829900E5111D /* GraphApiSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraphApiSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C040018A7829900E5111D /* GraphApiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphApiViewController.h; sourceTree = "<group>"; };
+		680C040118A7829900E5111D /* GraphApiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphApiViewController.m; sourceTree = "<group>"; };
+		680C040218A7829900E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C040318A7829900E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C040418A7829900E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C040518A7829900E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C040618A7829900E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C040718A7829900E5111D /* GraphApiSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GraphApiSample.xcodeproj; sourceTree = "<group>"; };
+		680C040A18A7829900E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C040D18A7829900E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C040E18A7829900E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C040F18A7829900E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C041118A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HFViewController_iPad.xib; sourceTree = "<group>"; };
+		680C041318A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HFViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C041518A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C041618A7829900E5111D /* HelloFacebookSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloFacebookSample-Info.plist"; sourceTree = "<group>"; };
+		680C041718A7829900E5111D /* HelloFacebookSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloFacebookSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C041818A7829900E5111D /* HFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFAppDelegate.h; sourceTree = "<group>"; };
+		680C041918A7829900E5111D /* HFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFAppDelegate.m; sourceTree = "<group>"; };
+		680C041A18A7829900E5111D /* HFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFViewController.h; sourceTree = "<group>"; };
+		680C041B18A7829900E5111D /* HFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFViewController.m; sourceTree = "<group>"; };
+		680C041C18A7829900E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C041D18A7829900E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C041E18A7829900E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C041F18A7829900E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C042018A7829900E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C042118A7829900E5111D /* HelloFacebookSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HelloFacebookSample.xcodeproj; sourceTree = "<group>"; };
+		680C042418A7829900E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C042718A7829900E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C042818A7829900E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C042918A7829900E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C042B18A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C042D18A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPViewController_iPad.xib; sourceTree = "<group>"; };
+		680C042F18A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C043018A7829900E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C043118A7829900E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C043218A7829900E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C043318A7829900E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C043418A7829900E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C043518A7829900E5111D /* PlacePickerSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlacePickerSample-Info.plist"; sourceTree = "<group>"; };
+		680C043618A7829900E5111D /* PlacePickerSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlacePickerSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C043718A7829900E5111D /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
+		680C043818A7829900E5111D /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
+		680C043918A7829900E5111D /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
+		680C043A18A7829900E5111D /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
+		680C043B18A7829900E5111D /* PlacePickerSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PlacePickerSample.xcodeproj; sourceTree = "<group>"; };
+		680C043E18A7829900E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C044118A7829900E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C044218A7829900E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C044318A7829900E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C044518A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C044718A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPViewController_iPad.xib; sourceTree = "<group>"; };
+		680C044918A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C044A18A7829900E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C044B18A7829900E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C044C18A7829900E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C044D18A7829900E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C044E18A7829900E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C044F18A7829900E5111D /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
+		680C045018A7829900E5111D /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
+		680C045118A7829900E5111D /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
+		680C045218A7829900E5111D /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
+		680C045318A7829900E5111D /* ProfilePictureSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProfilePictureSample-Info.plist"; sourceTree = "<group>"; };
+		680C045418A7829900E5111D /* ProfilePictureSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProfilePictureSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C045518A7829900E5111D /* ProfilePictureSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ProfilePictureSample.xcodeproj; sourceTree = "<group>"; };
+		680C045818A7829900E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C045A18A7829900E5111D /* post_app_objects.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = post_app_objects.sh; sourceTree = "<group>"; };
+		680C045B18A7829900E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C045D18A7829900E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C045E18A7829900E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C045F18A7829900E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C046118A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C046318A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RPSFriendsViewController_iPad.xib; sourceTree = "<group>"; };
+		680C046518A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RPSFriendsViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C046718A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RPSGameViewController_iPad.xib; sourceTree = "<group>"; };
+		680C046918A7829900E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RPSGameViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C046A18A7829900E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C046B18A7829900E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C046C18A7829900E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C046D18A7829900E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C046E18A7829900E5111D /* IconFacebook-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconFacebook-72@2x.png"; sourceTree = "<group>"; };
+		680C046F18A7829900E5111D /* left-paper-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-paper-128.png"; sourceTree = "<group>"; };
+		680C047018A7829900E5111D /* left-paper-88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-paper-88.png"; sourceTree = "<group>"; };
+		680C047118A7829900E5111D /* left-rock-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-rock-128.png"; sourceTree = "<group>"; };
+		680C047218A7829900E5111D /* left-rock-88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-rock-88.png"; sourceTree = "<group>"; };
+		680C047318A7829900E5111D /* left-scissors-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-scissors-128.png"; sourceTree = "<group>"; };
+		680C047418A7829900E5111D /* left-scissors-88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-scissors-88.png"; sourceTree = "<group>"; };
+		680C047518A7829900E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C047618A7829900E5111D /* OGProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGProtocols.h; sourceTree = "<group>"; };
+		680C047718A7829A00E5111D /* right-paper-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-paper-128.png"; sourceTree = "<group>"; };
+		680C047818A7829A00E5111D /* right-paper-88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-paper-88.png"; sourceTree = "<group>"; };
+		680C047918A7829A00E5111D /* right-rock-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-rock-128.png"; sourceTree = "<group>"; };
+		680C047A18A7829A00E5111D /* right-rock-88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-rock-88.png"; sourceTree = "<group>"; };
+		680C047B18A7829A00E5111D /* right-scissors-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-scissors-128.png"; sourceTree = "<group>"; };
+		680C047C18A7829A00E5111D /* right-scissors-88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-scissors-88.png"; sourceTree = "<group>"; };
+		680C047D18A7829A00E5111D /* RPSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSAppDelegate.h; sourceTree = "<group>"; };
+		680C047E18A7829A00E5111D /* RPSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSAppDelegate.m; sourceTree = "<group>"; };
+		680C047F18A7829A00E5111D /* RPSCommonObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSCommonObjects.h; sourceTree = "<group>"; };
+		680C048018A7829A00E5111D /* RPSCommonObjects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSCommonObjects.m; sourceTree = "<group>"; };
+		680C048118A7829A00E5111D /* RPSDeeplyLinkedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSDeeplyLinkedViewController.h; sourceTree = "<group>"; };
+		680C048218A7829A00E5111D /* RPSDeeplyLinkedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSDeeplyLinkedViewController.m; sourceTree = "<group>"; };
+		680C048318A7829A00E5111D /* RPSDeeplyLinkedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPSDeeplyLinkedViewController.xib; sourceTree = "<group>"; };
+		680C048418A7829A00E5111D /* RPSFriendsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSFriendsViewController.h; sourceTree = "<group>"; };
+		680C048518A7829A00E5111D /* RPSFriendsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSFriendsViewController.m; sourceTree = "<group>"; };
+		680C048618A7829A00E5111D /* RPSGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSGameViewController.h; sourceTree = "<group>"; };
+		680C048718A7829A00E5111D /* RPSGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSGameViewController.m; sourceTree = "<group>"; };
+		680C048818A7829A00E5111D /* RPSSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RPSSample-Info.plist"; sourceTree = "<group>"; };
+		680C048918A7829A00E5111D /* RPSSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RPSSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C048A18A7829A00E5111D /* RPSSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RPSSample.xcodeproj; sourceTree = "<group>"; };
+		680C048E18A7829A00E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C048F18A7829A00E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C049018A7829A00E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C049118A7829A00E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C049318A7829A00E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C049418A7829A00E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C049518A7829A00E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C049718A7829A00E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C049918A7829A00E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Scrumptious.strings; sourceTree = "<group>"; };
+		680C049B18A7829A00E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SCViewController.xib; sourceTree = "<group>"; };
+		680C049C18A7829A00E5111D /* FacebookSDKOverrides.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKOverrides.bundle; sourceTree = "<group>"; };
+		680C049D18A7829A00E5111D /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Scrumptious.strings; sourceTree = "<group>"; };
+		680C049F18A7829A00E5111D /* action-eating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action-eating.png"; sourceTree = "<group>"; };
+		680C04A018A7829A00E5111D /* action-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action-location.png"; sourceTree = "<group>"; };
+		680C04A118A7829A00E5111D /* action-people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action-people.png"; sourceTree = "<group>"; };
+		680C04A218A7829A00E5111D /* action-photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action-photo.png"; sourceTree = "<group>"; };
+		680C04A318A7829A00E5111D /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		680C04A418A7829A00E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C04A518A7829A00E5111D /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		680C04A618A7829A00E5111D /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		680C04A718A7829A00E5111D /* SCLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCLoginViewController.h; sourceTree = "<group>"; };
+		680C04A818A7829A00E5111D /* SCLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCLoginViewController.m; sourceTree = "<group>"; };
+		680C04A918A7829A00E5111D /* SCLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCLoginViewController.xib; sourceTree = "<group>"; };
+		680C04AA18A7829A00E5111D /* SCPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCPhotoViewController.h; sourceTree = "<group>"; };
+		680C04AB18A7829A00E5111D /* SCPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCPhotoViewController.m; sourceTree = "<group>"; };
+		680C04AC18A7829A00E5111D /* SCPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCPhotoViewController.xib; sourceTree = "<group>"; };
+		680C04AD18A7829A00E5111D /* SCProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProtocols.h; sourceTree = "<group>"; };
+		680C04AE18A7829A00E5111D /* scrumptious-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "scrumptious-Info.plist"; sourceTree = "<group>"; };
+		680C04AF18A7829A00E5111D /* scrumptious-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "scrumptious-Prefix.pch"; sourceTree = "<group>"; };
+		680C04B018A7829A00E5111D /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		680C04B118A7829A00E5111D /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		680C04B218A7829A00E5111D /* Scrumptious.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Scrumptious.xcodeproj; sourceTree = "<group>"; };
+		680C04B618A7829A00E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C04B818A7829A00E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C04B918A7829A00E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C04BA18A7829A00E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C04BC18A7829A00E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C04BE18A7829A00E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLViewController_iPad.xib; sourceTree = "<group>"; };
+		680C04C018A7829A00E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C04C118A7829A00E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C04C218A7829A00E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C04C318A7829A00E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C04C418A7829A00E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C04C518A7829A00E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C04C618A7829A00E5111D /* SessionLoginSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SessionLoginSample-Info.plist"; sourceTree = "<group>"; };
+		680C04C718A7829A00E5111D /* SessionLoginSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SessionLoginSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C04C818A7829A00E5111D /* SLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAppDelegate.h; sourceTree = "<group>"; };
+		680C04C918A7829A00E5111D /* SLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAppDelegate.m; sourceTree = "<group>"; };
+		680C04CA18A7829A00E5111D /* SLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLViewController.h; sourceTree = "<group>"; };
+		680C04CB18A7829A00E5111D /* SLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLViewController.m; sourceTree = "<group>"; };
+		680C04CC18A7829A00E5111D /* SessionLoginSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SessionLoginSample.xcodeproj; sourceTree = "<group>"; };
+		680C04D018A7829A00E5111D /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		680C04D218A7829A00E5111D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		680C04D318A7829A00E5111D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		680C04D418A7829A00E5111D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		680C04D618A7829A00E5111D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		680C04D718A7829A00E5111D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		680C04D818A7829A00E5111D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		680C04D918A7829A00E5111D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		680C04DA18A7829A00E5111D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		680C04DB18A7829A00E5111D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680C04DC18A7829A00E5111D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680C04DD18A7829A00E5111D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680C04DE18A7829A00E5111D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		680C04DF18A7829A00E5111D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		680C04E018A7829A00E5111D /* SUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAppDelegate.h; sourceTree = "<group>"; };
+		680C04E118A7829A00E5111D /* SUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAppDelegate.m; sourceTree = "<group>"; };
+		680C04E218A7829A00E5111D /* SUProfileTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUProfileTableViewCell.h; sourceTree = "<group>"; };
+		680C04E318A7829A00E5111D /* SUProfileTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUProfileTableViewCell.m; sourceTree = "<group>"; };
+		680C04E418A7829A00E5111D /* SUSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUSettingsViewController.h; sourceTree = "<group>"; };
+		680C04E518A7829A00E5111D /* SUSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUSettingsViewController.m; sourceTree = "<group>"; };
+		680C04E618A7829A00E5111D /* SUSettingsViewController_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SUSettingsViewController_iPad.xib; sourceTree = "<group>"; };
+		680C04E718A7829A00E5111D /* SUSettingsViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SUSettingsViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C04E818A7829A00E5111D /* SUUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUUserManager.h; sourceTree = "<group>"; };
+		680C04E918A7829A00E5111D /* SUUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUUserManager.m; sourceTree = "<group>"; };
+		680C04EA18A7829A00E5111D /* SUUsingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUUsingViewController.h; sourceTree = "<group>"; };
+		680C04EB18A7829A00E5111D /* SUUsingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUUsingViewController.m; sourceTree = "<group>"; };
+		680C04EC18A7829A00E5111D /* SUUsingViewController_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SUUsingViewController_iPad.xib; sourceTree = "<group>"; };
+		680C04ED18A7829A00E5111D /* SUUsingViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SUUsingViewController_iPhone.xib; sourceTree = "<group>"; };
+		680C04EE18A7829A00E5111D /* SwitchUserSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwitchUserSample-Info.plist"; sourceTree = "<group>"; };
+		680C04EF18A7829A00E5111D /* SwitchUserSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwitchUserSample-Prefix.pch"; sourceTree = "<group>"; };
+		680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwitchUserSample.xcodeproj; sourceTree = "<group>"; };
 		683BC664188A48F30027D7F2 /* Roast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683BC667188A48F30027D7F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		683BC669188A48F30027D7F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -144,13 +438,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1825D018A6100A007232E6 /* FacebookSDK.framework in Frameworks */,
 				DCCF44DA189C2CD20098F3E9 /* Social.framework in Frameworks */,
 				DCCF44D8189C2CB90098F3E9 /* Twitter.framework in Frameworks */,
 				DCCF44D6189C2CB20098F3E9 /* Accounts.framework in Frameworks */,
 				683BC66A188A48F30027D7F2 /* CoreGraphics.framework in Frameworks */,
 				683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */,
 				683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */,
-				DC1825D018A6100A007232E6 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +503,480 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		680C03CD18A7829900E5111D /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				680C03CE18A7829900E5111D /* FacebookSDK.framework */,
+				680C03CF18A7829900E5111D /* LICENSE */,
+				680C03D018A7829900E5111D /* README.txt */,
+				680C03D118A7829900E5111D /* Samples */,
+			);
+			name = FacebookSDK;
+			path = ../FacebookSDK;
+			sourceTree = "<group>";
+		};
+		680C03D118A7829900E5111D /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				680C03D218A7829900E5111D /* Configurations */,
+				680C03D718A7829900E5111D /* FriendPickerSample */,
+				680C03F118A7829900E5111D /* GraphApiSample */,
+				680C040B18A7829900E5111D /* HelloFacebookSample */,
+				680C042518A7829900E5111D /* PlacePickerSample */,
+				680C043F18A7829900E5111D /* ProfilePictureSample */,
+				680C045918A7829900E5111D /* RPSSample */,
+				680C048D18A7829A00E5111D /* Scrumptious */,
+				680C04B518A7829A00E5111D /* SessionLoginSample */,
+				680C04CF18A7829A00E5111D /* SwitchUserSample */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		680C03D218A7829900E5111D /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				680C03D318A7829900E5111D /* Application.xcconfig */,
+				680C03D418A7829900E5111D /* Project-Debug.xcconfig */,
+				680C03D518A7829900E5111D /* Project-Release.xcconfig */,
+				680C03D618A7829900E5111D /* Project.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		680C03D718A7829900E5111D /* FriendPickerSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C03D818A7829900E5111D /* FriendPickerSample */,
+				680C03ED18A7829900E5111D /* FriendPickerSample.xcodeproj */,
+				680C03F018A7829900E5111D /* ReadMe.txt */,
+			);
+			path = FriendPickerSample;
+			sourceTree = "<group>";
+		};
+		680C03D818A7829900E5111D /* FriendPickerSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C03D918A7829900E5111D /* Default-568h@2x.png */,
+				680C03DA18A7829900E5111D /* Default.png */,
+				680C03DB18A7829900E5111D /* Default@2x.png */,
+				680C03DC18A7829900E5111D /* FPViewController_iPad.xib */,
+				680C03DE18A7829900E5111D /* FPViewController_iPhone.xib */,
+				680C03E018A7829900E5111D /* InfoPlist.strings */,
+				680C03E218A7829900E5111D /* FPAppDelegate.h */,
+				680C03E318A7829900E5111D /* FPAppDelegate.m */,
+				680C03E418A7829900E5111D /* FPViewController.h */,
+				680C03E518A7829900E5111D /* FPViewController.m */,
+				680C03E618A7829900E5111D /* FriendPickerSample-Info.plist */,
+				680C03E718A7829900E5111D /* FriendPickerSample-Prefix.pch */,
+				680C03E818A7829900E5111D /* Icon-72.png */,
+				680C03E918A7829900E5111D /* Icon-72@2x.png */,
+				680C03EA18A7829900E5111D /* Icon.png */,
+				680C03EB18A7829900E5111D /* Icon@2x.png */,
+				680C03EC18A7829900E5111D /* main.m */,
+			);
+			path = FriendPickerSample;
+			sourceTree = "<group>";
+		};
+		680C03EE18A7829900E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C04F518A7829B00E5111D /* FriendPickerSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C03F118A7829900E5111D /* GraphApiSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C03F218A7829900E5111D /* GraphApiSample */,
+				680C040718A7829900E5111D /* GraphApiSample.xcodeproj */,
+				680C040A18A7829900E5111D /* ReadMe.txt */,
+			);
+			path = GraphApiSample;
+			sourceTree = "<group>";
+		};
+		680C03F218A7829900E5111D /* GraphApiSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C03F318A7829900E5111D /* Default-568h@2x.png */,
+				680C03F418A7829900E5111D /* Default.png */,
+				680C03F518A7829900E5111D /* Default@2x.png */,
+				680C03F618A7829900E5111D /* GraphApiViewController_iPad.xib */,
+				680C03F818A7829900E5111D /* GraphApiViewController_iPhone.xib */,
+				680C03FA18A7829900E5111D /* InfoPlist.strings */,
+				680C03FC18A7829900E5111D /* GraphApiAppDelegate.h */,
+				680C03FD18A7829900E5111D /* GraphApiAppDelegate.m */,
+				680C03FE18A7829900E5111D /* GraphApiSample-Info.plist */,
+				680C03FF18A7829900E5111D /* GraphApiSample-Prefix.pch */,
+				680C040018A7829900E5111D /* GraphApiViewController.h */,
+				680C040118A7829900E5111D /* GraphApiViewController.m */,
+				680C040218A7829900E5111D /* Icon-72.png */,
+				680C040318A7829900E5111D /* Icon-72@2x.png */,
+				680C040418A7829900E5111D /* Icon.png */,
+				680C040518A7829900E5111D /* Icon@2x.png */,
+				680C040618A7829900E5111D /* main.m */,
+			);
+			path = GraphApiSample;
+			sourceTree = "<group>";
+		};
+		680C040818A7829900E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C04F818A7829B00E5111D /* GraphApiSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C040B18A7829900E5111D /* HelloFacebookSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C040C18A7829900E5111D /* HelloFacebookSample */,
+				680C042118A7829900E5111D /* HelloFacebookSample.xcodeproj */,
+				680C042418A7829900E5111D /* ReadMe.txt */,
+			);
+			path = HelloFacebookSample;
+			sourceTree = "<group>";
+		};
+		680C040C18A7829900E5111D /* HelloFacebookSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C040D18A7829900E5111D /* Default-568h@2x.png */,
+				680C040E18A7829900E5111D /* Default.png */,
+				680C040F18A7829900E5111D /* Default@2x.png */,
+				680C041018A7829900E5111D /* HFViewController_iPad.xib */,
+				680C041218A7829900E5111D /* HFViewController_iPhone.xib */,
+				680C041418A7829900E5111D /* InfoPlist.strings */,
+				680C041618A7829900E5111D /* HelloFacebookSample-Info.plist */,
+				680C041718A7829900E5111D /* HelloFacebookSample-Prefix.pch */,
+				680C041818A7829900E5111D /* HFAppDelegate.h */,
+				680C041918A7829900E5111D /* HFAppDelegate.m */,
+				680C041A18A7829900E5111D /* HFViewController.h */,
+				680C041B18A7829900E5111D /* HFViewController.m */,
+				680C041C18A7829900E5111D /* Icon-72.png */,
+				680C041D18A7829900E5111D /* Icon-72@2x.png */,
+				680C041E18A7829900E5111D /* Icon.png */,
+				680C041F18A7829900E5111D /* Icon@2x.png */,
+				680C042018A7829900E5111D /* main.m */,
+			);
+			path = HelloFacebookSample;
+			sourceTree = "<group>";
+		};
+		680C042218A7829900E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C04FB18A7829B00E5111D /* HelloFacebookSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C042518A7829900E5111D /* PlacePickerSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C042618A7829900E5111D /* PlacePickerSample */,
+				680C043B18A7829900E5111D /* PlacePickerSample.xcodeproj */,
+				680C043E18A7829900E5111D /* ReadMe.txt */,
+			);
+			path = PlacePickerSample;
+			sourceTree = "<group>";
+		};
+		680C042618A7829900E5111D /* PlacePickerSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C042718A7829900E5111D /* Default-568h@2x.png */,
+				680C042818A7829900E5111D /* Default.png */,
+				680C042918A7829900E5111D /* Default@2x.png */,
+				680C042A18A7829900E5111D /* InfoPlist.strings */,
+				680C042C18A7829900E5111D /* PPViewController_iPad.xib */,
+				680C042E18A7829900E5111D /* PPViewController_iPhone.xib */,
+				680C043018A7829900E5111D /* Icon-72.png */,
+				680C043118A7829900E5111D /* Icon-72@2x.png */,
+				680C043218A7829900E5111D /* Icon.png */,
+				680C043318A7829900E5111D /* Icon@2x.png */,
+				680C043418A7829900E5111D /* main.m */,
+				680C043518A7829900E5111D /* PlacePickerSample-Info.plist */,
+				680C043618A7829900E5111D /* PlacePickerSample-Prefix.pch */,
+				680C043718A7829900E5111D /* PPAppDelegate.h */,
+				680C043818A7829900E5111D /* PPAppDelegate.m */,
+				680C043918A7829900E5111D /* PPViewController.h */,
+				680C043A18A7829900E5111D /* PPViewController.m */,
+			);
+			path = PlacePickerSample;
+			sourceTree = "<group>";
+		};
+		680C043C18A7829900E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C04FE18A7829B00E5111D /* PlacePickerSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C043F18A7829900E5111D /* ProfilePictureSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C044018A7829900E5111D /* ProfilePictureSample */,
+				680C045518A7829900E5111D /* ProfilePictureSample.xcodeproj */,
+				680C045818A7829900E5111D /* ReadMe.txt */,
+			);
+			path = ProfilePictureSample;
+			sourceTree = "<group>";
+		};
+		680C044018A7829900E5111D /* ProfilePictureSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C044118A7829900E5111D /* Default-568h@2x.png */,
+				680C044218A7829900E5111D /* Default.png */,
+				680C044318A7829900E5111D /* Default@2x.png */,
+				680C044418A7829900E5111D /* InfoPlist.strings */,
+				680C044618A7829900E5111D /* PPViewController_iPad.xib */,
+				680C044818A7829900E5111D /* PPViewController_iPhone.xib */,
+				680C044A18A7829900E5111D /* Icon-72.png */,
+				680C044B18A7829900E5111D /* Icon-72@2x.png */,
+				680C044C18A7829900E5111D /* Icon.png */,
+				680C044D18A7829900E5111D /* Icon@2x.png */,
+				680C044E18A7829900E5111D /* main.m */,
+				680C044F18A7829900E5111D /* PPAppDelegate.h */,
+				680C045018A7829900E5111D /* PPAppDelegate.m */,
+				680C045118A7829900E5111D /* PPViewController.h */,
+				680C045218A7829900E5111D /* PPViewController.m */,
+				680C045318A7829900E5111D /* ProfilePictureSample-Info.plist */,
+				680C045418A7829900E5111D /* ProfilePictureSample-Prefix.pch */,
+			);
+			path = ProfilePictureSample;
+			sourceTree = "<group>";
+		};
+		680C045618A7829900E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C050118A7829B00E5111D /* ProfilePictureSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C045918A7829900E5111D /* RPSSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C045A18A7829900E5111D /* post_app_objects.sh */,
+				680C045B18A7829900E5111D /* ReadMe.txt */,
+				680C045C18A7829900E5111D /* RPSSample */,
+				680C048A18A7829A00E5111D /* RPSSample.xcodeproj */,
+			);
+			path = RPSSample;
+			sourceTree = "<group>";
+		};
+		680C045C18A7829900E5111D /* RPSSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C045D18A7829900E5111D /* Default-568h@2x.png */,
+				680C045E18A7829900E5111D /* Default.png */,
+				680C045F18A7829900E5111D /* Default@2x.png */,
+				680C046018A7829900E5111D /* InfoPlist.strings */,
+				680C046218A7829900E5111D /* RPSFriendsViewController_iPad.xib */,
+				680C046418A7829900E5111D /* RPSFriendsViewController_iPhone.xib */,
+				680C046618A7829900E5111D /* RPSGameViewController_iPad.xib */,
+				680C046818A7829900E5111D /* RPSGameViewController_iPhone.xib */,
+				680C046A18A7829900E5111D /* Icon-72.png */,
+				680C046B18A7829900E5111D /* Icon-72@2x.png */,
+				680C046C18A7829900E5111D /* Icon.png */,
+				680C046D18A7829900E5111D /* Icon@2x.png */,
+				680C046E18A7829900E5111D /* IconFacebook-72@2x.png */,
+				680C046F18A7829900E5111D /* left-paper-128.png */,
+				680C047018A7829900E5111D /* left-paper-88.png */,
+				680C047118A7829900E5111D /* left-rock-128.png */,
+				680C047218A7829900E5111D /* left-rock-88.png */,
+				680C047318A7829900E5111D /* left-scissors-128.png */,
+				680C047418A7829900E5111D /* left-scissors-88.png */,
+				680C047518A7829900E5111D /* main.m */,
+				680C047618A7829900E5111D /* OGProtocols.h */,
+				680C047718A7829A00E5111D /* right-paper-128.png */,
+				680C047818A7829A00E5111D /* right-paper-88.png */,
+				680C047918A7829A00E5111D /* right-rock-128.png */,
+				680C047A18A7829A00E5111D /* right-rock-88.png */,
+				680C047B18A7829A00E5111D /* right-scissors-128.png */,
+				680C047C18A7829A00E5111D /* right-scissors-88.png */,
+				680C047D18A7829A00E5111D /* RPSAppDelegate.h */,
+				680C047E18A7829A00E5111D /* RPSAppDelegate.m */,
+				680C047F18A7829A00E5111D /* RPSCommonObjects.h */,
+				680C048018A7829A00E5111D /* RPSCommonObjects.m */,
+				680C048118A7829A00E5111D /* RPSDeeplyLinkedViewController.h */,
+				680C048218A7829A00E5111D /* RPSDeeplyLinkedViewController.m */,
+				680C048318A7829A00E5111D /* RPSDeeplyLinkedViewController.xib */,
+				680C048418A7829A00E5111D /* RPSFriendsViewController.h */,
+				680C048518A7829A00E5111D /* RPSFriendsViewController.m */,
+				680C048618A7829A00E5111D /* RPSGameViewController.h */,
+				680C048718A7829A00E5111D /* RPSGameViewController.m */,
+				680C048818A7829A00E5111D /* RPSSample-Info.plist */,
+				680C048918A7829A00E5111D /* RPSSample-Prefix.pch */,
+			);
+			path = RPSSample;
+			sourceTree = "<group>";
+		};
+		680C048B18A7829A00E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C050418A7829B00E5111D /* RPSSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C048D18A7829A00E5111D /* Scrumptious */ = {
+			isa = PBXGroup;
+			children = (
+				680C048E18A7829A00E5111D /* Icon-72.png */,
+				680C048F18A7829A00E5111D /* Icon.png */,
+				680C049018A7829A00E5111D /* Icon@2x.png */,
+				680C049118A7829A00E5111D /* ReadMe.txt */,
+				680C049218A7829A00E5111D /* scrumptious */,
+				680C04B218A7829A00E5111D /* Scrumptious.xcodeproj */,
+			);
+			path = Scrumptious;
+			sourceTree = "<group>";
+		};
+		680C049218A7829A00E5111D /* scrumptious */ = {
+			isa = PBXGroup;
+			children = (
+				680C049318A7829A00E5111D /* Default-568h@2x.png */,
+				680C049418A7829A00E5111D /* Default.png */,
+				680C049518A7829A00E5111D /* Default@2x.png */,
+				680C049618A7829A00E5111D /* InfoPlist.strings */,
+				680C049818A7829A00E5111D /* Scrumptious.strings */,
+				680C049A18A7829A00E5111D /* SCViewController.xib */,
+				680C049C18A7829A00E5111D /* FacebookSDKOverrides.bundle */,
+				680C049E18A7829A00E5111D /* images */,
+				680C04A418A7829A00E5111D /* main.m */,
+				680C04A518A7829A00E5111D /* SCAppDelegate.h */,
+				680C04A618A7829A00E5111D /* SCAppDelegate.m */,
+				680C04A718A7829A00E5111D /* SCLoginViewController.h */,
+				680C04A818A7829A00E5111D /* SCLoginViewController.m */,
+				680C04A918A7829A00E5111D /* SCLoginViewController.xib */,
+				680C04AA18A7829A00E5111D /* SCPhotoViewController.h */,
+				680C04AB18A7829A00E5111D /* SCPhotoViewController.m */,
+				680C04AC18A7829A00E5111D /* SCPhotoViewController.xib */,
+				680C04AD18A7829A00E5111D /* SCProtocols.h */,
+				680C04AE18A7829A00E5111D /* scrumptious-Info.plist */,
+				680C04AF18A7829A00E5111D /* scrumptious-Prefix.pch */,
+				680C04B018A7829A00E5111D /* SCViewController.h */,
+				680C04B118A7829A00E5111D /* SCViewController.m */,
+			);
+			path = scrumptious;
+			sourceTree = "<group>";
+		};
+		680C049E18A7829A00E5111D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				680C049F18A7829A00E5111D /* action-eating.png */,
+				680C04A018A7829A00E5111D /* action-location.png */,
+				680C04A118A7829A00E5111D /* action-people.png */,
+				680C04A218A7829A00E5111D /* action-photo.png */,
+				680C04A318A7829A00E5111D /* facebook.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		680C04B318A7829A00E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C050718A7829B00E5111D /* Scrumptious.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C04B518A7829A00E5111D /* SessionLoginSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C04B618A7829A00E5111D /* ReadMe.txt */,
+				680C04B718A7829A00E5111D /* SessionLoginSample */,
+				680C04CC18A7829A00E5111D /* SessionLoginSample.xcodeproj */,
+			);
+			path = SessionLoginSample;
+			sourceTree = "<group>";
+		};
+		680C04B718A7829A00E5111D /* SessionLoginSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C04B818A7829A00E5111D /* Default-568h@2x.png */,
+				680C04B918A7829A00E5111D /* Default.png */,
+				680C04BA18A7829A00E5111D /* Default@2x.png */,
+				680C04BB18A7829A00E5111D /* InfoPlist.strings */,
+				680C04BD18A7829A00E5111D /* SLViewController_iPad.xib */,
+				680C04BF18A7829A00E5111D /* SLViewController_iPhone.xib */,
+				680C04C118A7829A00E5111D /* Icon-72.png */,
+				680C04C218A7829A00E5111D /* Icon-72@2x.png */,
+				680C04C318A7829A00E5111D /* Icon.png */,
+				680C04C418A7829A00E5111D /* Icon@2x.png */,
+				680C04C518A7829A00E5111D /* main.m */,
+				680C04C618A7829A00E5111D /* SessionLoginSample-Info.plist */,
+				680C04C718A7829A00E5111D /* SessionLoginSample-Prefix.pch */,
+				680C04C818A7829A00E5111D /* SLAppDelegate.h */,
+				680C04C918A7829A00E5111D /* SLAppDelegate.m */,
+				680C04CA18A7829A00E5111D /* SLViewController.h */,
+				680C04CB18A7829A00E5111D /* SLViewController.m */,
+			);
+			path = SessionLoginSample;
+			sourceTree = "<group>";
+		};
+		680C04CD18A7829A00E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C050A18A7829B00E5111D /* SessionLoginSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680C04CF18A7829A00E5111D /* SwitchUserSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C04D018A7829A00E5111D /* ReadMe.txt */,
+				680C04D118A7829A00E5111D /* SwitchUserSample */,
+				680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */,
+			);
+			path = SwitchUserSample;
+			sourceTree = "<group>";
+		};
+		680C04D118A7829A00E5111D /* SwitchUserSample */ = {
+			isa = PBXGroup;
+			children = (
+				680C04D218A7829A00E5111D /* Default-568h@2x.png */,
+				680C04D318A7829A00E5111D /* Default.png */,
+				680C04D418A7829A00E5111D /* Default@2x.png */,
+				680C04D518A7829A00E5111D /* InfoPlist.strings */,
+				680C04D718A7829A00E5111D /* first.png */,
+				680C04D818A7829A00E5111D /* first@2x.png */,
+				680C04D918A7829A00E5111D /* Icon-72.png */,
+				680C04DA18A7829A00E5111D /* Icon-72@2x.png */,
+				680C04DB18A7829A00E5111D /* Icon.png */,
+				680C04DC18A7829A00E5111D /* Icon@2x.png */,
+				680C04DD18A7829A00E5111D /* main.m */,
+				680C04DE18A7829A00E5111D /* second.png */,
+				680C04DF18A7829A00E5111D /* second@2x.png */,
+				680C04E018A7829A00E5111D /* SUAppDelegate.h */,
+				680C04E118A7829A00E5111D /* SUAppDelegate.m */,
+				680C04E218A7829A00E5111D /* SUProfileTableViewCell.h */,
+				680C04E318A7829A00E5111D /* SUProfileTableViewCell.m */,
+				680C04E418A7829A00E5111D /* SUSettingsViewController.h */,
+				680C04E518A7829A00E5111D /* SUSettingsViewController.m */,
+				680C04E618A7829A00E5111D /* SUSettingsViewController_iPad.xib */,
+				680C04E718A7829A00E5111D /* SUSettingsViewController_iPhone.xib */,
+				680C04E818A7829A00E5111D /* SUUserManager.h */,
+				680C04E918A7829A00E5111D /* SUUserManager.m */,
+				680C04EA18A7829A00E5111D /* SUUsingViewController.h */,
+				680C04EB18A7829A00E5111D /* SUUsingViewController.m */,
+				680C04EC18A7829A00E5111D /* SUUsingViewController_iPad.xib */,
+				680C04ED18A7829A00E5111D /* SUUsingViewController_iPhone.xib */,
+				680C04EE18A7829A00E5111D /* SwitchUserSample-Info.plist */,
+				680C04EF18A7829A00E5111D /* SwitchUserSample-Prefix.pch */,
+			);
+			path = SwitchUserSample;
+			sourceTree = "<group>";
+		};
+		680C04F118A7829A00E5111D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680C050D18A7829B00E5111D /* SwitchUserSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		683BC65B188A48F30027D7F2 = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +1000,9 @@
 		683BC666188A48F30027D7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				680C03CD18A7829900E5111D /* FacebookSDK */,
+				680C03CB18A7820D00E5111D /* facebook-ios-sdk-3.12.pkg */,
+				680C03C918A7819D00E5111D /* FacebookSDK-131121.unitypackage */,
 				DC1825CF18A6100A007232E6 /* FacebookSDK.framework */,
 				DCCF44D9189C2CD20098F3E9 /* Social.framework */,
 				DCCF44D7189C2CB90098F3E9 /* Twitter.framework */,
@@ -412,10 +1183,49 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				he,
 			);
 			mainGroup = 683BC65B188A48F30027D7F2;
 			productRefGroup = 683BC665188A48F30027D7F2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 680C03EE18A7829900E5111D /* Products */;
+					ProjectRef = 680C03ED18A7829900E5111D /* FriendPickerSample.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C040818A7829900E5111D /* Products */;
+					ProjectRef = 680C040718A7829900E5111D /* GraphApiSample.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C042218A7829900E5111D /* Products */;
+					ProjectRef = 680C042118A7829900E5111D /* HelloFacebookSample.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C043C18A7829900E5111D /* Products */;
+					ProjectRef = 680C043B18A7829900E5111D /* PlacePickerSample.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C045618A7829900E5111D /* Products */;
+					ProjectRef = 680C045518A7829900E5111D /* ProfilePictureSample.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C048B18A7829A00E5111D /* Products */;
+					ProjectRef = 680C048A18A7829A00E5111D /* RPSSample.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C04B318A7829A00E5111D /* Products */;
+					ProjectRef = 680C04B218A7829A00E5111D /* Scrumptious.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C04CD18A7829A00E5111D /* Products */;
+					ProjectRef = 680C04CC18A7829A00E5111D /* SessionLoginSample.xcodeproj */;
+				},
+				{
+					ProductGroup = 680C04F118A7829A00E5111D /* Products */;
+					ProjectRef = 680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				683BC663188A48F30027D7F2 /* Roast */,
@@ -423,6 +1233,72 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		680C04F518A7829B00E5111D /* FriendPickerSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FriendPickerSample.app;
+			remoteRef = 680C04F418A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C04F818A7829B00E5111D /* GraphApiSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GraphApiSample.app;
+			remoteRef = 680C04F718A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C04FB18A7829B00E5111D /* HelloFacebookSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HelloFacebookSample.app;
+			remoteRef = 680C04FA18A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C04FE18A7829B00E5111D /* PlacePickerSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PlacePickerSample.app;
+			remoteRef = 680C04FD18A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C050118A7829B00E5111D /* ProfilePictureSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ProfilePictureSample.app;
+			remoteRef = 680C050018A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C050418A7829B00E5111D /* RPSSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RPSSample.app;
+			remoteRef = 680C050318A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C050718A7829B00E5111D /* Scrumptious.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Scrumptious.app;
+			remoteRef = 680C050618A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C050A18A7829B00E5111D /* SessionLoginSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SessionLoginSample.app;
+			remoteRef = 680C050918A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		680C050D18A7829B00E5111D /* SwitchUserSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwitchUserSample.app;
+			remoteRef = 680C050C18A7829B00E5111D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		683BC662188A48F30027D7F2 /* Resources */ = {
@@ -434,6 +1310,7 @@
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
+				680C03C818A73F0700E5111D /* instagramicon.png in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
@@ -501,6 +1378,223 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		680C03DC18A7829900E5111D /* FPViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C03DD18A7829900E5111D /* en */,
+			);
+			name = FPViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C03DE18A7829900E5111D /* FPViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C03DF18A7829900E5111D /* en */,
+			);
+			name = FPViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C03E018A7829900E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C03E118A7829900E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C03F618A7829900E5111D /* GraphApiViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C03F718A7829900E5111D /* en */,
+			);
+			name = GraphApiViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C03F818A7829900E5111D /* GraphApiViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C03F918A7829900E5111D /* en */,
+			);
+			name = GraphApiViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C03FA18A7829900E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C03FB18A7829900E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C041018A7829900E5111D /* HFViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C041118A7829900E5111D /* en */,
+			);
+			name = HFViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C041218A7829900E5111D /* HFViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C041318A7829900E5111D /* en */,
+			);
+			name = HFViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C041418A7829900E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C041518A7829900E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C042A18A7829900E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C042B18A7829900E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C042C18A7829900E5111D /* PPViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C042D18A7829900E5111D /* en */,
+			);
+			name = PPViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C042E18A7829900E5111D /* PPViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C042F18A7829900E5111D /* en */,
+			);
+			name = PPViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C044418A7829900E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C044518A7829900E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C044618A7829900E5111D /* PPViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C044718A7829900E5111D /* en */,
+			);
+			name = PPViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C044818A7829900E5111D /* PPViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C044918A7829900E5111D /* en */,
+			);
+			name = PPViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C046018A7829900E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C046118A7829900E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C046218A7829900E5111D /* RPSFriendsViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C046318A7829900E5111D /* en */,
+			);
+			name = RPSFriendsViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C046418A7829900E5111D /* RPSFriendsViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C046518A7829900E5111D /* en */,
+			);
+			name = RPSFriendsViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C046618A7829900E5111D /* RPSGameViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C046718A7829900E5111D /* en */,
+			);
+			name = RPSGameViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C046818A7829900E5111D /* RPSGameViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C046918A7829900E5111D /* en */,
+			);
+			name = RPSGameViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C049618A7829A00E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C049718A7829A00E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C049818A7829A00E5111D /* Scrumptious.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C049918A7829A00E5111D /* en */,
+				680C049D18A7829A00E5111D /* he */,
+			);
+			name = Scrumptious.strings;
+			sourceTree = "<group>";
+		};
+		680C049A18A7829A00E5111D /* SCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C049B18A7829A00E5111D /* en */,
+			);
+			name = SCViewController.xib;
+			sourceTree = "<group>";
+		};
+		680C04BB18A7829A00E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C04BC18A7829A00E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		680C04BD18A7829A00E5111D /* SLViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C04BE18A7829A00E5111D /* en */,
+			);
+			name = SLViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		680C04BF18A7829A00E5111D /* SLViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C04C018A7829A00E5111D /* en */,
+			);
+			name = SLViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		680C04D518A7829A00E5111D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				680C04D618A7829A00E5111D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		683BC670188A48F30027D7F2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -600,6 +1694,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/arexxk/Documents/FacebookSDK,
+					/Users/KT/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Roast/Roast-Prefix.pch";
@@ -617,6 +1712,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/arexxk/Documents/FacebookSDK,
+					/Users/KT/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Roast/Roast-Prefix.pch";
