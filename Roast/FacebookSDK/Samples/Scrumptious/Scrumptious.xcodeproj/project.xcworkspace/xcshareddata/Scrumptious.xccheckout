@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7B4A9075-FC35-46EC-A026-2F86DB77F83F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Scrumptious</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BA810A47-9913-4BBA-8FE6-86319EBF1258</key>
+		<string>ssh://projects.git.vip.facebook.com/data/gitrepos/ios-sdk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>samples/Scrumptious/Scrumptious.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BA810A47-9913-4BBA-8FE6-86319EBF1258</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://projects.git.vip.facebook.com/data/gitrepos/ios-sdk</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BA810A47-9913-4BBA-8FE6-86319EBF1258</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BA810A47-9913-4BBA-8FE6-86319EBF1258</string>
+			<key>IDESourceControlWCCName</key>
+			<string>release-ios-sdk</string>
+		</dict>
+	</array>
+</dict>
+</plist>
