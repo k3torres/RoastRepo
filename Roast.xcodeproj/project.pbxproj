@@ -25,7 +25,6 @@
 		683BC68B188A48F30027D7F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683BC689188A48F30027D7F2 /* InfoPlist.strings */; };
 		683BC68D188A48F30027D7F2 /* RoastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683BC68C188A48F30027D7F2 /* RoastTests.m */; };
 		683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683BC69A188B13A10027D7F2 /* Main.storyboard */; };
-		68F1826D18A6061C00506E30 /* RoastAppShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */; };
 		DC1825D018A6100A007232E6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1825CF18A6100A007232E6 /* FacebookSDK.framework */; };
 		DC1825D918A619F2007232E6 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1825D818A619F2007232E6 /* login.png */; };
 		DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */; };
@@ -383,8 +382,6 @@
 		683BC68A188A48F30027D7F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		683BC68C188A48F30027D7F2 /* RoastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastTests.m; sourceTree = "<group>"; };
 		683BC69A188B13A10027D7F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
-		68F1826B18A6061C00506E30 /* RoastAppShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopTableViewController.h; path = Roast/RoastAppShopTableViewController.h; sourceTree = "<group>"; };
-		68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopTableViewController.m; path = Roast/RoastAppShopTableViewController.m; sourceTree = "<group>"; };
 		DC1825CF18A6100A007232E6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		DC1825D818A619F2007232E6 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		DC1825DD18A6215E007232E6 /* RoastAppLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppLoginViewController.h; sourceTree = "<group>"; };
@@ -490,8 +487,6 @@
 		66B0871018936F850045B805 /* Shop View */ = {
 			isa = PBXGroup;
 			children = (
-				68F1826B18A6061C00506E30 /* RoastAppShopTableViewController.h */,
-				68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */,
 				66B892811895D8390030CE6E /* RoastAppShopViewController.h */,
 				66B892821895D8390030CE6E /* RoastAppShopViewController.m */,
 				66FE40531895F1A6003AAE61 /* RoastAppShopItem.h */,
@@ -1017,9 +1012,9 @@
 			isa = PBXGroup;
 			children = (
 				DC1825D118A616CF007232E6 /* Login */,
+				66B0870F18936F6B0045B805 /* Feed */,
 				DC1BA3F718A1E23900D6370A /* Shop List */,
 				66B0871018936F850045B805 /* Shop View */,
-				66B0870F18936F6B0045B805 /* Feed */,
 				66B0870C18936EF40045B805 /* Networking Services */,
 				683BC69A188B13A10027D7F2 /* Main.storyboard */,
 				683BC676188A48F30027D7F2 /* RoastAppAppDelegate.h */,
@@ -1350,7 +1345,6 @@
 				DC51FFCE18A5C15600D196C2 /* RoastAppFeedProfile.m in Sources */,
 				DC51FFCD18A5C15600D196C2 /* RoastAppFeedItem.m in Sources */,
 				DCCF44D3189C2C5F0098F3E9 /* JSONSyntaxHighlight.m in Sources */,
-				68F1826D18A6061C00506E30 /* RoastAppShopTableViewController.m in Sources */,
 				DCCF44CE189C2C5F0098F3E9 /* STTwitterAppOnly.m in Sources */,
 				DCCF44CC189C2C5F0098F3E9 /* STHTTPRequest+STTwitter.m in Sources */,
 			);
