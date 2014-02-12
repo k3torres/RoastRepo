@@ -55,9 +55,8 @@ NSArray *queryResult;
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     
     NSArray *jsonArray = [dictionaryFromResponse allValues];
-    NSArray *innerElements = [jsonArray objectAtIndex:0];
     
-    queryResult = [[NSArray alloc] initWithArray:innerElements];
+    queryResult = [[NSArray alloc] initWithArray:jsonArray];
     
     return queryResult;
 }
