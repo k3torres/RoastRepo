@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FacebookSDK/FBRequestConnection.h>
 #import "RoastAppFeedProfile.h"
 #import "STTwitter.h"
 
@@ -21,8 +22,10 @@
 @property NSString *instagramRedirect_URI;
 @property NSString *instagramClient_Secret;
 
+@property FBRequestConnection *fbService;
 @property NSString *fbAppID;
 @property NSString *fbShh;
+@property FBRequestConnection *fbReqConn;
 
 - (id)init;
 - (id)initWithProfile:(RoastAppFeedProfile *)newProfile;

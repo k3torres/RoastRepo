@@ -24,10 +24,10 @@
 		683BC68B188A48F30027D7F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683BC689188A48F30027D7F2 /* InfoPlist.strings */; };
 		683BC68D188A48F30027D7F2 /* RoastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683BC68C188A48F30027D7F2 /* RoastTests.m */; };
 		683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683BC69A188B13A10027D7F2 /* Main.storyboard */; };
+		68F1826D18A6061C00506E30 /* RoastAppShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */; };
 		DC1825D018A6100A007232E6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1825CF18A6100A007232E6 /* FacebookSDK.framework */; };
 		DC1825D918A619F2007232E6 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1825D818A619F2007232E6 /* login.png */; };
 		DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */; };
-		68F1826D18A6061C00506E30 /* RoastAppShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */; };
 		DC1BA3FD18A1EDD200D6370A /* RoastAppShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */; };
 		DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC40FA2C18A5A382002CE7B3 /* twittericon.png */; };
 		DC51FFCD18A5C15600D196C2 /* RoastAppFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFC818A5C15600D196C2 /* RoastAppFeedItem.m */; };
@@ -36,6 +36,7 @@
 		DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */; };
 		DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */; };
 		DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9221701893560800C67EAD /* RoastAppFeedViewController.m */; };
+		DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB4E5EE18AB6308006BA824 /* fbicon.png */; };
 		DCCF44CA189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B2189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m */; };
 		DCCF44CB189C2C5F0098F3E9 /* NSString+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B4189C2C5F0098F3E9 /* NSString+STTwitter.m */; };
 		DCCF44CC189C2C5F0098F3E9 /* STHTTPRequest+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B6189C2C5F0098F3E9 /* STHTTPRequest+STTwitter.m */; };
@@ -89,12 +90,12 @@
 		683BC68A188A48F30027D7F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		683BC68C188A48F30027D7F2 /* RoastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastTests.m; sourceTree = "<group>"; };
 		683BC69A188B13A10027D7F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		68F1826B18A6061C00506E30 /* RoastAppShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopTableViewController.h; path = Roast/RoastAppShopTableViewController.h; sourceTree = "<group>"; };
+		68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopTableViewController.m; path = Roast/RoastAppShopTableViewController.m; sourceTree = "<group>"; };
 		DC1825CF18A6100A007232E6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		DC1825D818A619F2007232E6 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		DC1825DD18A6215E007232E6 /* RoastAppLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppLoginViewController.h; sourceTree = "<group>"; };
 		DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppLoginViewController.m; sourceTree = "<group>"; };
-		68F1826B18A6061C00506E30 /* RoastAppShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopTableViewController.h; path = Roast/RoastAppShopTableViewController.h; sourceTree = "<group>"; };
-		68F1826C18A6061C00506E30 /* RoastAppShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopTableViewController.m; path = Roast/RoastAppShopTableViewController.m; sourceTree = "<group>"; };
 		DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopListViewController.h; sourceTree = "<group>"; };
 		DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopListViewController.m; sourceTree = "<group>"; };
 		DC40FA2C18A5A382002CE7B3 /* twittericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twittericon.png; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = caffecalabria.jpg; path = ../caffecalabria.jpg; sourceTree = "<group>"; };
 		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedViewController.h; path = Roast/RoastAppFeedViewController.h; sourceTree = "<group>"; };
 		DC9221701893560800C67EAD /* RoastAppFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedViewController.m; path = Roast/RoastAppFeedViewController.m; sourceTree = "<group>"; };
+		DCB4E5EE18AB6308006BA824 /* fbicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon.png; sourceTree = "<group>"; };
 		DCCF44B1189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STTwitter.h"; sourceTree = "<group>"; };
 		DCCF44B2189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+STTwitter.m"; sourceTree = "<group>"; };
 		DCCF44B3189C2C5F0098F3E9 /* NSString+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+STTwitter.h"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				680C03C618A608CB00E5111D /* CaffeCalabria1.png */,
+				DCB4E5EE18AB6308006BA824 /* fbicon.png */,
 				DC40FA2C18A5A382002CE7B3 /* twittericon.png */,
 				683BC66F188A48F30027D7F2 /* Roast-Info.plist */,
 				683BC670188A48F30027D7F2 /* InfoPlist.strings */,
@@ -432,6 +435,7 @@
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
+				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,7 +537,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -572,7 +576,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

@@ -46,17 +46,18 @@
     [userFollowing addObject:@"candtcollective"];
     [userFollowing addObject:@"roastcoachsd"];
     [userFollowing addObject:@"younghickorysd"];
-        [userFollowing addObject:@"SDCoffeeNetwork"];
-        [userFollowing addObject:@"CaffeCalabria"];
+    [userFollowing addObject:@"SDCoffeeNetwork"];
+    [userFollowing addObject:@"CaffeCalabria"];
 
     [feedProfile setUsers:userFollowing];
     //[feedProfile.users addObject:[NSString @"coffee"]];
-    [feedProfile setEnableFacebook:NO];
+    [feedProfile setEnableFacebook:YES];
     [feedProfile setEnableInstagram:NO];
     [feedProfile setEnableTwitter:YES];
     
     self.feedService = [[RoastAppFeedService alloc] initWithProfile:feedProfile];
     [self.feedService populateFeed:self.feedItems withTableView:self.tableView];
+    self.feedDateFormat = @"EEE h:mm a MM.dd.yyyy";
     
     [self.tableView reloadData];
     NSLog(@"feedItems Initialized!");
@@ -103,11 +104,14 @@
 
     // Configure the cell...
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:self.feedDateFormat];
      
     [(UILabel *)[cell.contentView viewWithTag:10] setText:feedItemAtIndex.userName];
     [(UIImageView *)[cell.contentView viewWithTag:11] setImage:feedItemAtIndex.serviceBadge];
     [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
-    [(UILabel *)[cell.contentView viewWithTag:13] setText:feedItemAtIndex.timestamp];
+    [(UILabel *)[cell.contentView viewWithTag:13] setText:[formatter stringFromDate:feedItemAtIndex.timestamp]];
     [(UIImageView *)[cell.contentView viewWithTag:14] setImage:feedItemAtIndex.userPic];
     
     return cell;
@@ -125,7 +129,7 @@
 {
     [self.feedItems sortUsingComparator:^NSComparisonResult(RoastAppFeedItem *item0, RoastAppFeedItem *item1)
      {
-         return [item1.idNum compare:item0.idNum];
+         return [item1.timestamp compare:item0.timestamp];
      }];
     
     [self.tableView reloadData];

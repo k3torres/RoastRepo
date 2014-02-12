@@ -27,7 +27,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //[NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(segueToFeed:) userInfo:nil repeats:NO];
     
+}
+
+- (void)segueToFeed:(id)sender
+{
+    [self performSegueWithIdentifier:@"login" sender:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +45,7 @@
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     self.statusLabel.text = @"You're logged in as";
     NSLog(@"LOGGED IN.");
-    [self performSegueWithIdentifier:@"login" sender:self];
+    [self segueToFeed:self];
 }
 
 @end
