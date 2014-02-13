@@ -50,11 +50,17 @@
     [userFollowing addObject:@"younghickorysd"];
     [userFollowing addObject:@"SDCoffeeNetwork"];
     [userFollowing addObject:@"CaffeCalabria"];
-
+    
+    //adding tags for instagram
+    [tagFollowing addObject:@"candtcollective"];
+    [tagFollowing addObject:@"younghickorysd"];
+    [tagFollowing addObject:@"birdrockcoffeeroasters"];
+    
+    [feedProfile setTags:tagFollowing];
     [feedProfile setUsers:userFollowing];
     //[feedProfile.users addObject:[NSString @"coffee"]];
     [feedProfile setEnableFacebook:YES];
-    [feedProfile setEnableInstagram:NO];
+    [feedProfile setEnableInstagram:YES];
     [feedProfile setEnableTwitter:YES];
     
     self.feedService = [[RoastAppFeedService alloc] initWithProfile:feedProfile];

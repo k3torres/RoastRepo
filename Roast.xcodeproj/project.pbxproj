@@ -1037,6 +1037,7 @@
 			children = (
 				680C03C618A608CB00E5111D /* CaffeCalabria1.png */,
 				DCB4E5EE18AB6308006BA824 /* fbicon.png */,
+				680C03C718A73F0700E5111D /* instagramicon.png */,
 				DC40FA2C18A5A382002CE7B3 /* twittericon.png */,
 				683BC66F188A48F30027D7F2 /* Roast-Info.plist */,
 				683BC670188A48F30027D7F2 /* InfoPlist.strings */,

@@ -65,52 +65,6 @@
     return self.fbService;
 }
 
-// FBSample logic
-// Report any results.  Invoked once for each request we make.
-- (void)requestCompleted:(FBRequestConnection *)connection
-                 forFbID:fbID
-                  result:(id)result
-                   error:(NSError *)error {
-    // not the completion we were looking for...
-    if (self.fbReqConn &&
-        connection != self.fbReqConn) {
-        return;
-    }
-    
-    // clean this up, for posterity
-    self.fbReqConn = nil;
-    
-    NSString *text;
-    if (error) {
-        // error contains details about why the request failed
-        /*
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"FB returned an error. Probably bad Oauth"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Nah"
-                                              otherButtonTitles:nil];
-        [alert show];
-         */
-    } else {
-        // result is the json response from a successful request !!!!!!!!!!!!!
-        NSDictionary *dictionary = (NSDictionary *)result;
-        // we pull the name property out, if there is one, and display it
-        /*
-        NSMutableString *text = [NSMutableString stringWithString:@"It returned!/nCheck it: %@"];
-        [text appendString:(NSMutableString *)[dictionary objectForKey:@"name"]];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congrats"
-                                                        message:text
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Yee"
-                                              otherButtonTitles:nil];
-        [alert show];
-         */
-        
-        
-    }
-}
-
-
 - (UIImage *)getUIImageFromURLString:(NSString *)urlString
 {
     NSURL *imageURL = [NSURL URLWithString:urlString];
