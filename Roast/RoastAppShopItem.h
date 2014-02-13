@@ -11,10 +11,6 @@
 @interface RoastAppShopItem : NSObject
 
 @property NSString *name;
-@property NSString *description;
-@property NSString *type;
-@property NSString *price;
-
 @property UIImage *shopImage;
 
 @end
