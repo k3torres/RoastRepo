@@ -215,7 +215,7 @@
     NSMutableArray *username        = [dictionaryFromResponse valueForKeyPath:@"data.caption.from.username"];
     NSMutableArray *profileURL      = [dictionaryFromResponse valueForKeyPath:@"data.caption.from.profile_picture"];
     NSMutableArray *message         = [dictionaryFromResponse valueForKeyPath:@"data.caption.text"];
-    NSMutableArray *thumbnailURLs   = [dictionaryFromResponse valueForKeyPath:@"data.images.thumbnail.url"];
+    NSMutableArray *thumbnailURLs   = [dictionaryFromResponse valueForKeyPath:@"data.images.low_resolution.url"];
     NSMutableArray *creation        = [dictionaryFromResponse valueForKeyPath:@"data.caption.created_time"];
     NSMutableArray *idNumber        = [dictionaryFromResponse valueForKeyPath:@"data.caption.id"];
     
@@ -230,7 +230,11 @@
         
         NSURL *imageURL = [NSURL URLWithString:[thumbnailURLs objectAtIndex:i]];
         NSData *data = [NSData dataWithContentsOfURL:imageURL];
-        UIImage *userPic = [UIImage imageWithData:data];
+        UIImage *photo = [UIImage imageWithData:data];
+        
+        NSURL *image2URL = [NSURL URLWithString:[profileURL objectAtIndex:i]];
+        NSData *data2 = [NSData dataWithContentsOfURL:image2URL];
+        UIImage *userPic = [UIImage imageWithData:data2];
         
         RoastAppFeedItem *feedItem1 = [[RoastAppFeedItem alloc] init];
         
@@ -245,6 +249,7 @@
         //done with date
         
         feedItem1.userPic = userPic;
+        feedItem1.photo = photo;
         
         NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
         [f setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -258,7 +263,7 @@
     
 }
 
--(NSString *)feedDateFormatter:(NSString *)oldDate
+-(NSDate *)feedDateFormatter:(NSString *)oldDate
 {
     //Format the date to match Twitter
     NSNumberFormatter * d = [[NSNumberFormatter alloc] init];
@@ -274,7 +279,7 @@
     NSDateFormatter *f = [[NSDateFormatter alloc] init];
     [f setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
     [f setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
-    NSString *newDate = [f stringFromDate:aDate];
+    NSDate *newDate = [f stringFromDate:aDate];
     
     return newDate;
     

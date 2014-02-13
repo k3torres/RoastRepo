@@ -101,7 +101,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"FeedItemCell";
+
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
     
     // Configure the cell...
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
@@ -114,8 +117,8 @@
     [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
     [(UILabel *)[cell.contentView viewWithTag:13] setText:[formatter stringFromDate:feedItemAtIndex.timestamp]];
     [(UIImageView *)[cell.contentView viewWithTag:14] setImage:feedItemAtIndex.userPic];
-    
-    return cell;
+
+        return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,12 +131,14 @@
 
 - (void)reloadList:(NSNotificationCenter *)notification
 {
+
     [self.feedItems sortUsingComparator:^NSComparisonResult(RoastAppFeedItem *item0, RoastAppFeedItem *item1)
      {
          return [item1.timestamp compare:item0.timestamp];
      }];
-    
+
     [self.tableView reloadData];
+     
 }
 
 - (void)dealloc
