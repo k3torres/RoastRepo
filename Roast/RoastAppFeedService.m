@@ -185,10 +185,8 @@
     
     
     
-    for(NSString *tag in self.feedProfile.tags)
-    {
-        [self appendFeedArray:feedArray withTag:tag];
-    }
+    
+    
     
     return feedArray;
 }
@@ -246,7 +244,8 @@
         feedItem1.message = [message objectAtIndex:i];
         
         //date
-        feedItem1.timestamp = [NSDate dateWithTimeIntervalSince1970:[[creation objectAtIndex:i] integerValue]];
+        
+        feedItem1.timestamp = [self feedDateFormatter:[creation objectAtIndex:i]];
         //done with date
         
         feedItem1.userPic = userPic;
@@ -263,4 +262,28 @@
     NSLog(@"added instagram feedItems with tag = %@" , instagramTag );
     
 }
+
+-(NSDate *)feedDateFormatter:(NSString *)oldDate
+{
+    //Format the date to match Twitter
+    NSNumberFormatter * d = [[NSNumberFormatter alloc] init];
+    [d setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    double dateNum = [[d numberFromString:oldDate] doubleValue];
+    
+    //use interval to get human readable date
+    NSTimeInterval interval = dateNum;
+    NSDate *aDate = [NSDate dateWithTimeIntervalSince1970: interval];
+    
+    //set format and return string
+    NSDateFormatter *f = [[NSDateFormatter alloc] init];
+    [f setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+    [f setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
+    NSDate *newDate = [f stringFromDate:aDate];
+    
+    return newDate;
+    
+}
+
+
 @end
