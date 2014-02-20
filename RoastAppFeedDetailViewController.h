@@ -11,6 +11,7 @@
 @interface RoastAppFeedDetailViewController : UIViewController
 
 @property NSString* detailName;
+- (void)RoastAppFeedDetailViewDismiss;
 
 
 @end
