@@ -56,6 +56,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.00090433453030647204" green="0.43599699722176788" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="A2Q-pe-t9V" kind="modal" id="CA8-ZE-PeT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -120,7 +123,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEA-Ib-3Xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="-316"/>
+            <point key="canvasLocation" x="479" y="-752"/>
         </scene>
         <!--Roast App Shop View Controller - ShopView-->
         <scene sceneID="hzS-aL-naJ">
@@ -177,7 +180,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBM-Id-aVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="-316"/>
+            <point key="canvasLocation" x="1061" y="-752"/>
+        </scene>
+        <!--Roast App Feed Detail View Controller-->
+        <scene sceneID="iy9-OM-ki2">
+            <objects>
+                <viewController id="A2Q-pe-t9V" customClass="RoastAppFeedDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="srF-bV-pUY"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Fu-7L-yrj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7B2-nU-FYU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-w4-P2T">
+                                <rect key="frame" x="8" y="20" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="31" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLf-xX-RbN">
+                                <rect key="frame" x="0.0" y="98" width="320" height="148"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Comment Space">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-FD-L7M" userLabel="Label - UserName">
+                                <rect key="frame" x="93" y="32" width="207" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="User name"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" tag="15" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phU-QX-Z8k">
+                                <rect key="frame" x="-1" y="243" width="321" height="319"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWD-3I-LeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="-52"/>
         </scene>
         <!--Roast App Login View Controller-->
         <scene sceneID="gP1-26-6Ow">
@@ -219,7 +272,7 @@
                         <barButtonItem key="backBarButtonItem" title="Logout" id="Qdq-5B-LPg"/>
                         <barButtonItem key="rightBarButtonItem" title="Skip" id="hgB-gZ-EMC">
                             <connections>
-                                <segue destination="k1a-9X-DLR" kind="push" identifier="login" id="bvy-an-x7h"/>
+                                <segue destination="k1a-9X-DLR" kind="push" id="Odl-pW-WQZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -242,7 +295,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHJ-KY-Qf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-926" y="-316"/>
+            <point key="canvasLocation" x="-979" y="-295"/>
         </scene>
     </scenes>
     <resources>

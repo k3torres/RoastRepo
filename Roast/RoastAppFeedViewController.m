@@ -7,6 +7,7 @@
 //
 
 #import "RoastAppFeedViewController.h"
+#import "RoastAppFeedDetailViewController.h"
 #import "RoastAppFeedItem.h"
 #import "RoastAppFeedProfile.h"
 #import "RoastAppFeedService.h"
@@ -134,11 +135,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{/*
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     //XYZToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
     //tappedItem.completed = !tappedItem.completed;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+  */
+    RoastAppFeedDetailViewController *detailView =[[RoastAppFeedDetailViewController alloc] initWithNibName:@"RoastAppFeedDetailViewController" bundle:nil];
+    
+    // Pass the selected object to the new view controller.
+    
+    RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
+    detailView.detailName = feedItemAtIndex.userName;
+    NSLog(@"userName = %@" , feedItemAtIndex.userName );
+    
+    // Push the view controller.
+    [self.navigationController pushViewController:detailView animated:YES];
 }
 
 - (void)reloadList:(NSNotificationCenter *)notification
