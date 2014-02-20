@@ -49,8 +49,8 @@
     [userFollowing addObject:@"candtcollective"];
     [userFollowing addObject:@"roastcoachsd"];
     [userFollowing addObject:@"younghickorysd"];
-        [userFollowing addObject:@"SDCoffeeNetwork"];
-        [userFollowing addObject:@"CaffeCalabria"];
+    [userFollowing addObject:@"SDCoffeeNetwork"];
+    [userFollowing addObject:@"CaffeCalabria"];
     
     //adding tags for instagram
     [tagFollowing addObject:@"candtcollective"];
@@ -60,13 +60,14 @@
     [feedProfile setTags:tagFollowing];
     [feedProfile setUsers:userFollowing];
     //[feedProfile.users addObject:[NSString @"coffee"]];
-    [feedProfile setEnableFacebook:NO];
+    [feedProfile setEnableFacebook:YES];
     [feedProfile setEnableInstagram:YES];
     [feedProfile setEnableTwitter:YES];
     
     self.feedService = [[RoastAppFeedService alloc] initWithProfile:feedProfile];
     
     [self.feedService populateFeed:self.feedItems withTableView:self.tableView];
+    self.feedDateFormat = @"EEE h:mm a MM.dd";
     
     [self.tableView reloadData];
     NSLog(@"feedItems Initialized!");
@@ -108,8 +109,12 @@
     
     // Configure the cell...
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:self.feedDateFormat];
+     
 
-    if ( [feedItemAtIndex.serviceName isEqualToString:@"Twitter"] )
+    if ( [feedItemAtIndex.serviceName isEqualToString:@"Twitter"] || [feedItemAtIndex.serviceName isEqualToString:@"Facebook"])
     {
         //[cell setBackgroundColor:[UIColor blueColor]];
         [(UILabel *)[cell.contentView viewWithTag:12] setHidden:NO];
@@ -122,16 +127,17 @@
 
         [(UIImageView *)[cell.contentView viewWithTag:15] setHidden:NO];
         [(UIImageView *)[cell.contentView viewWithTag:15] setImage:feedItemAtIndex.photo];
-        [(UILabel *)[cell.contentView viewWithTag:12] setHidden:YES];
-        
+        //[(UILabel *)[cell.contentView viewWithTag:12] setHidden:YES];
     }
 
-    [(UIImageView *)[cell.contentView viewWithTag:11] setImage:feedItemAtIndex.serviceBadge];
+ 
     [(UILabel *)[cell.contentView viewWithTag:10] setText:feedItemAtIndex.userName];
-    [(UILabel *)[cell.contentView viewWithTag:13] setText:feedItemAtIndex.timestamp];
+    [(UIImageView *)[cell.contentView viewWithTag:11] setImage:feedItemAtIndex.serviceBadge];
+    [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
+    [(UILabel *)[cell.contentView viewWithTag:13] setText:[formatter stringFromDate:feedItemAtIndex.timestamp]];
     [(UIImageView *)[cell.contentView viewWithTag:14] setImage:feedItemAtIndex.userPic];
 
-        return cell;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -156,6 +162,7 @@
 - (void)reloadList:(NSNotificationCenter *)notification
 {
 
+    
     [self.feedItems sortUsingComparator:^NSComparisonResult(RoastAppFeedItem *item0, RoastAppFeedItem *item1)
      {
          return [item1.timestamp compare:item0.timestamp];

@@ -13,5 +13,6 @@
 
 @property NSMutableArray *feedItems;
 @property RoastAppFeedService *feedService;
+@property NSString *feedDateFormat;
 
 @end

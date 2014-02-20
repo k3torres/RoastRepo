@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Affiliated. All rights reserved.
 //
 
+#import <FacebookSDK/FBRequest.h>
+#import <FacebookSDK/FBSession.h>
+#import <FacebookSDK/FBAccessTokenData.h>
+#import <FacebookSDK/FBGraphObject.h>
 #import "RoastAppFeedService.h"
 #import "RoastAppFeedItem.h"
 #import "STHTTPRequest.h"
@@ -48,10 +52,35 @@
     return self.twitterService;
 }
 
+
+
+- (FBRequestConnection *)connectFB
+{
+    
+    
+    // create the connection object
+    [self.fbService cancel];
+    self.fbService = [[FBRequestConnection alloc] init];
+    
+    return self.fbService;
+}
+
+- (UIImage *)getUIImageFromURLString:(NSString *)urlString
+{
+    NSURL *imageURL = [NSURL URLWithString:urlString];
+    NSData *data = [NSData dataWithContentsOfURL:imageURL];
+    return [UIImage imageWithData:data];
+}
+
+
 -(NSMutableArray *)populateFeed:(NSMutableArray *)feedArray withTableView:(UITableView *)tableView
 {
     //Connect to Services
     [self connectTwitter];
+    [self connectFB];
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
     //Twitter Request
     [self.twitterService verifyCredentialsWithSuccessBlock:^(NSString *bearerToken)
@@ -59,15 +88,14 @@
          for(NSString *user in self.feedProfile.users)
          {
              [self.twitterService getUserInformationFor:user successBlock:^(NSDictionary *response) {
-                 NSURL *imageURL = [NSURL URLWithString:[response objectForKey:@"profile_image_url"]];
-                 NSData *data = [NSData dataWithContentsOfURL:imageURL];
-                 UIImage *userPic = [UIImage imageWithData:data];
                  
                  [self.twitterService getUserTimelineWithScreenName:user count:5 successBlock:^(NSArray *statuses)
                   {
                       NSLog(@"Successful Verification and status retrival! %@", user);
                       
                       UIImage *twitterBadge = [UIImage imageNamed:@"twittericon.png"];
+                      [formatter setDateFormat:@"EEE MMM dd HH:mm:ss '+'zzzz yyyy"];
+
                       for(NSDictionary *status in statuses)
                       {
                           RoastAppFeedItem *feedItem1 = [[RoastAppFeedItem alloc] init];
@@ -76,8 +104,8 @@
                           feedItem1.serviceBadge = twitterBadge;
                           feedItem1.userName = status[@"user"][@"screen_name"];
                           feedItem1.message = status[@"text"];
-                          feedItem1.timestamp = status[@"created_at"];
-                          feedItem1.userPic = userPic;
+                          feedItem1.timestamp = [formatter dateFromString:status[@"created_at"]];
+                          feedItem1.userPic = [self getUIImageFromURLString:[response objectForKey:@"profile_image_url"]];
                           feedItem1.idNum = status[@"id"];
                           
                           [feedArray addObject:feedItem1];
@@ -105,9 +133,62 @@
          NSLog(@"%@", error.debugDescription);
      }];
     
-    //CALL INSTAGRAM FUNCTION
-    for (NSString *tags in self.feedProfile.tags)
-        [self appendFeedArray:feedArray withTag:tags];
+    
+    //Facebook Request
+    for (NSString *fbid in self.feedProfile.users)
+    {
+        
+        NSMutableString *graphPathString = [[NSMutableString alloc] initWithString:fbid];
+        [graphPathString appendString:@"?fields=id,name,statuses.limit(5).fields(message),picture"];
+        
+        // create a handler block to handle the results of the request for fbid's profile
+        [self.fbService
+         addRequest:[[FBRequest alloc] initWithSession:FBSession.activeSession graphPath:graphPathString]
+         completionHandler:^(FBRequestConnection *connection, id result, NSError *error)
+         {
+             if(!error)
+             {
+                 // result is the json response from a successful request !!!!!!!!!!!!!
+                 NSDictionary *dictionary = (NSDictionary *)result;
+                 UIImage *fbBadge = [UIImage imageNamed:@"fbicon.png"];
+                 [formatter setDateFormat:@"YYYY-MM-dd'T'HH:mm:ss'+'zzzz"];
+
+                 for(FBGraphObject *status in dictionary[@"statuses"][@"data"])
+                 {
+                     RoastAppFeedItem *feedItem = [[RoastAppFeedItem alloc] init];
+                     
+                     feedItem.serviceName = @"Facebook";
+                     feedItem.serviceBadge = fbBadge;
+                     feedItem.userName = dictionary[@"name"];
+                     feedItem.message = status[@"message"];
+                     feedItem.timestamp = [formatter dateFromString:status[@"updated_time"]];
+                     feedItem.userPic = [self getUIImageFromURLString:dictionary[@"picture"][@"data"][@"url"]];
+                     feedItem.idNum = status[@"id"];
+                     
+                     [feedArray addObject:feedItem];
+                 }
+                 
+                 [[NSNotificationCenter defaultCenter]
+                  postNotificationName:@"TestNotification"
+                  object:self];
+             }
+         }];
+    }
+    
+    [self.fbService start];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    for(NSString *tag in self.feedProfile.tags)
+    {
+        [self appendFeedArray:feedArray withTag:tag];
+    }
     
     return feedArray;
 }
@@ -165,8 +246,7 @@
         feedItem1.message = [message objectAtIndex:i];
         
         //date
-        
-        feedItem1.timestamp = [self feedDateFormatter:[creation objectAtIndex:i]];
+        feedItem1.timestamp = [NSDate dateWithTimeIntervalSince1970:[[creation objectAtIndex:i] integerValue]];
         //done with date
         
         feedItem1.userPic = userPic;
@@ -183,28 +263,4 @@
     NSLog(@"added instagram feedItems with tag = %@" , instagramTag );
     
 }
-
--(NSDate *)feedDateFormatter:(NSString *)oldDate
-{
-    //Format the date to match Twitter
-    NSNumberFormatter * d = [[NSNumberFormatter alloc] init];
-    [d setNumberStyle:NSNumberFormatterDecimalStyle];
-    
-    double dateNum = [[d numberFromString:oldDate] doubleValue];
-    
-    //use interval to get human readable date
-    NSTimeInterval interval = dateNum;
-    NSDate *aDate = [NSDate dateWithTimeIntervalSince1970: interval];
-    
-    //set format and return string
-    NSDateFormatter *f = [[NSDateFormatter alloc] init];
-    [f setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-    [f setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
-    NSDate *newDate = [f stringFromDate:aDate];
-    
-    return newDate;
-    
-}
-
-
 @end

@@ -37,6 +37,7 @@
 		DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */; };
 		DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */; };
 		DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9221701893560800C67EAD /* RoastAppFeedViewController.m */; };
+		DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB4E5EE18AB6308006BA824 /* fbicon.png */; };
 		DCCF44CA189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B2189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m */; };
 		DCCF44CB189C2C5F0098F3E9 /* NSString+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B4189C2C5F0098F3E9 /* NSString+STTwitter.m */; };
 		DCCF44CC189C2C5F0098F3E9 /* STHTTPRequest+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B6189C2C5F0098F3E9 /* STHTTPRequest+STTwitter.m */; };
@@ -402,6 +403,7 @@
 		DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = caffecalabria.jpg; path = ../caffecalabria.jpg; sourceTree = "<group>"; };
 		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedViewController.h; path = Roast/RoastAppFeedViewController.h; sourceTree = "<group>"; };
 		DC9221701893560800C67EAD /* RoastAppFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedViewController.m; path = Roast/RoastAppFeedViewController.m; sourceTree = "<group>"; };
+		DCB4E5EE18AB6308006BA824 /* fbicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon.png; sourceTree = "<group>"; };
 		DCCF44B1189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STTwitter.h"; sourceTree = "<group>"; };
 		DCCF44B2189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+STTwitter.m"; sourceTree = "<group>"; };
 		DCCF44B3189C2C5F0098F3E9 /* NSString+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+STTwitter.h"; sourceTree = "<group>"; };
@@ -1034,6 +1036,7 @@
 			isa = PBXGroup;
 			children = (
 				680C03C618A608CB00E5111D /* CaffeCalabria1.png */,
+				DCB4E5EE18AB6308006BA824 /* fbicon.png */,
 				680C03C718A73F0700E5111D /* instagramicon.png */,
 				DC40FA2C18A5A382002CE7B3 /* twittericon.png */,
 				683BC66F188A48F30027D7F2 /* Roast-Info.plist */,
@@ -1310,6 +1313,7 @@
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
 				680C03C818A73F0700E5111D /* instagramicon.png in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
+				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1628,7 +1632,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1667,7 +1671,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
