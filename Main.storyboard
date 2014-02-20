@@ -62,9 +62,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.00090433453030647204" green="0.43599699722176788" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="A2Q-pe-t9V" kind="modal" id="CA8-ZE-PeT"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -75,6 +72,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="A2Q-pe-t9V" kind="modal" identifier="feedDetailView" modalTransitionStyle="crossDissolve" id="eCG-bz-a60"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbD-qo-yWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +196,7 @@
                         <viewControllerLayoutGuide type="top" id="srF-bV-pUY"/>
                         <viewControllerLayoutGuide type="bottom" id="5Fu-7L-yrj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7B2-nU-FYU">
+                    <view key="view" alpha="0.10000000000000001" contentMode="scaleToFill" id="7B2-nU-FYU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -237,13 +237,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismissDetailView" destination="A2Q-pe-t9V" eventType="touchUpInside" id="3WG-NY-hKY"/>
-                                    <action selector="goBack" destination="sWD-3I-LeY" eventType="touchUpInside" id="GgK-1s-rrw"/>
-                                    <segue destination="i7l-2n-3hL" kind="unwind" unwindAction="unwindToFeed:" id="7nt-EV-vgx"/>
+                                    <segue destination="i7l-2n-3hL" kind="unwind" unwindAction="unwindToFeedListView:" id="Zfc-So-I6x"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWD-3I-LeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -291,7 +289,7 @@
                         <barButtonItem key="backBarButtonItem" title="Logout" id="Qdq-5B-LPg"/>
                         <barButtonItem key="rightBarButtonItem" title="Skip" id="hgB-gZ-EMC">
                             <connections>
-                                <segue destination="k1a-9X-DLR" kind="push" id="Odl-pW-WQZ"/>
+                                <segue destination="k1a-9X-DLR" kind="push" identifier="login" id="Odl-pW-WQZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

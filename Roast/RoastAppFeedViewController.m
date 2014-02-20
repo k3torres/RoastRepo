@@ -147,16 +147,20 @@
     //tappedItem.completed = !tappedItem.completed;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
   */
-    RoastAppFeedDetailViewController *detailView =[[RoastAppFeedDetailViewController alloc] initWithNibName:@"RoastAppFeedDetailViewController" bundle:nil];
+    
+    /*RoastAppFeedDetailViewController *detailView =[[RoastAppFeedDetailViewController alloc] initWithNibName:@"RoastAppFeedDetailViewController" bundle:nil];
     
     // Pass the selected object to the new view controller.
     
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
     detailView.detailName = feedItemAtIndex.userName;
     NSLog(@"userName = %@" , feedItemAtIndex.userName );
+     
     
     // Push the view controller.
-    [self.navigationController pushViewController:detailView animated:YES];
+    [self presentViewController:detailView animated:YES completion:Nil];
+     */
+    [self performSegueWithIdentifier:@"feedDetailView" sender:self];
 }
 
 - (void)reloadList:(NSNotificationCenter *)notification
@@ -228,5 +232,9 @@
 }
 
  */
+
+- (IBAction)unwindToFeedListView:(UIStoryboardSegue *)unwindSegue
+{
+}
 
 @end
