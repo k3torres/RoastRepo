@@ -250,6 +250,7 @@
         feedItem1.timestamp = [NSDate dateWithTimeIntervalSince1970:[[creation objectAtIndex:i] integerValue]];
         //done with date
         
+        
         NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
         [f setNumberStyle:NSNumberFormatterDecimalStyle];
         NSNumber * myNumber = [f numberFromString:[idNumber objectAtIndex:i]];
