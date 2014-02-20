@@ -30,6 +30,7 @@
     self.title = @"Detail";
 	// Do any additional setup after loading the view.
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -42,4 +43,6 @@
 
     [(UILabel *)[self.view viewWithTag:30] setText:self.detailName];
 }
+
+
 @end
