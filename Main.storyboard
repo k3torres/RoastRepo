@@ -120,7 +120,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Coffee Houses" id="UV1-F4-7ac">
-                        <barButtonItem key="rightBarButtonItem" title="ShopView" id="VxI-zA-01i">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="VxI-zA-01i">
                             <connections>
                                 <segue destination="BNU-aW-3Un" kind="push" identifier="shopSegue" id="uan-yF-xpF"/>
                             </connections>
