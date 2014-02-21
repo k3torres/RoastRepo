@@ -1,30 +1,85 @@
 //
-//  RoastAppShopViewController.m
+//  RoastAppShopMenuViewController.m
 //  Roast
 //
-//  Created by Nicholas Variz on 1/26/14.
+//  Created by Nicholas Variz on 2/10/14.
 //  Copyright (c) 2014 Affiliated. All rights reserved.
 //
 
-#import "RoastAppShopViewController.h"
 #import "RoastAppShopMenuViewController.h"
+#import "RoastAppShopViewController.h"
 #import "RoastAppJSONHandler.h"
 #import "RoastAppShopItem.h"
 
-@interface RoastAppShopViewController ()
+@interface RoastAppShopMenuViewController ()
+
+@property NSMutableArray *shopList;
 
 @end
 
-@implementation RoastAppShopViewController
+@implementation RoastAppShopMenuViewController
 
+@synthesize menuChoice;
 @synthesize shopChoice;
+
+- (void)loadInitialData
+{
+    NSInteger requestType = 0;
+    
+    if([menuChoice isEqualToString:@"drinkMenu"])
+        requestType = 0;
+    else if([menuChoice isEqualToString:@"foodMenu"])
+        requestType = 1;
+    else if([menuChoice isEqualToString:@"gearMenu"])
+        requestType = 2;
+    else if([menuChoice isEqualToString:@"infoMenu"])
+        requestType = 3;
+    
+    NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:requestType :shopChoice];
+    
+    if(queryResult != nil){
+        
+        int counter = 0;
+        self.descriptions = [queryResult objectAtIndex:1];
+        self.names = [queryResult objectAtIndex:2];
+        self.types = [queryResult objectAtIndex:0];
+        self.prices = [queryResult objectAtIndex:3];
+        
+        for(NSString *string in self.descriptions){
+            
+            RoastAppShopItem *temp = [[RoastAppShopItem alloc] init];
+            temp.name = [self.names objectAtIndex:counter];
+            temp.description = [self.descriptions objectAtIndex:counter];
+            temp.type = [self.types objectAtIndex:counter];
+            temp.price = [self.prices objectAtIndex:counter];
+            
+            [self.shopList addObject:temp];
+            counter = counter + 1;
+        }
+    }
+    NSLog(@"shopItems Initialized!");
+    
+}
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.descriptions = [[NSMutableArray alloc] init];
+    self.types = [[NSMutableArray alloc] init];
+    self.prices = [[NSMutableArray alloc] init];
+    self.names = [[NSMutableArray alloc] init];
+    self.shopList = [[NSMutableArray alloc] init];
     
-    self.shopList1 = [[NSMutableArray alloc] init];
-    self.shopList2 = [[NSMutableArray alloc] init];
+    [self loadInitialData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,55 +98,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    if(tableView == [self.view viewWithTag:1])
-    {
-        return [self.shopList1 count];
-    }
-    else {
-        return [self.shopList2 count];
-    }
-    return 0;
+    return [self.shopList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ListPrototypeCell";
+    static NSString *CellIdentifier = @"ShopItemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    if(tableView == [self.view viewWithTag:1]){
-        RoastAppShopItem *shopItem = [self.shopList1   objectAtIndex:indexPath.row];
-        cell.textLabel.text = shopItem.name;
-    }
-    else{
-        RoastAppShopItem *shopItem = [self.shopList2   objectAtIndex:indexPath.row];
-        cell.textLabel.text = shopItem.name;
-    }
+    RoastAppShopItem *shopItemAtIndex = [self.shopList objectAtIndex:indexPath.row];
+    
+    [(UILabel *)[cell.contentView viewWithTag:1] setText:shopItemAtIndex.name];
+    [(UILabel *)[cell.contentView viewWithTag:2] setText:shopItemAtIndex.description];
+    [(UILabel *)[cell.contentView viewWithTag:3] setText:shopItemAtIndex.price];
+    
     return cell;
-}
-
-- (IBAction)unwindToShopList:(UIStoryboardSegue *)segue
-
-{
-    
-    NSLog(@"Calling unwindToShopList");
-    
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get reference to the ShopMenu view controller (destination)
-    RoastAppShopMenuViewController *menuCtrlr = [segue destinationViewController];
-    menuCtrlr.shopChoice = [self shopChoice];
-    //Inform the menu VC which type of menu should be displayed
-    if ([[segue identifier] isEqualToString:@"drinkMenuSegue"])
-        menuCtrlr.menuChoice = @"drinkMenu";
-    else if ([[segue identifier] isEqualToString:@"foodMenuSegue"])
-        menuCtrlr.menuChoice = @"foodMenu";
-    else if ([[segue identifier] isEqualToString:@"gearMenuSegue"])
-        menuCtrlr.menuChoice = @"gearMenu";
-    else if ([[segue identifier] isEqualToString:@"infoMenuSegue"])
-        menuCtrlr.menuChoice = @"infoMenu";
 }
 
 /*
