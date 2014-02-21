@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RoastAppShopListViewController : UITableViewController
-
+@property NSString *selectedShop;
 @property NSMutableArray *shopImages;
 
 @end
