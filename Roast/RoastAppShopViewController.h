@@ -12,5 +12,6 @@
 
 @property NSMutableArray *shopList1;
 @property NSMutableArray *shopList2;
+@property (strong, nonatomic) NSString *shopChoice;
 
 @end
