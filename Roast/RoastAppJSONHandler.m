@@ -102,12 +102,27 @@ NSArray *queryResult;
 //Query: Select * from roast.drinks where foodName like '% cafe %'
 +(NSArray *)requestCafeInfo:(NSString *)cafeName{
     
-    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeInfo?cafe="] stringByAppendingString:cafeName];
+    NSString *str1 = @"PlaceholderForInfo";
+    NSString *str2 = @"";
+    NSString *str3 = @"";
+    NSString *str4 = @"";
+    NSMutableArray *mut = [[NSMutableArray alloc] init];
+    NSMutableArray *ar1 = [[NSMutableArray alloc] init];
+    NSMutableArray *ar2 = [[NSMutableArray alloc] init];
+    NSMutableArray *ar3 = [[NSMutableArray alloc] init];
+    NSMutableArray *ar4 = [[NSMutableArray alloc] init];
     
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
-    NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    [ar1 addObject:str1];
+    [ar2 addObject:str2];
+    [ar3 addObject:str3];
+    [ar4 addObject:str4];
     
-    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    [mut addObject:ar1];
+    [mut addObject:ar2];
+    [mut addObject:ar3];
+    [mut addObject:ar4];
+    
+    NSArray *jsonArray = [[NSArray alloc] initWithArray:mut];
     
     return jsonArray;
 }
