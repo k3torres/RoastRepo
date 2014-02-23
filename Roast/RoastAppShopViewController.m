@@ -18,14 +18,31 @@
 @implementation RoastAppShopViewController
 
 @synthesize shopChoice;
+@synthesize shopImage;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = shopChoice;
     
-    self.shopList1 = [[NSMutableArray alloc] init];
-    self.shopList2 = [[NSMutableArray alloc] init];
+    /*UIScrollView *tempScrollView=(UIScrollView *)self.view;
+    tempScrollView.contentSize=CGSizeMake(1280,960);*/
+    
+    [self loadInitialView];
+   
 }
+
+
+- (void)loadInitialView
+{
+    self.pix = [NSArray arrayWithObjects:@"candtcollectivecoldbrew.jpg",
+                                            @"candtcollectiveproduct.jpg",
+                                            @"candtcollectiveemblem.jpg",
+                                            nil];
+    self.imageIndex = 0;
+    shopImage.image = [UIImage imageNamed:[self.pix objectAtIndex:self.imageIndex]];
+}
+ 
 
 - (void)didReceiveMemoryWarning
 {
@@ -33,48 +50,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    
-    if(tableView == [self.view viewWithTag:1])
-    {
-        return [self.shopList1 count];
-    }
-    else {
-        return [self.shopList2 count];
-    }
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"ListPrototypeCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    if(tableView == [self.view viewWithTag:1]){
-        RoastAppShopItem *shopItem = [self.shopList1   objectAtIndex:indexPath.row];
-        cell.textLabel.text = shopItem.name;
-    }
-    else{
-        RoastAppShopItem *shopItem = [self.shopList2   objectAtIndex:indexPath.row];
-        cell.textLabel.text = shopItem.name;
-    }
-    return cell;
-}
 
 - (IBAction)unwindToShopList:(UIStoryboardSegue *)segue
 
 {
     
     NSLog(@"Calling unwindToShopList");
+    
+}
+
+- (IBAction)handleSwipe:(UISwipeGestureRecognizer *)sender {
+    NSLog(@"swipped!!");
+    UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *)sender direction];
+
+    switch (direction) {
+        case UISwipeGestureRecognizerDirectionLeft:
+            NSLog(@"Swiped Left");
+            self.imageIndex++;
+            break;
+        case UISwipeGestureRecognizerDirectionRight:
+            NSLog( @"Swiped Right");
+            self.imageIndex--;
+        default:
+            break;
+    }
+    self.imageIndex = (self.imageIndex < 0) ? ([self.pix count] -1) : self.imageIndex % [self.pix count];
+    shopImage.image = [UIImage imageNamed:[self.pix objectAtIndex:self.imageIndex]];
+    
     
 }
 
@@ -94,44 +97,6 @@
         menuCtrlr.menuChoice = @"infoMenu";
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 /*
  #pragma mark - Navigation
