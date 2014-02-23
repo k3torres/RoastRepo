@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938D18B9A58D00B41C3D /* foodicon.jpg */; };
+		6671939118B9A58D00B41C3D /* cupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6671938E18B9A58D00B41C3D /* cupicon.png */; };
+		6671939218B9A58D00B41C3D /* carticon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938F18B9A58D00B41C3D /* carticon.jpg */; };
 		6681A36318A61A1700D5324D /* RoastAppServerImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */; };
 		66ACA12318B7EE5B00C60614 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACA12218B7EE5B00C60614 /* FacebookSDK.framework */; };
 		66ACA12618B7F03500C60614 /* RoastAppShopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACA12518B7F03500C60614 /* RoastAppShopMenuViewController.m */; };
@@ -129,6 +132,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6671938D18B9A58D00B41C3D /* foodicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foodicon.jpg; sourceTree = "<group>"; };
+		6671938E18B9A58D00B41C3D /* cupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cupicon.png; sourceTree = "<group>"; };
+		6671938F18B9A58D00B41C3D /* carticon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carticon.jpg; sourceTree = "<group>"; };
 		6681A36118A61A1700D5324D /* RoastAppServerImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppServerImageHandler.h; sourceTree = "<group>"; };
 		6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppServerImageHandler.m; sourceTree = "<group>"; };
 		66ACA12218B7EE5B00C60614 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -1040,6 +1046,9 @@
 		683BC66E188A48F30027D7F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6671938D18B9A58D00B41C3D /* foodicon.jpg */,
+				6671938E18B9A58D00B41C3D /* cupicon.png */,
+				6671938F18B9A58D00B41C3D /* carticon.jpg */,
 				680C03C618A608CB00E5111D /* CaffeCalabria1.png */,
 				DCB4E5EE18AB6308006BA824 /* fbicon.png */,
 				680C03C718A73F0700E5111D /* instagramicon.png */,
@@ -1317,10 +1326,13 @@
 				683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */,
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
+				6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
 				680C03C818A73F0700E5111D /* instagramicon.png in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
+				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,
+				6671939218B9A58D00B41C3D /* carticon.jpg in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
