@@ -14,7 +14,7 @@
 @property NSMutableArray *names;
 @property NSMutableArray *prices;
 @property NSMutableArray *types;
-@property UIImage *listIcon;
+@property NSMutableArray *imgNames;
 @property (strong, nonatomic) NSString *menuChoice;
 @property (strong, nonatomic) NSString *shopChoice;
 

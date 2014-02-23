@@ -9,6 +9,7 @@
 #import "RoastAppShopMenuViewController.h"
 #import "RoastAppShopViewController.h"
 #import "RoastAppJSONHandler.h"
+#import "RoastAppServerImageHandler.h"
 #import "RoastAppShopItem.h"
 
 @interface RoastAppShopMenuViewController ()
@@ -29,15 +30,12 @@
     if([menuChoice isEqualToString:@"drinkMenu"]){
         self.title = @"Drinks";
         requestType = 0;
-        self.listIcon = [UIImage imageNamed:@"cupicon.png"];
     }else if([menuChoice isEqualToString:@"foodMenu"]){
         self.title = @"Food";
         requestType = 1;
-        self.listIcon = [UIImage imageNamed:@"foodicon.jpg"];
     }else if([menuChoice isEqualToString:@"gearMenu"]){
         self.title = @"Gear";
         requestType = 2;
-        self.listIcon = [UIImage imageNamed:@"carticon.jpg"];
     }
     
     NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:requestType :shopChoice];
@@ -46,9 +44,10 @@
         
         int counter = 0;
         self.descriptions = [queryResult objectAtIndex:1];
-        self.names = [queryResult objectAtIndex:2];
+        self.names = [queryResult objectAtIndex:3];
         self.types = [queryResult objectAtIndex:0];
-        self.prices = [queryResult objectAtIndex:3];
+        self.prices = [queryResult objectAtIndex:4];
+        self.imgNames = [queryResult objectAtIndex:2];
         
         for(NSString *string in self.descriptions){
             
@@ -57,7 +56,7 @@
             temp.description = [self.descriptions objectAtIndex:counter];
             temp.type = [self.types objectAtIndex:counter];
             temp.price = [self.prices objectAtIndex:counter];
-            temp.shopImage = self.listIcon;
+            temp.shopImage = [RoastAppServerImageHandler requestCafeImages:[self.imgNames objectAtIndex:counter]];
             [self.shopList addObject:temp];
             counter = counter + 1;
         }
@@ -78,6 +77,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.imgNames = [[NSMutableArray alloc] init];
     self.descriptions = [[NSMutableArray alloc] init];
     self.types = [[NSMutableArray alloc] init];
     self.prices = [[NSMutableArray alloc] init];
