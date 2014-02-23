@@ -37,6 +37,11 @@ NSArray *queryResult;
             return [RoastAppJSONHandler requestCafeFoods:cafe];
             break;
             
+        case 2:
+            
+            return [RoastAppJSONHandler requestCafeGear:cafe];
+            break;
+            
         default:
             
             break;
@@ -49,33 +54,44 @@ NSArray *queryResult;
 //Query: Select * from roast.cafes where cafeName like '% cafe %'
 +(NSArray *)requestCafeDrinks:(NSString*)cafeName{
     
-    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeDrinks?cafe="] stringByAppendingString:cafeName];
+    NSString *cafePrefix = [cafeName substringToIndex:3];
     
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeDrinks?cafe="] stringByAppendingString:cafePrefix];
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
-    NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    NSError *error;
+    NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     
     NSArray *jsonArray = [dictionaryFromResponse allValues];
-    NSArray *innerElements = [jsonArray objectAtIndex:0];
     
-    queryResult = [[NSArray alloc] initWithArray:innerElements];
-    
-    return queryResult;
+    return jsonArray;
 }
 
 //Query: Select * from roast.drinks where foodName like '% cafe %'
 +(NSArray *)requestCafeFoods:(NSString *)cafeName{
     
-    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeFoods?cafe="] stringByAppendingString:cafeName];
+    NSString *cafePrefix = [cafeName substringToIndex:3];
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeFoods?cafe="] stringByAppendingString:cafePrefix];
     
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     
     NSArray *jsonArray = [dictionaryFromResponse allValues];
-    NSArray *innerElements = [jsonArray objectAtIndex:0];
     
-    queryResult = [[NSArray alloc] initWithArray:innerElements];
+    return jsonArray;
+}
+
+//Query: Select * from roast.drinks where foodName like '% cafe %'
++(NSArray *)requestCafeGear:(NSString *)cafeName{
     
-    return queryResult;
+    NSString *cafePrefix = [cafeName substringToIndex:3];
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetCafeGear?cafe="] stringByAppendingString:cafePrefix];
+    
+    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
+    NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    
+    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    
+    return jsonArray;
 }
 
 @end

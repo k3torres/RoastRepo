@@ -7,6 +7,7 @@
 //
 
 #import "RoastAppShopListViewController.h"
+#import "RoastAppShopViewController.h"
 
 @interface RoastAppShopListViewController ()
 
@@ -51,6 +52,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Pass the name of the selected shop to the next view controller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    RoastAppShopViewController *shopCtrlr = [segue destinationViewController];
+    
+    shopCtrlr.shopChoice = [self selectedShop];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    NSDictionary *shopAtIndex = [self.shopImages objectAtIndex:indexPath.row];
+    
+    self.selectedShop = shopAtIndex[@"name"];
+    
+    [self performSegueWithIdentifier:@"shopSegue" sender:cell];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -80,9 +100,6 @@
 
     return cell;
 }
-
-
-
 
 /*
 // Override to support conditional editing of the table view.

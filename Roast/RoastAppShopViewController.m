@@ -7,6 +7,7 @@
 //
 
 #import "RoastAppShopViewController.h"
+#import "RoastAppShopMenuViewController.h"
 #import "RoastAppJSONHandler.h"
 #import "RoastAppShopItem.h"
 
@@ -16,50 +17,14 @@
 
 @implementation RoastAppShopViewController
 
-- (void)loadInitialData
-{
-    //This is just an arbitrary selection so that shop view has something to show
-    NSString * initialCafe = @"caffe";
-    NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:0 :initialCafe];
-    
-    if(queryResult != nil){
-        
-        int counter = 0;
-        
-        for(NSString *string in queryResult){
-            RoastAppShopItem *temp = [[RoastAppShopItem alloc] init];
-            temp.name = [queryResult objectAtIndex:counter];
-            [self.shopList1 addObject:temp];
-            counter = counter + 1;
-        }
-    }
-    
-    queryResult = [RoastAppJSONHandler makeJSONRequest:1 :initialCafe];
-    
-    if(queryResult != nil){
-        
-        int counter = 0;
-        
-        for(NSString *string in queryResult){
-            RoastAppShopItem *temp = [[RoastAppShopItem alloc] init];
-            temp.name = [queryResult objectAtIndex:counter];
-            [self.shopList2 addObject:temp];
-            counter = counter + 1;
-        }
-    }
-
-    NSLog(@"shopItems Initialized!");
-
-}
+@synthesize shopChoice;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.shopList1 = [[NSMutableArray alloc] init];
     self.shopList2 = [[NSMutableArray alloc] init];
-    
-    [self loadInitialData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+    
     if(tableView == [self.view viewWithTag:1])
     {
         return [self.shopList1 count];
@@ -108,60 +73,74 @@
 - (IBAction)unwindToShopList:(UIStoryboardSegue *)segue
 
 {
-
+    
     NSLog(@"Calling unwindToShopList");
     
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Get reference to the ShopMenu view controller (destination)
+    RoastAppShopMenuViewController *menuCtrlr = [segue destinationViewController];
+    menuCtrlr.shopChoice = [self shopChoice];
+    //Inform the menu VC which type of menu should be displayed
+    if ([[segue identifier] isEqualToString:@"drinkMenuSegue"])
+        menuCtrlr.menuChoice = @"drinkMenu";
+    else if ([[segue identifier] isEqualToString:@"foodMenuSegue"])
+        menuCtrlr.menuChoice = @"foodMenu";
+    else if ([[segue identifier] isEqualToString:@"gearMenuSegue"])
+        menuCtrlr.menuChoice = @"gearMenu";
 }
 
+/*
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
+
+/*
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ 
  */
 
 @end
