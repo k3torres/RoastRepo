@@ -27,12 +27,15 @@
     NSInteger requestType = 0;
     
     if([menuChoice isEqualToString:@"drinkMenu"]){
+        self.title = @"Drinks";
         requestType = 0;
         self.listIcon = [UIImage imageNamed:@"cupicon.png"];
     }else if([menuChoice isEqualToString:@"foodMenu"]){
+        self.title = @"Food";
         requestType = 1;
         self.listIcon = [UIImage imageNamed:@"foodicon.jpg"];
     }else if([menuChoice isEqualToString:@"gearMenu"]){
+        self.title = @"Gear";
         requestType = 2;
         self.listIcon = [UIImage imageNamed:@"carticon.jpg"];
     }
