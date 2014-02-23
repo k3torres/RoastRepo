@@ -14,5 +14,7 @@
 @property NSMutableArray *feedItems;
 @property RoastAppFeedService *feedService;
 @property NSString *feedDateFormat;
+@property UIRefreshControl *refreshControl;
+@property (strong, nonatomic) IBOutlet UITableView *feedViewTable;
 
 @end

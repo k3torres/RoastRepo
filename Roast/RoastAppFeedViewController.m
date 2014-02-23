@@ -12,12 +12,16 @@
 #import "RoastAppFeedProfile.h"
 #import "RoastAppFeedService.h"
 #import "STTwitter.h"
+#import "TransitionDelegate.h"
 
 @interface RoastAppFeedViewController ()
+
+@property (nonatomic, strong) TransitionDelegate *transitionController;
 
 @end
 
 @implementation RoastAppFeedViewController
+@synthesize transitionController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -66,10 +70,12 @@
     
     self.feedService = [[RoastAppFeedService alloc] initWithProfile:feedProfile];
     
+    //Start Query
     [self.feedService populateFeed:self.feedItems withTableView:self.tableView];
     self.feedDateFormat = @"EEE h:mm a MM.dd";
     
     [self.tableView reloadData];
+    
     NSLog(@"feedItems Initialized!");
     NSLog(@"Current feedItems size:%u", [self.feedItems count]);
     
@@ -77,6 +83,11 @@
                                              selector:@selector(reloadList:)
                                                  name:@"TestNotification"
                                                object:nil];
+    
+    //Refresh on pull-down
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.feedViewTable addSubview:self.refreshControl];
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,18 +127,14 @@
 
     if ( [feedItemAtIndex.serviceName isEqualToString:@"Twitter"] || [feedItemAtIndex.serviceName isEqualToString:@"Facebook"])
     {
-        //[cell setBackgroundColor:[UIColor blueColor]];
         [(UILabel *)[cell.contentView viewWithTag:12] setHidden:NO];
         [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
         [(UIImageView *)[cell.contentView viewWithTag:15] setHidden:YES];
     }
     else
     {
-        //[cell setBackgroundColor:[UIColor blackColor]];
-
         [(UIImageView *)[cell.contentView viewWithTag:15] setHidden:NO];
         [(UIImageView *)[cell.contentView viewWithTag:15] setImage:feedItemAtIndex.photo];
-        //[(UILabel *)[cell.contentView viewWithTag:12] setHidden:YES];
     }
 
  
@@ -141,26 +148,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{/*
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    //XYZToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
-    //tappedItem.completed = !tappedItem.completed;
-    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-  */
-    
-    /*RoastAppFeedDetailViewController *detailView =[[RoastAppFeedDetailViewController alloc] initWithNibName:@"RoastAppFeedDetailViewController" bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
+{
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
-    detailView.detailName = feedItemAtIndex.userName;
-    NSLog(@"userName = %@" , feedItemAtIndex.userName );
-     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RoastAppFeedDetailViewController *detailView = [storyboard instantiateViewControllerWithIdentifier:@"FeedDetailViewController"];
     
-    // Push the view controller.
+    UIView *snapshotView = [self.view snapshotViewAfterScreenUpdates:NO];
+    [detailView.view addSubview:snapshotView];
+    [detailView.view sendSubviewToBack:snapshotView];
+    detailView.selectedFeedItem = feedItemAtIndex;
     [self presentViewController:detailView animated:YES completion:Nil];
-     */
-    [self performSegueWithIdentifier:@"feedDetailView" sender:self];
 }
 
 - (void)reloadList:(NSNotificationCenter *)notification
@@ -235,6 +232,19 @@
 
 - (IBAction)unwindToFeedListView:(UIStoryboardSegue *)unwindSegue
 {
+}
+
+- (void)refresh:(id)sender
+{
+    // do your refresh here and reload the tablview
+    NSLog(@"RELOADING!");
+    
+    //Start Query
+    self.feedItems = Nil;
+    self.feedItems = [[NSMutableArray alloc] init];
+    [self.feedService populateFeed:self.feedItems withTableView:self.tableView];
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 @end

@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RoastAppFeedItem.h"
 
 @interface RoastAppFeedDetailViewController : UIViewController
 
-@property NSString* detailName;
-- (void)RoastAppFeedDetailViewDismiss;
+@property NSString *detailName;
+@property RoastAppFeedItem *selectedFeedItem;
 
+@property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
+@property (weak, nonatomic) IBOutlet UITextView *comment;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UIImageView *postPicture;
 
 @end
 

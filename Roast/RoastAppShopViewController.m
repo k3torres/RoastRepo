@@ -93,8 +93,6 @@
         menuCtrlr.menuChoice = @"foodMenu";
     else if ([[segue identifier] isEqualToString:@"gearMenuSegue"])
         menuCtrlr.menuChoice = @"gearMenu";
-    else if ([[segue identifier] isEqualToString:@"infoMenuSegue"])
-        menuCtrlr.menuChoice = @"infoMenu";
 }
 
 

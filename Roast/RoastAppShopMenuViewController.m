@@ -26,14 +26,16 @@
 {
     NSInteger requestType = 0;
     
-    if([menuChoice isEqualToString:@"drinkMenu"])
+    if([menuChoice isEqualToString:@"drinkMenu"]){
         requestType = 0;
-    else if([menuChoice isEqualToString:@"foodMenu"])
+        self.listIcon = [UIImage imageNamed:@"cupicon.png"];
+    }else if([menuChoice isEqualToString:@"foodMenu"]){
         requestType = 1;
-    else if([menuChoice isEqualToString:@"gearMenu"])
+        self.listIcon = [UIImage imageNamed:@"foodicon.jpg"];
+    }else if([menuChoice isEqualToString:@"gearMenu"]){
         requestType = 2;
-    else if([menuChoice isEqualToString:@"infoMenu"])
-        requestType = 3;
+        self.listIcon = [UIImage imageNamed:@"carticon.jpg"];
+    }
     
     NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:requestType :shopChoice];
     
@@ -52,7 +54,7 @@
             temp.description = [self.descriptions objectAtIndex:counter];
             temp.type = [self.types objectAtIndex:counter];
             temp.price = [self.prices objectAtIndex:counter];
-            
+            temp.shopImage = self.listIcon;
             [self.shopList addObject:temp];
             counter = counter + 1;
         }
@@ -78,7 +80,7 @@
     self.prices = [[NSMutableArray alloc] init];
     self.names = [[NSMutableArray alloc] init];
     self.shopList = [[NSMutableArray alloc] init];
-    
+
     [self loadInitialData];
 }
 
@@ -111,6 +113,7 @@
     [(UILabel *)[cell.contentView viewWithTag:1] setText:shopItemAtIndex.name];
     [(UILabel *)[cell.contentView viewWithTag:2] setText:shopItemAtIndex.description];
     [(UILabel *)[cell.contentView viewWithTag:3] setText:shopItemAtIndex.price];
+    [(UIImageView *)[cell.contentView viewWithTag:4] setImage:shopItemAtIndex.shopImage];
     
     return cell;
 }
