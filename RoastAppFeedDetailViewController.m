@@ -9,8 +9,6 @@
 #import "RoastAppFeedDetailViewController.h"
 
 @interface RoastAppFeedDetailViewController ()
-
-
 @end
 
 @implementation RoastAppFeedDetailViewController
@@ -27,8 +25,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Detail";
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,8 +37,26 @@
 {
     [super viewWillAppear:YES];
 
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEE h:mm a MM.dd"];
+    
+    
+    if ( [self.selectedFeedItem.serviceName isEqualToString:@"Instagram"])
+    {
+        [self.postPicture setImage:self.selectedFeedItem.photo];
+    }
+    
     [(UILabel *)[self.view viewWithTag:30] setText:self.detailName];
+    [self.userName setText:self.selectedFeedItem.userName];
+    [self.comment setText:self.selectedFeedItem.message];
+    [self.profilePicture setImage:self.selectedFeedItem.userPic];
+    //[ viewWithTag:13] setText:[formatter stringFromDate:feedItemAtIndex.timestamp]];
 }
 
+- (void)handleGesture
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:Nil];
+}
 
 @end

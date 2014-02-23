@@ -34,6 +34,8 @@
 		DC51FFCD18A5C15600D196C2 /* RoastAppFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFC818A5C15600D196C2 /* RoastAppFeedItem.m */; };
 		DC51FFCE18A5C15600D196C2 /* RoastAppFeedProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFCA18A5C15600D196C2 /* RoastAppFeedProfile.m */; };
 		DC51FFCF18A5C15600D196C2 /* RoastAppFeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFCC18A5C15600D196C2 /* RoastAppFeedService.m */; };
+		DC8BC6E618B5DF2A0062D1C4 /* AnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */; };
+		DC8BC6E718B5DF2A0062D1C4 /* TransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E518B5DF2A0062D1C4 /* TransitionDelegate.m */; };
 		DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */; };
 		DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */; };
 		DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9221701893560800C67EAD /* RoastAppFeedViewController.m */; };
@@ -399,6 +401,10 @@
 		DC51FFCA18A5C15600D196C2 /* RoastAppFeedProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedProfile.m; path = Roast/RoastAppFeedProfile.m; sourceTree = "<group>"; };
 		DC51FFCB18A5C15600D196C2 /* RoastAppFeedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedService.h; path = Roast/RoastAppFeedService.h; sourceTree = "<group>"; };
 		DC51FFCC18A5C15600D196C2 /* RoastAppFeedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedService.m; path = Roast/RoastAppFeedService.m; sourceTree = "<group>"; };
+		DC8BC6E218B5DF2A0062D1C4 /* AnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioning.h; sourceTree = "<group>"; };
+		DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransitioning.m; sourceTree = "<group>"; };
+		DC8BC6E418B5DF2A0062D1C4 /* TransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDelegate.h; sourceTree = "<group>"; };
+		DC8BC6E518B5DF2A0062D1C4 /* TransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionDelegate.m; sourceTree = "<group>"; };
 		DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = coffeeandteacollective.jpg; path = ../coffeeandteacollective.jpg; sourceTree = "<group>"; };
 		DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = caffecalabria.jpg; path = ../caffecalabria.jpg; sourceTree = "<group>"; };
 		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedViewController.h; path = Roast/RoastAppFeedViewController.h; sourceTree = "<group>"; };
@@ -980,6 +986,7 @@
 		683BC65B188A48F30027D7F2 = {
 			isa = PBXGroup;
 			children = (
+				DC8BC6E118B5DF2A0062D1C4 /* Transition Delegate */,
 				DCCF44B0189C2C5F0098F3E9 /* STTwitter */,
 				683BC66D188A48F30027D7F2 /* Roast */,
 				683BC686188A48F30027D7F2 /* RoastTests */,
@@ -1084,6 +1091,17 @@
 				DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */,
 			);
 			name = "Shop List";
+			sourceTree = "<group>";
+		};
+		DC8BC6E118B5DF2A0062D1C4 /* Transition Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DC8BC6E218B5DF2A0062D1C4 /* AnimatedTransitioning.h */,
+				DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */,
+				DC8BC6E418B5DF2A0062D1C4 /* TransitionDelegate.h */,
+				DC8BC6E518B5DF2A0062D1C4 /* TransitionDelegate.m */,
+			);
+			path = "Transition Delegate";
 			sourceTree = "<group>";
 		};
 		DCCF44B0189C2C5F0098F3E9 /* STTwitter */ = {
@@ -1335,6 +1353,7 @@
 			files = (
 				DCCF44D0189C2C5F0098F3E9 /* STTwitterOAuth.m in Sources */,
 				DCCF44CD189C2C5F0098F3E9 /* STTwitterAPI.m in Sources */,
+				DC8BC6E618B5DF2A0062D1C4 /* AnimatedTransitioning.m in Sources */,
 				DCCF44CB189C2C5F0098F3E9 /* NSString+STTwitter.m in Sources */,
 				DCCF44D1189C2C5F0098F3E9 /* STTwitterOS.m in Sources */,
 				DCCF44D2189C2C5F0098F3E9 /* BAVPlistNode.m in Sources */,
@@ -1347,6 +1366,7 @@
 				66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */,
 				DC1BA3FD18A1EDD200D6370A /* RoastAppShopListViewController.m in Sources */,
 				DC51FFCF18A5C15600D196C2 /* RoastAppFeedService.m in Sources */,
+				DC8BC6E718B5DF2A0062D1C4 /* TransitionDelegate.m in Sources */,
 				DCCF44CA189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m in Sources */,
 				DCCF44D4189C2C5F0098F3E9 /* STHTTPRequest.m in Sources */,
 				DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */,
