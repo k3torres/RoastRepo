@@ -63,20 +63,32 @@
 - (IBAction)handleSwipe:(UISwipeGestureRecognizer *)sender {
     NSLog(@"swipped!!");
     UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *)sender direction];
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:1.0]; //Animate for a duration of 1.0 seconds
+    [animation setType:kCATransitionPush]; //New image will push the old image off
 
     switch (direction) {
         case UISwipeGestureRecognizerDirectionLeft:
             NSLog(@"Swiped Left");
             self.imageIndex++;
+            [animation setSubtype:kCATransitionFromRight]; //Current image will slide off to the left, new image slides in from the right
             break;
         case UISwipeGestureRecognizerDirectionRight:
             NSLog( @"Swiped Right");
             self.imageIndex--;
+            [animation setSubtype:kCATransitionFromLeft]; //Current image will slide off to the left, new image slides in from the right
+            break;
         default:
             break;
     }
     self.imageIndex = (self.imageIndex < 0) ? ([self.pix count] -1) : self.imageIndex % [self.pix count];
+    
     shopImage.image = [UIImage imageNamed:[self.pix objectAtIndex:self.imageIndex]];
+    
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    [[shopImage layer] addAnimation:animation forKey:nil];
+    
+    
     
     
 }

@@ -1059,6 +1059,9 @@
 		683BC66E188A48F30027D7F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6671938D18B9A58D00B41C3D /* foodicon.jpg */,
+				6671938E18B9A58D00B41C3D /* cupicon.png */,
+				6671938F18B9A58D00B41C3D /* carticon.jpg */,
 				683D651F18B9999000B54F9F /* candtcollectivecoldbrew.jpg */,
 				683D652018B9999000B54F9F /* candtcollectiveproduct.jpg */,
 				683D652118B9999000B54F9F /* candtcollectiveemblem.jpg */,
