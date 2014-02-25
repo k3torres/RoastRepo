@@ -10,8 +10,11 @@
 
 @interface RoastAppShopViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property NSMutableArray *shopList1;
-@property NSMutableArray *shopList2;
+@property int imageIndex;
 @property (strong, nonatomic) NSString *shopChoice;
+@property (strong, nonatomic) IBOutlet UIImageView *shopImage;
+- (IBAction)handleSwipe:(UISwipeGestureRecognizer *)sender;
+
+@property NSArray *pix;
 
 @end

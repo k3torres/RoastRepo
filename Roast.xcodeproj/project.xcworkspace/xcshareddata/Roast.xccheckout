@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98C2DCBC-5065-4FD9-86F3-9B9BCE1614FA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Roast</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F5D3C9C0-4B81-4A05-B050-C42F6220BE17</key>
+		<string>https://github.com/k3torres/RoastRepo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Roast.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F5D3C9C0-4B81-4A05-B050-C42F6220BE17</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/k3torres/RoastRepo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F5D3C9C0-4B81-4A05-B050-C42F6220BE17</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5D3C9C0-4B81-4A05-B050-C42F6220BE17</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RoastRepo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

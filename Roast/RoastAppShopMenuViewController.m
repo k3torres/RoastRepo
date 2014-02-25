@@ -9,6 +9,7 @@
 #import "RoastAppShopMenuViewController.h"
 #import "RoastAppShopViewController.h"
 #import "RoastAppJSONHandler.h"
+#import "RoastAppServerImageHandler.h"
 #import "RoastAppShopItem.h"
 
 @interface RoastAppShopMenuViewController ()
@@ -27,14 +28,14 @@
     NSInteger requestType = 0;
     
     if([menuChoice isEqualToString:@"drinkMenu"]){
+        self.title = @"Drinks";
         requestType = 0;
-        self.listIcon = [UIImage imageNamed:@"cupicon.png"];
     }else if([menuChoice isEqualToString:@"foodMenu"]){
+        self.title = @"Food";
         requestType = 1;
-        self.listIcon = [UIImage imageNamed:@"foodicon.jpg"];
     }else if([menuChoice isEqualToString:@"gearMenu"]){
+        self.title = @"Gear";
         requestType = 2;
-        self.listIcon = [UIImage imageNamed:@"carticon.jpg"];
     }
     
     NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:requestType :shopChoice];
@@ -42,19 +43,34 @@
     if(queryResult != nil){
         
         int counter = 0;
-        self.descriptions = [queryResult objectAtIndex:1];
-        self.names = [queryResult objectAtIndex:2];
-        self.types = [queryResult objectAtIndex:0];
-        self.prices = [queryResult objectAtIndex:3];
         
-        for(NSString *string in self.descriptions){
+        if([menuChoice isEqualToString:@"drinkMenu"]){
+            self.names = [queryResult objectAtIndex:2];
+            self.descriptions = [queryResult objectAtIndex:0];
+            self.prices = [queryResult objectAtIndex:3];
+            self.imgNames = [queryResult objectAtIndex:1];
+            self.ids = [queryResult objectAtIndex:4];
+        }else if([menuChoice isEqualToString:@"foodMenu"]){
+            self.names = [queryResult objectAtIndex:0];
+            self.descriptions = [queryResult objectAtIndex:1];
+            self.prices = [queryResult objectAtIndex:3];
+            self.imgNames = [queryResult objectAtIndex:2];
+            self.ids = [queryResult objectAtIndex:4];
+        }else if([menuChoice isEqualToString:@"gearMenu"]){
+            self.names = [queryResult objectAtIndex:4];
+            self.descriptions = [queryResult objectAtIndex:1];
+            self.prices = [queryResult objectAtIndex:3];
+            self.imgNames = [queryResult objectAtIndex:2];
+            self.ids = [queryResult objectAtIndex:0];
+        }
+        
+        for(NSString *string in self.names){
             
             RoastAppShopItem *temp = [[RoastAppShopItem alloc] init];
             temp.name = [self.names objectAtIndex:counter];
             temp.description = [self.descriptions objectAtIndex:counter];
-            temp.type = [self.types objectAtIndex:counter];
             temp.price = [self.prices objectAtIndex:counter];
-            temp.shopImage = self.listIcon;
+            temp.shopImage = [RoastAppServerImageHandler requestCafeImages:[self.imgNames objectAtIndex:counter]];
             [self.shopList addObject:temp];
             counter = counter + 1;
         }
@@ -75,8 +91,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.imgNames = [[NSMutableArray alloc] init];
     self.descriptions = [[NSMutableArray alloc] init];
-    self.types = [[NSMutableArray alloc] init];
     self.prices = [[NSMutableArray alloc] init];
     self.names = [[NSMutableArray alloc] init];
     self.shopList = [[NSMutableArray alloc] init];
@@ -114,6 +130,7 @@
     [(UILabel *)[cell.contentView viewWithTag:2] setText:shopItemAtIndex.description];
     [(UILabel *)[cell.contentView viewWithTag:3] setText:shopItemAtIndex.price];
     [(UIImageView *)[cell.contentView viewWithTag:4] setImage:shopItemAtIndex.shopImage];
+    
     
     return cell;
 }

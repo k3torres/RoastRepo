@@ -178,13 +178,6 @@
     [self.fbService start];
     
     
-    
-    
-    
-    
-    
-    
-    
     for(NSString *tag in self.feedProfile.tags)
     {
         [self appendFeedArray:feedArray withTag:tag];
@@ -197,7 +190,7 @@
 - (void)appendFeedArray:(NSMutableArray *)feed withTag:(NSString *)instagramTag
 {
     //we can for loop here through self.feedProfile.tags and change tagURLMedia
-    
+    NSLog(@"PART 0: appendFeedArray called recieved");
     NSString *tagURLMedia = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=%@", instagramTag, self.instagramClient_ID];
     NSURL *url = [NSURL URLWithString:tagURLMedia];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
@@ -224,21 +217,26 @@
         // Construct a String around the Data from the response
         UIImage *instagramBadge = [UIImage imageNamed:@"instagramicon.png"];
         
+        NSURL *imageURL;
+        NSData *data;
+        UIImage *photo;
+        
         //get 5 latest instagram posts for instagramTag
         for (int i=0; i<5; i++)
         {
-            //NSLog(@"username = %@\nprofileURL = %@\nidnum = %@\nthumbunailURL = %@" , [username objectAtIndex:i],
-            //[profileURL objectAtIndex:i] , [idNumber objectAtIndex:i] , [thumbnailURLs objectAtIndex:i]);
-            
-            NSURL *imageURL = [NSURL URLWithString:[thumbnailURLs objectAtIndex:i]];
-            NSData *data = [NSData dataWithContentsOfURL:imageURL];
-            UIImage *photo = [UIImage imageWithData:data];
-            
-            NSURL *image2URL = [NSURL URLWithString:[profileURL objectAtIndex:i]];
-            NSData *data2 = [NSData dataWithContentsOfURL:image2URL];
-            UIImage *userPic = [UIImage imageWithData:data2];
-            
             RoastAppFeedItem *feedItem1 = [[RoastAppFeedItem alloc] init];
+            
+            imageURL = [NSURL URLWithString:[thumbnailURLs objectAtIndex:i]];
+            data = [NSData dataWithContentsOfURL:imageURL];
+            photo = [UIImage imageWithData:data];
+            
+            feedItem1.photo = photo;
+            
+            imageURL = [NSURL URLWithString:[profileURL objectAtIndex:i]];
+            data = [NSData dataWithContentsOfURL:imageURL];
+            photo = [UIImage imageWithData:data];
+            
+            feedItem1.userPic = photo;
             
             feedItem1.serviceName = @"Instagram";
             feedItem1.serviceBadge = instagramBadge;
@@ -248,9 +246,6 @@
             //date
             feedItem1.timestamp = [NSDate dateWithTimeIntervalSince1970:[[creation objectAtIndex:i] integerValue]];
             //done with date
-            
-            feedItem1.userPic = userPic;
-            feedItem1.photo = photo;
             
             NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
             [f setNumberStyle:NSNumberFormatterDecimalStyle];
