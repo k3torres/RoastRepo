@@ -27,13 +27,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    //[NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(segueToFeed:) userInfo:nil repeats:NO];
+    self.navigationController.navigationBarHidden = YES;
     
 }
 
 - (void)segueToFeed:(id)sender
 {
     [self performSegueWithIdentifier:@"login" sender:self];
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +47,11 @@
     self.statusLabel.text = @"You're logged in as";
     NSLog(@"LOGGED IN.");
     [self segueToFeed:self];
+}
+
+- (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue
+{
+    self.navigationController.navigationBarHidden = YES;
 }
 
 @end

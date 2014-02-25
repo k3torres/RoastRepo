@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NUJ-Mp-fbm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NUJ-Mp-fbm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Roast App Feed View Controller - Feed-->
@@ -66,6 +66,11 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Feed" id="pPo-tk-42O">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="C1b-nw-rma">
+                            <connections>
+                                <segue destination="3w5-DL-b6v" kind="unwind" unwindAction="unwindToLogin:" id="ZrC-UB-9zK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Shops" id="agV-YI-LaZ">
                             <connections>
                                 <segue destination="LOT-JR-Ki4" kind="push" id="MlW-T9-aGu"/>
@@ -78,6 +83,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbD-qo-yWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3w5-DL-b6v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-66" y="-322"/>
         </scene>
@@ -361,14 +367,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9J6-vB-dMt">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="Qdq-5B-LPg"/>
-                        <barButtonItem key="rightBarButtonItem" title="Skip" id="hgB-gZ-EMC">
-                            <connections>
-                                <segue destination="k1a-9X-DLR" kind="push" identifier="login" id="Odl-pW-WQZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="9J6-vB-dMt"/>
+                    <connections>
+                        <segue destination="k1a-9X-DLR" kind="push" identifier="login" id="Pcr-AE-Nee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxo-mK-OUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,7 +390,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHJ-KY-Qf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-979" y="-295"/>
+            <point key="canvasLocation" x="-979" y="-322"/>
         </scene>
     </scenes>
     <resources>
