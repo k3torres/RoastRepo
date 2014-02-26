@@ -11,10 +11,15 @@
 #import "RoastAppJSONHandler.h"
 #import "RoastAppServerImageHandler.h"
 #import "RoastAppShopItem.h"
+#import "RoastAppMenuItemViewController.h"
 
 @interface RoastAppShopMenuViewController ()
 
 @property NSMutableArray *shopList;
+@property NSString *itemName;
+@property NSString *itemDescription;
+@property NSString *itemPrice;
+@property UIImage *itemImage;
 
 @end
 
@@ -44,6 +49,8 @@
         
         int counter = 0;
         
+        //JSON Serializer is producing different NSDictionary structures depending on the
+        //menu type, so this if-else construct corrects for the difference in ordering
         if([menuChoice isEqualToString:@"drinkMenu"]){
             self.names = [queryResult objectAtIndex:2];
             self.descriptions = [queryResult objectAtIndex:0];
@@ -96,7 +103,6 @@
     self.prices = [[NSMutableArray alloc] init];
     self.names = [[NSMutableArray alloc] init];
     self.shopList = [[NSMutableArray alloc] init];
-
     [self loadInitialData];
 }
 
@@ -117,6 +123,27 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.shopList count];
+}
+
+//Pass the name of the selected shop to the next view controller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    RoastAppMenuItemViewController *menuCtrlr = [segue destinationViewController];
+    
+    [(UITextView *)[menuCtrlr.view viewWithTag:1] setText:self.itemDescription];
+    [(UIImageView *)[menuCtrlr.view viewWithTag:3] setImage:self.itemImage];
+    menuCtrlr.title = self.itemName;
+    [menuCtrlr.view setNeedsDisplay];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+    RoastAppShopItem *chosenItem = [self.shopList objectAtIndex:indexPath.row];
+    self.itemName = chosenItem.name;
+    self.itemDescription = chosenItem.description;
+    self.itemPrice = chosenItem.price;
+    self.itemImage = chosenItem.shopImage;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
