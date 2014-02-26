@@ -27,9 +27,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    CGColorSpaceRef rgbColorspace = CGColorSpaceCreateDeviceRGB();
+    CGFloat values[4] = {1.0, 1.0, 1.0, 1.0};
+    CGColorRef white = CGColorCreate(rgbColorspace, values);
     self.navigationController.navigationBarHidden = YES;
+    self.skipButton.layer.borderWidth = 0.5f;
+    self.skipButton.layer.cornerRadius = 5;
+    self.skipButton.layer.borderColor = white;
+    self.skipButton.layer.cornerRadius = 0;
     
 }
+- (IBAction)skipButtonClicked:(id)sender {
+    [self segueToFeed:self];
+}
+
 
 - (void)segueToFeed:(id)sender
 {

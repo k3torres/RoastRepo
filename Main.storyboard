@@ -378,11 +378,23 @@
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl6-PG-yWN">
+                                <rect key="frame" x="122" y="397" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonClicked:" destination="ycV-7D-lgR" eventType="touchUpInside" id="eSY-3M-wKq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="9J6-vB-dMt"/>
                     <connections>
+                        <outlet property="skipButton" destination="wl6-PG-yWN" id="uqJ-Vz-RVK"/>
                         <segue destination="k1a-9X-DLR" kind="push" identifier="login" id="Pcr-AE-Nee"/>
                     </connections>
                 </viewController>

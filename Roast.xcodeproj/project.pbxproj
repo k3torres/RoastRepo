@@ -11,7 +11,6 @@
 		6671939118B9A58D00B41C3D /* cupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6671938E18B9A58D00B41C3D /* cupicon.png */; };
 		6671939218B9A58D00B41C3D /* carticon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938F18B9A58D00B41C3D /* carticon.jpg */; };
 		6681A36318A61A1700D5324D /* RoastAppServerImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */; };
-		66ACA12318B7EE5B00C60614 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ACA12218B7EE5B00C60614 /* FacebookSDK.framework */; };
 		66ACA12618B7F03500C60614 /* RoastAppShopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACA12518B7F03500C60614 /* RoastAppShopMenuViewController.m */; };
 		66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */; };
 		66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B892821895D8390030CE6E /* RoastAppShopViewController.m */; };
@@ -41,6 +40,7 @@
 		DC51FFCD18A5C15600D196C2 /* RoastAppFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFC818A5C15600D196C2 /* RoastAppFeedItem.m */; };
 		DC51FFCE18A5C15600D196C2 /* RoastAppFeedProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFCA18A5C15600D196C2 /* RoastAppFeedProfile.m */; };
 		DC51FFCF18A5C15600D196C2 /* RoastAppFeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFCC18A5C15600D196C2 /* RoastAppFeedService.m */; };
+		DC62905418BCA78400DE60F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC62905318BCA78400DE60F7 /* FacebookSDK.framework */; };
 		DC8BC6E618B5DF2A0062D1C4 /* AnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */; };
 		DC8BC6E718B5DF2A0062D1C4 /* TransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E518B5DF2A0062D1C4 /* TransitionDelegate.m */; };
 		DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */; };
@@ -142,7 +142,6 @@
 		6671938F18B9A58D00B41C3D /* carticon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carticon.jpg; sourceTree = "<group>"; };
 		6681A36118A61A1700D5324D /* RoastAppServerImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppServerImageHandler.h; sourceTree = "<group>"; };
 		6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppServerImageHandler.m; sourceTree = "<group>"; };
-		66ACA12218B7EE5B00C60614 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		66ACA12418B7F03500C60614 /* RoastAppShopMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopMenuViewController.h; sourceTree = "<group>"; };
 		66ACA12518B7F03500C60614 /* RoastAppShopMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopMenuViewController.m; sourceTree = "<group>"; };
 		66B0870918936DB10045B805 /* RoastAppJSONHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppJSONHandler.h; path = Roast/RoastAppJSONHandler.h; sourceTree = "<group>"; };
@@ -153,7 +152,6 @@
 		66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopItem.m; path = Roast/RoastAppShopItem.m; sourceTree = "<group>"; };
 		680C03C618A608CB00E5111D /* CaffeCalabria1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaffeCalabria1.png; sourceTree = "<group>"; };
 		680C03C718A73F0700E5111D /* instagramicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagramicon.png; sourceTree = "<group>"; };
-		680C03C918A7819D00E5111D /* FacebookSDK-131121.unitypackage */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FacebookSDK-131121.unitypackage"; path = "../../Downloads/FacebookSDK-131121.unitypackage"; sourceTree = "<group>"; };
 		680C03CB18A7820D00E5111D /* facebook-ios-sdk-3.12.pkg */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.installer-pkg"; name = "facebook-ios-sdk-3.12.pkg"; path = "../../Downloads/facebook-ios-sdk-3.12.pkg"; sourceTree = "<group>"; };
 		680C03CE18A7829900E5111D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		680C03CF18A7829900E5111D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -417,6 +415,7 @@
 		DC51FFCA18A5C15600D196C2 /* RoastAppFeedProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedProfile.m; path = Roast/RoastAppFeedProfile.m; sourceTree = "<group>"; };
 		DC51FFCB18A5C15600D196C2 /* RoastAppFeedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedService.h; path = Roast/RoastAppFeedService.h; sourceTree = "<group>"; };
 		DC51FFCC18A5C15600D196C2 /* RoastAppFeedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedService.m; path = Roast/RoastAppFeedService.m; sourceTree = "<group>"; };
+		DC62905318BCA78400DE60F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		DC8BC6E218B5DF2A0062D1C4 /* AnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioning.h; sourceTree = "<group>"; };
 		DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransitioning.m; sourceTree = "<group>"; };
 		DC8BC6E418B5DF2A0062D1C4 /* TransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDelegate.h; sourceTree = "<group>"; };
@@ -460,13 +459,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66ACA12318B7EE5B00C60614 /* FacebookSDK.framework in Frameworks */,
 				DCCF44DA189C2CD20098F3E9 /* Social.framework in Frameworks */,
 				DCCF44D8189C2CB90098F3E9 /* Twitter.framework in Frameworks */,
 				DCCF44D6189C2CB20098F3E9 /* Accounts.framework in Frameworks */,
 				683BC66A188A48F30027D7F2 /* CoreGraphics.framework in Frameworks */,
 				683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */,
 				683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */,
+				DC62905418BCA78400DE60F7 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,10 +1022,9 @@
 		683BC666188A48F30027D7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				66ACA12218B7EE5B00C60614 /* FacebookSDK.framework */,
+				DC62905318BCA78400DE60F7 /* FacebookSDK.framework */,
 				680C03CD18A7829900E5111D /* FacebookSDK */,
 				680C03CB18A7820D00E5111D /* facebook-ios-sdk-3.12.pkg */,
-				680C03C918A7819D00E5111D /* FacebookSDK-131121.unitypackage */,
 				DC1825CF18A6100A007232E6 /* FacebookSDK.framework */,
 				DCCF44D9189C2CD20098F3E9 /* Social.framework */,
 				DCCF44D7189C2CB90098F3E9 /* Twitter.framework */,
@@ -1744,6 +1742,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/arexxk/Documents/FacebookSDK,
@@ -1763,6 +1762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/arexxk/Documents/FacebookSDK,
