@@ -16,10 +16,6 @@
 @interface RoastAppShopMenuViewController ()
 
 @property NSMutableArray *shopList;
-@property NSString *itemName;
-@property NSString *itemDescription;
-@property NSString *itemPrice;
-@property UIImage *itemImage;
 @property RoastAppMenuItemViewController *menuCtrlr;
 
 @end
@@ -137,14 +133,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
  
     RoastAppShopItem *chosenItem = [self.shopList objectAtIndex:indexPath.row];
-    self.itemName = chosenItem.name;
-    self.itemDescription = chosenItem.description;
-    self.itemPrice = chosenItem.price;
-    self.itemImage = chosenItem.shopImage;
     
-    [(UITextView *)[self.menuCtrlr.view viewWithTag:1] setText:self.itemDescription];
-    [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:self.itemImage];
-    self.menuCtrlr.title = self.itemName;
+    [(UITextView *)[self.menuCtrlr.view viewWithTag:1] setText:[[chosenItem.description stringByAppendingString:@"\n\n"]stringByAppendingString:chosenItem.price]];
+    [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:chosenItem.shopImage];
+    self.menuCtrlr.title = chosenItem.name;
+    
+    NSString *demoText = @"First of all, the employees here are extremely rude and arrogant...I'm sorry but you work at a retail store....hello?!\n\nBut, this is my real problem with Teavana: when i ask for 2oz of something, they give me 2.5 ounces, without telling me....\n\nEVEN after I say, I just want 2 oz, they leave me with 2.2 ounces...I know this doesn't seem like a big deal, but it's extremely annoying to have to ask 3 times for the amount of tea I want. I've been drinking this tea for 4 years now, so I know what I like, and I know how much I use.\n\nLastly, this place is always so messy and unorganized, it stresses me out. They have no system when it comes to paying for items. Everything about this place is a disaster.....I've spent so much money here, but sorry Teavana, you've lost my business for good.";
+    
+    [(UITextView *)[self.menuCtrlr.view viewWithTag:4] setText:demoText]; //REPLACE THIS WITH RESULT FROM GETREVIEWS QUERY
+    
     [self.menuCtrlr.view setNeedsDisplay];
 }
 
@@ -159,7 +156,6 @@
     [(UILabel *)[cell.contentView viewWithTag:2] setText:shopItemAtIndex.description];
     [(UILabel *)[cell.contentView viewWithTag:3] setText:shopItemAtIndex.price];
     [(UIImageView *)[cell.contentView viewWithTag:4] setImage:shopItemAtIndex.shopImage];
-    
     
     return cell;
 }
