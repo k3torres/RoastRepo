@@ -27,13 +27,12 @@
     }
     return self;
 }
-/*
+
 -(void) viewWillAppear: (BOOL) animated {
-    [self loadInitialData];
-    [(UITextView *)[self.view viewWithTag:1] setText:self.description];
-    [(UIImageView *)[self.view viewWithTag:3] setImage:self.shopImage];
+    //[self loadInitialData];
+    [self.view setNeedsDisplay];
     
-}*/
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

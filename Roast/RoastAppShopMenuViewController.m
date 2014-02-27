@@ -20,6 +20,7 @@
 @property NSString *itemDescription;
 @property NSString *itemPrice;
 @property UIImage *itemImage;
+@property RoastAppMenuItemViewController *menuCtrlr;
 
 @end
 
@@ -129,12 +130,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    RoastAppMenuItemViewController *menuCtrlr = [segue destinationViewController];
+    self.menuCtrlr = [segue destinationViewController];
     
-    [(UITextView *)[menuCtrlr.view viewWithTag:1] setText:self.itemDescription];
-    [(UIImageView *)[menuCtrlr.view viewWithTag:3] setImage:self.itemImage];
-    menuCtrlr.title = self.itemName;
-    [menuCtrlr.view setNeedsDisplay];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -144,6 +141,11 @@
     self.itemDescription = chosenItem.description;
     self.itemPrice = chosenItem.price;
     self.itemImage = chosenItem.shopImage;
+    
+    [(UITextView *)[self.menuCtrlr.view viewWithTag:1] setText:self.itemDescription];
+    [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:self.itemImage];
+    self.menuCtrlr.title = self.itemName;
+    [self.menuCtrlr.view setNeedsDisplay];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
