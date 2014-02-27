@@ -11,9 +11,11 @@
 @implementation RoastAppReviewInserter
 
 
-+(BOOL) insertNewReview:(NSString *)id :(NSString *)comment :(NSString *)rating :(NSString *)userName{
++(NSData *) insertNewReview:(NSString *)id :(NSString *)comments :(NSString *)rating :(NSString *)userName{
     
-    return false;
+    NSString *fullURL = [[[[[[[@"http://54.201.5.175:8080/roast/PutReview?id=" stringByAppendingString:id] stringByAppendingString:@"&comments="] stringByAppendingString:comments] stringByAppendingString:@"&rating="] stringByAppendingString:rating] stringByAppendingString:@"&user="] stringByAppendingString:userName];
+    
+    return [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
 }
 
 @end

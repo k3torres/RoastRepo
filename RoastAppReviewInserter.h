@@ -10,6 +10,6 @@
 
 @interface RoastAppReviewInserter : NSObject
 
-+(BOOL) insertNewReview:(NSString *)id :(NSString *)comment :(NSString *)rating :(NSString *)userName;
++(NSData *) insertNewReview:(NSString *)id :(NSString *)comment :(NSString *)rating :(NSString *)userName;
 
 @end
