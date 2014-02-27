@@ -75,6 +75,7 @@
             temp.description = [self.descriptions objectAtIndex:counter];
             temp.price = [self.prices objectAtIndex:counter];
             temp.shopImage = [RoastAppServerImageHandler requestCafeImages:[self.imgNames objectAtIndex:counter]];
+            temp.id = [self.ids objectAtIndex:counter];
             [self.shopList addObject:temp];
             counter = counter + 1;
         }
@@ -100,6 +101,7 @@
     self.prices = [[NSMutableArray alloc] init];
     self.names = [[NSMutableArray alloc] init];
     self.shopList = [[NSMutableArray alloc] init];
+    self.ids = [[NSMutableArray alloc] init];
     [self loadInitialData];
 }
 
@@ -138,9 +140,19 @@
     [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:chosenItem.shopImage];
     self.menuCtrlr.title = chosenItem.name;
     
-    NSString *demoText = @"First of all, the employees here are extremely rude and arrogant...I'm sorry but you work at a retail store....hello?!\n\nBut, this is my real problem with Teavana: when i ask for 2oz of something, they give me 2.5 ounces, without telling me....\n\nEVEN after I say, I just want 2 oz, they leave me with 2.2 ounces...I know this doesn't seem like a big deal, but it's extremely annoying to have to ask 3 times for the amount of tea I want. I've been drinking this tea for 4 years now, so I know what I like, and I know how much I use.\n\nLastly, this place is always so messy and unorganized, it stresses me out. They have no system when it comes to paying for items. Everything about this place is a disaster.....I've spent so much money here, but sorry Teavana, you've lost my business for good.";
+    NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :chosenItem.id];
+    NSArray *userNames = [reviewsForItem objectAtIndex:3];
+    NSString *reviewString = @"";
+
+    int i = 0;
+    for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
+        NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
+        NSString *userRow = [userName stringByAppendingString:currentString];
+        reviewString = [[reviewString stringByAppendingString:userRow] stringByAppendingString:@"\n\n"];
+        i++;
+    }
     
-    [(UITextView *)[self.menuCtrlr.view viewWithTag:4] setText:demoText]; //REPLACE THIS WITH RESULT FROM GETREVIEWS QUERY
+    [(UITextView *)[self.menuCtrlr.view viewWithTag:4] setText:reviewString]; //REPLACE THIS WITH RESULT FROM GETREVIEWS QUERY
     
     [self.menuCtrlr.view setNeedsDisplay];
 }
