@@ -142,11 +142,14 @@
     
     NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :chosenItem.id];
     NSArray *userNames = [reviewsForItem objectAtIndex:3];
+    NSArray *userRatings = [reviewsForItem objectAtIndex:2];
     NSString *reviewString = @"";
 
     int i = 0;
     for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
         NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
+        userName = [userName stringByAppendingString:[userRatings objectAtIndex:i]];
+        userName = [userName stringByAppendingString:@"/5   |    "];
         NSString *userRow = [userName stringByAppendingString:currentString];
         reviewString = [[reviewString stringByAppendingString:userRow] stringByAppendingString:@"\n\n"];
         i++;
