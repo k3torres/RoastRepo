@@ -58,7 +58,7 @@ NSArray *queryResult;
 //Query: Select * from roast.reviews where itemID = id
 +(NSArray *)requestReviews:(NSString*)id{
     
-    NSString *fullURL = [[baseURL stringByAppendingString:@"GetReview?id="] stringByAppendingString:@"1"];
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetReview?id="] stringByAppendingString:id];
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSError *error;
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
