@@ -145,6 +145,8 @@
     NSArray *userRatings = [reviewsForItem objectAtIndex:2];
     NSString *reviewString = @"";
 
+    if( [userRatings count] > 0){
+    
     int i = 0;
     for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
         NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
@@ -154,8 +156,10 @@
         reviewString = [[reviewString stringByAppendingString:userRow] stringByAppendingString:@"\n\n"];
         i++;
     }
-    
-    [(UITextView *)[self.menuCtrlr.view viewWithTag:4] setText:reviewString]; //REPLACE THIS WITH RESULT FROM GETREVIEWS QUERY
+    }else{
+        reviewString = @"There are no reviews for this item. Add one below!";
+    }
+    [(UITextView *)[self.menuCtrlr.view viewWithTag:4] setText:reviewString];
     
     [self.menuCtrlr.view setNeedsDisplay];
 }
