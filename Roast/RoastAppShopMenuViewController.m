@@ -75,7 +75,7 @@
             temp.description = [self.descriptions objectAtIndex:counter];
             temp.price = [self.prices objectAtIndex:counter];
             temp.shopImage = [RoastAppServerImageHandler requestCafeImages:[self.imgNames objectAtIndex:counter]];
-            temp.id = [self.ids objectAtIndex:counter];
+            temp.uid = [self.ids objectAtIndex:counter];
             [self.shopList addObject:temp];
             counter = counter + 1;
         }
@@ -136,28 +136,38 @@
  
     RoastAppShopItem *chosenItem = [self.shopList objectAtIndex:indexPath.row];
     
+    self.menuCtrlr.item = chosenItem;
     [(UITextView *)[self.menuCtrlr.view viewWithTag:1] setText:[[chosenItem.description stringByAppendingString:@"\n\n"]stringByAppendingString:chosenItem.price]];
     [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:chosenItem.shopImage];
     self.menuCtrlr.title = chosenItem.name;
     
-    NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :chosenItem.id];
+    NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :chosenItem.uid];
     NSArray *userNames = [reviewsForItem objectAtIndex:3];
     NSArray *userRatings = [reviewsForItem objectAtIndex:2];
     NSString *reviewString = @"";
-
+    NSInteger averageReview = 0;
+    
     if( [userRatings count] > 0){
     
-    int i = 0;
-    for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
-        NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
-        userName = [userName stringByAppendingString:[userRatings objectAtIndex:i]];
-        userName = [userName stringByAppendingString:@"/5   |    "];
-        NSString *userRow = [userName stringByAppendingString:currentString];
-        reviewString = [[reviewString stringByAppendingString:userRow] stringByAppendingString:@"\n\n"];
-        i++;
-    }
+        int numRatings = [userRatings count];
+        for(NSString *rating in userRatings){
+            averageReview += [rating integerValue];
+        }
+        averageReview = averageReview / numRatings;
+        [(UITextView *)[self.menuCtrlr.view viewWithTag:5] setText:[@"Average Rating: " stringByAppendingString:[NSString stringWithFormat: @"%d", (int)averageReview]]];
+        
+        int i = 0;
+        for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
+            NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
+            userName = [userName stringByAppendingString:[userRatings objectAtIndex:i]];
+            userName = [userName stringByAppendingString:@"/5   |    "];
+            NSString *userRow = [userName stringByAppendingString:currentString];
+            reviewString = [[reviewString stringByAppendingString:userRow] stringByAppendingString:@"\n\n"];
+            i++;
+        }
     }else{
         reviewString = @"There are no reviews for this item. Add one below!";
+        [(UITextView *)[self.menuCtrlr.view viewWithTag:5] setText:@"Average Rating: N/A"];
     }
     [(UITextView *)[self.menuCtrlr.view viewWithTag:4] setText:reviewString];
     

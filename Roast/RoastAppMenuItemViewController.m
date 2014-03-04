@@ -7,6 +7,7 @@
 //
 
 #import "RoastAppMenuItemViewController.h"
+#import "RoastAppMenuItemReviewController.h"
 
 @interface RoastAppMenuItemViewController ()
 
@@ -26,6 +27,15 @@
         // Custom initialization
     }
     return self;
+}
+
+// Seque from MenuItem to Review screen, sets title and passes item ID
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    RoastAppMenuItemReviewController* reviewCtrlr = [segue destinationViewController];
+    reviewCtrlr.title = self.item.name;
+    reviewCtrlr.menuItemID = [self.item uid];
 }
 
 -(void) viewWillAppear: (BOOL) animated {
