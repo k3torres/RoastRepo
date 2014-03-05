@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [(UITextField*)[self.view viewWithTag:1] setDelegate:self];
+    [(UITextView*)[self.view viewWithTag:1] setDelegate:self];
     self.currentRating = (UILabel *)[self.view viewWithTag:2];
     self.ratingStepper = (UIStepper *)[self.view viewWithTag:3];
 
@@ -42,15 +42,19 @@
     self.rating = [@((int)sender.value) stringValue];
     
 }
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
-    [(UITextField*)[self.view viewWithTag:1] resignFirstResponder];
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
     return YES;
 }
-//ID,Comment,Rating,Username
+
 -(IBAction)submitReview:(UIButton *)sender{
 
-    UITextField *comm = (UITextField*)[self.view viewWithTag:1];
+    UITextView *comm = (UITextView*)[self.view viewWithTag:1];
     NSString* comments = comm.text;
     [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :self.rating:@"DefaultUser"];
     [self.navigationController popViewControllerAnimated:YES];

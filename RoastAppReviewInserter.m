@@ -16,10 +16,9 @@
         return;
     NSString *fullURL = [[[[[[[@"http://54.201.5.175:8080/roast/PutReview?id=" stringByAppendingString:id] stringByAppendingString:@"&comments="] stringByAppendingString:comments] stringByAppendingString:@"&rating="] stringByAppendingString:rating] stringByAppendingString:@"&user="] stringByAppendingString:userName];
     
-    [NSURLConnection connectionWithRequest:
-     [NSURLRequest requestWithURL:
-      [NSURL URLWithString:fullURL]]
-                                  delegate:self];
+    NSURLResponse *response;
+    NSError *error;
+    [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]] returningResponse:&response error:&error];
 }
 
 @end

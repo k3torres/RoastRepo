@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RoastAppMenuItemReviewController : UIViewController <UITextFieldDelegate>
+@interface RoastAppMenuItemReviewController : UIViewController <UITextViewDelegate>
 
 @property (strong, nonatomic) NSString* menuItemID;
-@property (nonatomic, retain) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
