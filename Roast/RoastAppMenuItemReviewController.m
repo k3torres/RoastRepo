@@ -8,6 +8,7 @@
 
 #import "RoastAppMenuItemReviewController.h"
 #import "RoastAppReviewInserter.h"
+#import "RoastAppJSONHandler.h"
 
 @interface RoastAppMenuItemReviewController ()
 
@@ -51,12 +52,50 @@
     }
     return YES;
 }
-
+//Pass the name of the selected shop to the next view controller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    UIViewController* target = [segue destinationViewController];
+    NSLog(@"Called prepare for segue in Review Controller");
+    NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :[self menuItemID]];
+    NSArray *userNames = [reviewsForItem objectAtIndex:3];
+    NSArray *userRatings = [reviewsForItem objectAtIndex:2];
+    NSString *reviewString = @"";
+    NSInteger averageReview = 0;
+    
+    if( [userRatings count] > 0){
+        
+        int numRatings = [userRatings count];
+        for(NSString *rating in userRatings){
+            averageReview += [rating integerValue];
+        }
+        averageReview = averageReview / numRatings;
+        [(UITextView *)[target.view viewWithTag:5] setText:[@"Average Rating: " stringByAppendingString:[NSString stringWithFormat: @"%d", (int)averageReview]]];
+        
+        int i = 0;
+        for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
+            NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
+            userName = [userName stringByAppendingString:[userRatings objectAtIndex:i]];
+            userName = [userName stringByAppendingString:@"/5   |    "];
+            NSString *userRow = [userName stringByAppendingString:currentString];
+            reviewString = [[reviewString stringByAppendingString:userRow] stringByAppendingString:@"\n\n"];
+            i++;
+        }
+    }else{
+        reviewString = @"There are no reviews for this item. Add one below!";
+        [(UITextView *)[target.view viewWithTag:5] setText:@"Average Rating: N/A"];
+    }
+    [(UITextView *)[target.view viewWithTag:4] setText:reviewString];
+    
+    [target.view setNeedsDisplay];
+}
 -(IBAction)submitReview:(UIButton *)sender{
 
     UITextView *comm = (UITextView*)[self.view viewWithTag:1];
     NSString* comments = comm.text;
     [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :self.rating:@"DefaultUser"];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
