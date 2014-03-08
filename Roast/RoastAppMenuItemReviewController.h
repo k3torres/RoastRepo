@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) NSString* menuItemID;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) UIViewController* parentViewCtrlr;
 
 @end

@@ -13,11 +13,11 @@
 
 +(void) insertNewReview:(NSString *)id :(NSString *)comments :(NSString *)rating :(NSString *)userName{
     if(rating == nil)
-        return;
+        rating = @"0";
     NSString *fullURL = [[[[[[[@"http://54.201.5.175:8080/roast/PutReview?id=" stringByAppendingString:id] stringByAppendingString:@"&comments="] stringByAppendingString:comments] stringByAppendingString:@"&rating="] stringByAppendingString:rating] stringByAppendingString:@"&user="] stringByAppendingString:userName];
     
     NSString* formattedURL = [fullURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
+    /*
     [NSURLConnection
      sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:formattedURL]]
      queue:[[NSOperationQueue alloc] init]
@@ -30,14 +30,14 @@
              NSLog(@"Error = %@", error);
          }
          else{
-             NSLog(@"Successfully inserted review into DB");
+             NSLog(@"Successfully inserted/updated review into DB");
          }
          
-     }];
-    /*
+     }];*/
+    
     NSURLResponse *response;
     NSError *error;
-    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
+    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:formattedURL]];
     //send it synchronous
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
@@ -45,8 +45,8 @@
     if(!error)
     {
         //log response
-        NSLog(@"Response from server = %@", responseString);
-    }*/
+        NSLog(@"Remote server responded to review insert request");
+    }
 }
 
 @end

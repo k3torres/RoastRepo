@@ -52,12 +52,10 @@
     }
     return YES;
 }
-//Pass the name of the selected shop to the next view controller
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+- (void)refreshReviews
 {
-    
-    UIViewController* target = [segue destinationViewController];
-    NSLog(@"Called prepare for segue in Review Controller");
+    NSLog(@"Called refreshReviews in review insert view");
     NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :[self menuItemID]];
     NSArray *userNames = [reviewsForItem objectAtIndex:3];
     NSArray *userRatings = [reviewsForItem objectAtIndex:2];
@@ -71,7 +69,7 @@
             averageReview += [rating integerValue];
         }
         averageReview = averageReview / numRatings;
-        [(UITextView *)[target.view viewWithTag:5] setText:[@"Average Rating: " stringByAppendingString:[NSString stringWithFormat: @"%d", (int)averageReview]]];
+        [(UITextView *)[self.parentViewController.view viewWithTag:5] setText:[@"Average Rating: " stringByAppendingString:[NSString stringWithFormat: @"%d", (int)averageReview]]];
         
         int i = 0;
         for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
@@ -84,18 +82,19 @@
         }
     }else{
         reviewString = @"There are no reviews for this item. Add one below!";
-        [(UITextView *)[target.view viewWithTag:5] setText:@"Average Rating: N/A"];
+        [(UITextView *)[self.parentViewController.view viewWithTag:5] setText:@"Average Rating: N/A"];
     }
-    [(UITextView *)[target.view viewWithTag:4] setText:reviewString];
+    [(UITextView *)[self.parentViewController.view viewWithTag:4] setText:reviewString];
     
-    [target.view setNeedsDisplay];
+    [self.parentViewController.view setNeedsDisplay];
 }
+
 -(IBAction)submitReview:(UIButton *)sender{
 
     UITextView *comm = (UITextView*)[self.view viewWithTag:1];
     NSString* comments = comm.text;
     [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :self.rating:@"DefaultUser"];
-
+    [self refreshReviews];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

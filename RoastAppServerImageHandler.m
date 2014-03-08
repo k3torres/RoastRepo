@@ -27,9 +27,10 @@
 +(NSMutableArray *)requestCafeImagesForCarousel:(NSString *)cafeName{
     
     NSMutableArray *imageArray = [[NSMutableArray alloc] init];
+    NSString *cafePrefix = [cafeName substringToIndex:3];
     
     //SELECT filename FROM CarouselPics WHERE cafe LIKE '%cafeName%';
-    NSString *fullURL = [[@"http://54.201.5.175:8080/roast/" stringByAppendingString:@"GetCarouselFilenames?cafe="] stringByAppendingString:cafeName];
+    NSString *fullURL = [[@"http://54.201.5.175:8080/roast/" stringByAppendingString:@"GetCarouselFilenames?cafe="] stringByAppendingString:cafePrefix];
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSError *error;
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];

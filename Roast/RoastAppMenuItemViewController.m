@@ -36,6 +36,7 @@
     RoastAppMenuItemReviewController* reviewCtrlr = [segue destinationViewController];
     reviewCtrlr.title = self.item.name;
     reviewCtrlr.menuItemID = [self.item uid];
+    reviewCtrlr.parentViewCtrlr = self;
 }
 
 -(void) viewWillAppear: (BOOL) animated {
