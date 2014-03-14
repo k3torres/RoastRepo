@@ -17,6 +17,7 @@
 		66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B892821895D8390030CE6E /* RoastAppShopViewController.m */; };
 		66C80ABE18C51BA300B9F028 /* RoastAppMenuItemReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C80ABD18C51BA300B9F028 /* RoastAppMenuItemReviewController.m */; };
 		66D7004918BBE5060090EDF0 /* RoastAppMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */; };
+		66F66F1418D3909000547445 /* birdrock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66F66F1318D3909000547445 /* birdrock.jpg */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
 		680C03C818A73F0700E5111D /* instagramicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680C03C718A73F0700E5111D /* instagramicon.png */; };
 		683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC667188A48F30027D7F2 /* Foundation.framework */; };
@@ -157,6 +158,7 @@
 		66C80ABD18C51BA300B9F028 /* RoastAppMenuItemReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppMenuItemReviewController.m; sourceTree = "<group>"; };
 		66D7004718BBE5060090EDF0 /* RoastAppMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppMenuItemViewController.h; sourceTree = "<group>"; };
 		66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppMenuItemViewController.m; sourceTree = "<group>"; };
+		66F66F1318D3909000547445 /* birdrock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = birdrock.jpg; sourceTree = "<group>"; };
 		66FE40531895F1A6003AAE61 /* RoastAppShopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopItem.h; path = Roast/RoastAppShopItem.h; sourceTree = "<group>"; };
 		66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopItem.m; path = Roast/RoastAppShopItem.m; sourceTree = "<group>"; };
 		680C03C618A608CB00E5111D /* CaffeCalabria1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaffeCalabria1.png; sourceTree = "<group>"; };
@@ -1129,6 +1131,7 @@
 		DC1BA3F718A1E23900D6370A /* Shop List */ = {
 			isa = PBXGroup;
 			children = (
+				66F66F1318D3909000547445 /* birdrock.jpg */,
 				DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */,
 				DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */,
 				DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */,
@@ -1381,6 +1384,7 @@
 				680C03C818A73F0700E5111D /* instagramicon.png in Resources */,
 				683D652318B9999000B54F9F /* candtcollectiveproduct.jpg in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
+				66F66F1418D3909000547445 /* birdrock.jpg in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
 				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,
 				6671939218B9A58D00B41C3D /* carticon.jpg in Resources */,

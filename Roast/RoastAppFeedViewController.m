@@ -59,7 +59,7 @@
     //adding tags for instagram
     [tagFollowing addObject:@"candtcollective"];
     [tagFollowing addObject:@"younghickorysd"];
-    [tagFollowing addObject:@"birdrockcoffeeroasters"];
+    //[tagFollowing addObject:@"birdrockcoffeeroasters"];
     
     [feedProfile setTags:tagFollowing];
     [feedProfile setUsers:userFollowing];
