@@ -44,29 +44,13 @@
     
     if(queryResult != nil){
         
+        self.names = [queryResult objectAtIndex:0];
+        self.descriptions = [queryResult objectAtIndex:1];
+        self.prices = [queryResult objectAtIndex:2];
+        self.imgNames = [queryResult objectAtIndex:3];
+        self.ids = [queryResult objectAtIndex:4];
+
         int counter = 0;
-        
-        //JSON Serializer is producing different NSDictionary structures depending on the
-        //menu type, so this if-else construct corrects for the difference in ordering
-        if([menuChoice isEqualToString:@"drinkMenu"]){
-            self.names = [queryResult objectAtIndex:2];
-            self.descriptions = [queryResult objectAtIndex:0];
-            self.prices = [queryResult objectAtIndex:3];
-            self.imgNames = [queryResult objectAtIndex:1];
-            self.ids = [queryResult objectAtIndex:4];
-        }else if([menuChoice isEqualToString:@"foodMenu"]){
-            self.names = [queryResult objectAtIndex:0];
-            self.descriptions = [queryResult objectAtIndex:1];
-            self.prices = [queryResult objectAtIndex:3];
-            self.imgNames = [queryResult objectAtIndex:2];
-            self.ids = [queryResult objectAtIndex:4];
-        }else if([menuChoice isEqualToString:@"gearMenu"]){
-            self.names = [queryResult objectAtIndex:4];
-            self.descriptions = [queryResult objectAtIndex:1];
-            self.prices = [queryResult objectAtIndex:3];
-            self.imgNames = [queryResult objectAtIndex:2];
-            self.ids = [queryResult objectAtIndex:0];
-        }
         
         for(NSString *string in self.names){
             
