@@ -23,6 +23,11 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Roast Login Screen";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -19,7 +19,7 @@
 //All server requests have this base URL
 NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 
-NSArray *queryResult;
+NSMutableArray *queryResult;
 
 // Function for making JSON requests, paramaterized by query type as described above
 +(NSArray *) makeJSONRequest:(int)queryType :(NSString *)param{
@@ -69,7 +69,7 @@ NSArray *queryResult;
 }
 
 //Query: Select * from roast.cafes where cafeName like '% cafe %'
-+(NSArray *)requestCafeDrinks:(NSString*)cafeName{
++(NSMutableArray *)requestCafeDrinks:(NSString*)cafeName{
     
     NSString *cafePrefix = [cafeName substringToIndex:3];
     
@@ -78,7 +78,18 @@ NSArray *queryResult;
     NSError *error;
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
-    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    NSMutableArray *drinkNames = [dictionaryFromResponse valueForKeyPath:@"drinkNames"];
+    NSMutableArray *descriptions = [dictionaryFromResponse valueForKeyPath:@"descriptions"];
+    NSMutableArray *prices = [dictionaryFromResponse valueForKeyPath:@"prices"];
+    NSMutableArray *imageNames = [dictionaryFromResponse valueForKeyPath:@"imageNames"];
+    NSMutableArray *ids = [dictionaryFromResponse valueForKeyPath:@"ids"];
+    
+    NSMutableArray *jsonArray = [[NSMutableArray alloc] init];
+    [jsonArray addObject:drinkNames];
+    [jsonArray addObject:descriptions];
+    [jsonArray addObject:prices];
+    [jsonArray addObject:imageNames];
+    [jsonArray addObject:ids];
     
     return jsonArray;
 }
@@ -92,8 +103,19 @@ NSArray *queryResult;
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSError *error;
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+
+    NSMutableArray *foodNames = [dictionaryFromResponse valueForKeyPath:@"foodNames"];
+    NSMutableArray *descriptions = [dictionaryFromResponse valueForKeyPath:@"descriptions"];
+    NSMutableArray *prices = [dictionaryFromResponse valueForKeyPath:@"prices"];
+    NSMutableArray *imageNames = [dictionaryFromResponse valueForKeyPath:@"imageNames"];
+    NSMutableArray *ids = [dictionaryFromResponse valueForKeyPath:@"ids"];
     
-    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    NSMutableArray *jsonArray = [[NSMutableArray alloc] init];
+    [jsonArray addObject:foodNames];
+    [jsonArray addObject:descriptions];
+    [jsonArray addObject:prices];
+    [jsonArray addObject:imageNames];
+    [jsonArray addObject:ids];
     
     return jsonArray;
 }
@@ -108,7 +130,18 @@ NSArray *queryResult;
     NSError *error;
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     
-    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    NSMutableArray *gearNames = [dictionaryFromResponse valueForKeyPath:@"gearNames"];
+    NSMutableArray *descriptions = [dictionaryFromResponse valueForKeyPath:@"descriptions"];
+    NSMutableArray *prices = [dictionaryFromResponse valueForKeyPath:@"prices"];
+    NSMutableArray *imageNames = [dictionaryFromResponse valueForKeyPath:@"imageNames"];
+    NSMutableArray *ids = [dictionaryFromResponse valueForKeyPath:@"ids"];
+    
+    NSMutableArray *jsonArray = [[NSMutableArray alloc] init];
+    [jsonArray addObject:gearNames];
+    [jsonArray addObject:descriptions];
+    [jsonArray addObject:prices];
+    [jsonArray addObject:imageNames];
+    [jsonArray addObject:ids];
     
     return jsonArray;
 }

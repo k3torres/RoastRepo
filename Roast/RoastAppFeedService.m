@@ -224,7 +224,7 @@
         UIImage *photo;
         
         //get 5 latest instagram posts for instagramTag
-        for (int i=0; i<5; i++)
+  /*      for (int i=0; i<5; i++)
         {
             RoastAppFeedItem *feedItem1 = [[RoastAppFeedItem alloc] init];
             
@@ -255,7 +255,7 @@
             feedItem1.idNum = myNumber;
             
             [feed addObject:feedItem1];
-        }
+        }*/
         
         NSLog(@"added instagram feedItems with tag = %@" , instagramTag );
     }];
