@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66391E1818BE706A00B7E666 /* RoastAppReviewInserter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66391E1718BE706A00B7E666 /* RoastAppReviewInserter.m */; };
 		6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938D18B9A58D00B41C3D /* foodicon.jpg */; };
 		6671939118B9A58D00B41C3D /* cupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6671938E18B9A58D00B41C3D /* cupicon.png */; };
 		6671939218B9A58D00B41C3D /* carticon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938F18B9A58D00B41C3D /* carticon.jpg */; };
@@ -14,6 +15,9 @@
 		66ACA12618B7F03500C60614 /* RoastAppShopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ACA12518B7F03500C60614 /* RoastAppShopMenuViewController.m */; };
 		66B0870B18936DB10045B805 /* RoastAppJSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */; };
 		66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B892821895D8390030CE6E /* RoastAppShopViewController.m */; };
+		66C80ABE18C51BA300B9F028 /* RoastAppMenuItemReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C80ABD18C51BA300B9F028 /* RoastAppMenuItemReviewController.m */; };
+		66D7004918BBE5060090EDF0 /* RoastAppMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */; };
+		66F66F1418D3909000547445 /* birdrock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66F66F1318D3909000547445 /* birdrock.jpg */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
 		680C03C818A73F0700E5111D /* instagramicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680C03C718A73F0700E5111D /* instagramicon.png */; };
 		683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC667188A48F30027D7F2 /* Foundation.framework */; };
@@ -141,6 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66391E1618BE706A00B7E666 /* RoastAppReviewInserter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppReviewInserter.h; sourceTree = "<group>"; };
+		66391E1718BE706A00B7E666 /* RoastAppReviewInserter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppReviewInserter.m; sourceTree = "<group>"; };
 		6671938D18B9A58D00B41C3D /* foodicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foodicon.jpg; sourceTree = "<group>"; };
 		6671938E18B9A58D00B41C3D /* cupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cupicon.png; sourceTree = "<group>"; };
 		6671938F18B9A58D00B41C3D /* carticon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carticon.jpg; sourceTree = "<group>"; };
@@ -152,6 +158,11 @@
 		66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppJSONHandler.m; path = Roast/RoastAppJSONHandler.m; sourceTree = "<group>"; };
 		66B892811895D8390030CE6E /* RoastAppShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopViewController.h; path = Roast/RoastAppShopViewController.h; sourceTree = "<group>"; };
 		66B892821895D8390030CE6E /* RoastAppShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopViewController.m; path = Roast/RoastAppShopViewController.m; sourceTree = "<group>"; };
+		66C80ABC18C51BA300B9F028 /* RoastAppMenuItemReviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppMenuItemReviewController.h; sourceTree = "<group>"; };
+		66C80ABD18C51BA300B9F028 /* RoastAppMenuItemReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppMenuItemReviewController.m; sourceTree = "<group>"; };
+		66D7004718BBE5060090EDF0 /* RoastAppMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppMenuItemViewController.h; sourceTree = "<group>"; };
+		66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppMenuItemViewController.m; sourceTree = "<group>"; };
+		66F66F1318D3909000547445 /* birdrock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = birdrock.jpg; sourceTree = "<group>"; };
 		66FE40531895F1A6003AAE61 /* RoastAppShopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopItem.h; path = Roast/RoastAppShopItem.h; sourceTree = "<group>"; };
 		66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopItem.m; path = Roast/RoastAppShopItem.m; sourceTree = "<group>"; };
 		680C03C618A608CB00E5111D /* CaffeCalabria1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaffeCalabria1.png; sourceTree = "<group>"; };
@@ -499,6 +510,8 @@
 				66B0870A18936DB10045B805 /* RoastAppJSONHandler.m */,
 				6681A36118A61A1700D5324D /* RoastAppServerImageHandler.h */,
 				6681A36218A61A1700D5324D /* RoastAppServerImageHandler.m */,
+				66391E1618BE706A00B7E666 /* RoastAppReviewInserter.h */,
+				66391E1718BE706A00B7E666 /* RoastAppReviewInserter.m */,
 			);
 			name = "Networking Services";
 			path = ..;
@@ -532,6 +545,17 @@
 			);
 			name = "Shop View";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		66C80AB818C51ABD00B9F028 /* Shop Review */ = {
+			isa = PBXGroup;
+			children = (
+				66D7004718BBE5060090EDF0 /* RoastAppMenuItemViewController.h */,
+				66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */,
+				66C80ABC18C51BA300B9F028 /* RoastAppMenuItemReviewController.h */,
+				66C80ABD18C51BA300B9F028 /* RoastAppMenuItemReviewController.m */,
+			);
+			name = "Shop Review";
 			sourceTree = "<group>";
 		};
 		680C03CD18A7829900E5111D /* FacebookSDK */ = {
@@ -1121,6 +1145,7 @@
 		DC1BA3F718A1E23900D6370A /* Shop List */ = {
 			isa = PBXGroup;
 			children = (
+				66F66F1318D3909000547445 /* birdrock.jpg */,
 				DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */,
 				DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */,
 				DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */,
@@ -1384,6 +1409,7 @@
 				DC346C5418D2BD49005DD76A /* cafe-26.png in Resources */,
 				683D652318B9999000B54F9F /* candtcollectiveproduct.jpg in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
+				66F66F1418D3909000547445 /* birdrock.jpg in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
 				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,
 				6671939218B9A58D00B41C3D /* carticon.jpg in Resources */,
@@ -1428,11 +1454,13 @@
 				DCCF44D4189C2C5F0098F3E9 /* STHTTPRequest.m in Sources */,
 				DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */,
 				DCCF44CF189C2C5F0098F3E9 /* STTwitterHTML.m in Sources */,
+				66D7004918BBE5060090EDF0 /* RoastAppMenuItemViewController.m in Sources */,
 				66ACA12618B7F03500C60614 /* RoastAppShopMenuViewController.m in Sources */,
 				DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */,
 				DC51FFCE18A5C15600D196C2 /* RoastAppFeedProfile.m in Sources */,
 				DC51FFCD18A5C15600D196C2 /* RoastAppFeedItem.m in Sources */,
 				DCCF44D3189C2C5F0098F3E9 /* JSONSyntaxHighlight.m in Sources */,
+				66C80ABE18C51BA300B9F028 /* RoastAppMenuItemReviewController.m in Sources */,
 				DCCF44CE189C2C5F0098F3E9 /* STTwitterAppOnly.m in Sources */,
 				DCCF44CC189C2C5F0098F3E9 /* STHTTPRequest+STTwitter.m in Sources */,
 			);

@@ -14,5 +14,5 @@
 @property NSString *description;
 @property NSString *price;
 @property UIImage *shopImage;
-@property NSInteger *id;
+@property NSString *uid;
 @end

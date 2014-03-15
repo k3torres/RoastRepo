@@ -11,5 +11,6 @@
 @interface RoastAppServerImageHandler : NSObject
 
 +(UIImage *)requestCafeImages:(NSString *)imageName;
++(NSMutableArray *)requestCafeImagesForCarousel:(NSString *)cafeName;
 
 @end

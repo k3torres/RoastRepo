@@ -22,25 +22,29 @@ NSString *baseURL = @"http://54.201.5.175:8080/roast/";
 NSArray *queryResult;
 
 // Function for making JSON requests, paramaterized by query type as described above
-+(NSArray *) makeJSONRequest:(int)queryType :(NSString *)cafe{
++(NSArray *) makeJSONRequest:(int)queryType :(NSString *)param{
     
     switch (queryType)
     {
         case 0:
             
-            return [RoastAppJSONHandler requestCafeDrinks:cafe];
+            return [RoastAppJSONHandler requestCafeDrinks:param];
             
             break;
             
         case 1:
             
-            return [RoastAppJSONHandler requestCafeFoods:cafe];
+            return [RoastAppJSONHandler requestCafeFoods:param];
             break;
             
         case 2:
             
-            return [RoastAppJSONHandler requestCafeGear:cafe];
+            return [RoastAppJSONHandler requestCafeGear:param];
             break;
+            
+        case 3:
+            
+            return [RoastAppJSONHandler requestReviews:param];
             
         default:
             
@@ -49,6 +53,19 @@ NSArray *queryResult;
     
     //Fall-through case
     return nil;
+}
+
+//Query: Select * from roast.reviews where itemID = id
++(NSArray *)requestReviews:(NSString*)id{
+    
+    NSString *fullURL = [[baseURL stringByAppendingString:@"GetReview?id="] stringByAppendingString:id];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
+    NSError *error;
+    NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    
+    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    
+    return jsonArray;
 }
 
 //Query: Select * from roast.cafes where cafeName like '% cafe %'

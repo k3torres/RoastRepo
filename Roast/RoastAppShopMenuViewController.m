@@ -11,10 +11,12 @@
 #import "RoastAppJSONHandler.h"
 #import "RoastAppServerImageHandler.h"
 #import "RoastAppShopItem.h"
+#import "RoastAppMenuItemViewController.h"
 
 @interface RoastAppShopMenuViewController ()
 
 @property NSMutableArray *shopList;
+@property RoastAppMenuItemViewController *menuCtrlr;
 
 @end
 
@@ -44,6 +46,8 @@
         
         int counter = 0;
         
+        //JSON Serializer is producing different NSDictionary structures depending on the
+        //menu type, so this if-else construct corrects for the difference in ordering
         if([menuChoice isEqualToString:@"drinkMenu"]){
             self.names = [queryResult objectAtIndex:2];
             self.descriptions = [queryResult objectAtIndex:0];
@@ -71,6 +75,7 @@
             temp.description = [self.descriptions objectAtIndex:counter];
             temp.price = [self.prices objectAtIndex:counter];
             temp.shopImage = [RoastAppServerImageHandler requestCafeImages:[self.imgNames objectAtIndex:counter]];
+            temp.uid = [self.ids objectAtIndex:counter];
             [self.shopList addObject:temp];
             counter = counter + 1;
         }
@@ -96,7 +101,7 @@
     self.prices = [[NSMutableArray alloc] init];
     self.names = [[NSMutableArray alloc] init];
     self.shopList = [[NSMutableArray alloc] init];
-
+    self.ids = [[NSMutableArray alloc] init];
     [self loadInitialData];
 }
 
@@ -119,6 +124,56 @@
     return [self.shopList count];
 }
 
+//Pass the name of the selected shop to the next view controller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    self.menuCtrlr = [segue destinationViewController];
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+    RoastAppShopItem *chosenItem = [self.shopList objectAtIndex:indexPath.row];
+    
+    self.menuCtrlr.item = chosenItem;
+    [(UITextView *)[self.menuCtrlr.view viewWithTag:1] setText:[[chosenItem.description stringByAppendingString:@"\n\n"]stringByAppendingString:chosenItem.price]];
+    [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:chosenItem.shopImage];
+    self.menuCtrlr.title = chosenItem.name;
+    
+    NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :chosenItem.uid];
+    NSArray *userNames = [reviewsForItem objectAtIndex:3];
+    NSArray *userRatings = [reviewsForItem objectAtIndex:2];
+    NSString *reviewString = @"";
+    NSInteger averageReview = 0;
+    
+    if( [userRatings count] > 0){
+    
+        int numRatings = [userRatings count];
+        for(NSString *rating in userRatings){
+            averageReview += [rating integerValue];
+        }
+        averageReview = averageReview / numRatings;
+        [(UITextView *)[self.menuCtrlr.view viewWithTag:5] setText:[@"Average Rating: " stringByAppendingString:[NSString stringWithFormat: @"%d", (int)averageReview]]];
+        
+        int i = 0;
+        for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
+            NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
+            userName = [userName stringByAppendingString:[userRatings objectAtIndex:i]];
+            userName = [userName stringByAppendingString:@"/5   |    "];
+            NSString *userRow = [userName stringByAppendingString:currentString];
+            reviewString = [[reviewString stringByAppendingString:userRow] stringByAppendingString:@"\n\n"];
+            i++;
+        }
+    }else{
+        reviewString = @"There are no reviews for this item. Add one below!";
+        [(UITextView *)[self.menuCtrlr.view viewWithTag:5] setText:@"Average Rating: N/A"];
+    }
+    [(UITextView *)[self.menuCtrlr.view viewWithTag:4] setText:reviewString];
+    
+    [self.menuCtrlr.view setNeedsDisplay];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ShopItemCell";
@@ -130,7 +185,6 @@
     [(UILabel *)[cell.contentView viewWithTag:2] setText:shopItemAtIndex.description];
     [(UILabel *)[cell.contentView viewWithTag:3] setText:shopItemAtIndex.price];
     [(UIImageView *)[cell.contentView viewWithTag:4] setImage:shopItemAtIndex.shopImage];
-    
     
     return cell;
 }

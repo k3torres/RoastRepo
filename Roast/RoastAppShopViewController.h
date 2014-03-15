@@ -15,6 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *shopImage;
 - (IBAction)handleSwipe:(UISwipeGestureRecognizer *)sender;
 
-@property NSArray *pix;
+@property NSMutableArray *pix;
 
 @end

@@ -10,6 +10,7 @@
 #import "RoastAppShopMenuViewController.h"
 #import "RoastAppJSONHandler.h"
 #import "RoastAppShopItem.h"
+#import "RoastAppServerImageHandler.h"
 
 @interface RoastAppShopViewController ()
 
@@ -24,7 +25,7 @@
 {
     [super viewDidLoad];
     self.title = shopChoice;
-    
+
     /*UIScrollView *tempScrollView=(UIScrollView *)self.view;
     tempScrollView.contentSize=CGSizeMake(1280,960);*/
     
@@ -35,12 +36,10 @@
 
 - (void)loadInitialView
 {
-    self.pix = [NSArray arrayWithObjects:@"candtcollectivecoldbrew.jpg",
-                                            @"candtcollectiveproduct.jpg",
-                                            @"candtcollectiveemblem.jpg",
-                                            nil];
+    self.pix = [RoastAppServerImageHandler requestCafeImagesForCarousel:shopChoice];
+    
     self.imageIndex = 0;
-    shopImage.image = [UIImage imageNamed:[self.pix objectAtIndex:self.imageIndex]];
+    shopImage.image = [self.pix objectAtIndex:self.imageIndex];
 }
  
 
@@ -83,7 +82,7 @@
     }
     self.imageIndex = (self.imageIndex < 0) ? ([self.pix count] -1) : self.imageIndex % [self.pix count];
     
-    shopImage.image = [UIImage imageNamed:[self.pix objectAtIndex:self.imageIndex]];
+    shopImage.image = [self.pix objectAtIndex:self.imageIndex];
     
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     [[shopImage layer] addAnimation:animation forKey:nil];
