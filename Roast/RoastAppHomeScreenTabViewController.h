@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface RoastAppHomeScreenTabViewController : UITabBarController
+{
+    UITabBar *shopListTabBar;
+}
 
+@property NSMutableArray *shopListTabBarArray;
+@property NSMutableArray *feedTabBarArray;
+@property NSMutableArray *profileTabBarArray;
+-(NSMutableArray *)getFeedViewArray;
 @end

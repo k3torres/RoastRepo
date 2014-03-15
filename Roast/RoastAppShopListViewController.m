@@ -9,6 +9,7 @@
 #import "RoastAppShopListViewController.h"
 #import "RoastAppShopViewController.h"
 #import "RoastAppFeedViewController.h"
+#import "RoastAppHomeScreenTabViewController.h"
 
 @interface RoastAppShopListViewController ()
 
@@ -32,16 +33,20 @@
     //Images should be 550x225
     self.shopImages = [[NSMutableArray alloc] init];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
-                                [UIImage imageNamed:@"caffecalabria.jpg"], @"image",
-                                @"CAFFE CALABRIA", @"name",
+                                [UIImage imageNamed:@"birdrock.png"], @"image",
+                                @"BIRD ROCK COFFEE ROASTERS", @"name",
                                 Nil]];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
                                 [UIImage imageNamed:@"coffeeandteacollective.jpg"], @"image",
                                 @"COFFEE & TEA COLLECTIVE", @"name",
                                 Nil]];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
-                                [UIImage imageNamed:@"birdrock.jpg"], @"image",
-                                @"BIRD ROCK COFFEE ROASTERS", @"name",
+                                [UIImage imageNamed:@"caffecalabria.jpg"], @"image",
+                                @"CAFFE CALABRIA", @"name",
+                                Nil]];
+    [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIImage imageNamed:@"cafemoto.png"], @"image",
+                                @"CAFE MOTO", @"name",
                                 Nil]];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -105,14 +110,15 @@
 }
 
 - (IBAction)SwipeLeft:(id)sender {
-    NSLog(@"SWIPED");
-    //RoastAppFeedViewController *newView = [RoastAppFeedViewController init];
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
     [UIView transitionFromView:[self view]
-                        toView:[self.tabBarController.viewControllers[1] view]
-                      duration:0.25
-                       options:UIViewAnimationOptionTransitionFlipFromRight
-                    completion:nil];
-    [self.tabBarController setSelectedIndex:1];
+     toView:[tmp.feedTabBarArray[0] view]
+     duration:0.25
+     options:UIViewAnimationOptionTransitionFlipFromRight
+     completion:nil];
+    
+    [self.tabBarController setViewControllers:tmp.feedTabBarArray];
 }
 
 /*

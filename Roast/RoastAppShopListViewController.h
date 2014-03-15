@@ -11,5 +11,6 @@
 @interface RoastAppShopListViewController : UITableViewController
 @property NSString *selectedShop;
 @property NSMutableArray *shopImages;
+@property NSMutableArray *tabViewControllers;
 
 @end

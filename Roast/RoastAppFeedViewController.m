@@ -8,6 +8,7 @@
 
 #import "RoastAppFeedViewController.h"
 #import "RoastAppFeedDetailViewController.h"
+#import "RoastAppHomeScreenTabViewController.h"
 #import "RoastAppFeedItem.h"
 #import "RoastAppFeedProfile.h"
 #import "RoastAppFeedService.h"
@@ -42,7 +43,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.feedItems = [[NSMutableArray alloc] init];
     
     //TODO: Read from file
@@ -90,6 +90,7 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self.feedViewTable addSubview:self.refreshControl];
+    
      
 }
 
@@ -177,13 +178,15 @@
 }
 
 - (IBAction)SwipeRight:(id)sender {
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
     [UIView transitionFromView:[self view]
-                        toView:[self.tabBarController.viewControllers[0] view]
+                        toView:[tmp.shopListTabBarArray[0] view]
                       duration:0.25
                        options:UIViewAnimationOptionTransitionFlipFromLeft
                     completion:nil];
-    [self.tabBarController setSelectedIndex:0];
-    [self.tabBarController setSelectedIndex:0];
+    
+    [self.tabBarController setViewControllers:tmp.shopListTabBarArray];
 }
 
 
