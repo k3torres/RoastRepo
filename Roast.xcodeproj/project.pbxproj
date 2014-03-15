@@ -36,11 +36,8 @@
 		DC1825D918A619F2007232E6 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1825D818A619F2007232E6 /* login.png */; };
 		DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */; };
 		DC1BA3FD18A1EDD200D6370A /* RoastAppShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */; };
-		DC346C4918D2BCC4005DD76A /* cafe-48.png in Resources */ = {isa = PBXBuildFile; fileRef = DC346C4818D2BCC4005DD76A /* cafe-48.png */; };
 		DC346C5418D2BD49005DD76A /* cafe-26.png in Resources */ = {isa = PBXBuildFile; fileRef = DC346C5318D2BD49005DD76A /* cafe-26.png */; };
 		DC346C5818D2BE3D005DD76A /* feed_in-26.png in Resources */ = {isa = PBXBuildFile; fileRef = DC346C5518D2BE3D005DD76A /* feed_in-26.png */; };
-		DC346C5918D2BE3D005DD76A /* feed_in-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DC346C5618D2BE3D005DD76A /* feed_in-32.png */; };
-		DC346C5A18D2BE3D005DD76A /* feed_in-48.png in Resources */ = {isa = PBXBuildFile; fileRef = DC346C5718D2BE3D005DD76A /* feed_in-48.png */; };
 		DC346C5E18D2C346005DD76A /* RoastAppHomeScreenTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC346C5D18D2C346005DD76A /* RoastAppHomeScreenTabViewController.m */; };
 		DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC40FA2C18A5A382002CE7B3 /* twittericon.png */; };
 		DC51FFCD18A5C15600D196C2 /* RoastAppFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFC818A5C15600D196C2 /* RoastAppFeedItem.m */; };
@@ -68,9 +65,6 @@
 		DCCF44D6189C2CB20098F3E9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D5189C2CB20098F3E9 /* Accounts.framework */; };
 		DCCF44D8189C2CB90098F3E9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D7189C2CB90098F3E9 /* Twitter.framework */; };
 		DCCF44DA189C2CD20098F3E9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D9189C2CD20098F3E9 /* Social.framework */; };
-		DCFE379518C5204500FA4ABE /* current0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCFE379218C5204500FA4ABE /* current0.jpg */; };
-		DCFE379618C5204500FA4ABE /* shop0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCFE379318C5204500FA4ABE /* shop0.jpg */; };
-		DCFE379718C5204500FA4ABE /* shops1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DCFE379418C5204500FA4ABE /* shops1.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -418,11 +412,8 @@
 		DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppLoginViewController.m; sourceTree = "<group>"; };
 		DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopListViewController.h; sourceTree = "<group>"; };
 		DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopListViewController.m; sourceTree = "<group>"; };
-		DC346C4818D2BCC4005DD76A /* cafe-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-48.png"; sourceTree = "<group>"; };
 		DC346C5318D2BD49005DD76A /* cafe-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-26.png"; sourceTree = "<group>"; };
 		DC346C5518D2BE3D005DD76A /* feed_in-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-26.png"; sourceTree = "<group>"; };
-		DC346C5618D2BE3D005DD76A /* feed_in-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-32.png"; sourceTree = "<group>"; };
-		DC346C5718D2BE3D005DD76A /* feed_in-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-48.png"; sourceTree = "<group>"; };
 		DC346C5C18D2C346005DD76A /* RoastAppHomeScreenTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppHomeScreenTabViewController.h; sourceTree = "<group>"; };
 		DC346C5D18D2C346005DD76A /* RoastAppHomeScreenTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppHomeScreenTabViewController.m; sourceTree = "<group>"; };
 		DC40FA2C18A5A382002CE7B3 /* twittericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twittericon.png; sourceTree = "<group>"; };
@@ -471,9 +462,6 @@
 		DCCF44D5189C2CB20098F3E9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DCCF44D7189C2CB90098F3E9 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		DCCF44D9189C2CD20098F3E9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		DCFE379218C5204500FA4ABE /* current0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = current0.jpg; sourceTree = "<group>"; };
-		DCFE379318C5204500FA4ABE /* shop0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shop0.jpg; sourceTree = "<group>"; };
-		DCFE379418C5204500FA4ABE /* shops1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shops1.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1083,16 +1071,10 @@
 			isa = PBXGroup;
 			children = (
 				DC346C5518D2BE3D005DD76A /* feed_in-26.png */,
-				DC346C5618D2BE3D005DD76A /* feed_in-32.png */,
-				DC346C5718D2BE3D005DD76A /* feed_in-48.png */,
-				DC346C4818D2BCC4005DD76A /* cafe-48.png */,
 				DC346C5318D2BD49005DD76A /* cafe-26.png */,
 				6671938D18B9A58D00B41C3D /* foodicon.jpg */,
 				6671938E18B9A58D00B41C3D /* cupicon.png */,
 				6671938F18B9A58D00B41C3D /* carticon.jpg */,
-				DCFE379218C5204500FA4ABE /* current0.jpg */,
-				DCFE379318C5204500FA4ABE /* shop0.jpg */,
-				DCFE379418C5204500FA4ABE /* shops1.JPG */,
 				683D651F18B9999000B54F9F /* candtcollectivecoldbrew.jpg */,
 				683D652018B9999000B54F9F /* candtcollectiveproduct.jpg */,
 				683D652118B9999000B54F9F /* candtcollectiveemblem.jpg */,
@@ -1390,28 +1372,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				683D652218B9999000B54F9F /* candtcollectivecoldbrew.jpg in Resources */,
-				DCFE379618C5204500FA4ABE /* shop0.jpg in Resources */,
 				DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */,
 				683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */,
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
 				683D652418B9999000B54F9F /* candtcollectiveemblem.jpg in Resources */,
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
 				6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */,
-				DC346C5A18D2BE3D005DD76A /* feed_in-48.png in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
 				DC346C5818D2BE3D005DD76A /* feed_in-26.png in Resources */,
 				680C03C818A73F0700E5111D /* instagramicon.png in Resources */,
-				DC346C5918D2BE3D005DD76A /* feed_in-32.png in Resources */,
 				DC346C5418D2BD49005DD76A /* cafe-26.png in Resources */,
 				683D652318B9999000B54F9F /* candtcollectiveproduct.jpg in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
 				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,
 				6671939218B9A58D00B41C3D /* carticon.jpg in Resources */,
-				DCFE379518C5204500FA4ABE /* current0.jpg in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
-				DC346C4918D2BCC4005DD76A /* cafe-48.png in Resources */,
-				DCFE379718C5204500FA4ABE /* shops1.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
