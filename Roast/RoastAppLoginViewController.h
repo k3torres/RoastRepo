@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FBProfilePictureView.h>
 #import <FacebookSDK/FBLoginView.h>
+#import "GAITrackedViewController.h"
 
-@interface RoastAppLoginViewController : UIViewController
+@interface RoastAppLoginViewController : GAITrackedViewController
 
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;

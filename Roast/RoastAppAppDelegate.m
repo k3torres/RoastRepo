@@ -9,6 +9,7 @@
 #import "RoastAppAppDelegate.h"
 #import <FacebookSDK/FBLoginView.h>
 #import <FacebookSDK/FBAppCall.h>
+#import "GAI.h"
 
 @implementation RoastAppAppDelegate
 
@@ -22,6 +23,18 @@
     
     // Override point for customization after application launch.
     [FBLoginView class];
+    
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 20;
+    
+    // Optional: set Logger to VERBOSE for debug information.
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    
+    // Initialize tracker.
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-49013626-1"];
     
     return YES;
 }
