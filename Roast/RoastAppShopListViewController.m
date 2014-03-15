@@ -8,6 +8,7 @@
 
 #import "RoastAppShopListViewController.h"
 #import "RoastAppShopViewController.h"
+#import "RoastAppFeedViewController.h"
 
 @interface RoastAppShopListViewController ()
 
@@ -99,6 +100,17 @@
     [(UIImageView *)[cell.contentView viewWithTag:10] setImage:shopAtIndex[@"image"]];
 
     return cell;
+}
+
+- (IBAction)SwipeLeft:(id)sender {
+    NSLog(@"SWIPED");
+    //RoastAppFeedViewController *newView = [RoastAppFeedViewController init];
+    [UIView transitionFromView:[self view]
+                        toView:[self.tabBarController.viewControllers[1] view]
+                      duration:0.25
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    completion:nil];
+    [self.tabBarController setSelectedIndex:1];
 }
 
 /*

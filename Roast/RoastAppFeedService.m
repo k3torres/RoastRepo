@@ -178,10 +178,12 @@
     [self.fbService start];
     
     
+    
     for(NSString *tag in self.feedProfile.tags)
     {
         [self appendFeedArray:feedArray withTag:tag];
     }
+     
     
     return feedArray;
 }

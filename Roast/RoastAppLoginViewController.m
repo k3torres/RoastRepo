@@ -45,7 +45,8 @@
 - (void)segueToFeed:(id)sender
 {
     [self performSegueWithIdentifier:@"login" sender:self];
-    self.navigationController.navigationBarHidden = NO;
+    //self.navigationController.navigationBarHidden = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +63,7 @@
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue
 {
-    self.navigationController.navigationBarHidden = YES;
+    //self.navigationController.navigationBarHidden = YES;
 }
 
 @end

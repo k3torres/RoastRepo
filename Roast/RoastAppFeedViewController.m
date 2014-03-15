@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -57,9 +58,9 @@
     [userFollowing addObject:@"CaffeCalabria"];
     
     //adding tags for instagram
-    [tagFollowing addObject:@"candtcollective"];
-    [tagFollowing addObject:@"younghickorysd"];
-    [tagFollowing addObject:@"birdrockcoffeeroasters"];
+    //[tagFollowing addObject:@"candtcollective"];
+    //[tagFollowing addObject:@"younghickorysd"];
+    //[tagFollowing addObject:@"birdrockcoffeeroasters"];
     
     [feedProfile setTags:tagFollowing];
     [feedProfile setUsers:userFollowing];
@@ -77,6 +78,7 @@
     [self.tableView reloadData];
     
     NSLog(@"feedItems Initialized!");
+    
     NSLog(@"Current feedItems size:%u", [self.feedItems count]);
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -88,6 +90,7 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self.feedViewTable addSubview:self.refreshControl];
+     
 }
 
 - (void)didReceiveMemoryWarning
@@ -173,6 +176,17 @@
      
 }
 
+- (IBAction)SwipeRight:(id)sender {
+    [UIView transitionFromView:[self view]
+                        toView:[self.tabBarController.viewControllers[0] view]
+                      duration:0.25
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    completion:nil];
+    [self.tabBarController setSelectedIndex:0];
+    [self.tabBarController setSelectedIndex:0];
+}
+
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -227,8 +241,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
- */
+*/
 
 - (IBAction)unwindToFeedListView:(UIStoryboardSegue *)unwindSegue
 {

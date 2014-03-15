@@ -15,7 +15,7 @@
                         <color key="sectionIndexColor" red="0.0009043345303" green="0.43599699720000001" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedItemCell" rowHeight="85" id="ZPu-jp-o3K">
-                                <rect key="frame" x="0.0" y="86" width="320" height="85"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZPu-jp-o3K" id="oUG-sB-8lX">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
@@ -64,18 +64,18 @@
                                 <color key="backgroundColor" red="0.00090433453030647204" green="0.43599699722176788" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OyM-pH-dDV" appends="YES" id="p2L-HV-Hyi"/>
+                        </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Current" image="feed_in-26.png" id="Voe-9i-Nje"/>
                     <navigationItem key="navigationItem" title="Feed" id="pPo-tk-42O">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="C1b-nw-rma">
                             <connections>
                                 <segue destination="3w5-DL-b6v" kind="unwind" unwindAction="unwindToLogin:" id="ZrC-UB-9zK"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Shops" id="agV-YI-LaZ">
-                            <connections>
-                                <segue destination="LOT-JR-Ki4" kind="push" id="MlW-T9-aGu"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Shops" id="agV-YI-LaZ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="feedViewTable" destination="AmQ-k3-cHF" id="3Kc-dQ-4KL"/>
@@ -83,9 +83,14 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbD-qo-yWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="OyM-pH-dDV">
+                    <connections>
+                        <action selector="SwipeRight:" destination="k1a-9X-DLR" id="gOj-Uw-84J"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <exit id="3w5-DL-b6v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-66" y="-322"/>
+            <point key="canvasLocation" x="74" y="-62"/>
         </scene>
         <!--Roast App Shop List View Controller - Coffee Houses-->
         <scene sceneID="fyj-4g-7TI">
@@ -97,7 +102,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopListCell" id="4kZ-19-J3e">
-                                <rect key="frame" x="0.0" y="86" width="320" height="150"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4kZ-19-J3e" id="nlc-zh-TdT">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
@@ -123,7 +128,7 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="LOT-JR-Ki4" id="PqN-EA-IOL"/>
-                            <outlet property="delegate" destination="LOT-JR-Ki4" id="VfQ-4N-4EJ"/>
+                            <outletCollection property="gestureRecognizers" destination="N1a-Nw-v4R" appends="YES" id="WgR-xn-Iz7"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Coffee Houses" id="UV1-F4-7ac">
@@ -135,8 +140,13 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEA-Ib-3Xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="N1a-Nw-v4R">
+                    <connections>
+                        <action selector="SwipeLeft:" destination="LOT-JR-Ki4" id="laj-60-X38"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="479" y="-752"/>
+            <point key="canvasLocation" x="589" y="-728"/>
         </scene>
         <!--Roast App Shop View Controller - ShopView-->
         <scene sceneID="hzS-aL-naJ">
@@ -202,6 +212,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lhO-vu-P1s"/>
                     <navigationItem key="navigationItem" title="ShopView" id="TaQ-b4-zom"/>
                     <connections>
                         <outlet property="shopImage" destination="JRk-y0-Y8G" id="7XJ-xF-i4J"/>
@@ -219,7 +230,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1061" y="-752"/>
+            <point key="canvasLocation" x="1587" y="-752"/>
         </scene>
         <!--Roast App Shop Menu View Controller-->
         <scene sceneID="VVh-9H-p2X">
@@ -231,7 +242,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopItemCell" rowHeight="100" id="lfv-8R-b1g">
-                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lfv-8R-b1g" id="BGn-pZ-hIO">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
@@ -273,7 +284,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgV-4h-sjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1546" y="-752"/>
+            <point key="canvasLocation" x="2072" y="-752"/>
         </scene>
         <!--Roast App Feed Detail View Controller-->
         <scene sceneID="iy9-OM-ki2">
@@ -395,19 +406,43 @@
                     <navigationItem key="navigationItem" id="9J6-vB-dMt"/>
                     <connections>
                         <outlet property="skipButton" destination="wl6-PG-yWN" id="uqJ-Vz-RVK"/>
-                        <segue destination="k1a-9X-DLR" kind="push" identifier="login" id="Pcr-AE-Nee"/>
+                        <segue destination="tlk-Ej-7ka" kind="push" identifier="login" id="bI5-Z2-d3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxo-mK-OUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="-322"/>
+            <point key="canvasLocation" x="-1026" y="-314"/>
+        </scene>
+        <!--Roast App Home Screen Tab View Controller-->
+        <scene sceneID="6Sw-eO-Ao3">
+            <objects>
+                <tabBarController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="tlk-Ej-7ka" customClass="RoastAppHomeScreenTabViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3hb-1b-F8U"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Y5R-Rq-FfG">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="s6p-0s-VPx" kind="relationship" relationship="viewControllers" id="TM5-fn-BXV"/>
+                        <segue destination="k1a-9X-DLR" kind="relationship" relationship="viewControllers" id="dK4-xP-V1p"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPA-4F-w5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="-322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="38W-xS-Lnx">
             <objects>
-                <navigationController definesPresentationContext="YES" id="NUJ-Mp-fbm" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="NUJ-Mp-fbm" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FTz-bf-VSC"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQj-ns-RNr">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CQj-ns-RNr">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -416,11 +451,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHJ-KY-Qf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-979" y="-322"/>
+            <point key="canvasLocation" x="-1475" y="-322"/>
+        </scene>
+        <!--Navigation Controller - Shops-->
+        <scene sceneID="g9y-QG-Sxp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s6p-0s-VPx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shops" image="cafe-26.png" id="e7p-Zx-TaV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AxE-JS-2yh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LOT-JR-Ki4" kind="relationship" relationship="rootViewController" id="4R4-n1-2Sb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILs-yr-G7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="-728"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cafe-26.png" width="26" height="26"/>
         <image name="candtcollectivecoldbrew.jpg" width="640" height="640"/>
+        <image name="feed_in-26.png" width="26" height="26"/>
         <image name="login.png" width="528" height="839"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
