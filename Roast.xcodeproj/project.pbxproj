@@ -1075,6 +1075,7 @@
 			isa = PBXGroup;
 			children = (
 				DC346C5B18D2C314005DD76A /* Home Screen */,
+				66C80AB818C51ABD00B9F028 /* Shop Review */,
 				DC1825D118A616CF007232E6 /* Login */,
 				66B0870F18936F6B0045B805 /* Feed */,
 				DC1BA3F718A1E23900D6370A /* Shop List */,
@@ -1439,6 +1440,7 @@
 				DCCF44D1189C2C5F0098F3E9 /* STTwitterOS.m in Sources */,
 				DCCF44D2189C2C5F0098F3E9 /* BAVPlistNode.m in Sources */,
 				DC346C5E18D2C346005DD76A /* RoastAppHomeScreenTabViewController.m in Sources */,
+				66391E1818BE706A00B7E666 /* RoastAppReviewInserter.m in Sources */,
 				683BC678188A48F30027D7F2 /* RoastAppAppDelegate.m in Sources */,
 				683BC674188A48F30027D7F2 /* main.m in Sources */,
 				66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */,
