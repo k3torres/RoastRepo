@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		66391E1818BE706A00B7E666 /* RoastAppReviewInserter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66391E1718BE706A00B7E666 /* RoastAppReviewInserter.m */; };
+		66504E9A18D427060092B2E4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504E9918D427060092B2E4 /* AdSupport.framework */; };
+		66504E9C18D4270C0092B2E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504E9B18D4270C0092B2E4 /* CoreData.framework */; };
+		66504E9E18D427260092B2E4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504E9D18D427260092B2E4 /* SystemConfiguration.framework */; };
+		66504EA018D427350092B2E4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504E9F18D427350092B2E4 /* libz.dylib */; };
+		66504EA218D427460092B2E4 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504EA118D427460092B2E4 /* libGoogleAnalyticsServices.a */; };
 		6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938D18B9A58D00B41C3D /* foodicon.jpg */; };
 		6671939118B9A58D00B41C3D /* cupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6671938E18B9A58D00B41C3D /* cupicon.png */; };
 		6671939218B9A58D00B41C3D /* carticon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938F18B9A58D00B41C3D /* carticon.jpg */; };
@@ -147,6 +152,17 @@
 /* Begin PBXFileReference section */
 		66391E1618BE706A00B7E666 /* RoastAppReviewInserter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppReviewInserter.h; sourceTree = "<group>"; };
 		66391E1718BE706A00B7E666 /* RoastAppReviewInserter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppReviewInserter.m; sourceTree = "<group>"; };
+		66504E9318D426E80092B2E4 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		66504E9418D426E80092B2E4 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		66504E9518D426E80092B2E4 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		66504E9618D426E80092B2E4 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		66504E9718D426E80092B2E4 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		66504E9818D426E80092B2E4 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		66504E9918D427060092B2E4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		66504E9B18D4270C0092B2E4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		66504E9D18D427260092B2E4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		66504E9F18D427350092B2E4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		66504EA118D427460092B2E4 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		6671938D18B9A58D00B41C3D /* foodicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foodicon.jpg; sourceTree = "<group>"; };
 		6671938E18B9A58D00B41C3D /* cupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cupicon.png; sourceTree = "<group>"; };
 		6671938F18B9A58D00B41C3D /* carticon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carticon.jpg; sourceTree = "<group>"; };
@@ -480,6 +496,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66504EA218D427460092B2E4 /* libGoogleAnalyticsServices.a in Frameworks */,
+				66504EA018D427350092B2E4 /* libz.dylib in Frameworks */,
+				66504E9E18D427260092B2E4 /* SystemConfiguration.framework in Frameworks */,
+				66504E9C18D4270C0092B2E4 /* CoreData.framework in Frameworks */,
+				66504E9A18D427060092B2E4 /* AdSupport.framework in Frameworks */,
 				DCCF44DA189C2CD20098F3E9 /* Social.framework in Frameworks */,
 				DCCF44D8189C2CB90098F3E9 /* Twitter.framework in Frameworks */,
 				DCCF44D6189C2CB20098F3E9 /* Accounts.framework in Frameworks */,
@@ -503,6 +524,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6687053B18D426A200E8CCD1 /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				66504E9318D426E80092B2E4 /* GAI.h */,
+				66504E9418D426E80092B2E4 /* GAIDictionaryBuilder.h */,
+				66504E9518D426E80092B2E4 /* GAIFields.h */,
+				66504E9618D426E80092B2E4 /* GAILogger.h */,
+				66504E9718D426E80092B2E4 /* GAITrackedViewController.h */,
+				66504E9818D426E80092B2E4 /* GAITracker.h */,
+			);
+			name = "Google Analytics";
+			sourceTree = "<group>";
+		};
 		66B0870C18936EF40045B805 /* Networking Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -1056,6 +1090,11 @@
 		683BC666188A48F30027D7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66504EA118D427460092B2E4 /* libGoogleAnalyticsServices.a */,
+				66504E9F18D427350092B2E4 /* libz.dylib */,
+				66504E9D18D427260092B2E4 /* SystemConfiguration.framework */,
+				66504E9B18D4270C0092B2E4 /* CoreData.framework */,
+				66504E9918D427060092B2E4 /* AdSupport.framework */,
 				DC62905318BCA78400DE60F7 /* FacebookSDK.framework */,
 				680C03CD18A7829900E5111D /* FacebookSDK */,
 				680C03CB18A7820D00E5111D /* facebook-ios-sdk-3.12.pkg */,
@@ -1074,6 +1113,7 @@
 		683BC66D188A48F30027D7F2 /* Roast */ = {
 			isa = PBXGroup;
 			children = (
+				6687053B18D426A200E8CCD1 /* Google Analytics */,
 				DC346C5B18D2C314005DD76A /* Home Screen */,
 				66C80AB818C51ABD00B9F028 /* Shop Review */,
 				DC1825D118A616CF007232E6 /* Login */,
@@ -1810,6 +1850,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Roast/Roast-Prefix.pch";
 				INFOPLIST_FILE = "Roast/Roast-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1830,6 +1874,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Roast/Roast-Prefix.pch";
 				INFOPLIST_FILE = "Roast/Roast-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
