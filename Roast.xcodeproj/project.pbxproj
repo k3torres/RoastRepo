@@ -12,7 +12,6 @@
 		66504E9C18D4270C0092B2E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504E9B18D4270C0092B2E4 /* CoreData.framework */; };
 		66504E9E18D427260092B2E4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504E9D18D427260092B2E4 /* SystemConfiguration.framework */; };
 		66504EA018D427350092B2E4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504E9F18D427350092B2E4 /* libz.dylib */; };
-		66504EA218D427460092B2E4 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66504EA118D427460092B2E4 /* libGoogleAnalyticsServices.a */; };
 		6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938D18B9A58D00B41C3D /* foodicon.jpg */; };
 		6671939118B9A58D00B41C3D /* cupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6671938E18B9A58D00B41C3D /* cupicon.png */; };
 		6671939218B9A58D00B41C3D /* carticon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6671938F18B9A58D00B41C3D /* carticon.jpg */; };
@@ -25,6 +24,10 @@
 		66F66F1418D3909000547445 /* birdrock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66F66F1318D3909000547445 /* birdrock.jpg */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
 		680C03C818A73F0700E5111D /* instagramicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680C03C718A73F0700E5111D /* instagramicon.png */; };
+		682589B818D56B2800ED7A10 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */; };
+		682589BA18D56D8500ED7A10 /* vegan_food-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589B918D56D8500ED7A10 /* vegan_food-32.png */; };
+		682589BC18D56D9800ED7A10 /* shirt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589BB18D56D9800ED7A10 /* shirt-32.png */; };
+		682589BE18D56DA200ED7A10 /* java_coffee_been_logo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */; };
 		683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC667188A48F30027D7F2 /* Foundation.framework */; };
 		683BC66A188A48F30027D7F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC669188A48F30027D7F2 /* CoreGraphics.framework */; };
 		683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC66B188A48F30027D7F2 /* UIKit.framework */; };
@@ -411,6 +414,11 @@
 		680C04EE18A7829A00E5111D /* SwitchUserSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwitchUserSample-Info.plist"; sourceTree = "<group>"; };
 		680C04EF18A7829A00E5111D /* SwitchUserSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwitchUserSample-Prefix.pch"; sourceTree = "<group>"; };
 		680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwitchUserSample.xcodeproj; sourceTree = "<group>"; };
+		682589B518D56B0B00ED7A10 /* GoogleAnalyticsServicesiOS_3.03c.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = GoogleAnalyticsServicesiOS_3.03c.zip; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c.zip; sourceTree = "<group>"; };
+		682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		682589B918D56D8500ED7A10 /* vegan_food-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vegan_food-32.png"; sourceTree = "<group>"; };
+		682589BB18D56D9800ED7A10 /* shirt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shirt-32.png"; sourceTree = "<group>"; };
+		682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "java_coffee_been_logo-32.png"; sourceTree = "<group>"; };
 		683BC664188A48F30027D7F2 /* Roast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683BC667188A48F30027D7F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		683BC669188A48F30027D7F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -496,7 +504,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66504EA218D427460092B2E4 /* libGoogleAnalyticsServices.a in Frameworks */,
+				682589B818D56B2800ED7A10 /* libGoogleAnalyticsServices.a in Frameworks */,
 				66504EA018D427350092B2E4 /* libz.dylib in Frameworks */,
 				66504E9E18D427260092B2E4 /* SystemConfiguration.framework in Frameworks */,
 				66504E9C18D4270C0092B2E4 /* CoreData.framework in Frameworks */,
@@ -1090,6 +1098,8 @@
 		683BC666188A48F30027D7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */,
+				682589B518D56B0B00ED7A10 /* GoogleAnalyticsServicesiOS_3.03c.zip */,
 				66504EA118D427460092B2E4 /* libGoogleAnalyticsServices.a */,
 				66504E9F18D427350092B2E4 /* libz.dylib */,
 				66504E9D18D427260092B2E4 /* SystemConfiguration.framework */,
@@ -1135,6 +1145,9 @@
 		683BC66E188A48F30027D7F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */,
+				682589B918D56D8500ED7A10 /* vegan_food-32.png */,
+				682589BB18D56D9800ED7A10 /* shirt-32.png */,
 				DC346C5518D2BE3D005DD76A /* feed_in-26.png */,
 				DC346C5318D2BD49005DD76A /* cafe-26.png */,
 				6671938D18B9A58D00B41C3D /* foodicon.jpg */,
@@ -1452,7 +1465,10 @@
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
 				66F66F1418D3909000547445 /* birdrock.jpg in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
+				682589BE18D56DA200ED7A10 /* java_coffee_been_logo-32.png in Resources */,
+				682589BC18D56D9800ED7A10 /* shirt-32.png in Resources */,
 				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,
+				682589BA18D56D8500ED7A10 /* vegan_food-32.png in Resources */,
 				6671939218B9A58D00B41C3D /* carticon.jpg in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
 			);
@@ -1853,6 +1869,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
+					/Users/KT/Downloads/GoogleAnalyticsServicesiOS_3.03c,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1877,6 +1894,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
+					/Users/KT/Downloads/GoogleAnalyticsServicesiOS_3.03c,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
