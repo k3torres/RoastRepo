@@ -31,13 +31,10 @@
     [super viewDidLoad];
     self.title = shopChoice;
 
-    /*UIScrollView *tempScrollView=(UIScrollView *)self.view;
-    tempScrollView.contentSize=CGSizeMake(1280,960);*/
     [scrolly setScrollEnabled:YES];
     [scrolly setContentSize:CGSizeMake(320, 1000)];
 
     self.backgroundtest = [NSMutableArray arrayWithObjects:@"Wood-Desktop-Wallpaper3.png", nil];
-    //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[self.backgroundtest objectAtIndex:self.i]]]];
     shopInfoTextView.layer.cornerRadius = 5.0;
     shopImage.layer.cornerRadius = 5.0;
 

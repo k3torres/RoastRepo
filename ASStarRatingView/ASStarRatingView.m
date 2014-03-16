@@ -48,9 +48,9 @@
 }
 
 - (void)baseInit {
-    _notSelectedStar = [UIImage imageNamed:@"star@2x"];
-    _selectedStar = [UIImage imageNamed:@"star_highlighted@2x"];
-    _halfSelectedStar = [UIImage imageNamed:@"star@2x"];
+    _notSelectedStar = [UIImage imageNamed:@"star"];
+    _selectedStar = [UIImage imageNamed:@"star_highlighted"];
+    _halfSelectedStar = [UIImage imageNamed:@"star"];
     _starViews = [NSMutableArray array];
     _maxRating = kDefaultMaxRating;
     _midMargin = kDefaultMidMargin;
