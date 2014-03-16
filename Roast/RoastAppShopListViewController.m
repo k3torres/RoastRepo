@@ -9,6 +9,7 @@
 #import "RoastAppShopListViewController.h"
 #import "RoastAppShopViewController.h"
 #import "RoastAppFeedViewController.h"
+#import "RoastAppHomeScreenTabViewController.h"
 
 @interface RoastAppShopListViewController ()
 
@@ -32,17 +33,23 @@
     //Images should be 550x225
     self.shopImages = [[NSMutableArray alloc] init];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
-                                [UIImage imageNamed:@"caffecalabria.jpg"], @"image",
-                                @"CAFFE CALABRIA", @"name",
+                                [UIImage imageNamed:@"birdrock.png"], @"image",
+                                @"Bird Rock Coffee Roasters", @"name",
                                 Nil]];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
                                 [UIImage imageNamed:@"coffeeandteacollective.jpg"], @"image",
-                                @"COFFEE & TEA COLLECTIVE", @"name",
+                                @"Coffee & Tea Collective", @"name",
                                 Nil]];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
-                                [UIImage imageNamed:@"birdrock.jpg"], @"image",
-                                @"BIRD ROCK COFFEE ROASTERS", @"name",
+                                [UIImage imageNamed:@"caffecalabria.jpg"], @"image",
+                                @"Caffe Calabria", @"name",
                                 Nil]];
+    [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
+                                [UIImage imageNamed:@"cafemoto.png"], @"image",
+                                @"Cafe Moto", @"name",
+                                Nil]];
+    
+    self.tableView.backgroundColor = self.tabBarController.tabBar.barTintColor;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -105,65 +112,26 @@
 }
 
 - (IBAction)SwipeLeft:(id)sender {
-    NSLog(@"SWIPED");
-    //RoastAppFeedViewController *newView = [RoastAppFeedViewController init];
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
     [UIView transitionFromView:[self view]
-                        toView:[self.tabBarController.viewControllers[1] view]
+     toView:[tmp.feedTabBarArray[0] view]
+     duration:0.25
+     options:UIViewAnimationOptionTransitionFlipFromRight
+     completion:nil];
+    
+    [self.tabBarController setViewControllers:tmp.feedTabBarArray];
+}
+- (IBAction)swipeRight:(id)sender {
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
+    [UIView transitionFromView:[self view]
+                        toView:[tmp.profileTabBarArray[0] view]
                       duration:0.25
-                       options:UIViewAnimationOptionTransitionFlipFromRight
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
                     completion:nil];
-    [self.tabBarController setSelectedIndex:1];
+    
+    [self.tabBarController setViewControllers:tmp.profileTabBarArray];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

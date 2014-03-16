@@ -7,9 +7,9 @@
         <!--Roast App Feed View Controller - Feed-->
         <scene sceneID="JXW-Yw-9OS">
             <objects>
-                <tableViewController id="k1a-9X-DLR" customClass="RoastAppFeedViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Feed" id="k1a-9X-DLR" customClass="RoastAppFeedViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="AmQ-k3-cHF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexColor" red="0.0009043345303" green="0.43599699720000001" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
@@ -66,9 +66,10 @@
                         </prototypes>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="OyM-pH-dDV" appends="YES" id="p2L-HV-Hyi"/>
+                            <outletCollection property="gestureRecognizers" destination="nzC-RD-45O" appends="YES" id="DAr-dg-U5K"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Current" image="feed_in-26.png" id="Voe-9i-Nje"/>
+                    <tabBarItem key="tabBarItem" title="Current" image="feed_in-25.png" id="Voe-9i-Nje"/>
                     <navigationItem key="navigationItem" title="Feed" id="pPo-tk-42O">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="C1b-nw-rma">
                             <connections>
@@ -83,6 +84,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbD-qo-yWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="nzC-RD-45O">
+                    <connections>
+                        <action selector="swipeLeft:" destination="k1a-9X-DLR" id="jwA-JH-FPk"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="OyM-pH-dDV">
                     <connections>
                         <action selector="SwipeRight:" destination="k1a-9X-DLR" id="gOj-Uw-84J"/>
@@ -90,14 +96,220 @@
                 </swipeGestureRecognizer>
                 <exit id="3w5-DL-b6v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="74" y="-62"/>
+            <point key="canvasLocation" x="10" y="-314"/>
+        </scene>
+        <!--Roast App Profile View Controller - Profile-->
+        <scene sceneID="Qaw-nX-LyT">
+            <objects>
+                <viewController storyboardIdentifier="Profile" id="hGE-6L-pbp" customClass="RoastAppProfileViewController" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="bu0-Qc-PGa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_bg.jpg" id="Tb8-sl-u8S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="YgI-W5-n4e">
+                                <rect key="frame" x="0.0" y="20" width="320" height="760"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="nuN-9v-oqJ">
+                                        <rect key="frame" x="0.0" y="59" width="320" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirty_hipster.jpg" id="xsv-DN-us5">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="i6R-Bv-GMd">
+                                                <rect key="frame" x="0.0" y="190" width="320" height="10"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i6R-Bv-GMd" id="1Bh-5g-CiN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="9"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.48111197189999999" green="0.48324927270000001" blue="0.48966117529999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            </tableViewCell>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="187" id="IS5-Jb-iyC">
+                                        <rect key="frame" x="0.0" y="-128" width="320" height="187"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IS5-Jb-iyC" id="8Dz-m5-6fV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x1U-MI-d4E">
+                                                    <rect key="frame" x="97" y="140" width="126" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="0.50605929112027037" green="0.50830741840813753" blue="0.51505180027173914" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.48111197187622257" green="0.48324927272510171" blue="0.48966117527173914" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <view contentMode="scaleToFill" id="Nlp-lx-Nxg" userLabel="facbookLoginButton">
+                                        <rect key="frame" x="20" y="280" width="280" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yOz-0j-JX4">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                                <state key="normal" title="Facebook">
+                                                    <color key="titleShadowColor" red="1" green="0.96846890799999996" blue="0.98983559740000004" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-32-white.png" id="xxV-4c-hF4">
+                                                <rect key="frame" x="234" y="5" width="34" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="1" green="0.96846890799999996" blue="0.98983559740000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                            <view alpha="0.050000000000000003" contentMode="scaleToFill" id="gQ6-tz-q6X" customClass="FBLoginView">
+                                                <rect key="frame" x="0.0" y="-5" width="280" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ycV-7D-lgR" id="yeH-7W-dbF"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="y2l-FG-Sam" userLabel="twitterLoginButton">
+                                        <rect key="frame" x="20" y="336" width="280" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VMq-3o-Fu5">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                                <state key="normal" title="Twitter">
+                                                    <color key="titleShadowColor" red="1" green="0.96846890799999996" blue="0.98983559740000004" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter-32-white.png" id="7g9-Oh-A9Z">
+                                                <rect key="frame" x="234" y="5" width="34" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="1" green="0.96846890799999996" blue="0.98983559740000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="9xH-Kc-CDF" userLabel="instagramLoginButton">
+                                        <rect key="frame" x="20" y="395" width="280" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cFR-O6-w5h">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                                <state key="normal" title="Instagram">
+                                                    <color key="titleShadowColor" red="1" green="0.96846890799999996" blue="0.98983559740000004" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram-32-white.png" id="ACG-ZK-uVt">
+                                                <rect key="frame" x="234" y="5" width="34" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="1" green="0.96846890799999996" blue="0.98983559740000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="cp9-cG-VxZ" userLabel="methodsButton">
+                                        <rect key="frame" x="20" y="573" width="280" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="methods.jpg" id="6fL-Tv-SIU">
+                                                <rect key="frame" x="0.0" y="-1" width="280" height="127"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Methods" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Uk-Pp-iFC">
+                                                <rect key="frame" x="20" y="23" width="183" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="38"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="D8V-91-hen" userLabel="toolKitButton">
+                                        <rect key="frame" x="20" y="466" width="280" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toolkit.jpg" id="dFL-Zf-t8n">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="178"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toolkit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tTy-QY-oyF">
+                                                <rect key="frame" x="20" y="23" width="183" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="38"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g0L-pB-m84">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g0L-pB-m84" id="Okm-Tw-eBh">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.48111197187622257" green="0.48324927272510171" blue="0.48966117527173914" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mFx-RE-nfD" appends="YES" id="S0l-l1-qYL"/>
+                            <outletCollection property="gestureRecognizers" destination="lOV-HZ-6kz" appends="YES" id="r55-Ee-7Pr"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user.png" id="jHg-9b-gax"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="yOz-0j-JX4" id="O2S-xd-dy7"/>
+                        <outlet property="instagramLoginButton" destination="9xH-Kc-CDF" id="TvH-ee-HUr"/>
+                        <outlet property="profilePic" destination="xsv-DN-us5" id="zh4-lA-uUa"/>
+                        <outlet property="scrollView" destination="YgI-W5-n4e" id="yXW-Cp-f15"/>
+                        <outlet property="twitterLoginButton" destination="y2l-FG-Sam" id="U2c-Eu-Y9W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6H-WE-C5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="mFx-RE-nfD">
+                    <connections>
+                        <action selector="swipeRight:" destination="hGE-6L-pbp" id="mwa-yn-vga"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="lOV-HZ-6kz">
+                    <connections>
+                        <action selector="swipeLeft:" destination="hGE-6L-pbp" id="uPt-Pt-Djb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="10" y="462"/>
         </scene>
         <!--Roast App Shop List View Controller - Coffee Houses-->
         <scene sceneID="fyj-4g-7TI">
             <objects>
                 <tableViewController id="LOT-JR-Ki4" customClass="RoastAppShopListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="cXY-3r-dA8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -108,16 +320,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" alpha="0.75" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lN4-0V-cP7">
+                                        <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lN4-0V-cP7">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MsW-D3-gji">
-                                            <rect key="frame" x="20" y="39" width="280" height="72"/>
+                                            <rect key="frame" x="20" y="20" width="280" height="109"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -129,6 +341,7 @@
                         <connections>
                             <outlet property="dataSource" destination="LOT-JR-Ki4" id="PqN-EA-IOL"/>
                             <outletCollection property="gestureRecognizers" destination="N1a-Nw-v4R" appends="YES" id="WgR-xn-Iz7"/>
+                            <outletCollection property="gestureRecognizers" destination="Zq3-jE-ukE" appends="YES" id="L6G-l7-o09"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Coffee Houses" id="UV1-F4-7ac">
@@ -145,19 +358,29 @@
                         <action selector="SwipeLeft:" destination="LOT-JR-Ki4" id="laj-60-X38"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Zq3-jE-ukE">
+                    <connections>
+                        <action selector="swipeRight:" destination="LOT-JR-Ki4" id="pcX-7q-mEg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <view contentMode="scaleToFill" id="cN5-hM-XwC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="589" y="-728"/>
+            <point key="canvasLocation" x="525" y="-980"/>
         </scene>
         <!--Roast App Shop View Controller - ShopView-->
         <scene sceneID="hzS-aL-naJ">
             <objects>
                 <viewController id="BNU-aW-3Un" customClass="RoastAppShopViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TlC-UG-pLg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EBh-39-kuB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="656"/>
+                                <rect key="frame" x="0.0" y="-49" width="320" height="656"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0We-6z-wFB">
@@ -248,14 +471,14 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1025" y="-728"/>
+            <point key="canvasLocation" x="961" y="-980"/>
         </scene>
         <!--Roast App Shop Menu View Controller-->
         <scene sceneID="VVh-9H-p2X">
             <objects>
                 <tableViewController id="pj5-wb-Kl4" customClass="RoastAppShopMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="rd5-Gf-jBv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -286,6 +509,12 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="86O-1V-qmG">
+                                            <rect key="frame" x="109" y="29" width="207" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TUt-ky-dWc">
                                             <rect key="frame" x="0.0" y="0.0" width="101" height="99"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -306,14 +535,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgV-4h-sjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="-728"/>
+            <point key="canvasLocation" x="1414" y="-980"/>
         </scene>
         <!--Roast App Menu Item View Controller-->
         <scene sceneID="H6J-tZ-9Dd">
             <objects>
                 <viewController id="bCN-g1-BAR" customClass="RoastAppMenuItemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3uy-Lg-WsT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1ht-h6-D67">
@@ -383,14 +612,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqK-Fi-7Nf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="-728"/>
+            <point key="canvasLocation" x="1824" y="-980"/>
         </scene>
         <!--Roast App Menu Item Review Controller-->
         <scene sceneID="1Qf-VP-mhJ">
             <objects>
                 <viewController id="c7t-Wj-bAu" customClass="RoastAppMenuItemReviewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9vx-6a-tKn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="M7A-OH-UcN">
@@ -502,7 +731,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVy-re-fhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293" y="-728"/>
+            <point key="canvasLocation" x="2229" y="-980"/>
         </scene>
         <!--Roast App Feed Detail View Controller-->
         <scene sceneID="iy9-OM-ki2">
@@ -568,7 +797,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="601" y="-62"/>
+            <point key="canvasLocation" x="537" y="-314"/>
         </scene>
         <!--Roast App Login View Controller-->
         <scene sceneID="gP1-26-6Ow">
@@ -582,27 +811,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="HZn-uO-QuA" customClass="FBLoginView">
-                                <rect key="frame" x="20" y="336" width="280" height="53"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="roast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YTG-gB-psj">
+                                <rect key="frame" x="32" y="215" width="256" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ycV-7D-lgR" id="WgZ-7w-D7X"/>
-                                </connections>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="roast." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YTG-gB-psj">
-                                <rect key="frame" x="37" y="216" width="256" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wl6-PG-yWN">
-                                <rect key="frame" x="122" y="397" width="86" height="30"/>
+                                <rect key="frame" x="117" y="332" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Skip">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -616,7 +837,7 @@
                     <navigationItem key="navigationItem" id="9J6-vB-dMt"/>
                     <connections>
                         <outlet property="skipButton" destination="wl6-PG-yWN" id="uqJ-Vz-RVK"/>
-                        <segue destination="tlk-Ej-7ka" kind="push" identifier="login" id="bI5-Z2-d3d"/>
+                        <segue destination="tlk-Ej-7ka" kind="push" identifier="login" id="7q0-rA-ECH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxo-mK-OUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -629,14 +850,17 @@
                 <tabBarController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="tlk-Ej-7ka" customClass="RoastAppHomeScreenTabViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3hb-1b-F8U"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Y5R-Rq-FfG">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Y5R-Rq-FfG">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.38756908421933689" blue="0.80086616847826086" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.99002207880434778" green="0.93107601148392805" blue="0.93733504325805639" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="s6p-0s-VPx" kind="relationship" relationship="viewControllers" id="TM5-fn-BXV"/>
-                        <segue destination="k1a-9X-DLR" kind="relationship" relationship="viewControllers" id="dK4-xP-V1p"/>
+                        <segue destination="k1a-9X-DLR" kind="relationship" relationship="viewControllers" id="pNe-62-xDR"/>
+                        <segue destination="s6p-0s-VPx" kind="relationship" relationship="viewControllers" id="8MA-2d-HTi"/>
+                        <segue destination="hGE-6L-pbp" kind="relationship" relationship="viewControllers" id="zXF-hg-c3s"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPA-4F-w5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -666,12 +890,17 @@
         <!--Navigation Controller - Shops-->
         <scene sceneID="g9y-QG-Sxp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s6p-0s-VPx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shops" image="cafe-26.png" id="e7p-Zx-TaV"/>
+                <navigationController storyboardIdentifier="ShopNav" automaticallyAdjustsScrollViewInsets="NO" id="s6p-0s-VPx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shops" image="coffee_cup.png" id="e7p-Zx-TaV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AxE-JS-2yh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.49895642979999999" green="0.50082795520000001" blue="0.48816587299999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -680,7 +909,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILs-yr-G7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="-728"/>
+            <point key="canvasLocation" x="-1" y="-980"/>
         </scene>
     </scenes>
     <resources>
@@ -688,10 +917,19 @@
         <image name="birdrock.jpg" width="442" height="295"/>
         <image name="cafe-26.png" width="26" height="26"/>
         <image name="candtcollectivecoldbrew.jpg" width="640" height="640"/>
-        <image name="feed_in-26.png" width="26" height="26"/>
+        <image name="coffee_cup.png" width="25" height="29"/>
+        <image name="dirty_hipster.jpg" width="500" height="337"/>
+        <image name="facebook-32-white.png" width="85" height="84"/>
+        <image name="feed_in-25.png" width="25" height="25"/>
+        <image name="instagram-32-white.png" width="85" height="84"/>
         <image name="java_coffee_been_logo-32.png" width="32" height="32"/>
         <image name="login.png" width="528" height="839"/>
+        <image name="methods.jpg" width="1280" height="850"/>
+        <image name="profile_bg.jpg" width="701" height="491"/>
         <image name="shirt-32.png" width="32" height="32"/>
+        <image name="toolkit.jpg" width="500" height="318"/>
+        <image name="twitter-32-white.png" width="85" height="84"/>
+        <image name="user.png" width="26" height="26"/>
         <image name="vegan_food-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

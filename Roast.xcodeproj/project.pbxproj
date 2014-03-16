@@ -21,7 +21,6 @@
 		66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B892821895D8390030CE6E /* RoastAppShopViewController.m */; };
 		66C80ABE18C51BA300B9F028 /* RoastAppMenuItemReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C80ABD18C51BA300B9F028 /* RoastAppMenuItemReviewController.m */; };
 		66D7004918BBE5060090EDF0 /* RoastAppMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */; };
-		66F66F1418D3909000547445 /* birdrock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66F66F1318D3909000547445 /* birdrock.jpg */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
 		680C03C818A73F0700E5111D /* instagramicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680C03C718A73F0700E5111D /* instagramicon.png */; };
 		682589B818D56B2800ED7A10 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */; };
@@ -53,9 +52,14 @@
 		6848FD7C18D5A96C00ADD857 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6848FD7618D5A96C00ADD857 /* star@2x.png */; };
 		6848FD7D18D5A96C00ADD857 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6848FD7718D5A96C00ADD857 /* star.png */; };
 		688AC4B718AECA9F00715A30 /* RoastAppFeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688AC4B618AECA9F00715A30 /* RoastAppFeedDetailViewController.m */; };
+		DC0D57E118D4342B00A4AAAD /* coffee-25.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0D57E018D4342B00A4AAAD /* coffee-25.png */; };
+		DC0D57EF18D4377500A4AAAD /* cafemoto.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0D57ED18D4377500A4AAAD /* cafemoto.png */; };
+		DC0D57F218D43BC000A4AAAD /* birdrock.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0D57F118D43BC000A4AAAD /* birdrock.png */; };
 		DC1825D918A619F2007232E6 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1825D818A619F2007232E6 /* login.png */; };
 		DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */; };
 		DC1BA3FD18A1EDD200D6370A /* RoastAppShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */; };
+		DC2E523C18D482900097C82D /* swipe_right-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DC2E523B18D482900097C82D /* swipe_right-50.png */; };
+		DC2E523E18D482A40097C82D /* swipe_left-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DC2E523D18D482A40097C82D /* swipe_left-50.png */; };
 		DC346C5418D2BD49005DD76A /* cafe-26.png in Resources */ = {isa = PBXBuildFile; fileRef = DC346C5318D2BD49005DD76A /* cafe-26.png */; };
 		DC346C5818D2BE3D005DD76A /* feed_in-26.png in Resources */ = {isa = PBXBuildFile; fileRef = DC346C5518D2BE3D005DD76A /* feed_in-26.png */; };
 		DC346C5E18D2C346005DD76A /* RoastAppHomeScreenTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC346C5D18D2C346005DD76A /* RoastAppHomeScreenTabViewController.m */; };
@@ -64,12 +68,23 @@
 		DC51FFCE18A5C15600D196C2 /* RoastAppFeedProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFCA18A5C15600D196C2 /* RoastAppFeedProfile.m */; };
 		DC51FFCF18A5C15600D196C2 /* RoastAppFeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51FFCC18A5C15600D196C2 /* RoastAppFeedService.m */; };
 		DC62905418BCA78400DE60F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC62905318BCA78400DE60F7 /* FacebookSDK.framework */; };
+		DC7E77B418D4C35A00019BFB /* facebook-25.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77B318D4C35A00019BFB /* facebook-25.png */; };
+		DC7E77B618D5354F00019BFB /* facebook-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77B518D5354F00019BFB /* facebook-32.png */; };
+		DC7E77BC18D547E500019BFB /* facebook-32-white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77BB18D547E500019BFB /* facebook-32-white.png */; };
+		DC7E77C218D5512C00019BFB /* dirty_hipster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77BF18D5512C00019BFB /* dirty_hipster.jpg */; };
+		DC7E77C318D5512C00019BFB /* toolkit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77C018D5512C00019BFB /* toolkit.jpg */; };
+		DC7E77C418D5512C00019BFB /* methods.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77C118D5512C00019BFB /* methods.jpg */; };
+		DC7E77C618D552B200019BFB /* twitter-32-white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77C518D552B200019BFB /* twitter-32-white.png */; };
+		DC7E77C818D555B400019BFB /* instagram-32-white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77C718D555B400019BFB /* instagram-32-white.png */; };
+		DC7E77CF18D57D3300019BFB /* coffee_cup.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77CD18D57D3300019BFB /* coffee_cup.png */; };
+		DC7E77D018D57D3300019BFB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77CE18D57D3300019BFB /* user.png */; };
+		DC7E77D318D57FA200019BFB /* feed_in-25.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77D118D57FA200019BFB /* feed_in-25.png */; };
+		DC7E77D418D57FA200019BFB /* feed_in-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77D218D57FA200019BFB /* feed_in-32.png */; };
 		DC8BC6E618B5DF2A0062D1C4 /* AnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */; };
 		DC8BC6E718B5DF2A0062D1C4 /* TransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E518B5DF2A0062D1C4 /* TransitionDelegate.m */; };
 		DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */; };
 		DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */; };
 		DC9221711893560800C67EAD /* RoastAppFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9221701893560800C67EAD /* RoastAppFeedViewController.m */; };
-		DC9AABF518C7C66F0020EB46 /* RoastAppMainTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9AABF418C7C66F0020EB46 /* RoastAppMainTabBarControllerViewController.m */; };
 		DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB4E5EE18AB6308006BA824 /* fbicon.png */; };
 		DCCF44CA189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B2189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m */; };
 		DCCF44CB189C2C5F0098F3E9 /* NSString+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCF44B4189C2C5F0098F3E9 /* NSString+STTwitter.m */; };
@@ -85,6 +100,10 @@
 		DCCF44D6189C2CB20098F3E9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D5189C2CB20098F3E9 /* Accounts.framework */; };
 		DCCF44D8189C2CB90098F3E9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D7189C2CB90098F3E9 /* Twitter.framework */; };
 		DCCF44DA189C2CD20098F3E9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D9189C2CD20098F3E9 /* Social.framework */; };
+		DCEC3F7818D4A17F0059C26F /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEC3F7718D4A17F0059C26F /* libGoogleAnalyticsServices.a */; };
+		DCEC3F7A18D4A4180059C26F /* akissinger_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7918D4A4180059C26F /* akissinger_profile_pic.jpg */; };
+		DCEC3F7C18D4AA980059C26F /* profile_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */; };
+		DCEC3F7F18D4AC440059C26F /* RoastAppProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,7 +192,6 @@
 		66504E9B18D4270C0092B2E4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		66504E9D18D427260092B2E4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		66504E9F18D427350092B2E4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		66504EA118D427460092B2E4 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		6671938D18B9A58D00B41C3D /* foodicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foodicon.jpg; sourceTree = "<group>"; };
 		6671938E18B9A58D00B41C3D /* cupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cupicon.png; sourceTree = "<group>"; };
 		6671938F18B9A58D00B41C3D /* carticon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carticon.jpg; sourceTree = "<group>"; };
@@ -189,7 +207,6 @@
 		66C80ABD18C51BA300B9F028 /* RoastAppMenuItemReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppMenuItemReviewController.m; sourceTree = "<group>"; };
 		66D7004718BBE5060090EDF0 /* RoastAppMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppMenuItemViewController.h; sourceTree = "<group>"; };
 		66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppMenuItemViewController.m; sourceTree = "<group>"; };
-		66F66F1318D3909000547445 /* birdrock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = birdrock.jpg; sourceTree = "<group>"; };
 		66FE40531895F1A6003AAE61 /* RoastAppShopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppShopItem.h; path = Roast/RoastAppShopItem.h; sourceTree = "<group>"; };
 		66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppShopItem.m; path = Roast/RoastAppShopItem.m; sourceTree = "<group>"; };
 		680C03C618A608CB00E5111D /* CaffeCalabria1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaffeCalabria1.png; sourceTree = "<group>"; };
@@ -458,12 +475,17 @@
 		6848FD7718D5A96C00ADD857 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		688AC4B518AECA9F00715A30 /* RoastAppFeedDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppFeedDetailViewController.h; sourceTree = "<group>"; };
 		688AC4B618AECA9F00715A30 /* RoastAppFeedDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppFeedDetailViewController.m; sourceTree = "<group>"; };
+		DC0D57E018D4342B00A4AAAD /* coffee-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee-25.png"; sourceTree = "<group>"; };
+		DC0D57ED18D4377500A4AAAD /* cafemoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafemoto.png; sourceTree = "<group>"; };
+		DC0D57F118D43BC000A4AAAD /* birdrock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birdrock.png; sourceTree = "<group>"; };
 		DC1825CF18A6100A007232E6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		DC1825D818A619F2007232E6 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		DC1825DD18A6215E007232E6 /* RoastAppLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppLoginViewController.h; sourceTree = "<group>"; };
 		DC1825DE18A6215E007232E6 /* RoastAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppLoginViewController.m; sourceTree = "<group>"; };
 		DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppShopListViewController.h; sourceTree = "<group>"; };
 		DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppShopListViewController.m; sourceTree = "<group>"; };
+		DC2E523B18D482900097C82D /* swipe_right-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe_right-50.png"; sourceTree = "<group>"; };
+		DC2E523D18D482A40097C82D /* swipe_left-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe_left-50.png"; sourceTree = "<group>"; };
 		DC346C5318D2BD49005DD76A /* cafe-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-26.png"; sourceTree = "<group>"; };
 		DC346C5518D2BE3D005DD76A /* feed_in-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-26.png"; sourceTree = "<group>"; };
 		DC346C5C18D2C346005DD76A /* RoastAppHomeScreenTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppHomeScreenTabViewController.h; sourceTree = "<group>"; };
@@ -476,6 +498,18 @@
 		DC51FFCB18A5C15600D196C2 /* RoastAppFeedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedService.h; path = Roast/RoastAppFeedService.h; sourceTree = "<group>"; };
 		DC51FFCC18A5C15600D196C2 /* RoastAppFeedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedService.m; path = Roast/RoastAppFeedService.m; sourceTree = "<group>"; };
 		DC62905318BCA78400DE60F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		DC7E77B318D4C35A00019BFB /* facebook-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-25.png"; sourceTree = "<group>"; };
+		DC7E77B518D5354F00019BFB /* facebook-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-32.png"; sourceTree = "<group>"; };
+		DC7E77BB18D547E500019BFB /* facebook-32-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-32-white.png"; sourceTree = "<group>"; };
+		DC7E77BF18D5512C00019BFB /* dirty_hipster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dirty_hipster.jpg; sourceTree = "<group>"; };
+		DC7E77C018D5512C00019BFB /* toolkit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = toolkit.jpg; sourceTree = "<group>"; };
+		DC7E77C118D5512C00019BFB /* methods.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = methods.jpg; sourceTree = "<group>"; };
+		DC7E77C518D552B200019BFB /* twitter-32-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-32-white.png"; sourceTree = "<group>"; };
+		DC7E77C718D555B400019BFB /* instagram-32-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instagram-32-white.png"; sourceTree = "<group>"; };
+		DC7E77CD18D57D3300019BFB /* coffee_cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee_cup.png; sourceTree = "<group>"; };
+		DC7E77CE18D57D3300019BFB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		DC7E77D118D57FA200019BFB /* feed_in-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-25.png"; sourceTree = "<group>"; };
+		DC7E77D218D57FA200019BFB /* feed_in-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-32.png"; sourceTree = "<group>"; };
 		DC8BC6E218B5DF2A0062D1C4 /* AnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioning.h; sourceTree = "<group>"; };
 		DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransitioning.m; sourceTree = "<group>"; };
 		DC8BC6E418B5DF2A0062D1C4 /* TransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDelegate.h; sourceTree = "<group>"; };
@@ -484,8 +518,6 @@
 		DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = caffecalabria.jpg; path = ../caffecalabria.jpg; sourceTree = "<group>"; };
 		DC92216F1893560800C67EAD /* RoastAppFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoastAppFeedViewController.h; path = Roast/RoastAppFeedViewController.h; sourceTree = "<group>"; };
 		DC9221701893560800C67EAD /* RoastAppFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoastAppFeedViewController.m; path = Roast/RoastAppFeedViewController.m; sourceTree = "<group>"; };
-		DC9AABF318C7C66F0020EB46 /* RoastAppMainTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppMainTabBarControllerViewController.h; sourceTree = "<group>"; };
-		DC9AABF418C7C66F0020EB46 /* RoastAppMainTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppMainTabBarControllerViewController.m; sourceTree = "<group>"; };
 		DCB4E5EE18AB6308006BA824 /* fbicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon.png; sourceTree = "<group>"; };
 		DCCF44B1189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STTwitter.h"; sourceTree = "<group>"; };
 		DCCF44B2189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+STTwitter.m"; sourceTree = "<group>"; };
@@ -514,6 +546,11 @@
 		DCCF44D5189C2CB20098F3E9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DCCF44D7189C2CB90098F3E9 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		DCCF44D9189C2CD20098F3E9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DCEC3F7718D4A17F0059C26F /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		DCEC3F7918D4A4180059C26F /* akissinger_profile_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akissinger_profile_pic.jpg; sourceTree = "<group>"; };
+		DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_bg.jpg; sourceTree = "<group>"; };
+		DCEC3F7D18D4AC440059C26F /* RoastAppProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppProfileViewController.h; sourceTree = "<group>"; };
+		DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,6 +570,7 @@
 				683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */,
 				683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */,
 				DC62905418BCA78400DE60F7 /* FacebookSDK.framework in Frameworks */,
+				DCEC3F7818D4A17F0059C26F /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1139,9 +1177,7 @@
 		683BC666188A48F30027D7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */,
-				682589B518D56B0B00ED7A10 /* GoogleAnalyticsServicesiOS_3.03c.zip */,
-				66504EA118D427460092B2E4 /* libGoogleAnalyticsServices.a */,
+				DCEC3F7718D4A17F0059C26F /* libGoogleAnalyticsServices.a */,
 				66504E9F18D427350092B2E4 /* libz.dylib */,
 				66504E9D18D427260092B2E4 /* SystemConfiguration.framework */,
 				66504E9B18D4270C0092B2E4 /* CoreData.framework */,
@@ -1164,17 +1200,16 @@
 		683BC66D188A48F30027D7F2 /* Roast */ = {
 			isa = PBXGroup;
 			children = (
+				DC1BA3F718A1E23900D6370A /* Shop List */,
+				DCEC3F8018D4AC4E0059C26F /* Profile */,
 				6687053B18D426A200E8CCD1 /* Google Analytics */,
 				DC346C5B18D2C314005DD76A /* Home Screen */,
 				66C80AB818C51ABD00B9F028 /* Shop Review */,
 				DC1825D118A616CF007232E6 /* Login */,
 				66B0870F18936F6B0045B805 /* Feed */,
-				DC1BA3F718A1E23900D6370A /* Shop List */,
 				66B0871018936F850045B805 /* Shop View */,
 				66B0870C18936EF40045B805 /* Networking Services */,
 				683BC69A188B13A10027D7F2 /* Main.storyboard */,
-				DC9AABF318C7C66F0020EB46 /* RoastAppMainTabBarControllerViewController.h */,
-				DC9AABF418C7C66F0020EB46 /* RoastAppMainTabBarControllerViewController.m */,
 				683BC676188A48F30027D7F2 /* RoastAppAppDelegate.h */,
 				683BC677188A48F30027D7F2 /* RoastAppAppDelegate.m */,
 				683BC679188A48F30027D7F2 /* Images.xcassets */,
@@ -1186,6 +1221,23 @@
 		683BC66E188A48F30027D7F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC7E77D118D57FA200019BFB /* feed_in-25.png */,
+				DC7E77D218D57FA200019BFB /* feed_in-32.png */,
+				DC7E77CD18D57D3300019BFB /* coffee_cup.png */,
+				DC7E77CE18D57D3300019BFB /* user.png */,
+				DC7E77C718D555B400019BFB /* instagram-32-white.png */,
+				DC7E77C518D552B200019BFB /* twitter-32-white.png */,
+				DC7E77BF18D5512C00019BFB /* dirty_hipster.jpg */,
+				DC7E77C018D5512C00019BFB /* toolkit.jpg */,
+				DC7E77C118D5512C00019BFB /* methods.jpg */,
+				DC7E77B318D4C35A00019BFB /* facebook-25.png */,
+				DC7E77BB18D547E500019BFB /* facebook-32-white.png */,
+				DC7E77B518D5354F00019BFB /* facebook-32.png */,
+				DC0D57E018D4342B00A4AAAD /* coffee-25.png */,
+				DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */,
+				DCEC3F7918D4A4180059C26F /* akissinger_profile_pic.jpg */,
+				DC2E523D18D482A40097C82D /* swipe_left-50.png */,
+				DC2E523B18D482900097C82D /* swipe_right-50.png */,
 				68258A2918D5847E00ED7A10 /* Wood-Desktop-Wallpaper3.png */,
 				682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */,
 				682589B918D56D8500ED7A10 /* vegan_food-32.png */,
@@ -1241,10 +1293,11 @@
 		DC1BA3F718A1E23900D6370A /* Shop List */ = {
 			isa = PBXGroup;
 			children = (
-				66F66F1318D3909000547445 /* birdrock.jpg */,
 				DC1BA3FB18A1EDD200D6370A /* RoastAppShopListViewController.h */,
 				DC1BA3FC18A1EDD200D6370A /* RoastAppShopListViewController.m */,
 				DC8D3C1E18A1B8970034ACEF /* caffecalabria.jpg */,
+				DC0D57F118D43BC000A4AAAD /* birdrock.png */,
+				DC0D57ED18D4377500A4AAAD /* cafemoto.png */,
 				DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */,
 				66ACA12418B7F03500C60614 /* RoastAppShopMenuViewController.h */,
 				66ACA12518B7F03500C60614 /* RoastAppShopMenuViewController.m */,
@@ -1309,6 +1362,15 @@
 				DCCF44C9189C2C5F0098F3E9 /* STHTTPRequest.m */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		DCEC3F8018D4AC4E0059C26F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DCEC3F7D18D4AC440059C26F /* RoastAppProfileViewController.h */,
+				DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1495,22 +1557,34 @@
 				6848FD7C18D5A96C00ADD857 /* star@2x.png in Resources */,
 				683D652218B9999000B54F9F /* candtcollectivecoldbrew.jpg in Resources */,
 				DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */,
+				DC7E77C318D5512C00019BFB /* toolkit.jpg in Resources */,
+				DC0D57E118D4342B00A4AAAD /* coffee-25.png in Resources */,
 				683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */,
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
 				683D652418B9999000B54F9F /* candtcollectiveemblem.jpg in Resources */,
 				6848FD7D18D5A96C00ADD857 /* star.png in Resources */,
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
+				DC7E77CF18D57D3300019BFB /* coffee_cup.png in Resources */,
+				DC2E523C18D482900097C82D /* swipe_right-50.png in Resources */,
 				6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */,
+				DC7E77D018D57D3300019BFB /* user.png in Resources */,
+				DC7E77BC18D547E500019BFB /* facebook-32-white.png in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
 				DC346C5818D2BE3D005DD76A /* feed_in-26.png in Resources */,
 				6848FD7B18D5A96C00ADD857 /* star_highlighted-darker.png in Resources */,
 				68258A2A18D5847E00ED7A10 /* Wood-Desktop-Wallpaper3.png in Resources */,
 				680C03C818A73F0700E5111D /* instagramicon.png in Resources */,
+				DC7E77C418D5512C00019BFB /* methods.jpg in Resources */,
 				DC346C5418D2BD49005DD76A /* cafe-26.png in Resources */,
+				DC7E77C218D5512C00019BFB /* dirty_hipster.jpg in Resources */,
+				DC2E523E18D482A40097C82D /* swipe_left-50.png in Resources */,
 				683D652318B9999000B54F9F /* candtcollectiveproduct.jpg in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
-				66F66F1418D3909000547445 /* birdrock.jpg in Resources */,
+				DC7E77D318D57FA200019BFB /* feed_in-25.png in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
+				DC7E77D418D57FA200019BFB /* feed_in-32.png in Resources */,
+				DC7E77C618D552B200019BFB /* twitter-32-white.png in Resources */,
+				DC0D57EF18D4377500A4AAAD /* cafemoto.png in Resources */,
 				682589BE18D56DA200ED7A10 /* java_coffee_been_logo-32.png in Resources */,
 				682589BC18D56D9800ED7A10 /* shirt-32.png in Resources */,
 				6848FD7A18D5A96C00ADD857 /* star_highlighted-darker@2x.png in Resources */,
@@ -1550,7 +1624,6 @@
 				683BC678188A48F30027D7F2 /* RoastAppAppDelegate.m in Sources */,
 				683BC674188A48F30027D7F2 /* main.m in Sources */,
 				66B892831895D8390030CE6E /* RoastAppShopViewController.m in Sources */,
-				DC9AABF518C7C66F0020EB46 /* RoastAppMainTabBarControllerViewController.m in Sources */,
 				66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */,
 				688AC4B718AECA9F00715A30 /* RoastAppFeedDetailViewController.m in Sources */,
 				6681A36318A61A1700D5324D /* RoastAppServerImageHandler.m in Sources */,
@@ -1559,6 +1632,7 @@
 				DC51FFCF18A5C15600D196C2 /* RoastAppFeedService.m in Sources */,
 				DC8BC6E718B5DF2A0062D1C4 /* TransitionDelegate.m in Sources */,
 				DCCF44CA189C2C5F0098F3E9 /* NSDateFormatter+STTwitter.m in Sources */,
+				DCEC3F7F18D4AC440059C26F /* RoastAppProfileViewController.m in Sources */,
 				DCCF44D4189C2C5F0098F3E9 /* STHTTPRequest.m in Sources */,
 				DC1825DF18A6215E007232E6 /* RoastAppLoginViewController.m in Sources */,
 				DCCF44CF189C2C5F0098F3E9 /* STTwitterHTML.m in Sources */,
@@ -1917,7 +1991,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
-					/Users/KT/Downloads/GoogleAnalyticsServicesiOS_3.03c,
+					/Users/arexxk/Documents/GoogleAnalyticsServicesiOS_3.03c,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1942,7 +2016,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
-					/Users/KT/Downloads/GoogleAnalyticsServicesiOS_3.03c,
+					/Users/arexxk/Documents/GoogleAnalyticsServicesiOS_3.03c,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

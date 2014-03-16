@@ -16,5 +16,6 @@
 @property NSString *feedDateFormat;
 @property UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UITableView *feedViewTable;
+@property NSMutableArray *tabViewControllers;
 
 @end

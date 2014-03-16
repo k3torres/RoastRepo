@@ -8,6 +8,7 @@
 
 #import "RoastAppFeedViewController.h"
 #import "RoastAppFeedDetailViewController.h"
+#import "RoastAppHomeScreenTabViewController.h"
 #import "RoastAppFeedItem.h"
 #import "RoastAppFeedProfile.h"
 #import "RoastAppFeedService.h"
@@ -42,7 +43,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.feedItems = [[NSMutableArray alloc] init];
     
     //TODO: Read from file
@@ -90,6 +90,7 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self.feedViewTable addSubview:self.refreshControl];
+    
      
 }
 
@@ -176,14 +177,28 @@
      
 }
 
-- (IBAction)SwipeRight:(id)sender {
+- (IBAction)swipeLeft:(id)sender {
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
     [UIView transitionFromView:[self view]
-                        toView:[self.tabBarController.viewControllers[0] view]
+                        toView:[tmp.profileTabBarArray[0] view]
+                      duration:0.25
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    completion:nil];
+    
+    [self.tabBarController setViewControllers:tmp.profileTabBarArray];
+}
+
+- (IBAction)SwipeRight:(id)sender {
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
+    [UIView transitionFromView:[self view]
+                        toView:[tmp.shopListTabBarArray[0] view]
                       duration:0.25
                        options:UIViewAnimationOptionTransitionFlipFromLeft
                     completion:nil];
-    [self.tabBarController setSelectedIndex:0];
-    [self.tabBarController setSelectedIndex:0];
+    
+    [self.tabBarController setViewControllers:tmp.shopListTabBarArray];
 }
 
 
@@ -191,57 +206,6 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)unwindToFeedListView:(UIStoryboardSegue *)unwindSegue
 {
