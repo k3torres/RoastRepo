@@ -34,19 +34,19 @@
     self.shopImages = [[NSMutableArray alloc] init];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
                                 [UIImage imageNamed:@"birdrock.png"], @"image",
-                                @"BIRD ROCK COFFEE ROASTERS", @"name",
+                                @"Bird Rock Coffee Roasters", @"name",
                                 Nil]];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
                                 [UIImage imageNamed:@"coffeeandteacollective.jpg"], @"image",
-                                @"COFFEE & TEA COLLECTIVE", @"name",
+                                @"Coffee & Tea Collective", @"name",
                                 Nil]];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
                                 [UIImage imageNamed:@"caffecalabria.jpg"], @"image",
-                                @"CAFFE CALABRIA", @"name",
+                                @"Caffe Calabria", @"name",
                                 Nil]];
     [self.shopImages addObject:[[NSDictionary alloc] initWithObjectsAndKeys:
                                 [UIImage imageNamed:@"cafemoto.png"], @"image",
-                                @"CAFE MOTO", @"name",
+                                @"Cafe Moto", @"name",
                                 Nil]];
     
     // Uncomment the following line to preserve selection between presentations.

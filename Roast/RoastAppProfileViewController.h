@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FBProfilePictureView.h>
+#import <FacebookSDK/FBLoginView.h>
 
 @interface RoastAppProfileViewController : UIViewController
 - (UIImage *)colorizeImage;
