@@ -424,7 +424,7 @@
                                         </connections>
                                     </button>
                                     <imageView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candtcollectivecoldbrew.jpg" id="s3d-WH-FE5">
-                                        <rect key="frame" x="8" y="-1" width="304" height="219"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="219"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -465,11 +465,11 @@
                                             <textView multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" id="XEc-H5-dE3">
                                                 <rect key="frame" x="0.0" y="50" width="320" height="460"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <mutableString key="text">Coffee &amp; Tea Collective is a group of people who care about the craft of coffee and the idea of sharing our passion with others. As a small-batch roastery and tasting room, we are able to intentionally focus on the entire experience from start to finish. We take pride in the coffees that we source and the brew methods in which we serve them. Specializing in a by-the-cup experience, we engage each interaction with intent and a desire to come alongside each individual as each experience and palette is different. All of our small-batch roasts are developed to produce the same consistent quality over time. We believe that coffee should not be a convenience. It is a craft as much as any other, and it's something we like to share. 
+                                                <string key="text">Coffee &amp; Tea Collective is a group of people who care about the craft of coffee and the idea of sharing our passion with others. As a small-batch roastery and tasting room, we are able to intentionally focus on the entire experience from start to finish. We take pride in the coffees that we source and the brew methods in which we serve them. Specializing in a by-the-cup experience, we engage each interaction with intent and a desire to come alongside each individual as each experience and palette is different. All of our small-batch roasts are developed to produce the same consistent quality over time. We believe that coffee should not be a convenience. It is a craft as much as any other, and it's something we like to share. 
 
           We saw a lack of attention and care towards small-batch coffee roasting in the place we call home. So we decided to start our own roastery &amp; tasting bar to share our passion with others. 
 
-For more information about our story, our shop and other inquiries contact: info@coffeeandteacollective.com</mutableString>
+For more information about our story, our shop and other inquiries contact: info@coffeeandteacollective.com</string>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
