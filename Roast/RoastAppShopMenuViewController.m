@@ -16,6 +16,7 @@
 @interface RoastAppShopMenuViewController ()
 
 @property NSMutableArray *shopList;
+@property NSMutableArray *colorWheel;
 @property RoastAppMenuItemViewController *menuCtrlr;
 
 @end
@@ -39,6 +40,11 @@
         self.title = @"Gear";
         requestType = 2;
     }
+    UIColor *ger = [UIColor colorWithRed:26.0/255.0 green:188.0/255.0 blue:156.0/255 alpha:1.0];
+    UIColor *blu = [UIColor colorWithRed:52.0/255.0 green:152.0/255.0 blue:219.0/255 alpha:1.0];
+    UIColor *yel = [UIColor colorWithRed:241.0/255.0 green:196.0/255.0 blue:15.0/255 alpha:1.0];
+    UIColor *red = [UIColor colorWithRed:231.0/255.0 green:76.0/255.0 blue:60.0/255 alpha:1.0];
+    self.colorWheel = [NSMutableArray arrayWithObjects:ger, blu, yel, red, nil];
     
     NSArray *queryResult = [RoastAppJSONHandler makeJSONRequest:requestType :shopChoice];
     
@@ -86,6 +92,8 @@
     self.names = [[NSMutableArray alloc] init];
     self.shopList = [[NSMutableArray alloc] init];
     self.ids = [[NSMutableArray alloc] init];
+    
+    self.tableView.backgroundColor = self.tabBarController.tabBar.barTintColor;
     [self loadInitialData];
 }
 
@@ -121,9 +129,10 @@
     RoastAppShopItem *chosenItem = [self.shopList objectAtIndex:indexPath.row];
     
     self.menuCtrlr.item = chosenItem;
+    self.menuCtrlr.title = chosenItem.name;
+
     [(UITextView *)[self.menuCtrlr.view viewWithTag:1] setText:[[chosenItem.description stringByAppendingString:@"\n\n"]stringByAppendingString:chosenItem.price]];
     [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:chosenItem.shopImage];
-    self.menuCtrlr.title = chosenItem.name;
     
     NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :chosenItem.uid];
     NSArray *userNames = [reviewsForItem objectAtIndex:3];
@@ -166,7 +175,7 @@
     cell.accessoryType = UITableViewCellAccessoryNone;
     
     RoastAppShopItem *shopItemAtIndex = [self.shopList objectAtIndex:indexPath.row];
-    
+    ((UILabel *)[cell.contentView viewWithTag:1]).textColor = self.colorWheel[indexPath.row % [self.colorWheel count]];
     [(UILabel *)[cell.contentView viewWithTag:1] setText:shopItemAtIndex.name];
     [(UILabel *)[cell.contentView viewWithTag:2] setText:shopItemAtIndex.description];
     [(UILabel *)[cell.contentView viewWithTag:3] setText:shopItemAtIndex.price];
