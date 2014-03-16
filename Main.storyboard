@@ -535,7 +535,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgV-4h-sjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="-980"/>
+            <point key="canvasLocation" x="1394" y="-998"/>
         </scene>
         <!--Roast App Menu Item View Controller-->
         <scene sceneID="H6J-tZ-9Dd">
@@ -661,15 +661,18 @@
                                                     </fragment>
                                                 </attributedString>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-72.png" id="MqF-HR-Ni1">
-                                                <rect key="frame" x="13" y="6" width="56" height="56"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gS3-Vd-RS8">
+                                                <rect key="frame" x="6" y="40" width="58" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birdrock.jpg" id="ZGU-0n-iuu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
+                                        <rect key="frame" x="1" y="0.0" width="320" height="225"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" id="dcl-HR-gvP">
@@ -723,10 +726,11 @@
                     <navigationItem key="navigationItem" id="xbh-wt-3TY"/>
                     <connections>
                         <outlet property="cancelButton" destination="FtB-o2-U3d" id="bGV-yg-UDu"/>
+                        <outlet property="menuImage" destination="ZGU-0n-iuu" id="G0F-SP-SV2"/>
                         <outlet property="scroll" destination="M7A-OH-UcN" id="NZf-q9-8ev"/>
                         <outlet property="submitButton" destination="8CC-p0-qis" id="Ocb-Gh-7Dx"/>
                         <outlet property="textViewArea" destination="TzM-tx-fVq" id="zme-Cv-Cr8"/>
-                        <outlet property="userImage" destination="MqF-HR-Ni1" id="CPs-2x-ymq"/>
+                        <outlet property="userName" destination="gS3-Vd-RS8" id="HVb-sE-zZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVy-re-fhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -913,9 +917,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-72.png" width="72" height="72"/>
         <image name="birdrock.jpg" width="442" height="295"/>
-        <image name="cafe-26.png" width="26" height="26"/>
         <image name="candtcollectivecoldbrew.jpg" width="640" height="640"/>
         <image name="coffee_cup.png" width="25" height="29"/>
         <image name="dirty_hipster.jpg" width="500" height="337"/>

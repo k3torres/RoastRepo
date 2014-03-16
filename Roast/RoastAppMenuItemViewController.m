@@ -41,6 +41,8 @@
     reviewCtrlr.title = self.item.name;
     reviewCtrlr.menuItemID = [self.item uid];
     reviewCtrlr.parentViewCtrlr = self;
+    reviewCtrlr.image = self.image;
+  
 }
 
 - (void)viewDidLoad

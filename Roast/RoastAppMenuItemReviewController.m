@@ -12,6 +12,7 @@
 
 
 
+
 @interface RoastAppMenuItemReviewController ()
 
 @property UIStepper* ratingStepper;
@@ -28,7 +29,7 @@
 @synthesize scroll;
 @synthesize cancelButton;
 @synthesize submitButton;
-
+@synthesize image;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 
@@ -40,10 +41,11 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
     [(UITextView*)[self.view viewWithTag:1] setDelegate:self];
-    self.currentRating = (UILabel *)[self.view viewWithTag:2];
-    self.ratingStepper = (UIStepper *)[self.view viewWithTag:3];
+    //self.currentRating = (UILabel *)[self.view viewWithTag:2];
+    //self.ratingStepper = (UIStepper *)[self.view viewWithTag:3];
     [scroll setScrollEnabled:YES];
     //[scroll setContentSize:CGSizeMake(320, 800)];
     //self.backgroundtest = [NSMutableArray arrayWithObjects:@"Wood-Desktop-Wallpaper3.png", nil];
@@ -65,17 +67,14 @@
     self.rateView.minAllowedRating = 0;
     self.rateView.maxAllowedRating = 5;
     self.rateView.rating = 5;
+
+    self.menuImage.image = self.image;
+
+    
     
 
 }
-- (IBAction)stepperValueChanged:(UIStepper *)sender {
-    
-    self.currentRating.text = [@((int)sender.value) stringValue];
-    self.rating = [@((int)sender.value) stringValue];
-    NSLog(@"star rating value ---------------> %f", self.rateView.rating);
-    
-    
-}
+
 
 
 -(IBAction)submitReview:(UIButton *)sender{
@@ -84,9 +83,10 @@
     NSString* comments = comm.text;
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *user = [prefs stringForKey:@"myName"];
+    NSLog(@"USER NAME --------------------> %@", user); 
     NSString *rating = [[NSNumber numberWithFloat:self.rateView.rating] stringValue];
     [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :rating:user];
-
+    
     
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"ReviewSubmitted"
@@ -127,5 +127,16 @@
     }
     return YES;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @end

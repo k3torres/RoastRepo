@@ -79,6 +79,7 @@
     NSDictionary *shopAtIndex = [self.shopImages objectAtIndex:indexPath.row];
     
     self.selectedShop = shopAtIndex[@"name"];
+
     
     [self performSegueWithIdentifier:@"shopSegue" sender:cell];
 }

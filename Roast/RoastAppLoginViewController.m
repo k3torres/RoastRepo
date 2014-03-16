@@ -64,9 +64,9 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
     self.nameLabel.text = user.name;
-    
+    NSLog(@"USER NAME FROM FBLOGIN -----------------------> %@", user.name);
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:user.name forKey:@"myName"];
+    
     [userDefaults synchronize];
     
     NSLog(@"UserInfo Fetched");

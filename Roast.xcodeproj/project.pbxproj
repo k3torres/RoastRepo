@@ -23,7 +23,6 @@
 		66D7004918BBE5060090EDF0 /* RoastAppMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
 		680C03C818A73F0700E5111D /* instagramicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680C03C718A73F0700E5111D /* instagramicon.png */; };
-		682589B818D56B2800ED7A10 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */; };
 		682589BA18D56D8500ED7A10 /* vegan_food-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589B918D56D8500ED7A10 /* vegan_food-32.png */; };
 		682589BC18D56D9800ED7A10 /* shirt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589BB18D56D9800ED7A10 /* shirt-32.png */; };
 		682589BE18D56DA200ED7A10 /* java_coffee_been_logo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */; };
@@ -51,6 +50,7 @@
 		6848FD7B18D5A96C00ADD857 /* star_highlighted-darker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6848FD7518D5A96C00ADD857 /* star_highlighted-darker.png */; };
 		6848FD7C18D5A96C00ADD857 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6848FD7618D5A96C00ADD857 /* star@2x.png */; };
 		6848FD7D18D5A96C00ADD857 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6848FD7718D5A96C00ADD857 /* star.png */; };
+		68598A3418D5E1BF0028CD32 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68598A3318D5E1BE0028CD32 /* libGoogleAnalyticsServices.a */; };
 		688AC4B718AECA9F00715A30 /* RoastAppFeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688AC4B618AECA9F00715A30 /* RoastAppFeedDetailViewController.m */; };
 		DC0D57E118D4342B00A4AAAD /* coffee-25.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0D57E018D4342B00A4AAAD /* coffee-25.png */; };
 		DC0D57EF18D4377500A4AAAD /* cafemoto.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0D57ED18D4377500A4AAAD /* cafemoto.png */; };
@@ -100,7 +100,6 @@
 		DCCF44D6189C2CB20098F3E9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D5189C2CB20098F3E9 /* Accounts.framework */; };
 		DCCF44D8189C2CB90098F3E9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D7189C2CB90098F3E9 /* Twitter.framework */; };
 		DCCF44DA189C2CD20098F3E9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCF44D9189C2CD20098F3E9 /* Social.framework */; };
-		DCEC3F7818D4A17F0059C26F /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEC3F7718D4A17F0059C26F /* libGoogleAnalyticsServices.a */; };
 		DCEC3F7A18D4A4180059C26F /* akissinger_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7918D4A4180059C26F /* akissinger_profile_pic.jpg */; };
 		DCEC3F7C18D4AA980059C26F /* profile_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */; };
 		DCEC3F7F18D4AC440059C26F /* RoastAppProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */; };
@@ -439,8 +438,6 @@
 		680C04EE18A7829A00E5111D /* SwitchUserSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwitchUserSample-Info.plist"; sourceTree = "<group>"; };
 		680C04EF18A7829A00E5111D /* SwitchUserSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwitchUserSample-Prefix.pch"; sourceTree = "<group>"; };
 		680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwitchUserSample.xcodeproj; sourceTree = "<group>"; };
-		682589B518D56B0B00ED7A10 /* GoogleAnalyticsServicesiOS_3.03c.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = GoogleAnalyticsServicesiOS_3.03c.zip; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c.zip; sourceTree = "<group>"; };
-		682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		682589B918D56D8500ED7A10 /* vegan_food-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vegan_food-32.png"; sourceTree = "<group>"; };
 		682589BB18D56D9800ED7A10 /* shirt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shirt-32.png"; sourceTree = "<group>"; };
 		682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "java_coffee_been_logo-32.png"; sourceTree = "<group>"; };
@@ -473,6 +470,7 @@
 		6848FD7518D5A96C00ADD857 /* star_highlighted-darker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_highlighted-darker.png"; sourceTree = "<group>"; };
 		6848FD7618D5A96C00ADD857 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		6848FD7718D5A96C00ADD857 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		68598A3318D5E1BE0028CD32 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		688AC4B518AECA9F00715A30 /* RoastAppFeedDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppFeedDetailViewController.h; sourceTree = "<group>"; };
 		688AC4B618AECA9F00715A30 /* RoastAppFeedDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppFeedDetailViewController.m; sourceTree = "<group>"; };
 		DC0D57E018D4342B00A4AAAD /* coffee-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee-25.png"; sourceTree = "<group>"; };
@@ -546,7 +544,6 @@
 		DCCF44D5189C2CB20098F3E9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DCCF44D7189C2CB90098F3E9 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		DCCF44D9189C2CD20098F3E9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		DCEC3F7718D4A17F0059C26F /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		DCEC3F7918D4A4180059C26F /* akissinger_profile_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akissinger_profile_pic.jpg; sourceTree = "<group>"; };
 		DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_bg.jpg; sourceTree = "<group>"; };
 		DCEC3F7D18D4AC440059C26F /* RoastAppProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppProfileViewController.h; sourceTree = "<group>"; };
@@ -558,7 +555,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682589B818D56B2800ED7A10 /* libGoogleAnalyticsServices.a in Frameworks */,
+				68598A3418D5E1BF0028CD32 /* libGoogleAnalyticsServices.a in Frameworks */,
 				66504EA018D427350092B2E4 /* libz.dylib in Frameworks */,
 				66504E9E18D427260092B2E4 /* SystemConfiguration.framework in Frameworks */,
 				66504E9C18D4270C0092B2E4 /* CoreData.framework in Frameworks */,
@@ -570,7 +567,6 @@
 				683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */,
 				683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */,
 				DC62905418BCA78400DE60F7 /* FacebookSDK.framework in Frameworks */,
-				DCEC3F7818D4A17F0059C26F /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,7 +1173,7 @@
 		683BC666188A48F30027D7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DCEC3F7718D4A17F0059C26F /* libGoogleAnalyticsServices.a */,
+				68598A3318D5E1BE0028CD32 /* libGoogleAnalyticsServices.a */,
 				66504E9F18D427350092B2E4 /* libz.dylib */,
 				66504E9D18D427260092B2E4 /* SystemConfiguration.framework */,
 				66504E9B18D4270C0092B2E4 /* CoreData.framework */,
@@ -1562,6 +1558,9 @@
 				683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */,
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
 				683D652418B9999000B54F9F /* candtcollectiveemblem.jpg in Resources */,
+				DC7E77B618D5354F00019BFB /* facebook-32.png in Resources */,
+				DCEC3F7C18D4AA980059C26F /* profile_bg.jpg in Resources */,
+				DC0D57F218D43BC000A4AAAD /* birdrock.png in Resources */,
 				6848FD7D18D5A96C00ADD857 /* star.png in Resources */,
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
 				DC7E77CF18D57D3300019BFB /* coffee_cup.png in Resources */,
@@ -1570,7 +1569,9 @@
 				DC7E77D018D57D3300019BFB /* user.png in Resources */,
 				DC7E77BC18D547E500019BFB /* facebook-32-white.png in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
+				DC7E77C818D555B400019BFB /* instagram-32-white.png in Resources */,
 				DC346C5818D2BE3D005DD76A /* feed_in-26.png in Resources */,
+				DC7E77B418D4C35A00019BFB /* facebook-25.png in Resources */,
 				6848FD7B18D5A96C00ADD857 /* star_highlighted-darker.png in Resources */,
 				68258A2A18D5847E00ED7A10 /* Wood-Desktop-Wallpaper3.png in Resources */,
 				680C03C818A73F0700E5111D /* instagramicon.png in Resources */,
@@ -1591,6 +1592,7 @@
 				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,
 				682589BA18D56D8500ED7A10 /* vegan_food-32.png in Resources */,
 				6671939218B9A58D00B41C3D /* carticon.jpg in Resources */,
+				DCEC3F7A18D4A4180059C26F /* akissinger_profile_pic.jpg in Resources */,
 				6848FD7918D5A96C00ADD857 /* star_highlighted.png in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
 				6848FD7818D5A96C00ADD857 /* star_highlighted@2x.png in Resources */,
@@ -1992,6 +1994,7 @@
 					"$(inherited)",
 					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
 					/Users/arexxk/Documents/GoogleAnalyticsServicesiOS_3.03c,
+					/Users/KT/Downloads/GoogleAnalyticsServicesiOS_3.03c,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -2017,6 +2020,7 @@
 					"$(inherited)",
 					/Users/nicholas.variz/Downloads/GoogleAnalyticsServicesiOS_3.03c,
 					/Users/arexxk/Documents/GoogleAnalyticsServicesiOS_3.03c,
+					/Users/KT/Downloads/GoogleAnalyticsServicesiOS_3.03c,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ASStarRatingView.h"
+
+
 @interface RoastAppMenuItemReviewController : UIViewController <UITextViewDelegate>
 
 @property (strong, nonatomic) NSString* menuItemID;
@@ -18,8 +20,10 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scroll;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
-@property (strong, nonatomic) IBOutlet UIImageView *userImage;
+@property (strong, nonatomic) IBOutlet UIImageView *menuImage;
+@property (strong, nonatomic) IBOutlet UILabel *userName;
 
+@property (strong, nonatomic) UIImage *image;
 
 
 @end

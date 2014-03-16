@@ -12,5 +12,5 @@
 @interface RoastAppMenuItemViewController : UIViewController
 
 @property (strong, nonatomic) RoastAppShopItem *item;
-
+@property (strong, nonatomic) UIImage *image;
 @end
