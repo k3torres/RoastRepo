@@ -36,9 +36,8 @@
     [scrolly setScrollEnabled:YES];
     [scrolly setContentSize:CGSizeMake(320, 1000)];
 
-    self.backgroundtest = [NSMutableArray arrayWithObjects:@"Wood-Desktop-Wallpaper.jpg",@"Wood-Desktop-Wallpaper.png",
-                           @"Wood-Desktop-Wallpaper2.png",@"Wood-Desktop-Wallpaper3.png",
-                           @"Wood-Desktop-Wallpaper4.png",@"Wood-Desktop-Wallpaper5.png", nil];
+    self.backgroundtest = [NSMutableArray arrayWithObjects:@"Wood-Desktop-Wallpaper3.png", nil];
+    //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[self.backgroundtest objectAtIndex:self.i]]]];
     shopInfoTextView.layer.cornerRadius = 5.0;
     shopImage.layer.cornerRadius = 5.0;
 

@@ -237,7 +237,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBM-Id-aVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Vdg-Mm-USh"/>
+                <swipeGestureRecognizer direction="right" id="Vdg-Mm-USh">
+                    <connections>
+                        <action selector="handleSwipe:" destination="BNU-aW-3Un" id="Pl4-vo-LeU"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="1zD-aK-qAJ">
                     <connections>
                         <action selector="handleSwipe:" destination="BNU-aW-3Un" id="RHQ-XR-etT"/>
@@ -403,14 +407,14 @@
                                 </connections>
                             </button>
                             <stepper opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="5" id="2Hj-2t-URd">
-                                <rect key="frame" x="59" y="115" width="94" height="29"/>
+                                <rect key="frame" x="59" y="154" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="c7t-Wj-bAu" eventType="valueChanged" id="ukL-t4-u9L"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BhL-OU-6dC">
-                                <rect key="frame" x="17" y="74" width="97" height="21"/>
+                                <rect key="frame" x="17" y="120" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your rating : ">
@@ -424,35 +428,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hdg-0A-GIP">
-                                <rect key="frame" x="176" y="119" width="14" height="21"/>
+                                <rect key="frame" x="176" y="158" width="14" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H0p-zR-rkM">
-                                <rect key="frame" x="20" y="169" width="94" height="21"/>
+                                <rect key="frame" x="17" y="240" width="94" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lGH-RA-lPK">
-                                <rect key="frame" x="198" y="119" width="41" height="21"/>
+                                <rect key="frame" x="198" y="158" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Enter your comments here" id="QRN-nk-LFe">
-                                <rect key="frame" x="40" y="198" width="240" height="266"/>
+                                <rect key="frame" x="40" y="294" width="240" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done"/>
                             </textView>
+                            <view contentMode="scaleToFill" id="DpF-IA-CfN" customClass="ASStarRatingView">
+                                <rect key="frame" x="28" y="53" width="265" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yZ8-ZZ-Xcx">
+                                <rect key="frame" x="197" y="120" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="xbh-wt-3TY"/>
                     <connections>
+                        <outlet property="rateView" destination="DpF-IA-CfN" id="U9d-Jh-1TP"/>
+                        <outlet property="status" destination="yZ8-ZZ-Xcx" id="6tE-BC-lLi"/>
                         <outlet property="textView" destination="QRN-nk-LFe" id="gVl-ed-Ty6"/>
                     </connections>
                 </viewController>

@@ -18,11 +18,22 @@
 
 @end
 
+//@synthesize rateView;
 
 @implementation RoastAppMenuItemReviewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    //self.rateView.notSelectedImage = [UIImage imageNamed:@"kermit_empty.png"];
+    //self.rateView.halfSelectedImage = [UIImage imageNamed:@"kermit_half.png"];
+    //self.rateView.fullSelectedImage = [UIImage imageNamed:@"kermit_full.png"];
+    self.rateView.canEdit = YES;
+    self.rateView.maxRating = 8;
+    self.rateView.minAllowedRating = 4;
+    self.rateView.maxAllowedRating = 6;
+    //self.rateView.selectedStar = [UIImage imageNamed:@"selected_star.png"];
+    self.rateView.rating = 5;
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
     }
