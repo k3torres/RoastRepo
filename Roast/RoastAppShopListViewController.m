@@ -49,6 +49,8 @@
                                 @"Cafe Moto", @"name",
                                 Nil]];
     
+    self.tableView.backgroundColor = self.tabBarController.tabBar.barTintColor;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
