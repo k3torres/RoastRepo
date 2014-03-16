@@ -209,12 +209,13 @@
         NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:nil];
         
         // Get the objects you want
-        NSMutableArray *username        = [dictionaryFromResponse valueForKeyPath:@"data.caption.from.username"];
-        NSMutableArray *profileURL      = [dictionaryFromResponse valueForKeyPath:@"data.caption.from.profile_picture"];
-        NSMutableArray *message         = [dictionaryFromResponse valueForKeyPath:@"data.caption.text"];
+        NSMutableArray *username        = [dictionaryFromResponse valueForKeyPath:@"data.user.username"];
+        NSMutableArray *profileURL      = [dictionaryFromResponse valueForKeyPath:@"data.user.profile_picture"];
+        NSMutableArray *message         = [dictionaryFromResponse valueForKeyPath:@"data.caption.text"]; //could be null
         NSMutableArray *thumbnailURLs   = [dictionaryFromResponse valueForKeyPath:@"data.images.low_resolution.url"];
-        NSMutableArray *creation        = [dictionaryFromResponse valueForKeyPath:@"data.caption.created_time"];
-        NSMutableArray *idNumber        = [dictionaryFromResponse valueForKeyPath:@"data.caption.id"];
+        //NSMutableArray *creation        = [dictionaryFromResponse valueForKeyPath:@"data.caption.created_time"];
+        NSMutableArray *creation        = [dictionaryFromResponse valueForKeyPath:@"data.created_time"];
+        NSMutableArray *idNumber        = [dictionaryFromResponse valueForKeyPath:@"data.user.id"];
         
         // Construct a String around the Data from the response
         UIImage *instagramBadge = [UIImage imageNamed:@"instagramicon.png"];
@@ -224,7 +225,7 @@
         UIImage *photo;
         
         //get 5 latest instagram posts for instagramTag
-  /*      for (int i=0; i<5; i++)
+        for (int i=0; i<5; i++)
         {
             RoastAppFeedItem *feedItem1 = [[RoastAppFeedItem alloc] init];
             
@@ -243,7 +244,7 @@
             feedItem1.serviceName = @"Instagram";
             feedItem1.serviceBadge = instagramBadge;
             feedItem1.userName = [username objectAtIndex:i];
-            feedItem1.message = [message objectAtIndex:i];
+            feedItem1.message = ([message objectAtIndex:i] == [NSNull null]) ? [NSString stringWithFormat:@"#%@" , instagramTag]  : [message objectAtIndex:i] ; //NULL CHECK
             
             //date
             feedItem1.timestamp = [NSDate dateWithTimeIntervalSince1970:[[creation objectAtIndex:i] integerValue]];
@@ -253,9 +254,9 @@
             [f setNumberStyle:NSNumberFormatterDecimalStyle];
             NSNumber * myNumber = [f numberFromString:[idNumber objectAtIndex:i]];
             feedItem1.idNum = myNumber;
-            
+            NSLog(@"ADDING ---------------------------------------------> %d", i);
             [feed addObject:feedItem1];
-        }*/
+        }
         
         NSLog(@"added instagram feedItems with tag = %@" , instagramTag );
     }];

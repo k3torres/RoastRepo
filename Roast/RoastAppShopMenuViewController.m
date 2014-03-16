@@ -98,7 +98,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+{   
     // Return the number of sections.
     return 1;
 }
@@ -162,6 +162,8 @@
 {
     static NSString *CellIdentifier = @"ShopItemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.accessoryType = UITableViewCellAccessoryNone;
     
     RoastAppShopItem *shopItemAtIndex = [self.shopList objectAtIndex:indexPath.row];
     

@@ -23,6 +23,18 @@
 		66D7004918BBE5060090EDF0 /* RoastAppMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D7004818BBE5060090EDF0 /* RoastAppMenuItemViewController.m */; };
 		66FE40551895F1A6003AAE61 /* RoastAppShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE40541895F1A6003AAE61 /* RoastAppShopItem.m */; };
 		680C03C818A73F0700E5111D /* instagramicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680C03C718A73F0700E5111D /* instagramicon.png */; };
+		682589B818D56B2800ED7A10 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */; };
+		682589BA18D56D8500ED7A10 /* vegan_food-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589B918D56D8500ED7A10 /* vegan_food-32.png */; };
+		682589BC18D56D9800ED7A10 /* shirt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589BB18D56D9800ED7A10 /* shirt-32.png */; };
+		682589BE18D56DA200ED7A10 /* java_coffee_been_logo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */; };
+		68258A2018D57E9500ED7A10 /* ASStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68258A1818D57E9500ED7A10 /* ASStarRatingView.m */; };
+		68258A2118D57E9500ED7A10 /* half_selected_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 68258A1A18D57E9500ED7A10 /* half_selected_star.png */; };
+		68258A2218D57E9500ED7A10 /* half_selected_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68258A1B18D57E9500ED7A10 /* half_selected_star@2x.png */; };
+		68258A2318D57E9500ED7A10 /* not_selected_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 68258A1C18D57E9500ED7A10 /* not_selected_star.png */; };
+		68258A2418D57E9500ED7A10 /* not_selected_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68258A1D18D57E9500ED7A10 /* not_selected_star@2x.png */; };
+		68258A2518D57E9500ED7A10 /* selected_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 68258A1E18D57E9500ED7A10 /* selected_star.png */; };
+		68258A2618D57E9500ED7A10 /* selected_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68258A1F18D57E9500ED7A10 /* selected_star@2x.png */; };
+		68258A2A18D5847E00ED7A10 /* Wood-Desktop-Wallpaper3.png in Resources */ = {isa = PBXBuildFile; fileRef = 68258A2918D5847E00ED7A10 /* Wood-Desktop-Wallpaper3.png */; };
 		683BC668188A48F30027D7F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC667188A48F30027D7F2 /* Foundation.framework */; };
 		683BC66A188A48F30027D7F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC669188A48F30027D7F2 /* CoreGraphics.framework */; };
 		683BC66C188A48F30027D7F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683BC66B188A48F30027D7F2 /* UIKit.framework */; };
@@ -427,6 +439,20 @@
 		680C04EE18A7829A00E5111D /* SwitchUserSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwitchUserSample-Info.plist"; sourceTree = "<group>"; };
 		680C04EF18A7829A00E5111D /* SwitchUserSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwitchUserSample-Prefix.pch"; sourceTree = "<group>"; };
 		680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwitchUserSample.xcodeproj; sourceTree = "<group>"; };
+		682589B518D56B0B00ED7A10 /* GoogleAnalyticsServicesiOS_3.03c.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = GoogleAnalyticsServicesiOS_3.03c.zip; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c.zip; sourceTree = "<group>"; };
+		682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		682589B918D56D8500ED7A10 /* vegan_food-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vegan_food-32.png"; sourceTree = "<group>"; };
+		682589BB18D56D9800ED7A10 /* shirt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shirt-32.png"; sourceTree = "<group>"; };
+		682589BD18D56DA200ED7A10 /* java_coffee_been_logo-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "java_coffee_been_logo-32.png"; sourceTree = "<group>"; };
+		68258A1718D57E9500ED7A10 /* ASStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASStarRatingView.h; sourceTree = "<group>"; };
+		68258A1818D57E9500ED7A10 /* ASStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASStarRatingView.m; sourceTree = "<group>"; };
+		68258A1A18D57E9500ED7A10 /* half_selected_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = half_selected_star.png; sourceTree = "<group>"; };
+		68258A1B18D57E9500ED7A10 /* half_selected_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "half_selected_star@2x.png"; sourceTree = "<group>"; };
+		68258A1C18D57E9500ED7A10 /* not_selected_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_selected_star.png; sourceTree = "<group>"; };
+		68258A1D18D57E9500ED7A10 /* not_selected_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not_selected_star@2x.png"; sourceTree = "<group>"; };
+		68258A1E18D57E9500ED7A10 /* selected_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_star.png; sourceTree = "<group>"; };
+		68258A1F18D57E9500ED7A10 /* selected_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_star@2x.png"; sourceTree = "<group>"; };
+		68258A2918D5847E00ED7A10 /* Wood-Desktop-Wallpaper3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wood-Desktop-Wallpaper3.png"; sourceTree = "<group>"; };
 		683BC664188A48F30027D7F2 /* Roast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683BC667188A48F30027D7F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		683BC669188A48F30027D7F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1102,9 +1128,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		68258A1618D57E9500ED7A10 /* ASStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				68258A1718D57E9500ED7A10 /* ASStarRatingView.h */,
+				68258A1818D57E9500ED7A10 /* ASStarRatingView.m */,
+				68258A1918D57E9500ED7A10 /* stars */,
+			);
+			path = ASStarRatingView;
+			sourceTree = "<group>";
+		};
+		68258A1918D57E9500ED7A10 /* stars */ = {
+			isa = PBXGroup;
+			children = (
+				68258A1A18D57E9500ED7A10 /* half_selected_star.png */,
+				68258A1B18D57E9500ED7A10 /* half_selected_star@2x.png */,
+				68258A1C18D57E9500ED7A10 /* not_selected_star.png */,
+				68258A1D18D57E9500ED7A10 /* not_selected_star@2x.png */,
+				68258A1E18D57E9500ED7A10 /* selected_star.png */,
+				68258A1F18D57E9500ED7A10 /* selected_star@2x.png */,
+			);
+			path = stars;
+			sourceTree = "<group>";
+		};
 		683BC65B188A48F30027D7F2 = {
 			isa = PBXGroup;
 			children = (
+				68258A1618D57E9500ED7A10 /* ASStarRatingView */,
 				DC8BC6E118B5DF2A0062D1C4 /* Transition Delegate */,
 				DCCF44B0189C2C5F0098F3E9 /* STTwitter */,
 				683BC66D188A48F30027D7F2 /* Roast */,
@@ -1363,7 +1413,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RoastApp;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Affiliated;
 				TargetAttributes = {
 					683BC67E188A48F30027D7F2 = {
@@ -1499,12 +1549,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68258A2518D57E9500ED7A10 /* selected_star.png in Resources */,
 				683D652218B9999000B54F9F /* candtcollectivecoldbrew.jpg in Resources */,
+				68258A2118D57E9500ED7A10 /* half_selected_star.png in Resources */,
 				DC40FA2D18A5A382002CE7B3 /* twittericon.png in Resources */,
 				DC7E77C318D5512C00019BFB /* toolkit.jpg in Resources */,
 				DC0D57E118D4342B00A4AAAD /* coffee-25.png in Resources */,
 				683BC69B188B13A10027D7F2 /* Main.storyboard in Resources */,
 				683BC672188A48F30027D7F2 /* InfoPlist.strings in Resources */,
+				68258A2218D57E9500ED7A10 /* half_selected_star@2x.png in Resources */,
 				683D652418B9999000B54F9F /* candtcollectiveemblem.jpg in Resources */,
 				DC7E77B618D5354F00019BFB /* facebook-32.png in Resources */,
 				DCEC3F7C18D4AA980059C26F /* profile_bg.jpg in Resources */,
@@ -1532,6 +1585,7 @@
 				DC7E77C618D552B200019BFB /* twitter-32-white.png in Resources */,
 				DC0D57EF18D4377500A4AAAD /* cafemoto.png in Resources */,
 				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,
+				682589BA18D56D8500ED7A10 /* vegan_food-32.png in Resources */,
 				6671939218B9A58D00B41C3D /* carticon.jpg in Resources */,
 				DCEC3F7A18D4A4180059C26F /* akissinger_profile_pic.jpg in Resources */,
 				DC1825D918A619F2007232E6 /* login.png in Resources */,
@@ -1555,6 +1609,7 @@
 			files = (
 				DCCF44D0189C2C5F0098F3E9 /* STTwitterOAuth.m in Sources */,
 				DCCF44CD189C2C5F0098F3E9 /* STTwitterAPI.m in Sources */,
+				68258A2018D57E9500ED7A10 /* ASStarRatingView.m in Sources */,
 				DC8BC6E618B5DF2A0062D1C4 /* AnimatedTransitioning.m in Sources */,
 				DCCF44CB189C2C5F0098F3E9 /* NSString+STTwitter.m in Sources */,
 				DCCF44D1189C2C5F0098F3E9 /* STTwitterOS.m in Sources */,
@@ -1847,7 +1902,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1886,7 +1940,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1968,7 +2021,6 @@
 		683BC694188A48F30027D7F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Roast.app/Roast";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1991,7 +2043,6 @@
 		683BC695188A48F30027D7F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Roast.app/Roast";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

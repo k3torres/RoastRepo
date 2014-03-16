@@ -12,6 +12,8 @@
 	<dict>
 		<key>F5D3C9C0-4B81-4A05-B050-C42F6220BE17</key>
 		<string>https://github.com/k3torres/RoastRepo.git</string>
+		<key>FABAE328-7930-4FF0-B480-E0F056206ED4</key>
+		<string>https://github.com/yanguango/ASStarRatingView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Roast.xcodeproj/project.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>F5D3C9C0-4B81-4A05-B050-C42F6220BE17</key>
 		<string>../..</string>
+		<key>FABAE328-7930-4FF0-B480-E0F056206ED4</key>
+		<string>../../ASStarRatingView</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/k3torres/RoastRepo.git</string>
@@ -28,6 +32,14 @@
 	<string>F5D3C9C0-4B81-4A05-B050-C42F6220BE17</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FABAE328-7930-4FF0-B480-E0F056206ED4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ASStarRatingView</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

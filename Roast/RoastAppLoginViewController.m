@@ -40,8 +40,8 @@
     self.skipButton.layer.cornerRadius = 5;
     self.skipButton.layer.borderColor = white;
     self.skipButton.layer.cornerRadius = 0;
-    
 }
+
 - (IBAction)skipButtonClicked:(id)sender {
     [self segueToFeed:self];
 }
@@ -60,12 +60,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+// This method will be called when the user information has been fetched
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user {
+    self.nameLabel.text = user.name;
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:user.name forKey:@"myName"];
+    [userDefaults synchronize];
+    
+    NSLog(@"UserInfo Fetched");
+    [self segueToFeed:self];
+}
+/*
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     self.statusLabel.text = @"You're logged in as";
     NSLog(@"LOGGED IN.");
     [self segueToFeed:self];
 }
-
+*/
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue
 {
     //self.navigationController.navigationBarHidden = YES;

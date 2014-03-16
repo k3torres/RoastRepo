@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *skipButton;
+@property (nonatomic) IBOutlet NSString* myName;
 
 @end
 
