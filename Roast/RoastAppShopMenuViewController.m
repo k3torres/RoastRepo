@@ -138,8 +138,10 @@
     self.menuCtrlr.image = chosenItem.shopImage;
     
     NSArray *reviewsForItem = [RoastAppJSONHandler makeJSONRequest:3 :chosenItem.uid];
-    NSArray *userNames = [reviewsForItem objectAtIndex:3];
-    NSArray *userRatings = [reviewsForItem objectAtIndex:2];
+    NSArray *userNames = [reviewsForItem objectAtIndex:0];
+    NSArray *userRatings = [reviewsForItem objectAtIndex:1];
+    NSArray *userComments = [reviewsForItem objectAtIndex:2];
+    
     NSString *reviewString = @"";
     NSInteger averageReview = 0;
     
@@ -153,7 +155,7 @@
         [(UITextView *)[self.menuCtrlr.view viewWithTag:5] setText:[@"Average Rating: " stringByAppendingString:[NSString stringWithFormat: @"%d", (int)averageReview]]];
         
         int i = 0;
-        for(NSString *currentString in [reviewsForItem objectAtIndex:1]){
+        for(NSString *currentString in userComments){
             NSString *userName = [[userNames objectAtIndex:i] stringByAppendingString:@" :    "];
             userName = [userName stringByAppendingString:[userRatings objectAtIndex:i]];
             userName = [userName stringByAppendingString:@"/5   |    "];
