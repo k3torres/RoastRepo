@@ -104,6 +104,7 @@
 		DCEC3F7A18D4A4180059C26F /* akissinger_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7918D4A4180059C26F /* akissinger_profile_pic.jpg */; };
 		DCEC3F7C18D4AA980059C26F /* profile_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */; };
 		DCEC3F7F18D4AC440059C26F /* RoastAppProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */; };
+		DCFF25A018D5D7FF00624ABE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF259F18D5D7FE00624ABE /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -439,7 +440,6 @@
 		680C04EE18A7829A00E5111D /* SwitchUserSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwitchUserSample-Info.plist"; sourceTree = "<group>"; };
 		680C04EF18A7829A00E5111D /* SwitchUserSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwitchUserSample-Prefix.pch"; sourceTree = "<group>"; };
 		680C04F018A7829A00E5111D /* SwitchUserSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwitchUserSample.xcodeproj; sourceTree = "<group>"; };
-		682589B518D56B0B00ED7A10 /* GoogleAnalyticsServicesiOS_3.03c.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = GoogleAnalyticsServicesiOS_3.03c.zip; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c.zip; sourceTree = "<group>"; };
 		682589B718D56B2800ED7A10 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../Downloads/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		682589B918D56D8500ED7A10 /* vegan_food-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vegan_food-32.png"; sourceTree = "<group>"; };
 		682589BB18D56D9800ED7A10 /* shirt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shirt-32.png"; sourceTree = "<group>"; };
@@ -551,6 +551,7 @@
 		DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_bg.jpg; sourceTree = "<group>"; };
 		DCEC3F7D18D4AC440059C26F /* RoastAppProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppProfileViewController.h; sourceTree = "<group>"; };
 		DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppProfileViewController.m; sourceTree = "<group>"; };
+		DCFF259F18D5D7FE00624ABE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -558,6 +559,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFF25A018D5D7FF00624ABE /* MapKit.framework in Frameworks */,
 				682589B818D56B2800ED7A10 /* libGoogleAnalyticsServices.a in Frameworks */,
 				66504EA018D427350092B2E4 /* libz.dylib in Frameworks */,
 				66504E9E18D427260092B2E4 /* SystemConfiguration.framework in Frameworks */,
@@ -1177,6 +1179,7 @@
 		683BC666188A48F30027D7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCFF259F18D5D7FE00624ABE /* MapKit.framework */,
 				DCEC3F7718D4A17F0059C26F /* libGoogleAnalyticsServices.a */,
 				66504E9F18D427350092B2E4 /* libz.dylib */,
 				66504E9D18D427260092B2E4 /* SystemConfiguration.framework */,

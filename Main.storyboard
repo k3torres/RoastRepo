@@ -375,14 +375,23 @@
         <scene sceneID="hzS-aL-naJ">
             <objects>
                 <viewController id="BNU-aW-3Un" customClass="RoastAppShopViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TlC-UG-pLg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="TlC-UG-pLg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1305"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EBh-39-kuB">
-                                <rect key="frame" x="0.0" y="-49" width="320" height="656"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yqJ-5n-Vcb">
+                                        <rect key="frame" x="0.0" y="-255" width="320" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yqJ-5n-Vcb" id="svg-KX-YaN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="299"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.48111197189999999" green="0.48324927270000001" blue="0.48966117529999997" alpha="0.75" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0We-6z-wFB">
                                         <rect key="frame" x="20" y="241" width="84" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -414,8 +423,8 @@
                                             <segue destination="pj5-wb-Kl4" kind="push" id="8cg-uA-qYn"/>
                                         </connections>
                                     </button>
-                                    <imageView multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candtcollectivecoldbrew.jpg" id="s3d-WH-FE5">
-                                        <rect key="frame" x="8" y="-1" width="304" height="219"/>
+                                    <imageView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candtcollectivecoldbrew.jpg" id="s3d-WH-FE5">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="219"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -423,25 +432,80 @@
                                             <outletCollection property="gestureRecognizers" destination="1zD-aK-qAJ" appends="YES" id="nAc-Fc-pXX"/>
                                         </connections>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" id="XEc-H5-dE3">
-                                        <rect key="frame" x="8" y="300" width="304" height="281"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fLQ-9h-hXt">
+                                        <rect key="frame" x="0.0" y="209" width="320" height="10"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.03589758212" alpha="0.75" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="16" name="LucidaGrande"/>
-                                                    <font key="NSOriginalFont" size="16" name="LucidaGrande"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                                    </textView>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fLQ-9h-hXt" id="BNp-jI-khr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="9"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.48111197189999999" green="0.48324927270000001" blue="0.48966117529999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <view contentMode="scaleToFill" id="k8z-2J-Cn7" userLabel="About">
+                                        <rect key="frame" x="0.0" y="298" width="320" height="510"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="49" id="q2C-J0-EjR">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q2C-J0-EjR" id="y3q-6r-wAv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="APz-vc-Inc">
+                                                            <rect key="frame" x="20" y="9" width="161" height="31"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.51004161005434789" green="0.51004161005434789" blue="0.51004161005434789" alpha="1" colorSpace="calibratedRGB"/>
+                                            </tableViewCell>
+                                            <textView multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" id="XEc-H5-dE3">
+                                                <rect key="frame" x="0.0" y="50" width="320" height="460"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Coffee &amp; Tea Collective is a group of people who care about the craft of coffee and the idea of sharing our passion with others. As a small-batch roastery and tasting room, we are able to intentionally focus on the entire experience from start to finish. We take pride in the coffees that we source and the brew methods in which we serve them. Specializing in a by-the-cup experience, we engage each interaction with intent and a desire to come alongside each individual as each experience and palette is different. All of our small-batch roasts are developed to produce the same consistent quality over time. We believe that coffee should not be a convenience. It is a craft as much as any other, and it's something we like to share. 
+
+          We saw a lack of attention and care towards small-batch coffee roasting in the place we call home. So we decided to start our own roastery &amp; tasting bar to share our passion with others. 
+
+For more information about our story, our shop and other inquiries contact: info@coffeeandteacollective.com</mutableString>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="5XN-q6-NYh" userLabel="Map">
+                                        <rect key="frame" x="0.0" y="838" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="449" id="oCT-y5-608">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oCT-y5-608" id="Wyj-EL-LWj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="449"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xbD-vE-ahU">
+                                                            <rect key="frame" x="20" y="9" width="161" height="31"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.5029296875" green="0.5029296875" blue="0.5029296875" alpha="1" colorSpace="calibratedRGB"/>
+                                            </tableViewCell>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="7Ql-Zg-gf2">
+                                                <rect key="frame" x="0.0" y="50" width="320" height="270"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </mapView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -450,10 +514,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="lhO-vu-P1s"/>
                     <navigationItem key="navigationItem" title="ShopView" id="TaQ-b4-zom"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="aboutSectionTitleCell" destination="q2C-J0-EjR" id="8Yv-Vs-j5E"/>
                         <outlet property="drinkOutlet" destination="0We-6z-wFB" id="z2u-Hg-zMp"/>
                         <outlet property="foodOutlet" destination="O75-fE-lLD" id="ONK-pt-SrY"/>
                         <outlet property="gearOutlet" destination="c1u-dx-fan" id="EyM-bl-JBi"/>
+                        <outlet property="mapSectionTitleCell" destination="oCT-y5-608" id="jjC-TE-QbF"/>
                         <outlet property="scrolly" destination="EBh-39-kuB" id="VhF-mM-Oi3"/>
                         <outlet property="shopImage" destination="s3d-WH-FE5" id="eyz-hE-p1s"/>
                         <outlet property="shopInfoTextView" destination="XEc-H5-dE3" id="PPO-DY-dWY"/>
@@ -478,7 +545,7 @@
             <objects>
                 <tableViewController id="pj5-wb-Kl4" customClass="RoastAppShopMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="rd5-Gf-jBv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -542,11 +609,11 @@
             <objects>
                 <viewController id="bCN-g1-BAR" customClass="RoastAppMenuItemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3uy-Lg-WsT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1ht-h6-D67">
-                                <rect key="frame" x="83" y="66" width="155" height="155"/>
+                                <rect key="frame" x="83" y="66" width="155" height="892"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" id="Rmi-YK-DiM">
@@ -619,7 +686,7 @@
             <objects>
                 <viewController id="c7t-Wj-bAu" customClass="RoastAppMenuItemReviewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9vx-6a-tKn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8CC-p0-qis">
@@ -643,7 +710,7 @@
                                 </connections>
                             </button>
                             <stepper opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="5" id="2Hj-2t-URd">
-                                <rect key="frame" x="59" y="154" width="94" height="29"/>
+                                <rect key="frame" x="59" y="891" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="c7t-Wj-bAu" eventType="valueChanged" id="ukL-t4-u9L"/>

@@ -13,6 +13,8 @@
 #import "RoastAppServerImageHandler.h"
 
 @interface RoastAppShopViewController ()
+@property (weak, nonatomic) IBOutlet UITableViewCell *aboutSectionTitleCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *mapSectionTitleCell;
 
 @end
 
@@ -34,16 +36,20 @@
     /*UIScrollView *tempScrollView=(UIScrollView *)self.view;
     tempScrollView.contentSize=CGSizeMake(1280,960);*/
     [scrolly setScrollEnabled:YES];
-    [scrolly setContentSize:CGSizeMake(320, 1000)];
+    [scrolly setContentSize:CGSizeMake(320, 1850)];
 
     self.backgroundtest = [NSMutableArray arrayWithObjects:@"Wood-Desktop-Wallpaper3.png", nil];
     //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[self.backgroundtest objectAtIndex:self.i]]]];
-    shopInfoTextView.layer.cornerRadius = 5.0;
-    shopImage.layer.cornerRadius = 5.0;
+    //shopInfoTextView.layer.cornerRadius = 5.0;
+    //shopImage.layer.cornerRadius = 5.0;
 
     [self setRoundedBorder:gearOutlet];
     [self setRoundedBorder:drinkOutlet];
     [self setRoundedBorder:foodOutlet];
+    
+    shopInfoTextView.backgroundColor = self.tabBarController.tabBar.barTintColor;
+    self.aboutSectionTitleCell.backgroundColor = self.tabBarController.tabBar.barTintColor;
+    self.mapSectionTitleCell.backgroundColor = self.tabBarController.tabBar.barTintColor;
     
     [self loadInitialView];
    
