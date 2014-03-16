@@ -205,7 +205,7 @@
     // Make synchronous request
     [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *urlData, NSError *connectionError)
     {
-        NSLog(@"PING!!!!!!!!!!!!");
+       // NSLog(@"PING!!!!!!!!!!!!");
         NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:nil];
         
         // Get the objects you want
@@ -254,7 +254,7 @@
             [f setNumberStyle:NSNumberFormatterDecimalStyle];
             NSNumber * myNumber = [f numberFromString:[idNumber objectAtIndex:i]];
             feedItem1.idNum = myNumber;
-            NSLog(@"ADDING ---------------------------------------------> %d", i);
+            //NSLog(@"ADDING ---------------------------------------------> %d", i);
             [feed addObject:feedItem1];
         }
         

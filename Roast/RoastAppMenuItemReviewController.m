@@ -24,14 +24,11 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    //self.rateView.notSelectedImage = [UIImage imageNamed:@"kermit_empty.png"];
-    //self.rateView.halfSelectedImage = [UIImage imageNamed:@"kermit_half.png"];
-    //self.rateView.fullSelectedImage = [UIImage imageNamed:@"kermit_full.png"];
+
     self.rateView.canEdit = YES;
-    self.rateView.maxRating = 8;
-    self.rateView.minAllowedRating = 4;
-    self.rateView.maxAllowedRating = 6;
-    //self.rateView.selectedStar = [UIImage imageNamed:@"selected_star.png"];
+    self.rateView.maxRating = 5;
+    self.rateView.minAllowedRating = 0;
+    self.rateView.maxAllowedRating = 5;
     self.rateView.rating = 5;
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -52,6 +49,7 @@
     
     self.currentRating.text = [@((int)sender.value) stringValue];
     self.rating = [@((int)sender.value) stringValue];
+    NSLog(@"star rating value ---------------> %f", self.rateView.rating);
     
 }
 
@@ -70,12 +68,14 @@
     NSString* comments = comm.text;
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *user = [prefs stringForKey:@"myName"];
-    [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :self.rating:user];
+    NSString *rating = [[NSNumber numberWithFloat:self.rateView.rating] stringValue];
+    [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :rating:user];
+
     
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"ReviewSubmitted"
      object:self];
-
+  
     [self.navigationController popViewControllerAnimated:YES];
 }
 

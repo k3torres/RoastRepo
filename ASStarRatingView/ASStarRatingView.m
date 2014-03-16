@@ -25,10 +25,12 @@
 - (void)refreshStars {
     for(int i = 0; i < _starViews.count; ++i) {
         UIImageView *imageView = [_starViews objectAtIndex:i];
-        if (_rating >= i+1) {
+        if (_rating >= i+1 ) {
             imageView.image = _selectedStar;
+            //NSLog(@"selected full star comparing %f >= %f", _rating, (float)i+1 );
         } else if (_rating > i) {
             imageView.image = _halfSelectedStar;
+            //NSLog(@"selected half star!!!");
         } else {
             imageView.image = _notSelectedStar;
         }
@@ -46,9 +48,9 @@
 }
 
 - (void)baseInit {
-    _notSelectedStar = [UIImage imageNamed:@"not_selected_star"];
-    _selectedStar = [UIImage imageNamed:@"selected_star"];
-    _halfSelectedStar = [UIImage imageNamed:@"half_selected_star"];
+    _notSelectedStar = [UIImage imageNamed:@"star@2x"];
+    _selectedStar = [UIImage imageNamed:@"star_highlighted@2x"];
+    _halfSelectedStar = [UIImage imageNamed:@"star@2x"];
     _starViews = [NSMutableArray array];
     _maxRating = kDefaultMaxRating;
     _midMargin = kDefaultMidMargin;
