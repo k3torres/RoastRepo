@@ -57,7 +57,9 @@
 
     UITextView *comm = (UITextView*)[self.view viewWithTag:1];
     NSString* comments = comm.text;
-    [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :self.rating:@"DefaultUser"];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *user = [prefs stringForKey:@"myName"];
+    [RoastAppReviewInserter insertNewReview:self.menuItemID :comments :self.rating:user];
     
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"ReviewSubmitted"
