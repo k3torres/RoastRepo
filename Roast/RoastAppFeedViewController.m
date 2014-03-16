@@ -147,6 +147,8 @@
     [(UILabel *)[cell.contentView viewWithTag:12] setText:feedItemAtIndex.message];
     [(UILabel *)[cell.contentView viewWithTag:13] setText:[formatter stringFromDate:feedItemAtIndex.timestamp]];
     [(UIImageView *)[cell.contentView viewWithTag:14] setImage:feedItemAtIndex.userPic];
+    
+    cell.contentView.backgroundColor = self.tabBarController.tabBar.barTintColor;
 
     return cell;
 }

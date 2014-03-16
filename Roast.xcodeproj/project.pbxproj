@@ -103,6 +103,11 @@
 		DCEC3F7A18D4A4180059C26F /* akissinger_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7918D4A4180059C26F /* akissinger_profile_pic.jpg */; };
 		DCEC3F7C18D4AA980059C26F /* profile_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */; };
 		DCEC3F7F18D4AC440059C26F /* RoastAppProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */; };
+		DCFF25A018D5D7FF00624ABE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF259F18D5D7FE00624ABE /* MapKit.framework */; };
+		DCFF25AC18D5F98200624ABE /* arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFF25AA18D5F98200624ABE /* arrow-left.png */; };
+		DCFF25AD18D5F98200624ABE /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFF25AB18D5F98200624ABE /* arrow-right.png */; };
+		DCFF25B018D5FCE000624ABE /* arrow-left-60px.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFF25AE18D5FCE000624ABE /* arrow-left-60px.png */; };
+		DCFF25B118D5FCE000624ABE /* arrow-right-60px.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFF25AF18D5FCE000624ABE /* arrow-right-60px.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -548,6 +553,11 @@
 		DCEC3F7B18D4AA980059C26F /* profile_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_bg.jpg; sourceTree = "<group>"; };
 		DCEC3F7D18D4AC440059C26F /* RoastAppProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoastAppProfileViewController.h; sourceTree = "<group>"; };
 		DCEC3F7E18D4AC440059C26F /* RoastAppProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoastAppProfileViewController.m; sourceTree = "<group>"; };
+		DCFF259F18D5D7FE00624ABE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DCFF25AA18D5F98200624ABE /* arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-left.png"; path = "../../arrow-left.png"; sourceTree = "<group>"; };
+		DCFF25AB18D5F98200624ABE /* arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-right.png"; path = "../../arrow-right.png"; sourceTree = "<group>"; };
+		DCFF25AE18D5FCE000624ABE /* arrow-left-60px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-left-60px.png"; path = "../../arrow-left-60px.png"; sourceTree = "<group>"; };
+		DCFF25AF18D5FCE000624ABE /* arrow-right-60px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-right-60px.png"; path = "../../arrow-right-60px.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1304,6 +1314,10 @@
 		DC346C5B18D2C314005DD76A /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DCFF25AA18D5F98200624ABE /* arrow-left.png */,
+				DCFF25AE18D5FCE000624ABE /* arrow-left-60px.png */,
+				DCFF25AF18D5FCE000624ABE /* arrow-right-60px.png */,
+				DCFF25AB18D5F98200624ABE /* arrow-right.png */,
 				DC346C5C18D2C346005DD76A /* RoastAppHomeScreenTabViewController.h */,
 				DC346C5D18D2C346005DD76A /* RoastAppHomeScreenTabViewController.m */,
 			);
@@ -1569,8 +1583,10 @@
 				DC7E77D018D57D3300019BFB /* user.png in Resources */,
 				DC7E77BC18D547E500019BFB /* facebook-32-white.png in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
+				DCFF25AC18D5F98200624ABE /* arrow-left.png in Resources */,
 				DC7E77C818D555B400019BFB /* instagram-32-white.png in Resources */,
 				DC346C5818D2BE3D005DD76A /* feed_in-26.png in Resources */,
+				DCFF25B018D5FCE000624ABE /* arrow-left-60px.png in Resources */,
 				DC7E77B418D4C35A00019BFB /* facebook-25.png in Resources */,
 				6848FD7B18D5A96C00ADD857 /* star_highlighted-darker.png in Resources */,
 				68258A2A18D5847E00ED7A10 /* Wood-Desktop-Wallpaper3.png in Resources */,

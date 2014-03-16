@@ -50,12 +50,15 @@
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     
-    UIImage *btnImageRight = [UIImage imageNamed:@"swipe_right-50.png"];
-    UIButton *btnRight = [UIButton buttonWithType:UIButtonTypeCustom];
-    btnRight.frame = CGRectMake(screenWidth - 60, screenHeight - 50, 50, 50);
-    [btnRight setBackgroundImage:btnImageRight forState:UIControlStateNormal];
+    UIImage *btnImageRight = [UIImage imageNamed:@"arrow-right-60px.png"];
     
-    [btnRight setTintColor:[UIColor colorWithRed:61.0/255.0 green:61.0/255.0 blue:61/255.0 alpha:0.10]];
+    UIButton *btnRight = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGRect buttonFrameRight = btnRight.frame;
+    buttonFrameRight = CGRectMake(screenWidth - 40, screenHeight - 43, 30.0f, 36.0f);
+    btnRight.frame = buttonFrameRight;
+    [btnRight setBackgroundImage:btnImageRight forState:UIControlStateNormal];
+
+    [btnRight setTintColor:[UIColor colorWithRed:61.0/255.0 green:61.0/255.0 blue:61/255.0 alpha:0.60]];
     UIImage * __weak imageRight = [btnRight.currentBackgroundImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [btnRight setBackgroundImage:imageRight forState:UIControlStateNormal];
     [btnRight setTag:9];
@@ -63,11 +66,15 @@
     
     [self.view addSubview:btnRight];
     
-    UIImage *btnImageLeft = [UIImage imageNamed:@"swipe_left-50.png"];
+    UIImage *btnImageLeft = [UIImage imageNamed:@"arrow-left-60px.png"];
     UIButton *btnLeft = [UIButton buttonWithType:UIButtonTypeCustom];
-    btnLeft.frame = CGRectMake(10, screenHeight - 50, 50, 50);
+    
+    CGRect buttonFrameLeft = btnLeft.frame;
+    buttonFrameLeft = CGRectMake(10, screenHeight - 43, 30.f, 36.f);
+    btnLeft.frame = buttonFrameLeft;
+    
     [btnLeft setBackgroundImage:btnImageLeft forState:UIControlStateNormal];
-    [btnLeft setTintColor:[UIColor colorWithRed:61.0/255.0 green:61.0/255.0 blue:61/255.0 alpha:0.10]];
+    [btnLeft setTintColor:[UIColor colorWithRed:61.0/255.0 green:61.0/255.0 blue:61/255.0 alpha:0.60]];
     UIImage * __weak imageLeft = [btnLeft.currentBackgroundImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [btnLeft setBackgroundImage:imageLeft forState:UIControlStateNormal];
     [btnLeft setTag:8];
