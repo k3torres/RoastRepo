@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Feed" id="k1a-9X-DLR" customClass="RoastAppFeedViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="AmQ-k3-cHF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexColor" red="0.0009043345303" green="0.43599699720000001" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
@@ -301,7 +301,7 @@
             <objects>
                 <tableViewController id="LOT-JR-Ki4" customClass="RoastAppShopListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="cXY-3r-dA8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -368,7 +368,7 @@
             <objects>
                 <viewController id="BNU-aW-3Un" customClass="RoastAppShopViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SOI-uP-5mt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YXn-Bu-Iel">
@@ -411,7 +411,7 @@
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <imageView multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candtcollectivecoldbrew.jpg" id="JRk-y0-Y8G">
-                                <rect key="frame" x="0.0" y="66" width="320" height="220"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="171"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -448,7 +448,7 @@
             <objects>
                 <tableViewController id="pj5-wb-Kl4" customClass="RoastAppShopMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="rd5-Gf-jBv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -505,11 +505,11 @@
             <objects>
                 <viewController id="bCN-g1-BAR" customClass="RoastAppMenuItemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3uy-Lg-WsT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupicon.png" id="1ht-h6-D67">
-                                <rect key="frame" x="83" y="66" width="155" height="155"/>
+                                <rect key="frame" x="83" y="66" width="155" height="106"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="Rmi-YK-DiM">
@@ -577,7 +577,7 @@
             <objects>
                 <viewController id="c7t-Wj-bAu" customClass="RoastAppMenuItemReviewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9vx-6a-tKn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8CC-p0-qis">
@@ -601,7 +601,7 @@
                                 </connections>
                             </button>
                             <stepper opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="5" id="2Hj-2t-URd">
-                                <rect key="frame" x="59" y="115" width="94" height="29"/>
+                                <rect key="frame" x="59" y="66" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="c7t-Wj-bAu" eventType="valueChanged" id="ukL-t4-u9L"/>
@@ -782,6 +782,11 @@
                         <color key="tintColor" red="0.0" green="0.38756908421933689" blue="0.80086616847826086" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.99002207880434778" green="0.93107601148392805" blue="0.93733504325805639" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="k1a-9X-DLR" kind="relationship" relationship="viewControllers" id="pNe-62-xDR"/>
+                        <segue destination="s6p-0s-VPx" kind="relationship" relationship="viewControllers" id="8MA-2d-HTi"/>
+                        <segue destination="hGE-6L-pbp" kind="relationship" relationship="viewControllers" id="zXF-hg-c3s"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPA-4F-w5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
