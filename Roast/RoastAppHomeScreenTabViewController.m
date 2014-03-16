@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 Affiliated. All rights reserved.
 //
 
+//IMPORT ALL HOMESCREEN VIEW CONTROLLERS
 #import "RoastAppHomeScreenTabViewController.h"
 #import "RoastAppFeedViewController.h"
+#import "RoastAppProfileViewController.h"
 
 @interface RoastAppHomeScreenTabViewController ()
 
@@ -20,7 +22,6 @@
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
         
     }
     return self;
@@ -29,26 +30,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"REACHED TABBARVC");
+    
     UIStoryboard *storyboard = self.storyboard;
     UINavigationController *shopListView = [storyboard instantiateViewControllerWithIdentifier:@"ShopNav"];
     RoastAppFeedViewController *feedView = [storyboard instantiateViewControllerWithIdentifier:@"Feed"];
-    /*
-    if ([self.viewControllers[0] class] == [UINavigationController class]) {
-        shopListView = self.viewControllers[0];
-        feedView = self.viewControllers[1];
-    }
-    else {
-        shopListView = self.viewControllers[1];
-        feedView = self.viewControllers[0];
-    }
-     */
+    RoastAppProfileViewController *profileView = [storyboard instantiateViewControllerWithIdentifier:@"Profile"];
+    
+
     
     self.shopListTabBarArray = [NSMutableArray arrayWithObjects:shopListView, nil];
     self.feedTabBarArray = [NSMutableArray arrayWithObjects:feedView, nil];
+    self.profileTabBarArray = [NSMutableArray arrayWithObjects:profileView, nil];
 
+    //INITIAL HOME SCREEN VIEW
     [self setViewControllers:self.shopListTabBarArray animated:YES];
 
+    //Draw Arrows
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
@@ -75,9 +72,6 @@
     [btnLeft setBackgroundImage:imageLeft forState:UIControlStateNormal];
     [btnLeft setTag:8];
     [self.view addSubview:btnLeft];
-    //[self presentViewController:shopListView animated:YES completion:nil];
-    //[self.tabBarController.tabBar setHidden:YES];
-	// Do any additional setup after loading the view.
 }
 
 - (NSMutableArray *) getFeedViewArray {

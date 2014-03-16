@@ -64,6 +64,10 @@
 		DC7E77C418D5512C00019BFB /* methods.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77C118D5512C00019BFB /* methods.jpg */; };
 		DC7E77C618D552B200019BFB /* twitter-32-white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77C518D552B200019BFB /* twitter-32-white.png */; };
 		DC7E77C818D555B400019BFB /* instagram-32-white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77C718D555B400019BFB /* instagram-32-white.png */; };
+		DC7E77CF18D57D3300019BFB /* coffee_cup.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77CD18D57D3300019BFB /* coffee_cup.png */; };
+		DC7E77D018D57D3300019BFB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77CE18D57D3300019BFB /* user.png */; };
+		DC7E77D318D57FA200019BFB /* feed_in-25.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77D118D57FA200019BFB /* feed_in-25.png */; };
+		DC7E77D418D57FA200019BFB /* feed_in-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E77D218D57FA200019BFB /* feed_in-32.png */; };
 		DC8BC6E618B5DF2A0062D1C4 /* AnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */; };
 		DC8BC6E718B5DF2A0062D1C4 /* TransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BC6E518B5DF2A0062D1C4 /* TransitionDelegate.m */; };
 		DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8D3C1C18A1B4B90034ACEF /* coffeeandteacollective.jpg */; };
@@ -476,6 +480,10 @@
 		DC7E77C118D5512C00019BFB /* methods.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = methods.jpg; sourceTree = "<group>"; };
 		DC7E77C518D552B200019BFB /* twitter-32-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-32-white.png"; sourceTree = "<group>"; };
 		DC7E77C718D555B400019BFB /* instagram-32-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instagram-32-white.png"; sourceTree = "<group>"; };
+		DC7E77CD18D57D3300019BFB /* coffee_cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee_cup.png; sourceTree = "<group>"; };
+		DC7E77CE18D57D3300019BFB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		DC7E77D118D57FA200019BFB /* feed_in-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-25.png"; sourceTree = "<group>"; };
+		DC7E77D218D57FA200019BFB /* feed_in-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed_in-32.png"; sourceTree = "<group>"; };
 		DC8BC6E218B5DF2A0062D1C4 /* AnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioning.h; sourceTree = "<group>"; };
 		DC8BC6E318B5DF2A0062D1C4 /* AnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransitioning.m; sourceTree = "<group>"; };
 		DC8BC6E418B5DF2A0062D1C4 /* TransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDelegate.h; sourceTree = "<group>"; };
@@ -1141,13 +1149,13 @@
 		683BC66D188A48F30027D7F2 /* Roast */ = {
 			isa = PBXGroup;
 			children = (
+				DC1BA3F718A1E23900D6370A /* Shop List */,
 				DCEC3F8018D4AC4E0059C26F /* Profile */,
 				6687053B18D426A200E8CCD1 /* Google Analytics */,
 				DC346C5B18D2C314005DD76A /* Home Screen */,
 				66C80AB818C51ABD00B9F028 /* Shop Review */,
 				DC1825D118A616CF007232E6 /* Login */,
 				66B0870F18936F6B0045B805 /* Feed */,
-				DC1BA3F718A1E23900D6370A /* Shop List */,
 				66B0871018936F850045B805 /* Shop View */,
 				66B0870C18936EF40045B805 /* Networking Services */,
 				683BC69A188B13A10027D7F2 /* Main.storyboard */,
@@ -1162,6 +1170,10 @@
 		683BC66E188A48F30027D7F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC7E77D118D57FA200019BFB /* feed_in-25.png */,
+				DC7E77D218D57FA200019BFB /* feed_in-32.png */,
+				DC7E77CD18D57D3300019BFB /* coffee_cup.png */,
+				DC7E77CE18D57D3300019BFB /* user.png */,
 				DC7E77C718D555B400019BFB /* instagram-32-white.png */,
 				DC7E77C518D552B200019BFB /* twitter-32-white.png */,
 				DC7E77BF18D5512C00019BFB /* dirty_hipster.jpg */,
@@ -1498,8 +1510,10 @@
 				DCEC3F7C18D4AA980059C26F /* profile_bg.jpg in Resources */,
 				DC0D57F218D43BC000A4AAAD /* birdrock.png in Resources */,
 				DC8D3C1D18A1B4B90034ACEF /* coffeeandteacollective.jpg in Resources */,
+				DC7E77CF18D57D3300019BFB /* coffee_cup.png in Resources */,
 				DC2E523C18D482900097C82D /* swipe_right-50.png in Resources */,
 				6671939018B9A58D00B41C3D /* foodicon.jpg in Resources */,
+				DC7E77D018D57D3300019BFB /* user.png in Resources */,
 				DC7E77BC18D547E500019BFB /* facebook-32-white.png in Resources */,
 				DC8D3C1F18A1B8970034ACEF /* caffecalabria.jpg in Resources */,
 				DC7E77C818D555B400019BFB /* instagram-32-white.png in Resources */,
@@ -1512,7 +1526,9 @@
 				DC2E523E18D482A40097C82D /* swipe_left-50.png in Resources */,
 				683D652318B9999000B54F9F /* candtcollectiveproduct.jpg in Resources */,
 				683BC67A188A48F30027D7F2 /* Images.xcassets in Resources */,
+				DC7E77D318D57FA200019BFB /* feed_in-25.png in Resources */,
 				DCB4E5EF18AB6308006BA824 /* fbicon.png in Resources */,
+				DC7E77D418D57FA200019BFB /* feed_in-32.png in Resources */,
 				DC7E77C618D552B200019BFB /* twitter-32-white.png in Resources */,
 				DC0D57EF18D4377500A4AAAD /* cafemoto.png in Resources */,
 				6671939118B9A58D00B41C3D /* cupicon.png in Resources */,

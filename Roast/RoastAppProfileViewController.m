@@ -7,6 +7,7 @@
 //
 
 #import "RoastAppProfileViewController.h"
+#import "RoastAppHomeScreenTabViewController.h"
 
 @interface RoastAppProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
@@ -37,15 +38,6 @@
     [self.scrollView setScrollEnabled:YES];
     [self.scrollView setContentSize:CGSizeMake(280,950)];
     
-    //Profile Pic
-    /*
-    CALayer * l = [self.profilePic layer];
-    [l setMasksToBounds:YES];
-    [l setCornerRadius:5.0];
-    [l setBorderWidth:1.0];
-    [l setBorderColor:[[UIColor colorWithWhite:1.0f alpha:0.7f] CGColor]];
-     */
-    
     //FaceBook Login Button
     CALayer *fbButtonLayer = [self.facebookLoginButton layer];
     [fbButtonLayer setMasksToBounds:YES];
@@ -60,7 +52,7 @@
     [tButtonLayer setBorderWidth:1.0f];
     [tButtonLayer setBorderColor:[[UIColor colorWithWhite:1.0 alpha:0.7f] CGColor]];
     
-    //Twitter Login Button
+    //Instagram Login Button
     CALayer *iButtonLayer = [self.instagramLoginButton layer];
     [iButtonLayer setMasksToBounds:YES];
     [iButtonLayer setCornerRadius:5.0];
@@ -69,6 +61,29 @@
     
 }
 
+- (IBAction)swipeRight:(id)sender {
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
+    [UIView transitionFromView:[self view]
+                        toView:[tmp.feedTabBarArray[0] view]
+                      duration:0.25
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    completion:nil];
+    
+    [self.tabBarController setViewControllers:tmp.feedTabBarArray];
+}
+
+- (IBAction)swipeLeft:(id)sender {
+    RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
+    
+    [UIView transitionFromView:[self view]
+                        toView:[tmp.shopListTabBarArray[0] view]
+                      duration:0.25
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    completion:nil];
+    
+    [self.tabBarController setViewControllers:tmp.shopListTabBarArray];
+}
 
 - (void)didReceiveMemoryWarning
 {

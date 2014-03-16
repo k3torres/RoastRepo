@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="hGE-6L-pbp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="NUJ-Mp-fbm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -66,9 +66,10 @@
                         </prototypes>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="OyM-pH-dDV" appends="YES" id="p2L-HV-Hyi"/>
+                            <outletCollection property="gestureRecognizers" destination="nzC-RD-45O" appends="YES" id="DAr-dg-U5K"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Current" image="feed_in-26.png" id="Voe-9i-Nje"/>
+                    <tabBarItem key="tabBarItem" title="Current" image="feed_in-25.png" id="Voe-9i-Nje"/>
                     <navigationItem key="navigationItem" title="Feed" id="pPo-tk-42O">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="C1b-nw-rma">
                             <connections>
@@ -83,6 +84,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbD-qo-yWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="nzC-RD-45O">
+                    <connections>
+                        <action selector="swipeLeft:" destination="k1a-9X-DLR" id="jwA-JH-FPk"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="OyM-pH-dDV">
                     <connections>
                         <action selector="SwipeRight:" destination="k1a-9X-DLR" id="gOj-Uw-84J"/>
@@ -92,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="10" y="-314"/>
         </scene>
-        <!--Roast App Profile View Controller-->
+        <!--Roast App Profile View Controller - Profile-->
         <scene sceneID="Qaw-nX-LyT">
             <objects>
-                <viewController id="hGE-6L-pbp" customClass="RoastAppProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="hGE-6L-pbp" customClass="RoastAppProfileViewController" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="bu0-Qc-PGa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,8 +141,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x1U-MI-d4E">
-                                                    <rect key="frame" x="97" y="140" width="126" height="31"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x1U-MI-d4E">
+                                                    <rect key="frame" x="97" y="140" width="126" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,7 +266,13 @@
                             </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mFx-RE-nfD" appends="YES" id="S0l-l1-qYL"/>
+                            <outletCollection property="gestureRecognizers" destination="lOV-HZ-6kz" appends="YES" id="r55-Ee-7Pr"/>
+                        </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user.png" id="jHg-9b-gax"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="facebookLoginButton" destination="yOz-0j-JX4" id="O2S-xd-dy7"/>
@@ -271,6 +283,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6H-WE-C5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="mFx-RE-nfD">
+                    <connections>
+                        <action selector="swipeRight:" destination="hGE-6L-pbp" id="mwa-yn-vga"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="lOV-HZ-6kz">
+                    <connections>
+                        <action selector="swipeLeft:" destination="hGE-6L-pbp" id="uPt-Pt-Djb"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="10" y="462"/>
         </scene>
@@ -311,6 +333,7 @@
                         <connections>
                             <outlet property="dataSource" destination="LOT-JR-Ki4" id="PqN-EA-IOL"/>
                             <outletCollection property="gestureRecognizers" destination="N1a-Nw-v4R" appends="YES" id="WgR-xn-Iz7"/>
+                            <outletCollection property="gestureRecognizers" destination="Zq3-jE-ukE" appends="YES" id="L6G-l7-o09"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Coffee Houses" id="UV1-F4-7ac">
@@ -327,6 +350,16 @@
                         <action selector="SwipeLeft:" destination="LOT-JR-Ki4" id="laj-60-X38"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Zq3-jE-ukE">
+                    <connections>
+                        <action selector="swipeRight:" destination="LOT-JR-Ki4" id="pcX-7q-mEg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <view contentMode="scaleToFill" id="cN5-hM-XwC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="525" y="-980"/>
         </scene>
@@ -778,7 +811,7 @@
         <scene sceneID="g9y-QG-Sxp">
             <objects>
                 <navigationController storyboardIdentifier="ShopNav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="s6p-0s-VPx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shops" image="cafe-26.png" id="e7p-Zx-TaV"/>
+                    <tabBarItem key="tabBarItem" title="Shops" image="coffee_cup.png" id="e7p-Zx-TaV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AxE-JS-2yh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -795,18 +828,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cafe-26.png" width="26" height="26"/>
         <image name="candtcollectivecoldbrew.jpg" width="640" height="640"/>
+        <image name="coffee_cup.png" width="25" height="29"/>
         <image name="cupicon.png" width="60" height="57"/>
         <image name="dirty_hipster.jpg" width="500" height="337"/>
         <image name="facebook-32-white.png" width="85" height="84"/>
-        <image name="feed_in-26.png" width="26" height="26"/>
+        <image name="feed_in-25.png" width="25" height="25"/>
         <image name="instagram-32-white.png" width="85" height="84"/>
         <image name="login.png" width="528" height="839"/>
         <image name="methods.jpg" width="1280" height="850"/>
         <image name="profile_bg.jpg" width="701" height="491"/>
         <image name="toolkit.jpg" width="500" height="318"/>
         <image name="twitter-32-white.png" width="85" height="84"/>
+        <image name="user.png" width="26" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
