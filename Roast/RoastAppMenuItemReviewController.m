@@ -34,8 +34,7 @@
 {
 
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
+
     return self;
 }
 
@@ -50,9 +49,18 @@
     //[scroll setContentSize:CGSizeMake(320, 800)];
     //self.backgroundtest = [NSMutableArray arrayWithObjects:@"Wood-Desktop-Wallpaper3.png", nil];
 
-    self.rateView.layer.cornerRadius = 5.0;
+    self.rateView.canEdit = YES;
+    self.rateView.maxRating = 5;
+    self.rateView.minAllowedRating = 0;
+    self.rateView.maxAllowedRating = 5;
+    //self.rateView.rating = 5;
+    self.rateView.rating = self.fromSegueRating;
+    NSLog(@"self.fromSegueRating returns -------------------> %f", self.fromSegueRating);
+    
+    self.menuImage.image = self.image;
+  /*  self.rateView.layer.cornerRadius = 5.0;
     self.rateView.layer.borderWidth = 0.5f;
-    [self.rateView.layer setBorderColor:[[UIColor whiteColor]CGColor]];
+    [self.rateView.layer setBorderColor:[[UIColor whiteColor]CGColor]];*/
     cancelButton.layer.borderWidth = 0.5f;
     cancelButton.layer.cornerRadius = 5;
     [cancelButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
@@ -62,13 +70,7 @@
     [submitButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
     submitButton.layer.cornerRadius = 0;
     
-    self.rateView.canEdit = YES;
-    self.rateView.maxRating = 5;
-    self.rateView.minAllowedRating = 0;
-    self.rateView.maxAllowedRating = 5;
-    self.rateView.rating = 5;
 
-    self.menuImage.image = self.image;
 
     
     

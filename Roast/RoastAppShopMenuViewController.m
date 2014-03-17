@@ -130,8 +130,9 @@
     
     self.menuCtrlr.item = chosenItem;
     self.menuCtrlr.title = chosenItem.name;
-
     [(UITextView *)[self.menuCtrlr.view viewWithTag:1] setText:[[chosenItem.description stringByAppendingString:@"\n\n"]stringByAppendingString:chosenItem.price]];
+  
+    
     [(UIImageView *)[self.menuCtrlr.view viewWithTag:3] setImage:chosenItem.shopImage];
     self.menuCtrlr.title = chosenItem.name;
     self.menuCtrlr.image = chosenItem.shopImage;

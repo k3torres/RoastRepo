@@ -18,18 +18,37 @@
 
 
 @implementation RoastAppMenuItemViewController
+@synthesize scroll;
 
 - (void)loadInitialData
 {
-
+    [scroll setScrollEnabled:YES];
+    [scroll setContentSize:CGSizeMake(320, 800)];
+    self.starRating.canEdit = YES;
+    self.starRating.maxRating = 5;
+    self.starRating.minAllowedRating = 0;
+    self.starRating.maxAllowedRating = 5;
+    self.starRating.rating = 0;
+    [self.textInfoView setScrollEnabled:NO];
+    [self.textInfoView sizeToFit];
+    CGRect frame = self.textInfoView.frame;
+    self.rateButton.layer.borderWidth = 0.5f;
+    self.rateButton.layer.cornerRadius = 5;
+    [self.rateButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    self.rateButton.layer.cornerRadius = 0;
+    frame.size.width = 320;
+    _textInfoView.frame = frame;
+    
+    [self.ratingTextView setScrollEnabled:NO];
+    frame = self.ratingTextView.frame;
+    
+    self.ratingTextView.frame = CGRectMake(0, (self.textInfoView.frame.origin.y + self.textInfoView.frame.size.height + 15), 320, frame.size.height);
+    
 }
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+
     return self;
 }
 
@@ -42,6 +61,8 @@
     reviewCtrlr.menuItemID = [self.item uid];
     reviewCtrlr.parentViewCtrlr = self;
     reviewCtrlr.image = self.image;
+    reviewCtrlr.fromSegueRating = self.starRating.rating;
+    
   
 }
 
@@ -52,6 +73,10 @@
         selector:@selector(receiveReviewSubmitted:)
             name:@"ReviewSubmitted"
                 object:nil];
+
+     self.textInfoView.text = [[self.item.description stringByAppendingString:@"\n\n"]stringByAppendingString:self.item.price];
+    
+    [self loadInitialData];
 }
 
 //Refresh ratings when HTTP request returns
@@ -71,6 +96,7 @@
             averageReview += [rating integerValue];
         }
         averageReview = averageReview / numRatings;
+        
         [(UITextView *)[self.view viewWithTag:5] setText:[@"Average Rating: " stringByAppendingString:[NSString stringWithFormat: @"%d", (int)averageReview]]];
         
         int i = 0;
@@ -91,11 +117,17 @@
     [self.view setNeedsDisplay];
     
 }
-
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"SOMEHOW IN HERE");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)unwindToMenuItemView:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
 @end

@@ -15,14 +15,15 @@
 @property (strong, nonatomic) NSString* menuItemID;
 
 @property (strong, nonatomic) UIViewController* parentViewCtrlr;
-@property (weak, nonatomic) IBOutlet ASStarRatingView *rateView;
+
 @property (strong, nonatomic) IBOutlet UIView *textViewArea;
 @property (strong, nonatomic) IBOutlet UIScrollView *scroll;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
+@property (strong, nonatomic) IBOutlet ASStarRatingView *rateView;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UIImageView *menuImage;
 @property (strong, nonatomic) IBOutlet UILabel *userName;
-
+@property (assign, nonatomic) float fromSegueRating;
 @property (strong, nonatomic) UIImage *image;
 
 

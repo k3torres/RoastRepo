@@ -147,6 +147,7 @@
         menuCtrlr.menuChoice = @"foodMenu";
     else if ([[segue identifier] isEqualToString:@"gearMenuSegue"])
         menuCtrlr.menuChoice = @"gearMenu";
+    NSLog(@"NOT IN HERE!!!!!!!!!!!!!!!!!!!!!!!");
 }
 - (IBAction)changeBack:(id)sender {
 
