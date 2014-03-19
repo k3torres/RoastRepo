@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="NUJ-Mp-fbm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="NUJ-Mp-fbm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Roast App Feed View Controller - Feed-->
@@ -103,7 +103,7 @@
             <objects>
                 <viewController storyboardIdentifier="Profile" id="hGE-6L-pbp" customClass="RoastAppProfileViewController" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="bu0-Qc-PGa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_bg.jpg" id="Tb8-sl-u8S">
@@ -282,6 +282,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="user.png" id="jHg-9b-gax"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="facebookLoginButton" destination="yOz-0j-JX4" id="O2S-xd-dy7"/>
                         <outlet property="instagramLoginButton" destination="9xH-Kc-CDF" id="TvH-ee-HUr"/>
@@ -376,7 +377,7 @@
             <objects>
                 <viewController id="BNU-aW-3Un" customClass="RoastAppShopViewController" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="TlC-UG-pLg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1305"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EBh-39-kuB">
@@ -516,6 +517,7 @@ For more information about our story, our shop and other inquiries contact: info
                     <tabBarItem key="tabBarItem" title="Item" id="lhO-vu-P1s"/>
                     <navigationItem key="navigationItem" title="ShopView" id="TaQ-b4-zom"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1305"/>
                     <connections>
                         <outlet property="aboutSectionTitleCell" destination="q2C-J0-EjR" id="8Yv-Vs-j5E"/>
                         <outlet property="drinkOutlet" destination="0We-6z-wFB" id="z2u-Hg-zMp"/>

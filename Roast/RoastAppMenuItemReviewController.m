@@ -94,11 +94,11 @@
      postNotificationName:@"ReviewSubmitted"
      object:self];
   
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)cancelAction:(UIButton *)sender{
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
