@@ -9,32 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <FacebookSDK/FBRequestConnection.h>
 #import "RoastAppFeedProfile.h"
-#import "STTwitter.h"
+#import "RoastAppFeedItem.h"
 
 @interface RoastAppFeedService : NSObject
 
-@property RoastAppFeedProfile *feedProfile;
-
-@property STTwitterAPI *twitterService;
-@property NSString *twitterConsumerKey;
-@property NSString *twitterConsumerShh;
-@property NSString *instagramClient_ID;
-@property NSString *instagramRedirect_URI;
-@property NSString *instagramClient_Secret;
-@property NSString *instagramAuthURL;
-@property NSString *instagramAPIURL;
-@property NSString *instagramTagURL;
-
-@property FBRequestConnection *fbService;
-@property NSString *fbAppID;
-@property NSString *fbShh;
-@property FBRequestConnection *fbReqConn;
+@property (nonatomic) RoastAppFeedProfile *feedProfile; //General Feed Settings
+@property (nonatomic) NSDateFormatter *dateFormatter;
+@property (nonatomic) NSMutableArray *feedArray;
 
 - (id)init;
 - (id)initWithProfile:(RoastAppFeedProfile *)newProfile;
-- (STTwitterAPI *)connectTwitter;
--(NSMutableArray *)populateFeed:(NSMutableArray *)feedArray withTableView:(UITableView *)tableView;
--(void)getAccessToken;
+- (UIImage *)getUIImageFromURLString:(NSString *)urlString;
 
+/* Prototype */
+//Retrieve new feeds; TODO: msg passing denote finished
+- (void)retrieveNewFeeds;
 @end
 

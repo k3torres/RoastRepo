@@ -12,6 +12,12 @@
 
 @property NSMutableArray *users;
 @property NSMutableArray *tags;
+@property NSMutableArray *facebookUsers;
+@property NSMutableArray *twitterUsers;
+@property NSMutableArray *instagramUsers;
+@property NSMutableArray *facebookTags;
+@property NSMutableArray *twitterTags;
+@property NSMutableArray *instagramTags;
 
 @property BOOL enableFacebook;
 @property BOOL enableInstagram;
