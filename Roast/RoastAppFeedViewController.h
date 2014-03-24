@@ -12,7 +12,7 @@
 @interface RoastAppFeedViewController : UITableViewController
 
 @property NSMutableArray *feedItems;
-@property RoastAppFeedService *feedService;
+@property NSMutableArray *feedServices;
 @property NSString *feedDateFormat;
 @property UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UITableView *feedViewTable;

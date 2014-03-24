@@ -13,6 +13,8 @@
 #import "RoastAppFeedProfile.h"
 #import "RoastAppFeedService.h"
 #import "RoastAppTwitterFeedService.h"
+#import "RoastAppFacebookFeedService.h"
+#import "RoastAppInstagramFeedService.h"
 #import "STTwitter.h"
 #import "TransitionDelegate.h"
 
@@ -24,6 +26,8 @@
 
 @implementation RoastAppFeedViewController
 @synthesize transitionController;
+NSString * const DATE_FORMAT = @"EEE h:mm a MM.dd";
+
 
 - (id)init:(UITableViewStyle)style
 {
@@ -60,17 +64,23 @@
     [feedProfile setEnableInstagram:YES];
     [feedProfile setEnableTwitter:YES];
     
-    self.feedService = [[RoastAppTwitterFeedService alloc] initWithProfile:feedProfile];
+    self.feedServices = [NSMutableArray arrayWithObjects:
+                         [[RoastAppTwitterFeedService alloc] initWithProfile:feedProfile],
+                         [[RoastAppFacebookFeedService alloc] initWithProfile:feedProfile],
+                         [[RoastAppInstagramFeedService alloc] initWithProfile:feedProfile],
+                         nil];
     
     //Start Query
-    [self.feedService setFeedProfile:feedProfile];
-    [self.feedService retrieveNewFeeds];
+    for (RoastAppFeedService *currentService in self.feedServices)
+    {
+        [currentService retrieveNewFeeds];
+    }
     
     [self.tableView reloadData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reloadList:)
-                                                 name:@"TestNotification"
+                                                 name:@"IncomingFeedItem"
                                                object:nil];
     
     //Refresh on pull-down
@@ -111,7 +121,8 @@
     // Configure the cell...
     RoastAppFeedItem *feedItemAtIndex = [self.feedItems objectAtIndex:indexPath.row];
     
-    NSDateFormatter *formatter = self.feedService.dateFormatter;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = DATE_FORMAT;
     
 
     if ( [feedItemAtIndex.serviceName isEqualToString:@"Twitter"] || [feedItemAtIndex.serviceName isEqualToString:@"Facebook"])
@@ -153,13 +164,17 @@
 
 - (void)reloadList:(NSNotification *)notification
 {
-
-    [self.feedItems addObject:notification.object];
-    [self.feedItems sortUsingComparator:^NSComparisonResult(RoastAppFeedItem *item0, RoastAppFeedItem *item1)
-     {
-         return [item1.timestamp compare:item0.timestamp];
-     }];
-
+    /* Sorted Insertion */
+    NSUInteger index =
+    [self.feedItems indexOfObject:notification.object
+                    inSortedRange:(NSRange){0, [self.feedItems count]}
+                    options:NSBinarySearchingInsertionIndex
+                    usingComparator: ^NSComparisonResult(RoastAppFeedItem *item0, RoastAppFeedItem *item1)
+    {
+        return [item1.timestamp compare:item0.timestamp];
+    }];
+    
+    [self.feedItems insertObject:notification.object atIndex:index];
     [self.tableView reloadData];
     
     //If refresh wheel is spinning, end it
@@ -167,7 +182,8 @@
      
 }
 
-- (IBAction)swipeLeft:(id)sender {
+- (IBAction)swipeLeft:(id)sender
+{
     RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
     
     [UIView transitionFromView:[self view]
@@ -179,7 +195,8 @@
     [self.tabBarController setViewControllers:tmp.profileTabBarArray];
 }
 
-- (IBAction)SwipeRight:(id)sender {
+- (IBAction)SwipeRight:(id)sender
+{
     RoastAppHomeScreenTabViewController *tmp = ((RoastAppHomeScreenTabViewController *)self.tabBarController);
     
     [UIView transitionFromView:[self view]
@@ -190,7 +207,6 @@
     
     [self.tabBarController setViewControllers:tmp.shopListTabBarArray];
 }
-
 
 - (void)dealloc
 {
@@ -203,13 +219,12 @@
 
 - (void)refresh:(id)sender
 {
-    // do your refresh here and reload the tablview
-    NSLog(@"RELOADING!");
-    
-    //Start Query
+    /* Clear Table Data and retrieve new feeds */
     self.feedItems = [[NSMutableArray alloc] init];
-    [self.feedService retrieveNewFeeds];
-    [self.tableView reloadData];
+    for (RoastAppFeedService *currentService in self.feedServices)
+    {
+        [currentService retrieveNewFeeds];
+    }
 }
 
 @end

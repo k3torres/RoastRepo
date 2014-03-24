@@ -9,20 +9,14 @@
 #import "RoastAppTwitterFeedService.h"
 
 @implementation RoastAppTwitterFeedService
+NSString * const CONSUMERKEY = @"FBx0CGvWk5aNx809oOTA";
+NSString * const CONSUMERSHH = @"tQATEamxHiy61VtFumuAKpps1snMJDd8vSVjOEeIw";;
 
 - (RoastAppTwitterFeedService *) init
 {
     self = [super init];
-    
-    /*** Secrets ***/
-    self.twitterConsumerKey = @"FBx0CGvWk5aNx809oOTA";
-    self.twitterConsumerShh = @"tQATEamxHiy61VtFumuAKpps1snMJDd8vSVjOEeIw";
-    
     self.twitterService = Nil;
-    self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss '+'zzzz yyyy"];
-    self.feedProfile = [[RoastAppFeedProfile alloc] init];
-    self.feedArray = [[NSMutableArray alloc] init];
     
     return self;
 }
@@ -30,15 +24,8 @@
 - (RoastAppTwitterFeedService *) initWithProfile: (RoastAppFeedProfile *)newProfile
 {
     self = [super initWithProfile:newProfile];
-    /*** Secrets ***/
-    self.twitterConsumerKey = @"FBx0CGvWk5aNx809oOTA";
-    self.twitterConsumerShh = @"tQATEamxHiy61VtFumuAKpps1snMJDd8vSVjOEeIw";
-    
     self.twitterService = Nil;
-    self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss '+'zzzz yyyy"];
-    self.feedProfile = [[RoastAppFeedProfile alloc] init];
-    self.feedArray = [[NSMutableArray alloc] init];
     
     return self;
 }
@@ -47,8 +34,8 @@
 {
     /* Twitter OAUTH and Request */
     self.twitterService = [STTwitterAPI
-                           twitterAPIAppOnlyWithConsumerKey:self.twitterConsumerKey
-                           consumerSecret:self.twitterConsumerShh];
+                           twitterAPIAppOnlyWithConsumerKey:CONSUMERKEY
+                           consumerSecret:CONSUMERSHH];
     return self.twitterService;
 }
 
@@ -60,7 +47,7 @@
         [self connectTwitter];
     }
     
-    //Twitter Request
+    //Twitter Object Request for USERS
     [self.twitterService verifyCredentialsWithSuccessBlock:^(NSString *bearerToken)
      {
          for(NSString *user in self.feedProfile.users)
@@ -70,48 +57,44 @@
                  
                  [self.twitterService getUserTimelineWithScreenName:user count:3 successBlock:^(NSArray *statuses)
                   {
-                      NSLog(@"Successful Verification and status retrival! %@", user);
-                      
                       UIImage *twitterBadge = [UIImage imageNamed:@"twittericon.png"];
                       
                       for(NSDictionary *status in statuses)
                       {
-                          RoastAppFeedItem *feedItem1 = [[RoastAppFeedItem alloc] init];
+                          RoastAppFeedItem *feedItem = [[RoastAppFeedItem alloc] init];
                           
-                          feedItem1.serviceName = @"Twitter";
-                          feedItem1.serviceBadge = twitterBadge;
-                          feedItem1.userName = status[@"user"][@"screen_name"];
-                          feedItem1.message = status[@"text"];
-                          feedItem1.timestamp = [self.dateFormatter dateFromString:status[@"created_at"]];
-                          feedItem1.userPic = [self getUIImageFromURLString:[response objectForKey:@"profile_image_url"]];
-                          feedItem1.idNum = status[@"id"];
+                          feedItem.serviceName = @"Twitter";
+                          feedItem.serviceBadge = twitterBadge;
+                          feedItem.userName = status[@"user"][@"screen_name"];
+                          feedItem.message = status[@"text"];
+                          feedItem.timestamp = [self.dateFormatter dateFromString:status[@"created_at"]];
+                          feedItem.userPic = [self getUIImageFromURLString:[response objectForKey:@"profile_image_url"]];
+                          feedItem.idNum = status[@"id"];
                           
-                          [self.feedArray addObject:feedItem1];
+                          [self.feedArray addObject:feedItem];
                           [[NSNotificationCenter defaultCenter]
-                           postNotificationName:@"TestNotification"
-                           object:feedItem1];
+                           postNotificationName:@"IncomingFeedItem"
+                           object:feedItem];
                       }
-                      
-                      
-                      
                       
                   } errorBlock:^(NSError *error)
                   {
-                      NSLog(@"%@", error.debugDescription);
+                      NSLog(@"Twitter failed fetching user object: %@", error.debugDescription);
                   }];
                  
                  
              } errorBlock:^(NSError *error) {
-                 //
+                 NSLog(@"Twitter failed getting user info: %@", error.debugDescription);
              }];
              
          }
      }
     errorBlock:^(NSError *error)
      {
-         NSLog(@"%@", error.debugDescription);
+         NSLog(@"Twitter service failed verification: %@", error.debugDescription);
          
      }];
+
 }
 
 @end

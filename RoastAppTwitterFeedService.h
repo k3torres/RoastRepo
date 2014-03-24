@@ -9,12 +9,9 @@
 #import "RoastAppFeedService.h"
 #import "STTwitterAPI.h"
 
-
 @interface RoastAppTwitterFeedService : RoastAppFeedService
 
 @property STTwitterAPI *twitterService;
-@property NSString *twitterConsumerKey;
-@property NSString *twitterConsumerShh;
 
 /*** Overridden Methods ***/
 - (void)retrieveNewFeeds;
