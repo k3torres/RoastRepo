@@ -56,14 +56,21 @@ NSMutableArray *queryResult;
 }
 
 //Query: Select * from roast.reviews where itemID = id
-+(NSArray *)requestReviews:(NSString*)id{
++(NSMutableArray *)requestReviews:(NSString*)id{
     
     NSString *fullURL = [[baseURL stringByAppendingString:@"GetReview?id="] stringByAppendingString:id];
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:fullURL]];
     NSError *error;
     NSDictionary *dictionaryFromResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
-    NSArray *jsonArray = [dictionaryFromResponse allValues];
+    NSMutableArray *users = [dictionaryFromResponse valueForKeyPath:@"users"];
+    NSMutableArray *ratings = [dictionaryFromResponse valueForKeyPath:@"ratings"];
+    NSMutableArray *comments = [dictionaryFromResponse valueForKeyPath:@"comments"];
+    
+    NSMutableArray *jsonArray = [[NSMutableArray alloc] init];
+    [jsonArray addObject:users];
+    [jsonArray addObject:ratings];
+    [jsonArray addObject:comments];
     
     return jsonArray;
 }

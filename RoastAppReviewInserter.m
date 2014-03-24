@@ -15,8 +15,8 @@
     if(rating == nil)
         rating = @"0";
     if(userName == nil){
-        NSLog(@"Review insertation failed, userName is nil");
-        return;
+        NSLog(@"userName is nil, using default username");
+        userName = @"me";
     }
     NSString *fullURL = [[[[[[[@"http://54.201.5.175:8080/roast/PutReview?id=" stringByAppendingString:id] stringByAppendingString:@"&comments="] stringByAppendingString:comments] stringByAppendingString:@"&rating="] stringByAppendingString:rating] stringByAppendingString:@"&user="] stringByAppendingString:userName];
     
